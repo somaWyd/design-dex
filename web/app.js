@@ -340,7 +340,6 @@ function renderSourcePanel() {
 const iconBtn = (name, label, onclick, cls = "icon-btn act") => el("button", { class: cls, ...tip(label), onclick }, face(name, label));
 function card(e) {
   const cat = catById[e.category];
-  const src = srcById[e.source];
   const preview = renderPreview(e);
   observePreview(preview);
   const link = e.ref_url || e.url;
@@ -358,11 +357,8 @@ function card(e) {
       el("div", { class: "badges" },
         el("span", { class: "badge " + e.kind, ...tip(t("k_" + e.kind)), "data-info": "" }, icon(e.kind)),
         el("span", { class: "badge", "data-tt": cat?.hint || cat?.name_ja, "data-info": "" }, cat?.name_ja))),
+    // カードは「見本・名前・説明・操作」の4段だけ。言い換え・出典は詳細で見せる（一覧の情報を絞って見比べやすくする）
     el("p", { class: "desc" }, e.description_ja),
-    e.aliases?.length ? el("div", { class: "aliases" }, ...e.aliases.map((a) => el("span", {}, a))) : null,
-    // 出典はスキル名のバッジ。押すとその出典だけに絞り、使い方が上に出る
-    src ? el("button", { class: "src-badge", "aria-label": t("open_source_only"),
-      onclick: () => { state.sources = new Set([src.id]); update(); scrollTo({ top: 0 }); } }, icon(srcIcon(src)), el("span", {}, src.name)) : null,
     el("div", { class: "actions" },
       el("button", { class: "btn", ...tip(t("copy_prompt")), onclick: () => copy(e.prompt, t("copied_prompt")) }, face("copy", t("copy_prompt"))),
       iconBtn("textsize", t("copy_name"), () => copy(e.name_en, t("copied", e.name_en))),

@@ -1,0 +1,56 @@
+/* 余白の体系（最後に読み込み、配置の余白はここだけで決める）
+   - 8pt グリッド（Apple HIG Layout・Material 3 Spacing）。値は下の段階からだけ選ぶ
+   - 近接の原則: まとまりの中は狭く、まとまりの間は広く。カードの間（24px）> カードの中の段（16px）> 名前と英名（2px）
+   - 共通領域: 区切り線を増やさず、カード・折りたたみの面で囲ってまとまりを示す
+   - カードは「見本 → 名前 → 説明 → 操作」の4段だけ。言い換え・出典は詳細（カードを押す）で見せる */
+:root {
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --edge: var(--sp-5);
+  --side-w: 296px;
+}
+
+/* ---- サイドバー: 行の高さを 36px にそろえ、区分の間を広く取る ---- */
+.app { grid-template-columns: var(--side-w) 1fr; }
+.side { padding: var(--edge) var(--sp-4) var(--sp-7); }
+.seg.view { margin-bottom: var(--sp-5); }
+.fold { padding: var(--sp-2) 0; }
+.fold + .fold { margin-top: var(--sp-2); }
+.fold summary { padding: var(--sp-2) var(--sp-3); min-height: 40px; }
+.fold[open] > summary { margin-bottom: var(--sp-1); }
+.list button { padding: var(--sp-2) var(--sp-3); min-height: 36px; }
+.list .group { padding-top: var(--sp-4); padding-bottom: var(--sp-1); }
+.list .group:first-child { padding-top: var(--sp-1); }
+
+/* ---- 上段: 検索と絞り込みの行の間を空け、一覧との境目に余白を置く ---- */
+.main { padding: var(--edge) var(--sp-6) 80px; }
+.toolbar { margin: calc(var(--edge) * -1) calc(var(--sp-6) * -1) 0; padding: var(--edge) calc(var(--sp-6) + var(--bar-h) + var(--sp-4)) var(--sp-5) var(--sp-6); gap: var(--sp-4); }
+:root:not([data-labels="icon"]) .toolbar { padding-right: calc(var(--sp-6) + var(--bar-h) + var(--sp-4)); }
+.gear { top: var(--edge); right: var(--edge); }
+.scope { gap: var(--sp-4); }
+.chips { gap: var(--sp-2); }
+
+/* ---- 一覧: カードの間 24px（中の段 16px より広く）で、1枚ずつのまとまりに見せる ---- */
+#dict .grid, .pal-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-6) var(--sp-5); }
+.src-panel { margin-bottom: var(--sp-5); }
+.card { padding: var(--sp-4) var(--sp-4) var(--sp-3); gap: 0; contain-intrinsic-size: auto 300px; }
+.card .card-top { margin-bottom: var(--sp-4); }
+.card header { gap: var(--sp-2); }
+.card h3 { font-size: 17px; letter-spacing: -.01em; }
+.card .en { margin-top: 2px; }
+.card .desc { margin-top: var(--sp-2); color: var(--text-2); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.card .actions { padding-top: var(--sp-4); }
+
+@media (max-width: 760px) {
+  :root { --edge: var(--sp-4); }
+  .app { grid-template-columns: 1fr; }
+  .side { padding: var(--edge) calc(var(--edge) + var(--bar-h) + var(--sp-2)) var(--sp-4) var(--edge); }
+  .main { padding: var(--edge) var(--edge) 64px; }
+  .toolbar, :root:not([data-labels="icon"]) .toolbar { margin: calc(var(--edge) * -1) calc(var(--edge) * -1) 0; padding: var(--edge) calc(var(--edge) + var(--bar-h) + var(--sp-2)) var(--edge) var(--edge); }
+  #dict .grid, .pal-grid { gap: var(--sp-4); }
+}
