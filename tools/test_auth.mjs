@@ -43,6 +43,8 @@ r = await gate({ request: req("/"), env: {}, next });
 assert.equal(r.status, 500);
 r = await gate({ request: req("/auth/login"), env, next });
 assert.equal(await r.text(), "page");
+r = await gate({ request: req("/privacy"), env: {}, next });                     // プライバシーポリシーは設定前・未ログインでも開ける（Google の同意画面の要件）
+assert.equal(await r.text(), "page");
 r = await gate({ request: req("/auth/other"), env, next });                       // /auth/ の下でも窓口以外は守る
 assert.equal(r.status, 302);
 r = await gate({ request: req("/auth/logout"), env, next });                     // GET のログアウトは本体へ流さない

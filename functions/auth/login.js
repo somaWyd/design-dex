@@ -3,9 +3,9 @@ import { safeNext } from "../_lib/session.js";
 
 const TEXT = {
   ja: { title: "DesignDex にログイン", lead: "UI・動き・配色・書体の名前と、AI にそのまま渡せる指示文を引く辞典です。Google アカウントでログインして使います。", button: "Google でログイン",
-    note: "ログインに使うのは名前・メールアドレス・アカウントの ID だけです。お気に入りや取り込んだ項目はこの端末の中だけに保存されます。" },
+    note: "ログインに使うのは名前・メールアドレス・アカウントの ID だけです。お気に入りや取り込んだ項目はこの端末の中だけに保存されます。", privacy: "プライバシーポリシー" },
   en: { title: "Sign in to DesignDex", lead: "A dictionary of names and ready-to-paste prompts for UI, motion, color and type. Sign in with your Google account to use it.", button: "Sign in with Google",
-    note: "Only your name, email address and account ID are used to sign in. Favorites and imported items stay on this device." },
+    note: "Only your name, email address and account ID are used to sign in. Favorites and imported items stay on this device.", privacy: "Privacy Policy" },
 };
 const GOOGLE_G = '<svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.7 6c4.5-4.2 6.9-10.3 6.9-17.7z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.7-6c-2.1 1.4-4.9 2.3-8.2 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>';
 
@@ -31,7 +31,7 @@ a.btn:active{transform:scale(.97)}a.btn:focus-visible{outline:2px solid #d92b4b;
 <img src="/icon.svg" alt="" width="72" height="72">
 <h1>${t.title}</h1><p>${t.lead}</p>
 <a class="btn" href="/auth/google?next=${next}">${GOOGLE_G}<span>${t.button}</span></a>
-<small>${t.note}</small>
+<small>${t.note} <a href="/privacy" style="color:inherit">${t.privacy}</a></small>
 </main></body></html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Frame-Options": "DENY", "Content-Security-Policy": "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'" } });
 }

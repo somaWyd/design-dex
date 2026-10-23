@@ -6,7 +6,7 @@ import { assertConfig, readSession, safeNext } from "./_lib/session.js";
 // 受け付けるメソッドも窓口ごとに決め、それ以外は 405（想定外のメソッドで静的ファイルへ流れないように）
 const PUBLIC_PATHS = new Map([
   ["/auth/login", ["GET"]], ["/auth/google", ["GET"]], ["/auth/callback", ["GET"]], ["/auth/me", ["GET"]],
-  ["/auth/logout", ["POST"]], ["/icon.svg", ["GET", "HEAD"]],
+  ["/auth/logout", ["POST"]], ["/icon.svg", ["GET", "HEAD"]], ["/privacy", ["GET", "HEAD"]],
 ]);
 
 export async function onRequest(context) {
