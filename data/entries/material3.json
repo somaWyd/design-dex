@@ -1,0 +1,822 @@
+{
+ "source": {
+  "id": "material3",
+  "type": "doc",
+  "name": "Material Design 3",
+  "ref": "https://m3.material.io",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "material3/app-bars",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "App bars",
+   "name_ja": "アプリバー（トップ／ボトム）",
+   "description_ja": "画面の上下端に固定され、タイトル・戻る・操作アイコンを並べる帯。スクロールで高さや色が変わる種類もある。",
+   "aliases": [
+    "ヘッダー",
+    "上のバー",
+    "タイトルバー",
+    "ツールバー"
+   ],
+   "preview": {
+    "demo": "nav",
+    "variant": "top"
+   },
+   "source_ref": "Material 3 公式『App bars』ページ",
+   "ref_url": "https://m3.material.io/app-bars/overview",
+   "prompt": "【出典】Material 3 公式『App bars』ページ／https://m3.material.io/app-bars/overview\n【作るもの】App bars（アプリバー（トップ／ボトム））\n【再現する見た目・動き】Small 64dp・Medium 112dp・Large 152dp の高さ。コンテナ色は surface、スクロール時は surface-container に切り替え。アイコンは24dp\n【指示】〈使う場所〉にApp barsを入れて。実装は `md-*` に専用要素なし。Jetpack Compose の `TopAppBar` / `CenterAlignedTopAppBar` / `MediumTopAppBar` / `LargeTopAppBar` / `BottomAppBar`、Flutter の `AppBar` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/badges",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Badges",
+   "name_ja": "バッジ",
+   "description_ja": "アイコンの角に付く小さな丸や数字で、未読や件数を知らせる。",
+   "aliases": [
+    "通知の赤丸",
+    "未読数",
+    "件数表示"
+   ],
+   "preview": {
+    "demo": "badge"
+   },
+   "source_ref": "Material 3 公式『Badges』ページ",
+   "ref_url": "https://m3.material.io/badges/overview",
+   "prompt": "【出典】Material 3 公式『Badges』ページ／https://m3.material.io/badges/overview\n【作るもの】Badges（バッジ）\n【再現する見た目・動き】小バッジ直径 6dp、大バッジ高さ 16dp・最小幅 16dp、色は error、文字は label-small\n【指示】〈使う場所〉にBadgesを入れて。実装は Jetpack Compose の `Badge` / `BadgedBox`、Flutter の `Badge` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/bottom-sheets",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Bottom sheets",
+   "name_ja": "ボトムシート",
+   "description_ja": "画面の下から引き出して補助的な内容や操作を出すパネル。標準（画面に残る）とモーダル（背景を暗くする）がある。",
+   "aliases": [
+    "下から出るパネル",
+    "下からスライド",
+    "アクションシート"
+   ],
+   "preview": {
+    "demo": "sheet"
+   },
+   "source_ref": "Material 3 公式『Bottom sheets』ページ",
+   "ref_url": "https://m3.material.io/bottom-sheets/overview",
+   "prompt": "【出典】Material 3 公式『Bottom sheets』ページ／https://m3.material.io/bottom-sheets/overview\n【作るもの】Bottom sheets（ボトムシート）\n【再現する見た目・動き】上端の角丸 28dp（extra-large top）、ドラッグハンドル 32×4dp、モーダル時のスクリム不透明度 32%、色は surface-container-low\n【指示】〈使う場所〉にBottom sheetsを入れて。実装は Jetpack Compose の `ModalBottomSheet` / `BottomSheetScaffold`、Flutter の `showModalBottomSheet` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/button-groups",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Button groups",
+   "name_ja": "ボタングループ",
+   "description_ja": "関連するボタンを並べて1つのまとまりとして見せる。押したボタンが広がり、隣が縮む動きがある。",
+   "aliases": [
+    "ボタンを並べる",
+    "ボタンの列",
+    "連結ボタン"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "Material 3 公式『Button groups』ページ",
+   "ref_url": "https://m3.material.io/button-groups/overview",
+   "prompt": "【出典】Material 3 公式『Button groups』ページ／https://m3.material.io/button-groups/overview\n【作るもの】Button groups（ボタングループ）\n【再現する見た目・動き】ボタン間隔 2dp（標準）、押下時に幅が広がり隣が縮む。動きは spring（expressive spatial）\n【指示】〈使う場所〉にButton groupsを入れて。実装は Jetpack Compose の `ButtonGroup`（Material3 Expressive） を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/buttons",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Common buttons",
+   "name_ja": "ボタン（塗り・枠線・トーナル・テキスト）",
+   "description_ja": "押して操作を実行する基本のボタン。強調度の順に Filled・Tonal・Elevated・Outlined・Text がある。",
+   "aliases": [
+    "普通のボタン",
+    "塗りボタン",
+    "枠ボタン",
+    "テキストボタン"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "Material 3 公式『Common buttons』ページ",
+   "ref_url": "https://m3.material.io/buttons/overview",
+   "prompt": "【出典】Material 3 公式『Common buttons』ページ／https://m3.material.io/buttons/overview\n【作るもの】Common buttons（ボタン（塗り・枠線・トーナル・テキスト））\n【再現する見た目・動き】高さ 40dp、角丸は full（円形端）、左右余白 24dp、文字は label-large。Filled は primary 色、Tonal は secondary-container、Outlined は outline 1dp\n【指示】〈使う場所〉にCommon buttonsを入れて。実装は `md-filled-button` / `md-filled-tonal-button` / `md-elevated-button` / `md-outlined-button` / `md-text-button`。Compose の `Button` / `FilledTonalButton` / `ElevatedButton` / `OutlinedButton` / `TextButton`、Flutter の `FilledButton` / `OutlinedButton` / `TextButton` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/cards",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Cards",
+   "name_ja": "カード",
+   "description_ja": "画像・文章・操作を1つの枠にまとめ、1つの話題を表す入れ物。",
+   "aliases": [
+    "囲み枠",
+    "カード型",
+    "パネル"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Material 3 公式『Cards』ページ",
+   "ref_url": "https://m3.material.io/cards/overview",
+   "prompt": "【出典】Material 3 公式『Cards』ページ／https://m3.material.io/cards/overview\n【作るもの】Cards（カード）\n【再現する見た目・動き】角丸 12dp（medium）、Elevated は elevation level 1、Filled は surface-container-highest、Outlined は outline-variant 1dp\n【指示】〈使う場所〉にCardsを入れて。実装は Compose の `Card` / `ElevatedCard` / `OutlinedCard`、Flutter の `Card` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/carousel",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Carousel",
+   "name_ja": "カルーセル",
+   "description_ja": "横にスクロールして画像やカードを送る一覧。端のアイテムが小さくなるなど、大きさが変わる。",
+   "aliases": [
+    "スライダー",
+    "横スクロールの画像",
+    "スライドショー"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "Material 3 公式『Carousel』ページ",
+   "ref_url": "https://m3.material.io/carousel/overview",
+   "prompt": "【出典】Material 3 公式『Carousel』ページ／https://m3.material.io/carousel/overview\n【作るもの】Carousel（カルーセル）\n【再現する見た目・動き】レイアウトは multi-browse・uncontained・hero・center-aligned hero・full-screen。小アイテム幅 40〜56dp、アイテム間隔 8dp、角丸 28dp\n【指示】〈使う場所〉にCarouselを入れて。実装は Compose の `HorizontalMultiBrowseCarousel` / `HorizontalUncontainedCarousel`、Android Views の `CarouselLayoutManager` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/checkbox",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Checkbox",
+   "name_ja": "チェックボックス",
+   "description_ja": "複数の選択肢から、いくつでも選べる四角いチェック。未選択・選択・一部選択の3状態。",
+   "aliases": [
+    "チェック欄",
+    "複数選択",
+    "チェックマーク"
+   ],
+   "preview": {
+    "demo": "check"
+   },
+   "source_ref": "Material 3 公式『Checkbox』ページ",
+   "ref_url": "https://m3.material.io/checkbox/overview",
+   "prompt": "【出典】Material 3 公式『Checkbox』ページ／https://m3.material.io/checkbox/overview\n【作るもの】Checkbox（チェックボックス）\n【再現する見た目・動き】ボックス 18dp、角丸 2dp、タッチ領域 48dp、選択時は primary で塗りつぶし、チェックは on-primary\n【指示】〈使う場所〉にCheckboxを入れて。実装は `md-checkbox`。Compose の `Checkbox` / `TriStateCheckbox`、Flutter の `Checkbox` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/chips",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Chips",
+   "name_ja": "チップ",
+   "description_ja": "短い項目を小さな丸い箱で表し、絞り込み・入力・提案・操作に使う。",
+   "aliases": [
+    "タグ",
+    "絞り込みボタン",
+    "小さい丸ボタン"
+   ],
+   "preview": {
+    "demo": "chips"
+   },
+   "source_ref": "Material 3 公式『Chips』ページ",
+   "ref_url": "https://m3.material.io/chips/overview",
+   "prompt": "【出典】Material 3 公式『Chips』ページ／https://m3.material.io/chips/overview\n【作るもの】Chips（チップ）\n【再現する見た目・動き】高さ 32dp、角丸 8dp、左右余白 16dp、文字は label-large、種類は Assist・Filter・Input・Suggestion。選択時は secondary-container\n【指示】〈使う場所〉にChipsを入れて。実装は `md-assist-chip` / `md-filter-chip` / `md-input-chip` / `md-suggestion-chip`。Compose の `AssistChip` / `FilterChip` / `InputChip` / `SuggestionChip`、Flutter の `ActionChip` / `FilterChip` / `InputChip` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/date-pickers",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Date pickers",
+   "name_ja": "日付ピッカー",
+   "description_ja": "カレンダーから日付や期間を選ぶ部品。モーダル・ドッキング・入力欄の3つの形がある。",
+   "aliases": [
+    "カレンダー選択",
+    "日付選択",
+    "日付入力"
+   ],
+   "preview": {
+    "demo": "calendar"
+   },
+   "source_ref": "Material 3 公式『Date pickers』ページ",
+   "ref_url": "https://m3.material.io/date-pickers/overview",
+   "prompt": "【出典】Material 3 公式『Date pickers』ページ／https://m3.material.io/date-pickers/overview\n【作るもの】Date pickers（日付ピッカー）\n【再現する見た目・動き】モーダルは幅 360dp、角丸 28dp、日付セル 40dp の円、選択日は primary の塗り円、今日は outline の枠\n【指示】〈使う場所〉にDate pickersを入れて。実装は Compose の `DatePicker` / `DatePickerDialog` / `DateRangePicker`、Flutter の `showDatePicker` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/dialogs",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Dialogs",
+   "name_ja": "ダイアログ",
+   "description_ja": "画面の中央に出て、確認や短い入力を求める小窓。背景は暗くなる。",
+   "aliases": [
+    "ポップアップ",
+    "確認画面",
+    "モーダル"
+   ],
+   "preview": {
+    "demo": "dialog"
+   },
+   "source_ref": "Material 3 公式『Dialogs』ページ",
+   "ref_url": "https://m3.material.io/dialogs/overview",
+   "prompt": "【出典】Material 3 公式『Dialogs』ページ／https://m3.material.io/dialogs/overview\n【作るもの】Dialogs（ダイアログ）\n【再現する見た目・動き】角丸 28dp、幅 280〜560dp、余白 24dp、背景スクリム不透明度 32%、色は surface-container-high、見出しは headline-small\n【指示】〈使う場所〉にDialogsを入れて。実装は `md-dialog`。Compose の `AlertDialog` / `BasicAlertDialog`、Flutter の `AlertDialog` / `showDialog` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/divider",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Divider",
+   "name_ja": "区切り線",
+   "description_ja": "項目やグループの間に引く細い線。見た目を整理する。",
+   "aliases": [
+    "仕切り線",
+    "罫線",
+    "ライン"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Material 3 公式『Divider』ページ",
+   "ref_url": "https://m3.material.io/divider/overview",
+   "prompt": "【出典】Material 3 公式『Divider』ページ／https://m3.material.io/divider/overview\n【作るもの】Divider（区切り線）\n【再現する見た目・動き】太さ 1dp、色は outline-variant、全幅（full-width）・インセット・中間（middle）の3種\n【指示】〈使う場所〉にDividerを入れて。実装は `md-divider`。Compose の `HorizontalDivider` / `VerticalDivider`、Flutter の `Divider` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/extended-fab",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Extended FAB",
+   "name_ja": "拡張FAB（文字つき浮遊ボタン）",
+   "description_ja": "アイコンに文字ラベルを足した浮遊ボタン。主要な操作が分かりやすくなる。",
+   "aliases": [
+    "文字つきの丸ボタン",
+    "新規作成ボタン",
+    "浮いてる横長ボタン"
+   ],
+   "preview": {
+    "demo": "toast",
+    "variant": "fab"
+   },
+   "source_ref": "Material 3 公式『Extended FAB』ページ",
+   "ref_url": "https://m3.material.io/extended-fab/overview",
+   "prompt": "【出典】Material 3 公式『Extended FAB』ページ／https://m3.material.io/extended-fab/overview\n【作るもの】Extended FAB（拡張FAB（文字つき浮遊ボタン））\n【再現する見た目・動き】高さ 56dp、角丸 16dp、アイコン 24dp とラベル間隔 8dp、色は primary-container、elevation level 3\n【指示】〈使う場所〉にExtended FABを入れて。実装は `md-fab` の `label` 属性。Compose の `ExtendedFloatingActionButton`、Flutter の `FloatingActionButton.extended` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/fab-menu",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "FAB menu",
+   "name_ja": "FABメニュー",
+   "description_ja": "FABを押すと関連する操作が縦に広がるメニュー。",
+   "aliases": [
+    "スピードダイヤル",
+    "押すと広がるボタン",
+    "展開メニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Material 3 公式『FAB menu』ページ",
+   "ref_url": "https://m3.material.io/fab-menu/overview",
+   "prompt": "【出典】Material 3 公式『FAB menu』ページ／https://m3.material.io/fab-menu/overview\n【作るもの】FAB menu（FABメニュー）\n【再現する見た目・動き】項目の高さ 56dp、角丸 full、項目間隔 4dp、展開は spring（expressive spatial）\n【指示】〈使う場所〉にFAB menuを入れて。実装は Compose の `FloatingActionButtonMenu`（Material3 Expressive） を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/floating-action-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Floating action button (FAB)",
+   "name_ja": "FAB（浮遊アクションボタン）",
+   "description_ja": "画面の右下などに浮かぶ丸いボタンで、その画面で最も大事な操作を1つ示す。",
+   "aliases": [
+    "右下の丸ボタン",
+    "追加ボタン",
+    "フローティングボタン"
+   ],
+   "preview": {
+    "demo": "toast",
+    "variant": "fab"
+   },
+   "source_ref": "Material 3 公式『Floating action button (FAB)』ページ",
+   "ref_url": "https://m3.material.io/floating-action-button/overview",
+   "prompt": "【出典】Material 3 公式『Floating action button (FAB)』ページ／https://m3.material.io/floating-action-button/overview\n【作るもの】Floating action button (FAB)（FAB（浮遊アクションボタン））\n【再現する見た目・動き】標準 56dp、小 40dp、大 96dp、角丸 16dp（標準）、色は primary-container、elevation level 3、アイコン 24dp\n【指示】〈使う場所〉にFloating action button (FAB)を入れて。実装は `md-fab`。Compose の `FloatingActionButton` / `SmallFloatingActionButton` / `LargeFloatingActionButton`、Flutter の `FloatingActionButton` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/icon-buttons",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Icon buttons",
+   "name_ja": "アイコンボタン",
+   "description_ja": "文字なしでアイコンだけの小さなボタン。押すと切り替わるトグル型もある。",
+   "aliases": [
+    "アイコンだけのボタン",
+    "ハートボタン",
+    "トグルアイコン"
+   ],
+   "preview": {
+    "demo": "like"
+   },
+   "source_ref": "Material 3 公式『Icon buttons』ページ",
+   "ref_url": "https://m3.material.io/icon-buttons/overview",
+   "prompt": "【出典】Material 3 公式『Icon buttons』ページ／https://m3.material.io/icon-buttons/overview\n【作るもの】Icon buttons（アイコンボタン）\n【再現する見た目・動き】アイコン 24dp、タッチ領域 48dp、種類は Standard・Filled・Tonal・Outlined、トグル選択時は色が primary に変わる\n【指示】〈使う場所〉にIcon buttonsを入れて。実装は `md-icon-button` / `md-filled-icon-button` / `md-filled-tonal-icon-button` / `md-outlined-icon-button`。Compose の `IconButton` / `IconToggleButton`、Flutter の `IconButton` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/lists",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Lists",
+   "name_ja": "リスト",
+   "description_ja": "アイコン・画像・文字を縦に並べた一覧。1行から3行までの高さがある。",
+   "aliases": [
+    "一覧",
+    "項目の並び",
+    "設定リストの行"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Material 3 公式『Lists』ページ",
+   "ref_url": "https://m3.material.io/lists/overview",
+   "prompt": "【出典】Material 3 公式『Lists』ページ／https://m3.material.io/lists/overview\n【作るもの】Lists（リスト）\n【再現する見た目・動き】1行 56dp・2行 72dp・3行 88dp、左右余白 16dp、先頭アイコン 24dp、見出しは body-large、補足は body-medium\n【指示】〈使う場所〉にListsを入れて。実装は `md-list` / `md-list-item`。Compose の `ListItem`、Flutter の `ListTile` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/loading-indicator",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Loading indicator",
+   "name_ja": "ローディングインジケーター",
+   "description_ja": "形が変わりながら回る読み込み表示。短い待ち時間に使う。",
+   "aliases": [
+    "くるくる",
+    "読み込み中",
+    "スピナー"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Material 3 公式『Loading indicator』ページ",
+   "ref_url": "https://m3.material.io/loading-indicator/overview",
+   "prompt": "【出典】Material 3 公式『Loading indicator』ページ／https://m3.material.io/loading-indicator/overview\n【作るもの】Loading indicator（ローディングインジケーター）\n【再現する見た目・動き】図形が morph しながら回転、標準サイズ 48dp、色は primary と primary-container\n【指示】〈使う場所〉にLoading indicatorを入れて。実装は Compose の `LoadingIndicator`（Material3 Expressive） を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/menus",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Menus",
+   "name_ja": "メニュー",
+   "description_ja": "ボタンの下などに出る選択肢の小窓。項目を選ぶと閉じる。",
+   "aliases": [
+    "ドロップダウン",
+    "プルダウン",
+    "三点メニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Material 3 公式『Menus』ページ",
+   "ref_url": "https://m3.material.io/menus/overview",
+   "prompt": "【出典】Material 3 公式『Menus』ページ／https://m3.material.io/menus/overview\n【作るもの】Menus（メニュー）\n【再現する見た目・動き】角丸 4dp、項目高さ 48dp、最小幅 112dp・最大幅 280dp、elevation level 2、色は surface-container\n【指示】〈使う場所〉にMenusを入れて。実装は `md-menu` / `md-menu-item`。Compose の `DropdownMenu` / `DropdownMenuItem`、Flutter の `MenuAnchor` / `PopupMenuButton` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/navigation-bar",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Navigation bar",
+   "name_ja": "ナビゲーションバー（下タブ）",
+   "description_ja": "スマホ画面の下に並べる3〜5個の主要な移動先。選択中は丸い背景が付く。",
+   "aliases": [
+    "下のタブバー",
+    "ボトムナビ",
+    "タブバー"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Material 3 公式『Navigation bar』ページ",
+   "ref_url": "https://m3.material.io/navigation-bar/overview",
+   "prompt": "【出典】Material 3 公式『Navigation bar』ページ／https://m3.material.io/navigation-bar/overview\n【作るもの】Navigation bar（ナビゲーションバー（下タブ））\n【再現する見た目・動き】高さ 80dp、アイコン 24dp、選択中の背景（active indicator）は幅 64dp×高さ 32dp の錠剤形で secondary-container、ラベルは label-medium\n【指示】〈使う場所〉にNavigation barを入れて。実装は `md-navigation-bar` / `md-navigation-tab`。Compose の `NavigationBar` / `NavigationBarItem`、Flutter の `NavigationBar` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/navigation-drawer",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Navigation drawer",
+   "name_ja": "ナビゲーションドロワー",
+   "description_ja": "画面の左から出る、多くの移動先を並べたパネル。標準とモーダルがある。",
+   "aliases": [
+    "左から出るメニュー",
+    "ハンバーガーメニュー",
+    "サイドメニュー"
+   ],
+   "preview": {
+    "demo": "sheet",
+    "variant": "drawer"
+   },
+   "source_ref": "Material 3 公式『Navigation drawer』ページ",
+   "ref_url": "https://m3.material.io/navigation-drawer/overview",
+   "prompt": "【出典】Material 3 公式『Navigation drawer』ページ／https://m3.material.io/navigation-drawer/overview\n【作るもの】Navigation drawer（ナビゲーションドロワー）\n【再現する見た目・動き】幅 360dp、右側の角丸 16dp、項目高さ 56dp、選択項目は secondary-container の錠剤形、モーダル時のスクリム 32%\n【指示】〈使う場所〉にNavigation drawerを入れて。実装は Compose の `ModalNavigationDrawer` / `PermanentNavigationDrawer` / `NavigationDrawerItem`、Flutter の `NavigationDrawer` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/navigation-rail",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Navigation rail",
+   "name_ja": "ナビゲーションレール",
+   "description_ja": "タブレットやPCの画面左端に置く縦の細いナビ。3〜7個の移動先を並べる。",
+   "aliases": [
+    "左の縦バー",
+    "サイドバー",
+    "縦タブ"
+   ],
+   "preview": {
+    "demo": "nav",
+    "variant": "rail"
+   },
+   "source_ref": "Material 3 公式『Navigation rail』ページ",
+   "ref_url": "https://m3.material.io/navigation-rail/overview",
+   "prompt": "【出典】Material 3 公式『Navigation rail』ページ／https://m3.material.io/navigation-rail/overview\n【作るもの】Navigation rail（ナビゲーションレール）\n【再現する見た目・動き】幅 80dp、アイコン 24dp、選択中の背景は幅 56dp×高さ 32dp、項目間隔 12dp、上部にメニューボタンや FAB を置ける\n【指示】〈使う場所〉にNavigation railを入れて。実装は Compose の `NavigationRail` / `NavigationRailItem`、Flutter の `NavigationRail` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/progress-indicators",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Progress indicators",
+   "name_ja": "プログレスインジケーター",
+   "description_ja": "処理の進み具合や待ち状態を示す。棒状と円形があり、割合が分かる型と分からない型がある。",
+   "aliases": [
+    "進捗バー",
+    "プログレスバー",
+    "ぐるぐる"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Material 3 公式『Progress indicators』ページ",
+   "ref_url": "https://m3.material.io/progress-indicators/overview",
+   "prompt": "【出典】Material 3 公式『Progress indicators』ページ／https://m3.material.io/progress-indicators/overview\n【作るもの】Progress indicators（プログレスインジケーター）\n【再現する見た目・動き】線の太さ 4dp、円形は直径 48dp、色は primary、トラックは secondary-container\n【指示】〈使う場所〉にProgress indicatorsを入れて。実装は `md-linear-progress` / `md-circular-progress`。Compose の `LinearProgressIndicator` / `CircularProgressIndicator`、Flutter の `LinearProgressIndicator` / `CircularProgressIndicator` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/radio-button",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Radio button",
+   "name_ja": "ラジオボタン",
+   "description_ja": "複数の選択肢から1つだけ選ぶ丸い選択欄。",
+   "aliases": [
+    "ラジオ",
+    "1つだけ選ぶ",
+    "丸い選択肢"
+   ],
+   "preview": {
+    "demo": "check"
+   },
+   "source_ref": "Material 3 公式『Radio button』ページ",
+   "ref_url": "https://m3.material.io/radio-button/overview",
+   "prompt": "【出典】Material 3 公式『Radio button』ページ／https://m3.material.io/radio-button/overview\n【作るもの】Radio button（ラジオボタン）\n【再現する見た目・動き】外側の円 20dp、内側の点 10dp、タッチ領域 48dp、選択時は primary、未選択は on-surface-variant\n【指示】〈使う場所〉にRadio buttonを入れて。実装は `md-radio`。Compose の `RadioButton`、Flutter の `Radio` / `RadioListTile` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/search",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Search",
+   "name_ja": "検索バー・検索ビュー",
+   "description_ja": "検索語を入力する欄（検索バー）と、候補や結果を全面に出す画面（検索ビュー）。",
+   "aliases": [
+    "検索欄",
+    "検索ボックス",
+    "サーチバー"
+   ],
+   "preview": {
+    "demo": "search"
+   },
+   "source_ref": "Material 3 公式『Search』ページ",
+   "ref_url": "https://m3.material.io/search/overview",
+   "prompt": "【出典】Material 3 公式『Search』ページ／https://m3.material.io/search/overview\n【作るもの】Search（検索バー・検索ビュー）\n【再現する見た目・動き】検索バーは高さ 56dp・角丸 full・色は surface-container-high、左に検索アイコン 24dp、検索ビューは全面表示で上端に入力欄\n【指示】〈使う場所〉にSearchを入れて。実装は Compose の `SearchBar` / `DockedSearchBar`、Flutter の `SearchBar` / `SearchAnchor` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/segmented-buttons",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Segmented buttons",
+   "name_ja": "セグメントボタン",
+   "description_ja": "2〜5個の選択肢を横に連ねて、1つまたは複数を選ぶボタン。",
+   "aliases": [
+    "切り替えボタン",
+    "トグルグループ",
+    "タブ切り替え風"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "Material 3 公式『Segmented buttons』ページ",
+   "ref_url": "https://m3.material.io/segmented-buttons/overview",
+   "prompt": "【出典】Material 3 公式『Segmented buttons』ページ／https://m3.material.io/segmented-buttons/overview\n【作るもの】Segmented buttons（セグメントボタン）\n【再現する見た目・動き】高さ 40dp、角丸 full（両端のみ）、枠は outline 1dp、選択時は secondary-container にチェックマーク\n【指示】〈使う場所〉にSegmented buttonsを入れて。実装は Compose の `SingleChoiceSegmentedButtonRow` / `MultiChoiceSegmentedButtonRow`、Flutter の `SegmentedButton` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/side-sheets",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Side sheets",
+   "name_ja": "サイドシート",
+   "description_ja": "画面の右側などから出る補助パネル。標準（並べて表示）とモーダルがある。",
+   "aliases": [
+    "右から出るパネル",
+    "詳細パネル",
+    "サイドパネル"
+   ],
+   "preview": {
+    "demo": "sheet",
+    "variant": "drawer"
+   },
+   "source_ref": "Material 3 公式『Side sheets』ページ",
+   "ref_url": "https://m3.material.io/side-sheets/overview",
+   "prompt": "【出典】Material 3 公式『Side sheets』ページ／https://m3.material.io/side-sheets/overview\n【作るもの】Side sheets（サイドシート）\n【再現する見た目・動き】幅 256〜400dp、左側の角丸 16dp（モーダル）、色は surface、モーダル時のスクリム 32%\n【指示】〈使う場所〉にSide sheetsを入れて。実装は Compose に専用部品なし（`ModalNavigationDrawer` 等で自作）、Android Views の `SideSheetDialog` / `SideSheetBehavior` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/sliders",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Sliders",
+   "name_ja": "スライダー",
+   "description_ja": "つまみを左右に動かして、範囲の中から値を選ぶ部品。",
+   "aliases": [
+    "つまみで調整",
+    "音量バー",
+    "値の調整"
+   ],
+   "preview": {
+    "demo": "slider"
+   },
+   "source_ref": "Material 3 公式『Sliders』ページ",
+   "ref_url": "https://m3.material.io/sliders/overview",
+   "prompt": "【出典】Material 3 公式『Sliders』ページ／https://m3.material.io/sliders/overview\n【作るもの】Sliders（スライダー）\n【再現する見た目・動き】トラックの高さ 4dp、つまみ 20dp の円、アクティブ側は primary、非アクティブ側は surface-container-highest、値ラベルあり（離散型）\n【指示】〈使う場所〉にSlidersを入れて。実装は `md-slider`。Compose の `Slider` / `RangeSlider`、Flutter の `Slider` / `RangeSlider` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/snackbar",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Snackbar",
+   "name_ja": "スナックバー",
+   "description_ja": "画面下に短く出て、操作の結果を知らせる通知。1つだけ操作を添えられ、数秒で消える。",
+   "aliases": [
+    "トースト",
+    "下に出る通知",
+    "一時メッセージ"
+   ],
+   "preview": {
+    "demo": "toast"
+   },
+   "source_ref": "Material 3 公式『Snackbar』ページ",
+   "ref_url": "https://m3.material.io/snackbar/overview",
+   "prompt": "【出典】Material 3 公式『Snackbar』ページ／https://m3.material.io/snackbar/overview\n【作るもの】Snackbar（スナックバー）\n【再現する見た目・動き】高さ 48dp（1行）、角丸 4dp、色は inverse-surface、文字は body-medium、操作ボタンは inverse-primary、表示 4〜10 秒\n【指示】〈使う場所〉にSnackbarを入れて。実装は Compose の `Snackbar` / `SnackbarHost`、Flutter の `SnackBar`（`ScaffoldMessenger.showSnackBar`） を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/split-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Split button",
+   "name_ja": "スプリットボタン",
+   "description_ja": "主要な操作と、関連する操作のメニューを1つにまとめた2分割のボタン。",
+   "aliases": [
+    "分割ボタン",
+    "メニュー付きボタン",
+    "▼付きボタン"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "Material 3 公式『Split button』ページ",
+   "ref_url": "https://m3.material.io/split-button/overview",
+   "prompt": "【出典】Material 3 公式『Split button』ページ／https://m3.material.io/split-button/overview\n【作るもの】Split button（スプリットボタン）\n【再現する見た目・動き】左が実行ボタン、右が矢印ボタン（メニューを開く）、間隔 2dp、高さ 40dp、角丸 full\n【指示】〈使う場所〉にSplit buttonを入れて。実装は Compose の `SplitButtonLayout`（Material3 Expressive） を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/switch",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Switch",
+   "name_ja": "スイッチ",
+   "description_ja": "オンとオフを切り替える、つまみ付きのトグル。押すとすぐ反映される。",
+   "aliases": [
+    "トグル",
+    "オンオフ",
+    "切り替えスイッチ"
+   ],
+   "preview": {
+    "demo": "switch"
+   },
+   "source_ref": "Material 3 公式『Switch』ページ",
+   "ref_url": "https://m3.material.io/switch/overview",
+   "prompt": "【出典】Material 3 公式『Switch』ページ／https://m3.material.io/switch/overview\n【作るもの】Switch（スイッチ）\n【再現する見た目・動き】トラック 52×32dp、つまみ 16dp（オフ）→24dp（オン）、オン時のトラックは primary、つまみは on-primary、タッチ領域 48dp\n【指示】〈使う場所〉にSwitchを入れて。実装は `md-switch`。Compose の `Switch`、Flutter の `Switch` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/tabs",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Tabs",
+   "name_ja": "タブ",
+   "description_ja": "同じ階層の内容を切り替える見出しの列。選択中は下線が付く。Primary と Secondary がある。",
+   "aliases": [
+    "タブ切り替え",
+    "見出しタブ",
+    "上のタブ"
+   ],
+   "preview": {
+    "demo": "nav",
+    "variant": "tabs"
+   },
+   "source_ref": "Material 3 公式『Tabs』ページ",
+   "ref_url": "https://m3.material.io/tabs/overview",
+   "prompt": "【出典】Material 3 公式『Tabs』ページ／https://m3.material.io/tabs/overview\n【作るもの】Tabs（タブ）\n【再現する見た目・動き】Primary は高さ 48dp（文字のみ）・64dp（アイコン付き）、選択中の下線は太さ 3dp・色 primary、Secondary は高さ 48dp・下線 2dp\n【指示】〈使う場所〉にTabsを入れて。実装は `md-tabs` / `md-primary-tab` / `md-secondary-tab`。Compose の `PrimaryTabRow` / `SecondaryTabRow` / `Tab`、Flutter の `TabBar` / `Tab` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/text-fields",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Text fields",
+   "name_ja": "テキストフィールド",
+   "description_ja": "文字を入力する欄。Filled と Outlined があり、ラベルが入力と一緒に上に動く。",
+   "aliases": [
+    "入力欄",
+    "フォーム入力",
+    "テキストボックス"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "Material 3 公式『Text fields』ページ",
+   "ref_url": "https://m3.material.io/text-fields/overview",
+   "prompt": "【出典】Material 3 公式『Text fields』ページ／https://m3.material.io/text-fields/overview\n【作るもの】Text fields（テキストフィールド）\n【再現する見た目・動き】高さ 56dp、Filled は上端の角丸 4dp、Outlined は枠 1dp（フォーカス時 2dp・primary）、ラベルは入力時に body-large→body-small\n【指示】〈使う場所〉にText fieldsを入れて。実装は `md-filled-text-field` / `md-outlined-text-field`。Compose の `TextField` / `OutlinedTextField`、Flutter の `TextField` / `InputDecoration` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/time-pickers",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Time pickers",
+   "name_ja": "時刻ピッカー",
+   "description_ja": "時計の文字盤や数字入力で時刻を選ぶ部品。",
+   "aliases": [
+    "時間選択",
+    "時計ダイアル",
+    "時刻入力"
+   ],
+   "preview": {
+    "demo": "calendar"
+   },
+   "source_ref": "Material 3 公式『Time pickers』ページ",
+   "ref_url": "https://m3.material.io/time-pickers/overview",
+   "prompt": "【出典】Material 3 公式『Time pickers』ページ／https://m3.material.io/time-pickers/overview\n【作るもの】Time pickers（時刻ピッカー）\n【再現する見た目・動き】ダイヤル直径 256dp、角丸 28dp（ダイアログ）、時・分の入力欄は幅 96dp×高さ 80dp、選択中は primary-container\n【指示】〈使う場所〉にTime pickersを入れて。実装は Compose の `TimePicker` / `TimeInput`、Flutter の `showTimePicker` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/toolbars",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Toolbars",
+   "name_ja": "ツールバー",
+   "description_ja": "画面内の文脈に合わせた操作を並べて浮かぶバー。Docked と Floating がある。",
+   "aliases": [
+    "浮かぶバー",
+    "操作バー",
+    "フローティングツールバー"
+   ],
+   "preview": {
+    "demo": "nav",
+    "variant": "top"
+   },
+   "source_ref": "Material 3 公式『Toolbars』ページ",
+   "ref_url": "https://m3.material.io/toolbars/overview",
+   "prompt": "【出典】Material 3 公式『Toolbars』ページ／https://m3.material.io/toolbars/overview\n【作るもの】Toolbars（ツールバー）\n【再現する見た目・動き】高さ 64dp、Floating は角丸 full・elevation level 3、アイコン 24dp、色は surface-container\n【指示】〈使う場所〉にToolbarsを入れて。実装は Compose の `HorizontalFloatingToolbar` / `VerticalFloatingToolbar`（Material3 Expressive） を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/tooltips",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Tooltips",
+   "name_ja": "ツールチップ",
+   "description_ja": "ボタンの近くに出る小さな説明の吹き出し。Plain と Rich がある。",
+   "aliases": [
+    "吹き出し",
+    "ホバーの説明",
+    "ヒント"
+   ],
+   "preview": {
+    "demo": "popover",
+    "variant": "tooltip"
+   },
+   "source_ref": "Material 3 公式『Tooltips』ページ",
+   "ref_url": "https://m3.material.io/tooltips/overview",
+   "prompt": "【出典】Material 3 公式『Tooltips』ページ／https://m3.material.io/tooltips/overview\n【作るもの】Tooltips（ツールチップ）\n【再現する見た目・動き】Plain は高さ 24dp・角丸 4dp・inverse-surface・body-small、Rich は角丸 12dp・surface-container・最大幅 312dp\n【指示】〈使う場所〉にTooltipsを入れて。実装は `md-*` に専用要素なし。Compose の `TooltipBox` / `PlainTooltip` / `RichTooltip`、Flutter の `Tooltip` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/motion",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Motion: easing and duration tokens",
+   "name_ja": "モーション（イージングと所要時間のトークン）",
+   "description_ja": "動きの速度変化（イージング）と長さ（所要時間）を決める M3 の共通の値。",
+   "aliases": [
+    "動きの速さ",
+    "アニメーションの時間",
+    "イージング"
+   ],
+   "preview": {
+    "demo": "ease",
+    "variant": "custom"
+   },
+   "source_ref": "Material 3 公式『Motion: easing and duration tokens』ページ",
+   "ref_url": "https://m3.material.io/styles/motion/easing-and-duration/tokens-specs",
+   "prompt": "【出典】Material 3 公式『Motion: easing and duration tokens』ページ／https://m3.material.io/styles/motion/easing-and-duration/tokens-specs\n【作るもの】Motion: easing and duration tokens（モーション（イージングと所要時間のトークン））\n【再現する見た目・動き】emphasized cubic-bezier(0.2, 0, 0, 1)、emphasized-decelerate (0.05, 0.7, 0.1, 1)、emphasized-accelerate (0.3, 0, 0.8, 0.15)、standard (0.2, 0, 0, 1)。所要時間は short 50〜200ms、medium 250〜400ms、long 450〜600ms\n【指示】〈使う場所〉にMotion: easing and duration tokensを入れて。実装は CSS の `transition-timing-function` と `--md-sys-motion-easing-*` / `--md-sys-motion-duration-*`。Compose の `MotionScheme` / `CubicBezierEasing`、Flutter の `Easing.emphasizedDecelerate` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/elevation",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Elevation",
+   "name_ja": "エレベーション（高さと影）",
+   "description_ja": "部品の高さを影と色の違いで表し、重なりを分かりやすくする段階。",
+   "aliases": [
+    "影",
+    "浮いて見える",
+    "重なり"
+   ],
+   "preview": {
+    "demo": "elevation"
+   },
+   "source_ref": "Material 3 公式『Elevation』ページ",
+   "ref_url": "https://m3.material.io/styles/elevation/overview",
+   "prompt": "【出典】Material 3 公式『Elevation』ページ／https://m3.material.io/styles/elevation/overview\n【作るもの】Elevation（エレベーション（高さと影））\n【再現する見た目・動き】level0 0dp・level1 1dp・level2 3dp・level3 6dp・level4 8dp・level5 12dp。色は surface-container の段階（lowest〜highest）で表す\n【指示】〈使う場所〉にElevationを入れて。実装は CSS の `--md-sys-elevation-level0`〜`level5`（`box-shadow`）。Compose の `tonalElevation` / `shadowElevation`、Flutter の `Material(elevation:)` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/shape",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Shape: corner radius scale",
+   "name_ja": "シェイプ（角丸の段階）",
+   "description_ja": "部品の角の丸さを段階で決めた値。部品ごとに使う段階が決まっている。",
+   "aliases": [
+    "角丸",
+    "丸み",
+    "角の丸さ"
+   ],
+   "preview": {
+    "demo": "shapes"
+   },
+   "source_ref": "Material 3 公式『Shape: corner radius scale』ページ",
+   "ref_url": "https://m3.material.io/styles/shape/corner-radius-scale",
+   "prompt": "【出典】Material 3 公式『Shape: corner radius scale』ページ／https://m3.material.io/styles/shape/corner-radius-scale\n【作るもの】Shape: corner radius scale（シェイプ（角丸の段階））\n【再現する見た目・動き】none 0dp・extra-small 4dp・small 8dp・medium 12dp・large 16dp・large-increased 20dp・extra-large 28dp・extra-large-increased 32dp・extra-extra-large 48dp・full 円形\n【指示】〈使う場所〉にShape: corner radius scaleを入れて。実装は CSS の `--md-sys-shape-corner-*`（`border-radius`）。Compose の `MaterialTheme.shapes` / `RoundedCornerShape`、Flutter の `ShapeBorder` / `RoundedRectangleBorder` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/color-roles",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Color roles",
+   "name_ja": "カラーロール（色の役割）",
+   "description_ja": "色を「主役色」「背景色」「上に載せる文字色」など役割ごとに名前を付けた組み合わせ。",
+   "aliases": [
+    "配色",
+    "テーマカラー",
+    "色の役割"
+   ],
+   "preview": {
+    "demo": "swatches"
+   },
+   "source_ref": "Material 3 公式『Color roles』ページ",
+   "ref_url": "https://m3.material.io/styles/color/roles",
+   "prompt": "【出典】Material 3 公式『Color roles』ページ／https://m3.material.io/styles/color/roles\n【作るもの】Color roles（カラーロール（色の役割））\n【再現する見た目・動き】primary / on-primary、primary-container / on-primary-container、secondary、tertiary、error、surface、surface-container、outline の組。色は 0〜100 の tone で決まり、ライトは primary が tone 40、ダークは tone 80\n【指示】〈使う場所〉にColor rolesを入れて。実装は CSS の `--md-sys-color-*`。Compose の `MaterialTheme.colorScheme`、Flutter の `ColorScheme.fromSeed` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/icons",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Icons (Material Symbols)",
+   "name_ja": "アイコン（Material Symbols）",
+   "description_ja": "Material のアイコン集。太さ・塗り・光学サイズを変えられる可変フォント。",
+   "aliases": [
+    "アイコン集",
+    "マテリアルアイコン",
+    "シンボル"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "Material 3 公式『Icons (Material Symbols)』ページ",
+   "ref_url": "https://m3.material.io/styles/icons/overview",
+   "prompt": "【出典】Material 3 公式『Icons (Material Symbols)』ページ／https://m3.material.io/styles/icons/overview\n【作るもの】Icons (Material Symbols)（アイコン（Material Symbols））\n【再現する見た目・動き】表示サイズ 24dp（光学サイズ 20〜48）、種類は Outlined・Rounded・Sharp、可変軸は FILL 0〜1・wght 100〜700・GRAD -25〜200\n【指示】〈使う場所〉にIcons (Material Symbols)を入れて。実装は `<span class=\"material-symbols-outlined\">` と Google Fonts の `Material Symbols`。Compose の `Icons.Outlined.*`、Flutter の `Icon(Icons.*)` を使い、M3 のトークン値に従って。"
+  },
+  {
+   "id": "material3/state-layers",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "State layers",
+   "name_ja": "ステートレイヤー（状態の重ね色）",
+   "description_ja": "部品の上に文字色を半透明で重ね、hover・focus・押下・ドラッグを示す仕組み。",
+   "aliases": [
+    "ホバーで色が変わる",
+    "押した色",
+    "状態の変化"
+   ],
+   "preview": {
+    "demo": "hover",
+    "variant": "state"
+   },
+   "source_ref": "Material 3 公式『State layers』ページ",
+   "ref_url": "https://m3.material.io/foundations/interaction/states/state-layers",
+   "prompt": "【出典】Material 3 公式『State layers』ページ／https://m3.material.io/foundations/interaction/states/state-layers\n【作るもの】State layers（ステートレイヤー（状態の重ね色））\n【再現する見た目・動き】重ねる不透明度は hover 8%・focus 10%・pressed 10%・dragged 16%。disabled は文字 38%・コンテナ 12%\n【指示】〈使う場所〉にState layersを入れて。実装は CSS の `--md-sys-state-hover-state-layer-opacity` 等。Compose の `Indication` / `ripple`、Flutter の `WidgetStateProperty` / `InkWell` を使い、M3 のトークン値に従って。"
+  }
+ ]
+}

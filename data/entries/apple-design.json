@@ -1,0 +1,323 @@
+{
+  "source": {
+    "id": "apple-design",
+    "type": "skill",
+    "name": "Apple Design",
+    "ref": "~/.claude/skills/apple-design",
+    "added_at": "2026-10-22"
+  },
+  "entries": [
+    {
+      "id": "apple-design/rubber-banding",
+      "kind": "motion",
+      "category": "scroll",
+      "name_en": "Rubber-banding",
+      "name_ja": "端で引っ張ると抵抗して戻る動き",
+      "description_ja": "端を越えて引っ張るほど指に付いてこなくなり、離すと戻る。硬く止まらず「これ以上ない」ことを伝える。",
+      "aliases": [
+        "ゴムみたいに伸びる",
+        "端でびよーん",
+        "引っ張って戻る",
+        "オーバースクロール"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『9. Rubber-banding — soft boundaries』節／https://developer.apple.com/design/human-interface-guidelines/scroll-views\n【作るもの】Rubber-banding（端で引っ張ると抵抗して戻る動き）\n【再現する見た目・動き】端を越えて引くほど指に付いてこなくなる。rubberband(overshoot, dimension, constant=0.55) = overshoot*dimension*0.55 / (dimension + 0.55*|overshoot|)。離すと少し行き過ぎてから戻る（プレビューの rubber と同じ）\n【指示】Apple HIG の Rubber-banding（端で引っ張ると抵抗して戻る）を〈リストのスクロール端〉に付けて。抵抗の係数は〈0.55〉。",
+      "preview": {
+        "demo": "drag",
+        "variant": "rubber"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『9. Rubber-banding — soft boundaries』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/scroll-views"
+    },
+    {
+      "id": "apple-design/spring-damping-response",
+      "kind": "motion",
+      "category": "easing",
+      "name_en": "Spring (damping ratio / response)",
+      "name_ja": "ばね（減衰比と応答時間）",
+      "description_ja": "固定時間でなく、ばねの性質で動く。減衰比1.0は揺れずに止まり、小さいほど弾む。",
+      "aliases": [
+        "ばね",
+        "ぷるんと止まる",
+        "バウンス",
+        "弾む"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『4. Behavior over animation — use springs』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Spring (damping ratio / response)（ばね（減衰比と応答時間））\n【再現する見た目・動き】既定は damping 1.0 / response 0.3〜0.4（揺れずに止まる）。弾ませるフリック後は damping 約0.8。プレビューの spring は cubic-bezier(.34,1.56,.64,1)\n【指示】Apple の Spring（damping 1.0 / response 0.3〜0.4）で〈カードの移動〉を動かして。弾ませるのは〈フリックした後〉だけにして。",
+      "preview": {
+        "demo": "ease",
+        "variant": "spring"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『4. Behavior over animation — use springs』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+    },
+    {
+      "id": "apple-design/velocity-handoff",
+      "kind": "motion",
+      "category": "easing",
+      "name_en": "Velocity handoff",
+      "name_ja": "指の速さを引き継ぐ",
+      "description_ja": "指を離した瞬間の速さのまま、ばねアニメーションに移る。ドラッグとアニメの継ぎ目が見えない。",
+      "aliases": [
+        "慣性で続く",
+        "離した勢いのまま",
+        "つなぎ目なし"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『5. Velocity handoff — the seam between drag and animation』節／https://developer.apple.com/design/human-interface-guidelines/gestures\n【作るもの】Velocity handoff（指の速さを引き継ぐ）\n【再現する見た目・動き】離した瞬間の指の速さを spring の初速にする。相対速度が要る API では relativeVelocity = gestureVelocity / (target − current)。離すとバネで戻る (.34,1.4,.64,1)\n【指示】Apple HIG の Velocity handoff（指の速さを引き継ぐ）を〈ドラッグして離すカード〉に付けて。離した時の速度を spring の初速にして。",
+      "preview": {
+        "demo": "drag"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『5. Velocity handoff — the seam between drag and animation』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/gestures"
+    },
+    {
+      "id": "apple-design/momentum-projection",
+      "kind": "motion",
+      "category": "scroll",
+      "name_en": "Momentum projection",
+      "name_ja": "勢いで着地点を先読みする",
+      "description_ja": "離したときの速さから止まる位置を予測し、その近くのスナップ位置へ飛ばす。軽いフリックでも次へ進む。",
+      "aliases": [
+        "フリックで次へ",
+        "勢いで飛ぶ",
+        "スナップ先を予測"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『6. Momentum projection — animate to where the gesture is *going*』節／https://developer.apple.com/design/human-interface-guidelines/sheets\n【作るもの】Momentum projection（勢いで着地点を先読みする）\n【再現する見た目・動き】project(v) = (v/1000) * d / (1 − d)、d = 0.998（素早くしたいときは 0.99）。着地点 = 現在位置 + project(離した速さ) の最寄りのスナップ位置。シートは translateY(100%)→30% で止まる\n【指示】Apple の Momentum projection（勢いで着地点を先読み）で〈ボトムシートのスナップ位置〉を決めて。減速率は〈0.998〉。",
+      "preview": {
+        "demo": "sheet"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『6. Momentum projection — animate to where the gesture is *going*』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/sheets"
+    },
+    {
+      "id": "apple-design/interruptible-animation",
+      "kind": "motion",
+      "category": "principle",
+      "name_en": "Interruptible animation",
+      "name_ja": "途中で掴んで逆戻しできる動き",
+      "description_ja": "動いている途中でも触れば止まり、逆向きにも戻せる。現在の見た目の位置から動き直す。",
+      "aliases": [
+        "途中で止められる",
+        "掴める",
+        "キャンセルできる"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『3. Interruptibility — the single most important principle』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Interruptible animation（途中で掴んで逆戻しできる動き）\n【再現する見た目・動き】動作中も入力を止めない。再開は目標値でなく画面上の現在値から。ジェスチャー駆動に CSS transition / @keyframes は使わず spring を使う。反転時は速度を引き継ぐ\n【指示】Apple HIG の Interruptible animation（途中で掴んで逆戻しできる）にして。〈シートの開閉〉は spring で、現在の位置から再開させて。",
+      "preview": {
+        "demo": "drag"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『3. Interruptibility — the single most important principle』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+    },
+    {
+      "id": "apple-design/direct-manipulation",
+      "kind": "motion",
+      "category": "scroll",
+      "name_en": "Direct manipulation (1:1 tracking)",
+      "name_ja": "指に吸い付くドラッグ",
+      "description_ja": "触れたところを基準に、指と要素が同じ量だけ動く。掴んだ位置はずれない。",
+      "aliases": [
+        "指に付いてくる",
+        "1対1",
+        "ぴったり追従"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『2. Direct manipulation — 1:1 tracking』節／https://developer.apple.com/design/human-interface-guidelines/gestures\n【作るもの】Direct manipulation (1:1 tracking)（指に吸い付くドラッグ）\n【再現する見た目・動き】指の動きに遅れず1:1で追従。Pointer Events と setPointerCapture を使い、掴んだ位置のずれ（grab offset）を保つ。方向確定の閾値は約10px\n【指示】Apple の Direct manipulation（1:1 tracking）で〈ドラッグできるパネル〉を作って。Pointer Events と setPointerCapture を使って。",
+      "preview": {
+        "demo": "drag"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『2. Direct manipulation — 1:1 tracking』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/gestures"
+    },
+    {
+      "id": "apple-design/spatial-consistency",
+      "kind": "motion",
+      "category": "principle",
+      "name_en": "Spatial consistency (symmetric paths)",
+      "name_ja": "出た道を通って戻る",
+      "description_ja": "右から入った画面は右へ消える。出入りの道筋をそろえて位置関係を保つ。",
+      "aliases": [
+        "同じ向きで戻る",
+        "出入りを揃える"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『7. Spatial consistency — symmetric paths, anchored origins』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Spatial consistency (symmetric paths)（出た道を通って戻る）\n【再現する見た目・動き】出た道を通って戻る（右から入ったら右へ消す）。transform-origin を押した要素に合わせ scale(.6)→1。往復の easing は逆の cubic-bezier で対称に\n【指示】Apple の Spatial consistency（出た道を通って戻る）で〈サイドパネル〉の出入りをそろえて。トリガー要素に transform-origin を合わせて。",
+      "preview": {
+        "demo": "popover"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『7. Spatial consistency — symmetric paths, anchored origins』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+    },
+    {
+      "id": "apple-design/gesture-direction-hint",
+      "kind": "motion",
+      "category": "principle",
+      "name_en": "Hint in the direction of the gesture",
+      "name_ja": "動く先を匂わせる途中の動き",
+      "description_ja": "結果の位置へ向かう途中の姿を見せ、次に何が起きるかを予告する。コントロールセンターのように指へ向かって伸びる。",
+      "aliases": [
+        "動く先を予告",
+        "指の方へ伸びる"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『8. Hint in the direction of the gesture』節／https://developer.apple.com/design/human-interface-guidelines/gestures\n【作るもの】Hint in the direction of the gesture（動く先を匂わせる途中の動き）\n【再現する見た目・動き】途中のコマが最終状態の向きを指すようにする（Control Center は指の方向に伸びる）。起点側を origin に scale(.6)→1 で開く\n【指示】Apple の Hint in the direction of the gesture を〈長押しで開くメニュー〉に使って。途中のコマが開く向きを指すようにして。",
+      "preview": {
+        "demo": "popover"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『8. Hint in the direction of the gesture』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/gestures"
+    },
+    {
+      "id": "apple-design/tap-highlight-on-down",
+      "kind": "motion",
+      "category": "feedback",
+      "name_en": "Respond on pointer-down",
+      "name_ja": "押した瞬間に反応する",
+      "description_ja": "指が触れた瞬間にハイライトや縮みを出し、指を離したときに実行する。待たされ感が出ない。",
+      "aliases": [
+        "押した瞬間",
+        "タップ反応",
+        "即反応"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『10. Gesture design details (the \"feel\" checklist)』節／https://developer.apple.com/design/human-interface-guidelines/gestures\n【作るもの】Respond on pointer-down（押した瞬間に反応する）\n【再現する見た目・動き】pointerdown で即ハイライト（scale(.97)、100ms）、click／pointerup で確定。押下は scale(.94)。ターゲット周囲に約10pxの余白、ドラッグで外せば取り消し\n【指示】Apple の Respond on pointer-down で〈ボタン〉を直して。pointerdown で scale(0.97) を100msで付けて、click で確定して。",
+      "preview": {
+        "demo": "hover",
+        "variant": "press"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『10. Gesture design details (the \"feel\" checklist)』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/gestures"
+    },
+    {
+      "id": "apple-design/materials-vibrancy",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Materials / Vibrancy (translucent chrome)",
+      "name_ja": "すりガラスの半透明バー",
+      "description_ja": "ナビやツールバーを半透明にぼかし、下をコンテンツが流れる。濃さで階層を示す。",
+      "aliases": [
+        "すりガラス",
+        "半透明バー",
+        "ぼかし背景",
+        "iOSのバー"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節／https://developer.apple.com/design/human-interface-guidelines/materials\n【作るもの】Materials / Vibrancy (translucent chrome)（すりガラスの半透明バー）\n【再現する見た目・動き】background: rgba(255,255,255,.6); backdrop-filter: blur(20px) saturate(180%); border-top: 1px solid rgba(255,255,255,.4)。プレビューは blur(12px) saturate(1.6)。半透明の面を重ねない\n【指示】Apple HIG の Materials（vibrancy）で〈ヘッダー〉を半透明にして。backdrop-filter: blur(20px) saturate(180%)、上端に明るい細線を足して。",
+      "preview": {
+        "demo": "glass"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/materials"
+    },
+    {
+      "id": "apple-design/scroll-edge-effect",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Scroll edge effect",
+      "name_ja": "境目がにじむスクロール端",
+      "description_ja": "固定ヘッダーとの境に線を引かず、ぼかしやグラデーションで内容をにじませて消す。",
+      "aliases": [
+        "線なしの境目",
+        "にじんで消える",
+        "ヘッダー下のぼかし"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節／https://developer.apple.com/design/human-interface-guidelines/scroll-views\n【作るもの】Scroll edge effect（境目がにじむスクロール端）\n【再現する見た目・動き】固定ヘッダーの1px境界線をやめ、内容と重なる所だけ小さな blur のグラデーションマスクで切り替える（プレビューは上端の半透明ぼかしバー）\n【指示】Apple の Scroll edge effect で〈固定ヘッダー〉の下の境界線をやめて、blur のグラデーションマスクに変えて。",
+      "preview": {
+        "demo": "scroll",
+        "variant": "edge"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/scroll-views"
+    },
+    {
+      "id": "apple-design/materialize-transition",
+      "kind": "motion",
+      "category": "entrance",
+      "name_en": "Materialize (blur + scale on enter)",
+      "name_ja": "ぼけから像を結んで現れる",
+      "description_ja": "ガラス面がぼかしと拡大を伴って現れ、本物の素材が届いたように見せる。フェードだけより質感が出る。",
+      "aliases": [
+        "ぼやけて現れる",
+        "ピントが合う",
+        "ガラスが出る"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節／https://developer.apple.com/design/human-interface-guidelines/materials\n【作るもの】Materialize (blur + scale on enter)（ぼけから像を結んで現れる）\n【再現する見た目・動き】ガラス面の出入りは blur 半径と scale を同時に動かす。プレビューは blur(10px)+scale(1.08)→0、2.6秒周期。実装例は blur 12px→0、scale .96→1、opacity も同時\n【指示】Apple の Materialize で〈ガラスのポップアップ〉を出して。blur を〈12px→0〉、scale を〈0.96→1〉、opacity と一緒に動かして。",
+      "preview": {
+        "demo": "enter",
+        "variant": "blur"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/materials"
+    },
+    {
+      "id": "apple-design/dim-and-push-back",
+      "kind": "ui",
+      "category": "overlay",
+      "name_en": "Dim to focus / push back (stacked sheets)",
+      "name_ja": "背景を暗くして奥へ引く",
+      "description_ja": "モーダル作業では背景を暗くして少し奥に下げ、重ねるシートは親を段階的に暗くする。",
+      "aliases": [
+        "背景が沈む",
+        "シートが重なる",
+        "奥に下がる"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節／https://developer.apple.com/design/human-interface-guidelines/sheets\n【作るもの】Dim to focus / push back (stacked sheets)（背景を暗くして奥へ引く）\n【再現する見た目・動き】モーダルは背面をスクリムで暗くし scale(.93〜.94) に下げる。重ねるごとに親を段階的に暗く・小さく。並行して使うパネルはスクリム無し\n【指示】Apple の Dim to focus / push back で〈モーダルシート〉を作って。背面をスクリムで暗くして scale(0.94) に下げて。",
+      "preview": {
+        "demo": "sheet",
+        "variant": "stack"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『12. Materials & depth — translucency conveys hierarchy』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/sheets"
+    },
+    {
+      "id": "apple-design/reduced-transparency",
+      "kind": "motion",
+      "category": "principle",
+      "name_en": "prefers-reduced-transparency / reduced motion fallback",
+      "name_ja": "動きと透明を減らす代替表示",
+      "description_ja": "設定に合わせ、スライドやばねは短いフェードに、半透明はほぼ不透明にする。反応は残す。",
+      "aliases": [
+        "動きを減らす",
+        "アクセシビリティ設定",
+        "酔わない"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『14. Reduced motion & accessibility』節／https://developer.apple.com/design/human-interface-guidelines/accessibility\n【作るもの】prefers-reduced-transparency / reduced motion fallback（動きと透明を減らす代替表示）\n【再現する見た目・動き】prefers-reduced-motion: reduce は移動なしの opacity 200ms のフェードに。prefers-reduced-transparency: reduce は背景を不透明にして blur を外す。prefers-contrast: more は枠線つきの不透明\n【指示】Apple HIG の reduced motion と reduced transparency に対応して。〈シート〉は opacity の200msだけにして、半透明バーは不透明にして。",
+      "preview": {
+        "demo": "principle",
+        "variant": "reduced"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『14. Reduced motion & accessibility』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+    },
+    {
+      "id": "apple-design/multimodal-feedback",
+      "kind": "motion",
+      "category": "feedback",
+      "name_en": "Multimodal feedback (motion + sound + haptics)",
+      "name_ja": "動き・音・触感を同時に返す",
+      "description_ja": "切り替わった瞬間に見た目・音・振動を同じフレームでそろえて返す。大事な場面だけに使う。",
+      "aliases": [
+        "ブルッと振動",
+        "カチッと音",
+        "触感フィードバック"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『13. Multimodal feedback — motion + sound + haptics』節／https://developer.apple.com/design/human-interface-guidelines/playing-haptics\n【作るもの】Multimodal feedback (motion + sound + haptics)（動き・音・触感を同時に返す）\n【再現する見た目・動き】動き・音・触感を同じフレームで出す（因果・調和・必要性の3原則）。触感（Vibration API）は成功・確定などの場面だけ。つまみはバネで右へ動き色が変わる\n【指示】Apple の Multimodal feedback で〈トグルの切り替え〉に動きと触感を同時に付けて。Vibration API は〈成功と確定〉だけ。",
+      "preview": {
+        "demo": "switch"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『13. Multimodal feedback — motion + sound + haptics』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics"
+    },
+    {
+      "id": "apple-design/optical-tracking",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Size-specific tracking and leading",
+      "name_ja": "大きさ別の字間と行間",
+      "description_ja": "大きい見出しは字間を詰め行間も狭く、小さい本文は字間を少し広げ行間を取る。",
+      "aliases": [
+        "見出しを詰める",
+        "字間の調整",
+        "タイポの整え"
+      ],
+      "prompt": "【出典】スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『15. Typography — optical sizing, tracking, leading』節／https://developer.apple.com/design/human-interface-guidelines/typography\n【作るもの】Size-specific tracking and leading（大きさ別の字間と行間）\n【再現する見た目・動き】字間と行間はサイズ別。大きい見出しは letter-spacing -0.02em・line-height 1.05、本文は字間0付近・行間1.5。font-optical-sizing: auto、システムフォント優先\n【指示】Apple の Size-specific tracking（大きさ別の字間）で〈見出し〉を整えて。字間は〈-0.02em〉、行間は〈1.05〉。",
+      "preview": {
+        "demo": "typescale"
+      },
+      "source_ref": "スキル apple-design（~/.agents/skills/apple-design/SKILL.md）の『15. Typography — optical sizing, tracking, leading』節",
+      "ref_url": "https://developer.apple.com/design/human-interface-guidelines/typography"
+    }
+  ]
+}

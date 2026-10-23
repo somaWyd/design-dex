@@ -1,0 +1,343 @@
+{
+ "source": {
+  "id": "emil-design-eng",
+  "type": "skill",
+  "name": "Emil Kowalski Design Engineering",
+  "ref": "~/.claude/skills/emil-design-eng",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "emil-design-eng/active-press-scale",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Scale on :active (press feedback)",
+   "name_ja": "押すと少し縮む",
+   "description_ja": "押している間だけ0.97倍に縮み、「聞いている」ことを伝える。0.95〜0.98の控えめな量にする。",
+   "aliases": [
+    "ぎゅっと押す",
+    "押し込み",
+    "ぽよっと縮む"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Buttons must feel responsive』節／https://developer.mozilla.org/en-US/docs/Web/CSS/:active\n【作るもの】Scale on :active (press feedback)（押すと少し縮む）\n【再現する見た目・動き】押している間だけ transform: scale(0.97)（0.95〜0.98の範囲）、160ms ease-out。プレビューは押下で scale(.94)\n【指示】Scale on :active (press feedback) を次の条件で実装して。〈全ボタン〉に押し込みフィードバックを入れて。:active で scale(0.97) にするだけで、他は動かさない。",
+   "preview": {
+    "demo": "hover",
+    "variant": "press"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Buttons must feel responsive』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:active"
+  },
+  {
+   "id": "emil-design-eng/origin-aware-popover",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Origin-aware popover",
+   "name_ja": "きっかけから広がるポップオーバー",
+   "description_ja": "ポップオーバーを、画面中央ではなく押したボタンの位置から拡大して出す。モーダルは中央のままでよい。",
+   "aliases": [
+    "ボタンから出る",
+    "押した所から広がる",
+    "ふわっと出る"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Make popovers origin-aware』節／https://emilkowal.ski/ui/7-practical-animation-tips\n【作るもの】Origin-aware popover（きっかけから広がるポップオーバー）\n【再現する見た目・動き】transform-origin を押したボタン側（左上）にして scale(.6)→1。中央から出す形（center）は悪い例。モーダルは中央のままでよい\n【指示】Origin-aware popover を次の条件で実装して。〈ドロップダウン〉をトリガー位置から広がるようにして。transform-origin を Radix の CSS 変数（またはトリガー位置）に合わせる。",
+   "preview": {
+    "demo": "popover"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Make popovers origin-aware』節",
+   "ref_url": "https://emilkowal.ski/ui/7-practical-animation-tips"
+  },
+  {
+   "id": "emil-design-eng/never-scale-zero",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Never animate from scale(0)",
+   "name_ja": "ゼロから拡大しない",
+   "description_ja": "0倍から出ず、0.9〜0.95倍と透明度で出す。何もない所から湧いたように見せない。",
+   "aliases": [
+    "ぽんと出る",
+    "小さい所から出る",
+    "自然な出現"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Never animate from scale(0)』節／https://emilkowal.ski/ui/7-practical-animation-tips\n【作るもの】Never animate from scale(0)（ゼロから拡大しない）\n【再現する見た目・動き】scale(0.9〜0.95)＋opacity 0 から scale(1)＋opacity 1 へ出す。プレビューは scale(.8)→1、2.6秒周期・ease-out\n【指示】Never animate from scale(0) を次の条件で実装して。〈ポップアップ〉の出現を scale(0) 始まりから scale(0.95)＋opacity 0 始まりに直して。",
+   "preview": {
+    "demo": "enter",
+    "variant": "scale"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Never animate from scale(0)』節",
+   "ref_url": "https://emilkowal.ski/ui/7-practical-animation-tips"
+  },
+  {
+   "id": "emil-design-eng/tooltip-skip-delay",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Tooltip instant on subsequent hover",
+   "name_ja": "2つ目から待たずに出るツールチップ",
+   "description_ja": "最初のツールチップだけ少し待ち、開いた後は隣へ移ると遅延も動きもなしで即表示する。",
+   "aliases": [
+    "すぐ出る説明",
+    "ホバー説明",
+    "連続ツールチップ"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Tooltips: skip delay on subsequent hovers』節／https://www.radix-ui.com/primitives/docs/components/tooltip\n【作るもの】Tooltip instant on subsequent hover（2つ目から待たずに出るツールチップ）\n【再現する見た目・動き】小さな黒い吹き出し。最初の1個だけ遅延あり、開いた後に隣へ移ると遅延も動きもなし（data-instant で transition-duration: 0ms）\n【指示】Tooltip instant on subsequent hover を次の条件で実装して。〈ツールバー〉のツールチップを、最初だけ遅延、2つ目以降は即表示にして。",
+   "preview": {
+    "demo": "popover",
+    "variant": "tooltip"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Tooltips: skip delay on subsequent hovers』節",
+   "ref_url": "https://www.radix-ui.com/primitives/docs/components/tooltip"
+  },
+  {
+   "id": "emil-design-eng/clip-path-reveal",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "clip-path inset reveal",
+   "name_ja": "切り抜きで現れる",
+   "description_ja": "inset() の切り抜き範囲を動かして、左から右へなど片側から現れさせる。GPUで動く軽い方法。",
+   "aliases": [
+    "ワイプで出る",
+    "端から見える",
+    "マスクで出現"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Image reveals on scroll』節／https://emilkowal.ski/ui/the-magic-of-clip-path\n【作るもの】clip-path inset reveal（切り抜きで現れる）\n【再現する見た目・動き】clip-path: inset(0 0 100% 0)→inset(0 0 0 0)（上端から下へ）。once で1回だけ。プレビューは inset(0 100% 0 0)→inset(0)、cubic-bezier(.2,.8,.2,1)\n【指示】clip-path inset reveal を次の条件で実装して。〈画像〉がスクロールで視界に入ったとき、clip-path の inset で出して。",
+   "preview": {
+    "demo": "enter",
+    "variant": "clip"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Image reveals on scroll』節",
+   "ref_url": "https://emilkowal.ski/ui/the-magic-of-clip-path"
+  },
+  {
+   "id": "emil-design-eng/hold-to-delete",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Hold-to-delete (clip-path overlay)",
+   "name_ja": "長押しで進む削除ボタン",
+   "description_ja": "押し続けると色の帯が2秒かけて端まで伸び、満ちたら実行。離すと素早く戻る。",
+   "aliases": [
+    "長押し確認",
+    "押し続ける",
+    "ゲージが溜まる"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Hold-to-delete pattern』節／https://emilkowal.ski/ui/the-magic-of-clip-path\n【作るもの】Hold-to-delete (clip-path overlay)（長押しで進む削除ボタン）\n【再現する見た目・動き】押している間は色の帯を clip-path で2秒 linear で満たし、離したら200ms ease-out で戻す。プレビューは左から scaleX 0→1 を約1.5秒\n【指示】Hold-to-delete (clip-path overlay) を次の条件で実装して。〈削除ボタン〉を長押し確定式にして。満ちたら実行、途中で離したら素早く戻す。",
+   "preview": {
+    "demo": "hold"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Hold-to-delete pattern』節",
+   "ref_url": "https://emilkowal.ski/ui/the-magic-of-clip-path"
+  },
+  {
+   "id": "emil-design-eng/clip-path-tabs",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Tabs with clip-path color transition",
+   "name_ja": "色が滑らかに移るタブ",
+   "description_ja": "タブ一覧を2重に作り、選択中スタイルの方を切り抜いて見せる。切り替えると色の変化がなめらかになる。",
+   "aliases": [
+    "スライドするタブ",
+    "選択の色が移る",
+    "タブ切替"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Tabs with perfect color transitions』節／https://emilkowal.ski/ui/the-magic-of-clip-path\n【作るもの】Tabs with clip-path color transition（色が滑らかに移るタブ）\n【再現する見た目・動き】タブ一覧を2重に作り、上の層を選択中スタイルにして clip-path で選択中の幅だけ見せる。切り替えは clip-path だけを動かす。プレビューは下線の移動\n【指示】Tabs with clip-path color transition を次の条件で実装して。〈タブ切り替え〉を作って。選択中スタイルの複製をクリップし、動かすのは clip-path だけにする。",
+   "preview": {
+    "demo": "nav",
+    "variant": "tabs"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Tabs with perfect color transitions』節",
+   "ref_url": "https://emilkowal.ski/ui/the-magic-of-clip-path"
+  },
+  {
+   "id": "emil-design-eng/comparison-slider",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Comparison slider (clip-path)",
+   "name_ja": "ビフォーアフタースライダー",
+   "description_ja": "2枚の画像を重ね、上の画像を左右に切り抜く境界線をドラッグで動かして比べる。",
+   "aliases": [
+    "before/after",
+    "左右で比較",
+    "スライドで比べる"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Comparison sliders』節／https://emilkowal.ski/ui/the-magic-of-clip-path\n【作るもの】Comparison slider (clip-path)（ビフォーアフタースライダー）\n【再現する見た目・動き】2枚を重ね、上の画像を clip-path: inset(0 50% 0 0) から始めて、ドラッグで左右の値を変える\n【指示】Comparison slider (clip-path) を次の条件で実装して。〈2枚の画像〉を比べられるスライダーにして。",
+   "preview": {
+    "demo": "compare"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Comparison sliders』節",
+   "ref_url": "https://emilkowal.ski/ui/the-magic-of-clip-path"
+  },
+  {
+   "id": "emil-design-eng/blur-crossfade",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Blur to mask crossfade",
+   "name_ja": "ぼかしでつなぐクロスフェード",
+   "description_ja": "2つの状態が重なって見えるときに、2px程度のぼかしを足して1つに変形したように見せる。",
+   "aliases": [
+    "ぼやけて切り替え",
+    "なじませる",
+    "二重に見える"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Use blur to mask imperfect transitions』節／https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur\n【作るもの】Blur to mask crossfade（ぼかしでつなぐクロスフェード）\n【再現する見た目・動き】transition 中だけ filter: blur(2px)＋opacity 0.7 を足して、重なって見える2状態を1つに見せる。プレビューは消える側に blur(6px)\n【指示】Blur to mask crossfade を次の条件で実装して。〈ボタンの文言切り替え〉の二重写りをぼかしで隠して。",
+   "preview": {
+    "demo": "cross",
+    "variant": "blur"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Use blur to mask imperfect transitions』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur"
+  },
+  {
+   "id": "emil-design-eng/starting-style-entry",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "@starting-style entry animation",
+   "name_ja": "表示された瞬間の初期状態指定",
+   "description_ja": "要素が現れた時の最初の状態をCSSだけで決め、JavaScriptなしで出現アニメを付ける。",
+   "aliases": [
+    "出現アニメ",
+    "初期状態",
+    "CSSだけで出す"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Animate enter states with @starting-style』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style\n【作るもの】@starting-style entry animation（表示された瞬間の初期状態指定）\n【再現する見た目・動き】@starting-style で opacity 0・translateY(100%) から、400ms で出現（JavaScript なし）。プレビューは下から translateY(70px)→0\n【指示】@starting-style entry animation を次の条件で実装して。〈トースト〉の出現を @starting-style だけで作って。",
+   "preview": {
+    "demo": "toast"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Animate enter states with @starting-style』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style"
+  },
+  {
+   "id": "emil-design-eng/translate-percent",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "translateY percentage (self-size offset)",
+   "name_ja": "自分の高さ分だけずらす",
+   "description_ja": "translateY(100%) のように、要素自身の大きさ分だけ動かす。高さが変わっても位置がずれない。",
+   "aliases": [
+    "自分の高さ分移動",
+    "画面外から出す"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『translateY with percentages』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate\n【作るもの】translateY percentage (self-size offset)（自分の高さ分だけずらす）\n【再現する見た目・動き】px 固定でなく translateY(100%) のように自身の高さ分だけ動かす。プレビューは translateY(100%)→30%\n【指示】translateY percentage (self-size offset) を次の条件で実装して。〈ドロワー〉の隠し位置を px でなく translateY(100%) にして。",
+   "preview": {
+    "demo": "sheet"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『translateY with percentages』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate"
+  },
+  {
+   "id": "emil-design-eng/momentum-dismissal",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Momentum-based dismissal",
+   "name_ja": "勢いで閉じるスワイプ",
+   "description_ja": "距離が足りなくても、速さが一定（約0.11）を超えれば閉じる。軽く払うだけで消せる。",
+   "aliases": [
+    "払って消す",
+    "フリックで閉じる",
+    "スワイプ削除"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Momentum-based dismissal』節／https://emilkowal.ski/ui/building-a-drawer-component\n【作るもの】Momentum-based dismissal（勢いで閉じるスワイプ）\n【再現する見た目・動き】速度 = |移動距離| ÷ 経過時間 が約0.11を超えたら、距離が足りなくても閉じる。プレビューは右へ払って消える\n【指示】Momentum-based dismissal を次の条件で実装して。〈トースト〉をスワイプで閉じられるようにして。距離のしきい値か速度0.11超えのどちらかで閉じる。",
+   "preview": {
+    "demo": "drag",
+    "variant": "swipe"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Momentum-based dismissal』節",
+   "ref_url": "https://emilkowal.ski/ui/building-a-drawer-component"
+  },
+  {
+   "id": "emil-design-eng/boundary-damping",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Damping at boundaries",
+   "name_ja": "端で減速する",
+   "description_ja": "端を越えて引くほど動きが小さくなる。急に止まらず、徐々に重くなる。",
+   "aliases": [
+    "端で重くなる",
+    "抵抗がある",
+    "引っ張りに抵抗"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Damping at boundaries』節／https://emilkowal.ski/ui/building-a-drawer-component\n【作るもの】Damping at boundaries（端で減速する）\n【再現する見た目・動き】端を越えて引くほど動きを減らす。プレビューは端を越えると抵抗し、戻るとき少し行き過ぎる\n【指示】Damping at boundaries を次の条件で実装して。〈ドロワーを上に引く動き〉に、越えた量が増えるほど動きが小さくなる減衰を付けて。",
+   "preview": {
+    "demo": "drag",
+    "variant": "rubber"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Damping at boundaries』節",
+   "ref_url": "https://emilkowal.ski/ui/building-a-drawer-component"
+  },
+  {
+   "id": "emil-design-eng/multi-touch-protection",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Multi-touch protection",
+   "name_ja": "別の指を無視する",
+   "description_ja": "ドラッグ開始後に触れた別の指を無視して、持った位置が飛ばないようにする。",
+   "aliases": [
+    "2本目の指を無視",
+    "ドラッグが飛ばない"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Multi-touch protection』節／https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId\n【作るもの】Multi-touch protection（別の指を無視する）\n【再現する見た目・動き】ドラッグ開始時の pointerId を覚え、それ以外の指は無視する。プレビューは掴んで動かし離すとバネ (.34,1.4,.64,1) で戻る\n【指示】Multi-touch protection を次の条件で実装して。〈ドラッグ要素〉に、開始後は最初の pointerId 以外を無視する処理を入れて。",
+   "preview": {
+    "demo": "drag"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Multi-touch protection』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId"
+  },
+  {
+   "id": "emil-design-eng/spring-mouse-follow",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Spring-based mouse interaction (useSpring)",
+   "name_ja": "ばねでマウスに付いてくる",
+   "description_ja": "マウス位置に直接合わせず、ばねを通すことで慣性のある追従にする。飾りの動きにだけ使う。",
+   "aliases": [
+    "マウス追従",
+    "ぬるっと付いてくる",
+    "慣性で追う"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Spring-based mouse interactions』節／https://motion.dev/docs/react-use-spring\n【作るもの】Spring-based mouse interaction (useSpring)（ばねでマウスに付いてくる）\n【再現する見た目・動き】useSpring に stiffness 100・damping 10（mass 1）。プレビューは rotateX/Y ±12〜16deg を3秒で往復\n【指示】Spring-based mouse interaction (useSpring) を次の条件で実装して。〈マウスに合わせて傾くカード〉を作って。飾りの動きにだけ使い、機能的な表示には使わない。",
+   "preview": {
+    "demo": "transform",
+    "variant": "tilt"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Spring-based mouse interactions』節",
+   "ref_url": "https://motion.dev/docs/react-use-spring"
+  },
+  {
+   "id": "emil-design-eng/strong-custom-easing",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Strong custom easing curves",
+   "name_ja": "強めのオリジナル速度カーブ",
+   "description_ja": "標準のeaseは弱いので、最初が速く最後に深く減速する自作カーブを使う。動きにキレが出る。",
+   "aliases": [
+    "キレのある動き",
+    "ease-outを強く",
+    "気持ちいい減速"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『What easing should it use?』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Strong custom easing curves（強めのオリジナル速度カーブ）\n【再現する見た目・動き】ease-out は cubic-bezier(0.23, 1, 0.32, 1)、ドロワーは (0.32, 0.72, 0, 1)。プレビューは (.16,1,.3,1)\n【指示】Strong custom easing curves を次の条件で実装して。〈UIの動き全般〉の標準 ease を上の自作カーブに置き換えて。",
+   "preview": {
+    "demo": "ease",
+    "variant": "custom"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『What easing should it use?』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "emil-design-eng/no-animation-high-frequency",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "No animation for high-frequency actions",
+   "name_ja": "毎日何百回の操作は動かさない",
+   "description_ja": "キーボード操作やコマンドパレットなど頻繁な操作は、動きを付けない方が速く感じる。",
+   "aliases": [
+    "動かさない選択",
+    "アニメ削除",
+    "速く感じる"
+   ],
+   "prompt": "【出典】スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Should this animate at all?』節／https://emilkowal.ski/ui/you-dont-need-animations\n【作るもの】No animation for high-frequency actions（毎日何百回の操作は動かさない）\n【再現する見た目・動き】動かさない（移動なし・フェードも不要）。1日100回以上使う操作が対象。プレビューは移動なしのフェードだけ\n【指示】No animation for high-frequency actions を次の条件で実装して。〈コマンドパレットの開閉〉のアニメーションを外して。",
+   "preview": {
+    "demo": "principle",
+    "variant": "reduced"
+   },
+   "source_ref": "スキル emil-design-eng（~/.agents/skills/emil-design-eng/SKILL.md）の『Should this animate at all?』節",
+   "ref_url": "https://emilkowal.ski/ui/you-dont-need-animations"
+  }
+ ]
+}

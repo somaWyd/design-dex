@@ -1,0 +1,25 @@
+name: macOS app (Release)
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: bash mac/build_app.sh
+      - run: ditto -c -k --keepParent mac/build/DesignDex.app DesignDex-macOS.zip
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: DesignDex-macOS.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DesignDex-macOS
+          path: DesignDex-macOS.zip

@@ -1,0 +1,2025 @@
+{
+ "source": {
+  "id": "typography",
+  "type": "doc",
+  "name": "タイポグラフィ（Google Fonts・各社公式）",
+  "ref": "https://fonts.google.com",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "typography/noto-sans-jp",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Noto Sans JP",
+   "name_ja": "ノトサンズ（標準ゴシック）",
+   "description_ja": "クセがなく読みやすい標準のゴシック体。迷ったらこれ。",
+   "aliases": [
+    "普通のゴシック",
+    "標準",
+    "無難",
+    "Webの定番"
+   ],
+   "preview": {
+    "font": "Noto Sans JP",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Noto Sans JP』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Noto+Sans+JP",
+   "prompt": "【出典】Google Fonts『Noto Sans JP』の書体ページ／https://fonts.google.com/specimen/Noto+Sans+JP\n【作るもの】Noto Sans JP（ノトサンズ（標準ゴシック））\n【再現する見た目・動き】font-family: \"Noto Sans JP\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Noto_Sans_JP）。\n【指示】〈使う場所〉にNoto Sans JPを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/noto-serif-jp",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Noto Serif JP",
+   "name_ja": "ノトセリフ（標準明朝）",
+   "description_ja": "端正で落ち着いた明朝体。記事や高級感のある見出し向け。",
+   "aliases": [
+    "明朝",
+    "上品",
+    "本文向け",
+    "新聞みたい"
+   ],
+   "preview": {
+    "font": "Noto Serif JP",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Noto Serif JP』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Noto+Serif+JP",
+   "prompt": "【出典】Google Fonts『Noto Serif JP』の書体ページ／https://fonts.google.com/specimen/Noto+Serif+JP\n【作るもの】Noto Serif JP（ノトセリフ（標準明朝））\n【再現する見た目・動き】font-family: \"Noto Serif JP\", serif; 推奨太さ 400/600/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Noto_Serif_JP）。\n【指示】〈使う場所〉にNoto Serif JPを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/m-plus-1p",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "M PLUS 1p",
+   "name_ja": "エムプラス1p（すっきりゴシック）",
+   "description_ja": "細めで軽く、字形がすっきりしたゴシック体。",
+   "aliases": [
+    "細身",
+    "軽い",
+    "モダン",
+    "すっきり"
+   ],
+   "preview": {
+    "font": "M PLUS 1p",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『M PLUS 1p』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/M+PLUS+1p",
+   "prompt": "【出典】Google Fonts『M PLUS 1p』の書体ページ／https://fonts.google.com/specimen/M+PLUS+1p\n【作るもの】M PLUS 1p（エムプラス1p（すっきりゴシック））\n【再現する見た目・動き】font-family: \"M PLUS 1p\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は M_PLUS_1p）。\n【指示】〈使う場所〉にM PLUS 1pを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/m-plus-rounded-1c",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "M PLUS Rounded 1c",
+   "name_ja": "エムプラス丸ゴシック",
+   "description_ja": "角が丸いやさしい丸ゴシック。親しみやすいアプリ向け。",
+   "aliases": [
+    "丸っこい",
+    "やさしい",
+    "かわいい",
+    "丸ゴ"
+   ],
+   "preview": {
+    "font": "M PLUS Rounded 1c",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『M PLUS Rounded 1c』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/M+PLUS+Rounded+1c",
+   "prompt": "【出典】Google Fonts『M PLUS Rounded 1c』の書体ページ／https://fonts.google.com/specimen/M+PLUS+Rounded+1c\n【作るもの】M PLUS Rounded 1c（エムプラス丸ゴシック）\n【再現する見た目・動き】font-family: \"M PLUS Rounded 1c\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は M_PLUS_Rounded_1c）。\n【指示】〈使う場所〉にM PLUS Rounded 1cを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/zen-kaku-gothic-new",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Zen Kaku Gothic New",
+   "name_ja": "ゼン角ゴシック",
+   "description_ja": "現代的で字面が整った角ゴシック。見出しにもUIにも使える。",
+   "aliases": [
+    "おしゃれなゴシック",
+    "モダン",
+    "きれい",
+    "角ゴ"
+   ],
+   "preview": {
+    "font": "Zen Kaku Gothic New",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Zen Kaku Gothic New』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Zen+Kaku+Gothic+New",
+   "prompt": "【出典】Google Fonts『Zen Kaku Gothic New』の書体ページ／https://fonts.google.com/specimen/Zen+Kaku+Gothic+New\n【作るもの】Zen Kaku Gothic New（ゼン角ゴシック）\n【再現する見た目・動き】font-family: \"Zen Kaku Gothic New\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Zen_Kaku_Gothic_New）。\n【指示】〈使う場所〉にZen Kaku Gothic Newを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/zen-maru-gothic",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Zen Maru Gothic",
+   "name_ja": "ゼン丸ゴシック",
+   "description_ja": "やわらかく上品な丸ゴシック。かわいすぎず落ち着く。",
+   "aliases": [
+    "丸っこい",
+    "やさしい",
+    "上品な丸ゴ",
+    "丸ゴ"
+   ],
+   "preview": {
+    "font": "Zen Maru Gothic",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Zen Maru Gothic』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Zen+Maru+Gothic",
+   "prompt": "【出典】Google Fonts『Zen Maru Gothic』の書体ページ／https://fonts.google.com/specimen/Zen+Maru+Gothic\n【作るもの】Zen Maru Gothic（ゼン丸ゴシック）\n【再現する見た目・動き】font-family: \"Zen Maru Gothic\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Zen_Maru_Gothic）。\n【指示】〈使う場所〉にZen Maru Gothicを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/zen-old-mincho",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Zen Old Mincho",
+   "name_ja": "ゼン オールド明朝",
+   "description_ja": "古い活字の趣がある明朝体。本や雑誌のような雰囲気。",
+   "aliases": [
+    "レトロな明朝",
+    "古風",
+    "文芸",
+    "雑誌風"
+   ],
+   "preview": {
+    "font": "Zen Old Mincho",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Zen Old Mincho』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Zen+Old+Mincho",
+   "prompt": "【出典】Google Fonts『Zen Old Mincho』の書体ページ／https://fonts.google.com/specimen/Zen+Old+Mincho\n【作るもの】Zen Old Mincho（ゼン オールド明朝）\n【再現する見た目・動き】font-family: \"Zen Old Mincho\", serif; 推奨太さ 400/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Zen_Old_Mincho）。\n【指示】〈使う場所〉にZen Old Minchoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/biz-udpgothic",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "BIZ UDPGothic",
+   "name_ja": "BIZ UDPゴシック",
+   "description_ja": "誤読しにくい形を重視したユニバーサルデザインのゴシック。",
+   "aliases": [
+    "読みやすい",
+    "UD",
+    "ユニバーサル",
+    "見間違えない"
+   ],
+   "preview": {
+    "font": "BIZ UDPGothic",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『BIZ UDPGothic』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/BIZ+UDPGothic",
+   "prompt": "【出典】Google Fonts『BIZ UDPGothic』の書体ページ／https://fonts.google.com/specimen/BIZ+UDPGothic\n【作るもの】BIZ UDPGothic（BIZ UDPゴシック）\n【再現する見た目・動き】font-family: \"BIZ UDPGothic\", sans-serif; 推奨太さ 400/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は BIZ_UDPGothic）。\n【指示】〈使う場所〉にBIZ UDPGothicを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/biz-udpmincho",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "BIZ UDPMincho",
+   "name_ja": "BIZ UDP明朝",
+   "description_ja": "小さくても読みやすいユニバーサルデザインの明朝。",
+   "aliases": [
+    "読みやすい明朝",
+    "UD明朝",
+    "資料向け"
+   ],
+   "preview": {
+    "font": "BIZ UDPMincho",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『BIZ UDPMincho』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/BIZ+UDPMincho",
+   "prompt": "【出典】Google Fonts『BIZ UDPMincho』の書体ページ／https://fonts.google.com/specimen/BIZ+UDPMincho\n【作るもの】BIZ UDPMincho（BIZ UDP明朝）\n【再現する見た目・動き】font-family: \"BIZ UDPMincho\", serif; 推奨太さ 400/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は BIZ_UDPMincho）。\n【指示】〈使う場所〉にBIZ UDPMinchoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/kosugi-maru",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Kosugi Maru",
+   "name_ja": "小杉丸",
+   "description_ja": "線の太さがそろった素朴な丸ゴシック。1種類の太さのみ。",
+   "aliases": [
+    "丸っこい",
+    "素朴",
+    "やわらかい",
+    "丸ゴ"
+   ],
+   "preview": {
+    "font": "Kosugi Maru",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Kosugi Maru』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Kosugi+Maru",
+   "prompt": "【出典】Google Fonts『Kosugi Maru』の書体ページ／https://fonts.google.com/specimen/Kosugi+Maru\n【作るもの】Kosugi Maru（小杉丸）\n【再現する見た目・動き】font-family: \"Kosugi Maru\", sans-serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Kosugi_Maru）。\n【指示】〈使う場所〉にKosugi Maruを使って。太さは400のみ。太字は疑似ボールドになるので避ける。"
+  },
+  {
+   "id": "typography/sawarabi-gothic",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Sawarabi Gothic",
+   "name_ja": "さわらびゴシック",
+   "description_ja": "細くやや小ぶりで、すっきりした古くからあるWeb向けゴシック。",
+   "aliases": [
+    "細いゴシック",
+    "さっぱり",
+    "小ぶり"
+   ],
+   "preview": {
+    "font": "Sawarabi Gothic",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Sawarabi Gothic』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Sawarabi+Gothic",
+   "prompt": "【出典】Google Fonts『Sawarabi Gothic』の書体ページ／https://fonts.google.com/specimen/Sawarabi+Gothic\n【作るもの】Sawarabi Gothic（さわらびゴシック）\n【再現する見た目・動き】font-family: \"Sawarabi Gothic\", sans-serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Sawarabi_Gothic）。\n【指示】〈使う場所〉にSawarabi Gothicを使って。太さは400のみ。"
+  },
+  {
+   "id": "typography/shippori-mincho",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Shippori Mincho",
+   "name_ja": "しっぽり明朝",
+   "description_ja": "しなやかで情緒のある明朝体。和の雰囲気を出したいとき。",
+   "aliases": [
+    "和風",
+    "しっとり",
+    "上品な明朝",
+    "情緒"
+   ],
+   "preview": {
+    "font": "Shippori Mincho",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Shippori Mincho』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Shippori+Mincho",
+   "prompt": "【出典】Google Fonts『Shippori Mincho』の書体ページ／https://fonts.google.com/specimen/Shippori+Mincho\n【作るもの】Shippori Mincho（しっぽり明朝）\n【再現する見た目・動き】font-family: \"Shippori Mincho\", serif; 推奨太さ 400/600/800; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Shippori_Mincho）。\n【指示】〈使う場所〉にShippori Minchoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/murecho",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Murecho",
+   "name_ja": "ムレチョ（読みやすいゴシック）",
+   "description_ja": "太さ幅が広く、文字がくっきり読めるゴシック。UIに使いやすい。",
+   "aliases": [
+    "くっきり",
+    "UI向け",
+    "可読性",
+    "太さ豊富"
+   ],
+   "preview": {
+    "font": "Murecho",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Murecho』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Murecho",
+   "prompt": "【出典】Google Fonts『Murecho』の書体ページ／https://fonts.google.com/specimen/Murecho\n【作るもの】Murecho（ムレチョ（読みやすいゴシック））\n【再現する見た目・動き】font-family: \"Murecho\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Murecho:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Murecho）。\n【指示】〈使う場所〉にMurechoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/klee-one",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Klee One",
+   "name_ja": "クレー・ワン（教科書の手書き風）",
+   "description_ja": "筆記用具で書いたような、教科書体に近い手書き風。",
+   "aliases": [
+    "手書き風",
+    "教科書体",
+    "やさしい手書き",
+    "ノート風"
+   ],
+   "preview": {
+    "font": "Klee One",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Klee One』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Klee+One",
+   "prompt": "【出典】Google Fonts『Klee One』の書体ページ／https://fonts.google.com/specimen/Klee+One\n【作るもの】Klee One（クレー・ワン（教科書の手書き風））\n【再現する見た目・動き】font-family: \"Klee One\", serif; 推奨太さ 400/600; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Klee_One）。\n【指示】〈使う場所〉にKlee Oneを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/yusei-magic",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Yusei Magic",
+   "name_ja": "油性マジック（手書き）",
+   "description_ja": "油性マジックで書いたような太い手書き文字。ポップな見出しに。",
+   "aliases": [
+    "マジック文字",
+    "手書き風",
+    "ポップ",
+    "太い見出し"
+   ],
+   "preview": {
+    "font": "Yusei Magic",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Yusei Magic』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Yusei+Magic",
+   "prompt": "【出典】Google Fonts『Yusei Magic』の書体ページ／https://fonts.google.com/specimen/Yusei+Magic\n【作るもの】Yusei Magic（油性マジック（手書き））\n【再現する見た目・動き】font-family: \"Yusei Magic\", sans-serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Yusei_Magic）。\n【指示】〈使う場所〉にYusei Magicを使って。太さは400のみ。長文には使わない。"
+  },
+  {
+   "id": "typography/dela-gothic-one",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Dela Gothic One",
+   "name_ja": "デラゴシック（極太）",
+   "description_ja": "非常に太くインパクトのある見出し用ゴシック。",
+   "aliases": [
+    "極太",
+    "インパクト",
+    "ドカンと太い",
+    "ポスター風"
+   ],
+   "preview": {
+    "font": "Dela Gothic One",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Dela Gothic One』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Dela+Gothic+One",
+   "prompt": "【出典】Google Fonts『Dela Gothic One』の書体ページ／https://fonts.google.com/specimen/Dela+Gothic+One\n【作るもの】Dela Gothic One（デラゴシック（極太））\n【再現する見た目・動き】font-family: \"Dela Gothic One\", sans-serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Dela_Gothic_One）。\n【指示】〈使う場所〉にDela Gothic Oneを使って。太さは400のみ（もともと極太）。見出し専用にする。"
+  },
+  {
+   "id": "typography/ibm-plex-sans-jp",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "IBM Plex Sans JP",
+   "name_ja": "IBMプレックス日本語",
+   "description_ja": "IBM Plex の欧文と組み合わせやすい、技術系の落ち着いたゴシック。",
+   "aliases": [
+    "エンジニア向け",
+    "クール",
+    "ビジネス",
+    "欧文となじむ"
+   ],
+   "preview": {
+    "font": "IBM Plex Sans JP",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『IBM Plex Sans JP』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/IBM+Plex+Sans+JP",
+   "prompt": "【出典】Google Fonts『IBM Plex Sans JP』の書体ページ／https://fonts.google.com/specimen/IBM+Plex+Sans+JP\n【作るもの】IBM Plex Sans JP（IBMプレックス日本語）\n【再現する見た目・動き】font-family: \"IBM Plex Sans JP\", sans-serif; 推奨太さ 400/500/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は IBM_Plex_Sans_JP）。\n【指示】〈使う場所〉にIBM Plex Sans JPを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/line-seed-jp",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "LINE Seed JP",
+   "name_ja": "ラインシード",
+   "description_ja": "LINE の公式書体。親しみのある角丸ぎみのゴシック。",
+   "aliases": [
+    "LINEの文字",
+    "やわらかい",
+    "丸みのあるゴシック",
+    "ポップ"
+   ],
+   "preview": {
+    "font": "LINE Seed JP",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『LINE Seed JP』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/LINE+Seed+JP",
+   "prompt": "【出典】Google Fonts『LINE Seed JP』の書体ページ／https://fonts.google.com/specimen/LINE+Seed+JP\n【作るもの】LINE Seed JP（ラインシード）\n【再現する見た目・動き】font-family: \"LINE Seed JP\", sans-serif; 推奨太さ 400/700; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は LINE_Seed_JP）。\n【指示】〈使う場所〉にLINE Seed JPを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/kiwi-maru",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Kiwi Maru",
+   "name_ja": "キウイ丸",
+   "description_ja": "やさしく読みやすい丸み明朝系の書体。絵本のような雰囲気。",
+   "aliases": [
+    "丸い明朝",
+    "絵本風",
+    "やさしい",
+    "かわいい"
+   ],
+   "preview": {
+    "font": "Kiwi Maru",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Kiwi Maru』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Kiwi+Maru",
+   "prompt": "【出典】Google Fonts『Kiwi Maru』の書体ページ／https://fonts.google.com/specimen/Kiwi+Maru\n【作るもの】Kiwi Maru（キウイ丸）\n【再現する見た目・動き】font-family: \"Kiwi Maru\", serif; 推奨太さ 400/500; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Kiwi_Maru）。\n【指示】〈使う場所〉にKiwi Maruを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/hachi-maru-pop",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Hachi Maru Pop",
+   "name_ja": "はちまるポップ",
+   "description_ja": "丸くてかわいいポップ体。子ども向けや軽い告知に。",
+   "aliases": [
+    "ポップ",
+    "かわいい",
+    "手書き風",
+    "丸っこい"
+   ],
+   "preview": {
+    "font": "Hachi Maru Pop",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Hachi Maru Pop』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Hachi+Maru+Pop",
+   "prompt": "【出典】Google Fonts『Hachi Maru Pop』の書体ページ／https://fonts.google.com/specimen/Hachi+Maru+Pop\n【作るもの】Hachi Maru Pop（はちまるポップ）\n【再現する見た目・動き】font-family: \"Hachi Maru Pop\", sans-serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Hachi_Maru_Pop）。\n【指示】〈使う場所〉にHachi Maru Popを使って。太さは400のみ。"
+  },
+  {
+   "id": "typography/rocknroll-one",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "RocknRoll One",
+   "name_ja": "ロックンロール（太い丸ポップ）",
+   "description_ja": "ロゴ風の太く元気なポップ体。見出しに。",
+   "aliases": [
+    "元気",
+    "太い見出し",
+    "ロゴ風",
+    "ポップ"
+   ],
+   "preview": {
+    "font": "RocknRoll One",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『RocknRoll One』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/RocknRoll+One",
+   "prompt": "【出典】Google Fonts『RocknRoll One』の書体ページ／https://fonts.google.com/specimen/RocknRoll+One\n【作るもの】RocknRoll One（ロックンロール（太い丸ポップ））\n【再現する見た目・動き】font-family: \"RocknRoll One\", sans-serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap\" rel=\"stylesheet\">（next/font/google の名前は RocknRoll_One）。\n【指示】〈使う場所〉にRocknRoll Oneを使って。太さは400のみ。"
+  },
+  {
+   "id": "typography/zen-antique",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Zen Antique",
+   "name_ja": "ゼンアンティーク",
+   "description_ja": "古い書籍の活字を思わせる、重みのある書体。",
+   "aliases": [
+    "アンティーク",
+    "古書",
+    "レトロ",
+    "重厚"
+   ],
+   "preview": {
+    "font": "Zen Antique",
+    "google": true,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Google Fonts『Zen Antique』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Zen+Antique",
+   "prompt": "【出典】Google Fonts『Zen Antique』の書体ページ／https://fonts.google.com/specimen/Zen+Antique\n【作るもの】Zen Antique（ゼンアンティーク）\n【再現する見た目・動き】font-family: \"Zen Antique\", serif; 推奨太さ 400; line-height 1.7; letter-spacing 0.04em。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Zen_Antique）。\n【指示】〈使う場所〉にZen Antiqueを使って。太さは400のみ。"
+  },
+  {
+   "id": "typography/hiragino-sans",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Hiragino Sans",
+   "name_ja": "ヒラギノ角ゴ",
+   "description_ja": "macOS・iOS に標準で入る上品なゴシック。Mac の日本語表示の既定。",
+   "aliases": [
+    "Macの標準",
+    "ヒラギノ",
+    "ゴシック",
+    "きれい"
+   ],
+   "preview": {
+    "font": "Hiragino Sans",
+    "google": false,
+    "fallback": "sans-serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Apple『Hiragino Sans』（Apple Fonts）",
+   "ref_url": "https://developer.apple.com/fonts/",
+   "prompt": "【出典】Apple『Hiragino Sans』（Apple Fonts）／https://developer.apple.com/fonts/\n【作るもの】Hiragino Sans（ヒラギノ角ゴ）\n【再現する見た目・動き】font-family: \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", sans-serif; 推奨太さ 300;600; line-height 1.7; letter-spacing 0.04em。読み込み不要（macOS・iOS 標準。他OSでは fallback の sans-serif になる）。\n【指示】〈使う場所〉にHiragino Sansを使って。Windows や Android では入っていないので fallback に Noto Sans JP を足す。"
+  },
+  {
+   "id": "typography/hiragino-mincho-pron",
+   "kind": "type",
+   "category": "type-jp",
+   "name_en": "Hiragino Mincho ProN",
+   "name_ja": "ヒラギノ明朝",
+   "description_ja": "macOS・iOS に標準で入る端正な明朝体。",
+   "aliases": [
+    "Macの明朝",
+    "ヒラギノ明朝",
+    "明朝",
+    "上品"
+   ],
+   "preview": {
+    "font": "Hiragino Mincho ProN",
+    "google": false,
+    "fallback": "serif",
+    "sample": "あ永 Aa",
+    "sample_long": "いろはにほへと 吾輩は猫である 0123"
+   },
+   "source_ref": "Apple『Hiragino Mincho ProN』（Apple Fonts）",
+   "ref_url": "https://developer.apple.com/fonts/",
+   "prompt": "【出典】Apple『Hiragino Mincho ProN』（Apple Fonts）／https://developer.apple.com/fonts/\n【作るもの】Hiragino Mincho ProN（ヒラギノ明朝）\n【再現する見た目・動き】font-family: \"Hiragino Mincho ProN\", \"Yu Mincho\", serif; 推奨太さ 300;600; line-height 1.8; letter-spacing 0.04em。読み込み不要（macOS・iOS 標準。他OSでは fallback の serif になる）。\n【指示】〈使う場所〉にHiragino Mincho ProNを使って。Windows や Android では入っていないので fallback に Noto Serif JP を足す。"
+  },
+  {
+   "id": "typography/inter",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Inter",
+   "name_ja": "インター（UI標準）",
+   "description_ja": "画面上の小さな文字でも読みやすい、UI の定番サンセリフ。",
+   "aliases": [
+    "普通のゴシック",
+    "UIの定番",
+    "Figmaの標準",
+    "無難"
+   ],
+   "preview": {
+    "font": "Inter",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Inter』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Inter",
+   "prompt": "【出典】Google Fonts『Inter』の書体ページ／https://fonts.google.com/specimen/Inter\n【作るもの】Inter（インター（UI標準））\n【再現する見た目・動き】font-family: \"Inter\", sans-serif; 推奨太さ 400/500/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Inter）。見出しは letter-spacing -0.02em。\n【指示】〈使う場所〉にInterを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/roboto",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Roboto",
+   "name_ja": "ロボト（Android標準）",
+   "description_ja": "Android の標準書体。機械的すぎず親しみもある。",
+   "aliases": [
+    "Androidの文字",
+    "Material",
+    "標準",
+    "無難"
+   ],
+   "preview": {
+    "font": "Roboto",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Roboto』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Roboto",
+   "prompt": "【出典】Google Fonts『Roboto』の書体ページ／https://fonts.google.com/specimen/Roboto\n【作るもの】Roboto（ロボト（Android標準））\n【再現する見た目・動き】font-family: \"Roboto\", sans-serif; 推奨太さ 400/500/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Roboto）。\n【指示】〈使う場所〉にRobotoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/open-sans",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Open Sans",
+   "name_ja": "オープンサンズ",
+   "description_ja": "丸みのある親しみやすい人文主義サンセリフ。Web で長く使われてきた。",
+   "aliases": [
+    "定番",
+    "やさしい",
+    "読みやすい",
+    "ブログ向け"
+   ],
+   "preview": {
+    "font": "Open Sans",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Open Sans』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Open+Sans",
+   "prompt": "【出典】Google Fonts『Open Sans』の書体ページ／https://fonts.google.com/specimen/Open+Sans\n【作るもの】Open Sans（オープンサンズ）\n【再現する見た目・動き】font-family: \"Open Sans\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Open_Sans）。\n【指示】〈使う場所〉にOpen Sansを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/lato",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Lato",
+   "name_ja": "ラト",
+   "description_ja": "やわらかく温かみのあるサンセリフ。ビジネス資料にもなじむ。",
+   "aliases": [
+    "あたたかい",
+    "上品",
+    "やさしい",
+    "汎用"
+   ],
+   "preview": {
+    "font": "Lato",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Lato』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Lato",
+   "prompt": "【出典】Google Fonts『Lato』の書体ページ／https://fonts.google.com/specimen/Lato\n【作るもの】Lato（ラト）\n【再現する見た目・動き】font-family: \"Lato\", sans-serif; 推奨太さ 400/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Lato）。\n【指示】〈使う場所〉にLatoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/montserrat",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Montserrat",
+   "name_ja": "モンセラート",
+   "description_ja": "幾何学的で広がりのある書体。大きな見出しで映える。",
+   "aliases": [
+    "幾何学",
+    "かっこいい見出し",
+    "ブランド風",
+    "ワイド"
+   ],
+   "preview": {
+    "font": "Montserrat",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Montserrat』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Montserrat",
+   "prompt": "【出典】Google Fonts『Montserrat』の書体ページ／https://fonts.google.com/specimen/Montserrat\n【作るもの】Montserrat（モンセラート）\n【再現する見た目・動き】font-family: \"Montserrat\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Montserrat）。\n【指示】〈使う場所〉にMontserratを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/poppins",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Poppins",
+   "name_ja": "ポピンズ",
+   "description_ja": "まん丸の幾何学サンセリフ。ポップで現代的な見た目。",
+   "aliases": [
+    "丸い",
+    "ポップ",
+    "スタートアップ風",
+    "かわいい"
+   ],
+   "preview": {
+    "font": "Poppins",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Poppins』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Poppins",
+   "prompt": "【出典】Google Fonts『Poppins』の書体ページ／https://fonts.google.com/specimen/Poppins\n【作るもの】Poppins（ポピンズ）\n【再現する見た目・動き】font-family: \"Poppins\", sans-serif; 推奨太さ 400/500/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Poppins）。\n【指示】〈使う場所〉にPoppinsを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/work-sans",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Work Sans",
+   "name_ja": "ワークサンズ",
+   "description_ja": "画面での可読性を考えた、少し癖のあるサンセリフ。",
+   "aliases": [
+    "実務的",
+    "落ち着いた",
+    "ニュートラル"
+   ],
+   "preview": {
+    "font": "Work Sans",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Work Sans』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Work+Sans",
+   "prompt": "【出典】Google Fonts『Work Sans』の書体ページ／https://fonts.google.com/specimen/Work+Sans\n【作るもの】Work Sans（ワークサンズ）\n【再現する見た目・動き】font-family: \"Work Sans\", sans-serif; 推奨太さ 400/500/600; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Work_Sans）。\n【指示】〈使う場所〉にWork Sansを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/dm-sans",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "DM Sans",
+   "name_ja": "ディーエムサンズ",
+   "description_ja": "低コントラストの幾何学サンセリフ。すっきり現代的。",
+   "aliases": [
+    "シンプル",
+    "モダン",
+    "スタートアップ風",
+    "軽い"
+   ],
+   "preview": {
+    "font": "DM Sans",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『DM Sans』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/DM+Sans",
+   "prompt": "【出典】Google Fonts『DM Sans』の書体ページ／https://fonts.google.com/specimen/DM+Sans\n【作るもの】DM Sans（ディーエムサンズ）\n【再現する見た目・動き】font-family: \"DM Sans\", sans-serif; 推奨太さ 400/500/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は DM_Sans）。\n【指示】〈使う場所〉にDM Sansを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/manrope",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Manrope",
+   "name_ja": "マンロープ",
+   "description_ja": "やや角ばって現代的。プロダクトやダッシュボード向け。",
+   "aliases": [
+    "モダン",
+    "プロダクト風",
+    "テック系"
+   ],
+   "preview": {
+    "font": "Manrope",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Manrope』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Manrope",
+   "prompt": "【出典】Google Fonts『Manrope』の書体ページ／https://fonts.google.com/specimen/Manrope\n【作るもの】Manrope（マンロープ）\n【再現する見た目・動き】font-family: \"Manrope\", sans-serif; 推奨太さ 400/600/800; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Manrope）。\n【指示】〈使う場所〉にManropeを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/plus-jakarta-sans",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Plus Jakarta Sans",
+   "name_ja": "プラスジャカルタサンズ",
+   "description_ja": "字形がやわらかく洗練された SaaS 風のサンセリフ。",
+   "aliases": [
+    "SaaS風",
+    "洗練",
+    "きれい",
+    "モダン"
+   ],
+   "preview": {
+    "font": "Plus Jakarta Sans",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Plus Jakarta Sans』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
+   "prompt": "【出典】Google Fonts『Plus Jakarta Sans』の書体ページ／https://fonts.google.com/specimen/Plus+Jakarta+Sans\n【作るもの】Plus Jakarta Sans（プラスジャカルタサンズ）\n【再現する見た目・動き】font-family: \"Plus Jakarta Sans\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Plus_Jakarta_Sans）。\n【指示】〈使う場所〉にPlus Jakarta Sansを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/outfit",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Outfit",
+   "name_ja": "アウトフィット",
+   "description_ja": "シンプルな幾何学サンセリフ。丸みがあり見出しに強い。",
+   "aliases": [
+    "丸い",
+    "ミニマル",
+    "ロゴ風",
+    "かわいい"
+   ],
+   "preview": {
+    "font": "Outfit",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Outfit』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Outfit",
+   "prompt": "【出典】Google Fonts『Outfit』の書体ページ／https://fonts.google.com/specimen/Outfit\n【作るもの】Outfit（アウトフィット）\n【再現する見た目・動き】font-family: \"Outfit\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Outfit）。\n【指示】〈使う場所〉にOutfitを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/space-grotesk",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Space Grotesk",
+   "name_ja": "スペースグロテスク",
+   "description_ja": "個性的な字形のテック系サンセリフ。SF 的な雰囲気。",
+   "aliases": [
+    "未来的",
+    "テック",
+    "個性的",
+    "エンジニア風"
+   ],
+   "preview": {
+    "font": "Space Grotesk",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Space Grotesk』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Space+Grotesk",
+   "prompt": "【出典】Google Fonts『Space Grotesk』の書体ページ／https://fonts.google.com/specimen/Space+Grotesk\n【作るもの】Space Grotesk（スペースグロテスク）\n【再現する見た目・動き】font-family: \"Space Grotesk\", sans-serif; 推奨太さ 400/500/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Space_Grotesk）。\n【指示】〈使う場所〉にSpace Groteskを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/sora",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Sora",
+   "name_ja": "ソラ",
+   "description_ja": "広い字幅で未来的。ブロックチェーンや AI サービスで見かける。",
+   "aliases": [
+    "未来的",
+    "ワイド",
+    "テック",
+    "AI風"
+   ],
+   "preview": {
+    "font": "Sora",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Sora』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Sora",
+   "prompt": "【出典】Google Fonts『Sora』の書体ページ／https://fonts.google.com/specimen/Sora\n【作るもの】Sora（ソラ）\n【再現する見た目・動き】font-family: \"Sora\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Sora）。\n【指示】〈使う場所〉にSoraを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/figtree",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Figtree",
+   "name_ja": "フィグツリー",
+   "description_ja": "親しみのある丸みのサンセリフ。UI 全体に使いやすい。",
+   "aliases": [
+    "やさしい",
+    "フレンドリー",
+    "UI向け",
+    "丸み"
+   ],
+   "preview": {
+    "font": "Figtree",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Figtree』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Figtree",
+   "prompt": "【出典】Google Fonts『Figtree』の書体ページ／https://fonts.google.com/specimen/Figtree\n【作るもの】Figtree（フィグツリー）\n【再現する見た目・動き】font-family: \"Figtree\", sans-serif; 推奨太さ 400/500/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Figtree）。\n【指示】〈使う場所〉にFigtreeを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/geist",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Geist",
+   "name_ja": "ジースト（Vercel）",
+   "description_ja": "Vercel が作ったすっきり現代的なサンセリフ。",
+   "aliases": [
+    "Vercel風",
+    "ミニマル",
+    "開発者向け",
+    "モダン"
+   ],
+   "preview": {
+    "font": "Geist",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Geist』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Geist",
+   "prompt": "【出典】Google Fonts『Geist』の書体ページ／https://fonts.google.com/specimen/Geist\n【作るもの】Geist（ジースト（Vercel））\n【再現する見た目・動き】font-family: \"Geist\", sans-serif; 推奨太さ 400/500/600; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Geist）。\n【指示】〈使う場所〉にGeistを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/playfair-display",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Playfair Display",
+   "name_ja": "プレイフェア（高コントラスト明朝）",
+   "description_ja": "線の太細差が大きい優雅なセリフ体。見出し用。",
+   "aliases": [
+    "エレガント",
+    "雑誌風",
+    "高級感",
+    "細太"
+   ],
+   "preview": {
+    "font": "Playfair Display",
+    "google": true,
+    "fallback": "serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Playfair Display』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Playfair+Display",
+   "prompt": "【出典】Google Fonts『Playfair Display』の書体ページ／https://fonts.google.com/specimen/Playfair+Display\n【作るもの】Playfair Display（プレイフェア（高コントラスト明朝））\n【再現する見た目・動き】font-family: \"Playfair Display\", serif; 推奨太さ 400/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Playfair_Display）。\n【指示】〈使う場所〉にPlayfair Displayを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/lora",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Lora",
+   "name_ja": "ローラ",
+   "description_ja": "筆の流れを感じる読みやすいセリフ体。長文向け。",
+   "aliases": [
+    "本文向け",
+    "やさしい明朝",
+    "記事風"
+   ],
+   "preview": {
+    "font": "Lora",
+    "google": true,
+    "fallback": "serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Lora』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Lora",
+   "prompt": "【出典】Google Fonts『Lora』の書体ページ／https://fonts.google.com/specimen/Lora\n【作るもの】Lora（ローラ）\n【再現する見た目・動き】font-family: \"Lora\", serif; 推奨太さ 400/500/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Lora）。\n【指示】〈使う場所〉にLoraを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/merriweather",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Merriweather",
+   "name_ja": "メリウェザー",
+   "description_ja": "画面での長文読みを想定した、どっしり読みやすいセリフ体。",
+   "aliases": [
+    "太め",
+    "本文",
+    "新聞風",
+    "どっしり"
+   ],
+   "preview": {
+    "font": "Merriweather",
+    "google": true,
+    "fallback": "serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Merriweather』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Merriweather",
+   "prompt": "【出典】Google Fonts『Merriweather』の書体ページ／https://fonts.google.com/specimen/Merriweather\n【作るもの】Merriweather（メリウェザー）\n【再現する見た目・動き】font-family: \"Merriweather\", serif; 推奨太さ 400/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Merriweather）。\n【指示】〈使う場所〉にMerriweatherを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/fraunces",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Fraunces",
+   "name_ja": "フラウンセス",
+   "description_ja": "ぽってり柔らかいオールドスタイルのセリフ体。可変軸で個性が変えられる。",
+   "aliases": [
+    "ぷっくり",
+    "レトロ",
+    "やわらかい明朝",
+    "おしゃれ"
+   ],
+   "preview": {
+    "font": "Fraunces",
+    "google": true,
+    "fallback": "serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Fraunces』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Fraunces",
+   "prompt": "【出典】Google Fonts『Fraunces』の書体ページ／https://fonts.google.com/specimen/Fraunces\n【作るもの】Fraunces（フラウンセス）\n【再現する見た目・動き】font-family: \"Fraunces\", serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Fraunces）。\n【指示】〈使う場所〉にFrauncesを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/instrument-serif",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Instrument Serif",
+   "name_ja": "インストゥルメントセリフ",
+   "description_ja": "細身で縦長の見出し向けセリフ。今風の個性的なロゴや大見出しに。",
+   "aliases": [
+    "縦長",
+    "細い明朝",
+    "おしゃれな見出し"
+   ],
+   "preview": {
+    "font": "Instrument Serif",
+    "google": true,
+    "fallback": "serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Instrument Serif』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Instrument+Serif",
+   "prompt": "【出典】Google Fonts『Instrument Serif』の書体ページ／https://fonts.google.com/specimen/Instrument+Serif\n【作るもの】Instrument Serif（インストゥルメントセリフ）\n【再現する見た目・動き】font-family: \"Instrument Serif\", serif; 推奨太さ 400; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Instrument_Serif）。\n【指示】〈使う場所〉にInstrument Serifを使って。太さは400のみ（イタリックあり）。見出し専用。"
+  },
+  {
+   "id": "typography/bebas-neue",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Bebas Neue",
+   "name_ja": "ベバス・ニュー",
+   "description_ja": "全部大文字の縦長で太いディスプレイ書体。ポスター風。",
+   "aliases": [
+    "縦長",
+    "ポスター",
+    "太いタイトル",
+    "大文字"
+   ],
+   "preview": {
+    "font": "Bebas Neue",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Bebas Neue』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Bebas+Neue",
+   "prompt": "【出典】Google Fonts『Bebas Neue』の書体ページ／https://fonts.google.com/specimen/Bebas+Neue\n【作るもの】Bebas Neue（ベバス・ニュー）\n【再現する見た目・動き】font-family: \"Bebas Neue\", sans-serif; 推奨太さ 400; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Bebas_Neue）。letter-spacing 0.02em。\n【指示】〈使う場所〉にBebas Neueを使って。太さは400のみ。大文字だけで使う。"
+  },
+  {
+   "id": "typography/oswald",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Oswald",
+   "name_ja": "オズワルド",
+   "description_ja": "縦長で力強いサンセリフ。見出し・ラベル向け。",
+   "aliases": [
+    "縦長",
+    "力強い",
+    "スポーツ風",
+    "見出し"
+   ],
+   "preview": {
+    "font": "Oswald",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Oswald』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Oswald",
+   "prompt": "【出典】Google Fonts『Oswald』の書体ページ／https://fonts.google.com/specimen/Oswald\n【作るもの】Oswald（オズワルド）\n【再現する見た目・動き】font-family: \"Oswald\", sans-serif; 推奨太さ 400/500/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Oswald）。\n【指示】〈使う場所〉にOswaldを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/raleway",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Raleway",
+   "name_ja": "ラレウェイ",
+   "description_ja": "細く優雅なサンセリフ。大見出しで上品に見える。",
+   "aliases": [
+    "細い",
+    "上品",
+    "エレガント",
+    "おしゃれ"
+   ],
+   "preview": {
+    "font": "Raleway",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Raleway』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Raleway",
+   "prompt": "【出典】Google Fonts『Raleway』の書体ページ／https://fonts.google.com/specimen/Raleway\n【作るもの】Raleway（ラレウェイ）\n【再現する見た目・動き】font-family: \"Raleway\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Raleway）。\n【指示】〈使う場所〉にRalewayを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/nunito",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "Nunito",
+   "name_ja": "ヌニート",
+   "description_ja": "端が丸いサンセリフ。やわらかく親しみやすい。",
+   "aliases": [
+    "丸い",
+    "やさしい",
+    "かわいい",
+    "フレンドリー"
+   ],
+   "preview": {
+    "font": "Nunito",
+    "google": true,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Google Fonts『Nunito』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Nunito",
+   "prompt": "【出典】Google Fonts『Nunito』の書体ページ／https://fonts.google.com/specimen/Nunito\n【作るもの】Nunito（ヌニート）\n【再現する見た目・動き】font-family: \"Nunito\", sans-serif; 推奨太さ 400/600/700; line-height 1.5; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Nunito）。\n【指示】〈使う場所〉にNunitoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/sf-pro",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "SF Pro",
+   "name_ja": "エスエフプロ（Apple標準）",
+   "description_ja": "iOS・macOS の標準書体。小さい文字では字間が広め、大きい文字では詰まる。",
+   "aliases": [
+    "Appleの文字",
+    "iPhoneの文字",
+    "システムフォント",
+    "標準"
+   ],
+   "preview": {
+    "font": "SF Pro",
+    "google": false,
+    "fallback": "sans-serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Apple『SF Pro』（Apple Fonts）",
+   "ref_url": "https://developer.apple.com/fonts/",
+   "prompt": "【出典】Apple『SF Pro』（Apple Fonts）／https://developer.apple.com/fonts/\n【作るもの】SF Pro（エスエフプロ（Apple標準））\n【再現する見た目・動き】font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", sans-serif; 推奨太さ 400;600;700; line-height 1.4; letter-spacing 0。読み込み不要（macOS・iOS 標準。他OSでは fallback の sans-serif になる）。\n【指示】〈使う場所〉にSF Proを使って。Web では system-ui スタックで呼ぶ。SF Pro は Apple 以外への再配布が不可。"
+  },
+  {
+   "id": "typography/new-york",
+   "kind": "type",
+   "category": "type-en",
+   "name_en": "New York",
+   "name_ja": "ニューヨーク（Apple標準セリフ）",
+   "description_ja": "Apple が用意した標準のセリフ体。本文や読み物に使う。",
+   "aliases": [
+    "Appleの明朝",
+    "iOSのセリフ",
+    "読み物向け"
+   ],
+   "preview": {
+    "font": "New York",
+    "google": false,
+    "fallback": "serif",
+    "sample": "Aa Gg",
+    "sample_long": "Hamburgefonstiv 0123456789"
+   },
+   "source_ref": "Apple『New York』（Apple Fonts）",
+   "ref_url": "https://developer.apple.com/fonts/",
+   "prompt": "【出典】Apple『New York』（Apple Fonts）／https://developer.apple.com/fonts/\n【作るもの】New York（ニューヨーク（Apple標準セリフ））\n【再現する見た目・動き】font-family: ui-serif, \"New York\", Georgia, serif; 推奨太さ 400;600;700; line-height 1.5; letter-spacing 0。読み込み不要（macOS・iOS 標準。他OSでは fallback の serif になる）。\n【指示】〈使う場所〉にNew Yorkを使って。Web では ui-serif で呼ぶ。他OSでは Georgia に落ちる。"
+  },
+  {
+   "id": "typography/jetbrains-mono",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "JetBrains Mono",
+   "name_ja": "ジェットブレインズモノ",
+   "description_ja": "JetBrains が作った、コードの縦の高さを稼いだ等幅書体。",
+   "aliases": [
+    "コードの文字",
+    "エンジニア向け",
+    "IDE風",
+    "読みやすい等幅"
+   ],
+   "preview": {
+    "font": "JetBrains Mono",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『JetBrains Mono』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/JetBrains+Mono",
+   "prompt": "【出典】Google Fonts『JetBrains Mono』の書体ページ／https://fonts.google.com/specimen/JetBrains+Mono\n【作るもの】JetBrains Mono（ジェットブレインズモノ）\n【再現する見た目・動き】font-family: \"JetBrains Mono\", monospace; 推奨太さ 400/500/700; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は JetBrains_Mono）。\n【指示】〈使う場所〉にJetBrains Monoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/fira-code",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "Fira Code",
+   "name_ja": "ファイラコード",
+   "description_ja": "合字（=> や != をつなげる）が有名な等幅書体。",
+   "aliases": [
+    "合字",
+    "矢印がつながる",
+    "コード",
+    "Mozilla"
+   ],
+   "preview": {
+    "font": "Fira Code",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『Fira Code』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Fira+Code",
+   "prompt": "【出典】Google Fonts『Fira Code』の書体ページ／https://fonts.google.com/specimen/Fira+Code\n【作るもの】Fira Code（ファイラコード）\n【再現する見た目・動き】font-family: \"Fira Code\", monospace; 推奨太さ 400/500/700; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Fira_Code）。font-variant-ligatures: normal で合字を有効にする。\n【指示】〈使う場所〉にFira Codeを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/source-code-pro",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "Source Code Pro",
+   "name_ja": "ソースコードプロ",
+   "description_ja": "Adobe が作った、くせのない定番のコード用書体。",
+   "aliases": [
+    "Adobe",
+    "定番",
+    "無難",
+    "コード"
+   ],
+   "preview": {
+    "font": "Source Code Pro",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『Source Code Pro』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Source+Code+Pro",
+   "prompt": "【出典】Google Fonts『Source Code Pro』の書体ページ／https://fonts.google.com/specimen/Source+Code+Pro\n【作るもの】Source Code Pro（ソースコードプロ）\n【再現する見た目・動き】font-family: \"Source Code Pro\", monospace; 推奨太さ 400/500/700; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Source_Code_Pro）。\n【指示】〈使う場所〉にSource Code Proを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/ibm-plex-mono",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "IBM Plex Mono",
+   "name_ja": "IBMプレックスモノ",
+   "description_ja": "IBM Plex の等幅版。落ち着いて端正。",
+   "aliases": [
+    "落ち着いた",
+    "技術文書",
+    "ビジネス",
+    "端正"
+   ],
+   "preview": {
+    "font": "IBM Plex Mono",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『IBM Plex Mono』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+   "prompt": "【出典】Google Fonts『IBM Plex Mono』の書体ページ／https://fonts.google.com/specimen/IBM+Plex+Mono\n【作るもの】IBM Plex Mono（IBMプレックスモノ）\n【再現する見た目・動き】font-family: \"IBM Plex Mono\", monospace; 推奨太さ 400/500/600; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap\" rel=\"stylesheet\">（next/font/google の名前は IBM_Plex_Mono）。\n【指示】〈使う場所〉にIBM Plex Monoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/roboto-mono",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "Roboto Mono",
+   "name_ja": "ロボトモノ",
+   "description_ja": "Roboto の等幅版。UI のコード表示になじむ。",
+   "aliases": [
+    "Roboto系",
+    "すっきり",
+    "コード"
+   ],
+   "preview": {
+    "font": "Roboto Mono",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『Roboto Mono』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Roboto+Mono",
+   "prompt": "【出典】Google Fonts『Roboto Mono』の書体ページ／https://fonts.google.com/specimen/Roboto+Mono\n【作るもの】Roboto Mono（ロボトモノ）\n【再現する見た目・動き】font-family: \"Roboto Mono\", monospace; 推奨太さ 400/500/700; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Roboto_Mono）。\n【指示】〈使う場所〉にRoboto Monoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/space-mono",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "Space Mono",
+   "name_ja": "スペースモノ",
+   "description_ja": "丸みと個性があるレトロ未来的な等幅書体。",
+   "aliases": [
+    "レトロ未来",
+    "個性的",
+    "ポップなコード",
+    "SF風"
+   ],
+   "preview": {
+    "font": "Space Mono",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『Space Mono』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Space+Mono",
+   "prompt": "【出典】Google Fonts『Space Mono』の書体ページ／https://fonts.google.com/specimen/Space+Mono\n【作るもの】Space Mono（スペースモノ）\n【再現する見た目・動き】font-family: \"Space Mono\", monospace; 推奨太さ 400/700; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Space_Mono）。\n【指示】〈使う場所〉にSpace Monoを使って。太さは400と700の2つだけ。"
+  },
+  {
+   "id": "typography/geist-mono",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "Geist Mono",
+   "name_ja": "ジーストモノ",
+   "description_ja": "Vercel が作ったすっきりした等幅書体。Geist と組み合わせる。",
+   "aliases": [
+    "Vercel風",
+    "ミニマルなコード",
+    "開発者向け"
+   ],
+   "preview": {
+    "font": "Geist Mono",
+    "google": true,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Google Fonts『Geist Mono』の書体ページ",
+   "ref_url": "https://fonts.google.com/specimen/Geist+Mono",
+   "prompt": "【出典】Google Fonts『Geist Mono』の書体ページ／https://fonts.google.com/specimen/Geist+Mono\n【作るもの】Geist Mono（ジーストモノ）\n【再現する見た目・動き】font-family: \"Geist Mono\", monospace; 推奨太さ 400/500/700; line-height 1.6; letter-spacing 0。読み込み: <link href=\"https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&display=swap\" rel=\"stylesheet\">（next/font/google の名前は Geist_Mono）。\n【指示】〈使う場所〉にGeist Monoを使って。太さは指定の値だけ読み込む。"
+  },
+  {
+   "id": "typography/sf-mono",
+   "kind": "type",
+   "category": "type-mono",
+   "name_en": "SF Mono",
+   "name_ja": "エスエフモノ（Apple等幅）",
+   "description_ja": "Xcode やターミナルで使われる Apple の等幅書体。",
+   "aliases": [
+    "Xcodeの文字",
+    "Appleのコード",
+    "ターミナル"
+   ],
+   "preview": {
+    "font": "SF Mono",
+    "google": false,
+    "fallback": "monospace",
+    "sample": "0Oo 1lI {}",
+    "sample_long": "const x = 0; // 1lI O0"
+   },
+   "source_ref": "Apple『SF Mono』（Apple Fonts）",
+   "ref_url": "https://developer.apple.com/fonts/",
+   "prompt": "【出典】Apple『SF Mono』（Apple Fonts）／https://developer.apple.com/fonts/\n【作るもの】SF Mono（エスエフモノ（Apple等幅））\n【再現する見た目・動き】font-family: ui-monospace, \"SF Mono\", Menlo, monospace; 推奨太さ 400;600; line-height 1.6; letter-spacing 0。読み込み不要（macOS・iOS 標準。他OSでは fallback の monospace になる）。\n【指示】〈使う場所〉にSF Monoを使って。Web では ui-monospace で呼ぶ。他OSでは Menlo や monospace に落ちる。"
+  },
+  {
+   "id": "typography/apple-text-styles",
+   "kind": "type",
+   "category": "type-system",
+   "name_en": "Apple Text Styles (Dynamic Type)",
+   "name_ja": "Appleの文字サイズ表（テキストスタイル）",
+   "description_ja": "SF Pro を使い、役割ごとに Large Title から Caption 2 まで決められた文字サイズ表。ユーザーの文字サイズ設定に追従する。",
+   "aliases": [
+    "iOSの文字サイズ",
+    "見出しと本文の大きさ",
+    "Dynamic Type",
+    "大見出し小見出し"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "Apple HIG『Typography』",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+   "prompt": "【出典】Apple HIG『Typography』／https://developer.apple.com/design/human-interface-guidelines/typography\n【作るもの】Apple Text Styles (Dynamic Type)（Appleの文字サイズ表（テキストスタイル））\n【再現する見た目・動き】iOS の標準サイズ（pt／行間 pt）: Large Title 34/41 Regular、Title 1 28/34、Title 2 22/28、Title 3 20/25、Headline 17/22 Semibold、Body 17/22、Callout 16/21、Subheadline 15/20、Footnote 13/18、Caption 1 12/16、Caption 2 11/13。font-family: -apple-system, \"SF Pro Text\", \"SF Pro Display\", sans-serif。ユーザー設定で拡大縮小する前提。\n【指示】〈アプリ・サイト〉にApple Text Styles (Dynamic Type)を使って。文字サイズは固定のpxにせず、この役割名の表に当てはめて決めて。"
+  },
+  {
+   "id": "typography/material-type-scale",
+   "kind": "type",
+   "category": "type-system",
+   "name_en": "Material 3 Type Scale",
+   "name_ja": "Material 3 の文字サイズ表",
+   "description_ja": "Display・Headline・Title・Body・Label の5役割を大・中・小に分けた15段階の文字サイズ表。",
+   "aliases": [
+    "Androidの文字サイズ",
+    "Materialのフォント設定",
+    "見出しと本文の段階",
+    "type scale"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "Material 3 公式『Type scale tokens』",
+   "ref_url": "https://m3.material.io/styles/typography/type-scale-tokens",
+   "prompt": "【出典】Material 3 公式『Type scale tokens』／https://m3.material.io/styles/typography/type-scale-tokens\n【作るもの】Material 3 Type Scale（Material 3 の文字サイズ表）\n【再現する見た目・動き】サイズ（px／行間px／太さ）: Display L 57/64/400、M 45/52、S 36/44。Headline L 32/40、M 28/36、S 24/32。Title L 22/28/400、M 16/24/500、S 14/20/500。Body L 16/24/400、M 14/20、S 12/16。Label L 14/20/500、M 12/16/500、S 11/16/500。font-family: Roboto, sans-serif（読み込み: https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap）。\n【指示】〈アプリ・サイト〉にMaterial 3 Type Scaleを使って。文字サイズは Display／Headline／Title／Body／Label の役割名で指定して。"
+  },
+  {
+   "id": "typography/dads-typography",
+   "kind": "type",
+   "category": "type-system",
+   "name_en": "DADS Typography (Std/Dsp/Oln)",
+   "name_ja": "デジタル庁の文字設定",
+   "description_ja": "デジタル庁デザインシステムの文字。Noto Sans JP を使い、本文(Std)・見出し(Dsp)・リンク(Oln)など役割ごとにサイズ・行間・太さが決まっている。",
+   "aliases": [
+    "デジタル庁の文字",
+    "行政サイトの文字",
+    "Std-16N-170",
+    "日本の公共サイト"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "デジタル庁デザインシステム『タイポグラフィ』",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/typography/",
+   "prompt": "【出典】デジタル庁デザインシステム『タイポグラフィ』／https://design.digital.go.jp/dads/foundations/typography/\n【作るもの】DADS Typography (Std/Dsp/Oln)（デジタル庁の文字設定）\n【再現する見た目・動き】命名規則 <種別>-<サイズ>-<文字サイズに対する行間 %>（例: Std-16N-170 は 16px・行間170%・通常=N、太字は B）。font-family: \"Noto Sans JP\", sans-serif（読み込み: https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap）。Std=標準の本文、Dsp=大きな表示用、Oln=リンク・アウトライン系。詳細な数値は公式ページの表に従う。\n【指示】〈アプリ・サイト〉にDADS Typography (Std/Dsp/Oln)を使って。文字スタイルは公式の命名どおりの値で当てはめて。"
+  },
+  {
+   "id": "typography/tracking",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Tracking (letter-spacing)",
+   "name_ja": "字間・トラッキング",
+   "description_ja": "文字と文字の間隔を全体で広げたり詰めたりすること。",
+   "aliases": [
+    "字詰め",
+    "文字の間隔",
+    "ゆったり",
+    "詰める"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『letter-spacing』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing",
+   "prompt": "【出典】MDN『letter-spacing』／https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing\n【作るもの】Tracking (letter-spacing)（字間・トラッキング）\n【再現する見た目・動き】letter-spacing: 0.04em（和文本文）／ -0.02em（大きい欧文見出し）／ 0.08em（大文字ラベル）。em で指定して文字サイズに追従させる。\n【指示】〈該当の文字〉にTracking (letter-spacing)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/leading",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Leading (line-height)",
+   "name_ja": "行間・行送り",
+   "description_ja": "1行の高さ。本文では文字サイズの1.5〜1.8倍が読みやすい。",
+   "aliases": [
+    "行の間隔",
+    "行の高さ",
+    "ゆとり",
+    "詰まって見える"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『line-height』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height",
+   "prompt": "【出典】MDN『line-height』／https://developer.mozilla.org/en-US/docs/Web/CSS/line-height\n【作るもの】Leading (line-height)（行間・行送り）\n【再現する見た目・動き】line-height: 1.7（和文本文）／ 1.5（欧文本文）／ 1.2（見出し）。単位なしの数値で指定する。\n【指示】〈該当の文字〉にLeading (line-height)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/kerning",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Kerning",
+   "name_ja": "カーニング",
+   "description_ja": "特定の文字の組ごとに間隔を調整すること。AとVなどの隙間が自然になる。",
+   "aliases": [
+    "文字の組ごとの詰め",
+    "AV",
+    "ペアカーニング"
+   ],
+   "preview": {
+    "font": "Playfair Display",
+    "google": true,
+    "fallback": "serif",
+    "weight": 700,
+    "sample": "AVAT WAVE",
+    "sample_long": "To Type Yo AVA"
+   },
+   "source_ref": "MDN『font-kerning』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning",
+   "prompt": "【出典】MDN『font-kerning』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning\n【作るもの】Kerning（カーニング）\n【再現する見た目・動き】font-kerning: normal; font-feature-settings: \"kern\" 1。大きい見出しでは必ず有効にする。\n【指示】〈該当の文字〉にKerningを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/font-weight",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Font Weight",
+   "name_ja": "文字の太さ",
+   "description_ja": "文字の線の太さ。100（極細）〜900（極太）の数値で指定する。",
+   "aliases": [
+    "太字",
+    "細字",
+    "ボールド",
+    "ウェイト"
+   ],
+   "preview": {
+    "font": "Noto Sans JP",
+    "google": true,
+    "fallback": "sans-serif",
+    "weight": 700,
+    "sample": "あ永 Aa",
+    "sample_long": "細い 標準 太い 極太"
+   },
+   "source_ref": "MDN『font-weight』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight",
+   "prompt": "【出典】MDN『font-weight』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight\n【作るもの】Font Weight（文字の太さ）\n【再現する見た目・動き】font-weight: 400（本文）／ 500（強調）／ 700（見出し）。使う太さだけを読み込む（例: wght@400;700）。\n【指示】〈該当の文字〉にFont Weightを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/x-height",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "x-height",
+   "name_ja": "エックスハイト",
+   "description_ja": "小文字 x の高さ。大きいほど同じサイズでも文字が大きく見え、小さな画面で読みやすい。",
+   "aliases": [
+    "小文字の高さ",
+    "文字が大きく見える",
+    "xの高さ"
+   ],
+   "preview": {
+    "font": "Inter",
+    "google": true,
+    "fallback": "sans-serif",
+    "weight": 400,
+    "sample": "xhxH",
+    "sample_long": "x-height matters"
+   },
+   "source_ref": "MDN『font-size-adjust』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size-adjust",
+   "prompt": "【出典】MDN『font-size-adjust』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-size-adjust\n【作るもの】x-height（エックスハイト）\n【再現する見た目・動き】font-size-adjust: ex-height 0.5（fallback のx-heightをそろえる）。書体を変えたら見た目の大きさを比べて調整する。\n【指示】〈該当の文字〉にx-heightを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/baseline",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Baseline",
+   "name_ja": "ベースライン",
+   "description_ja": "文字が乗る基準線。横に並べた文字や、アイコンとの高さをそろえる基準。",
+   "aliases": [
+    "文字の下の線",
+    "基準線",
+    "揃える線"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『vertical-align』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align",
+   "prompt": "【出典】MDN『vertical-align』／https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align\n【作るもの】Baseline（ベースライン）\n【再現する見た目・動き】vertical-align: baseline（既定）／ display: flex; align-items: baseline で文字サイズが違う要素の下をそろえる。\n【指示】〈該当の文字〉にBaselineを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/ascender-descender",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Ascender / Descender",
+   "name_ja": "アセンダー・ディセンダー",
+   "description_ja": "小文字のうち上に伸びる部分（b, d）と下に伸びる部分（g, p）。行間はこの分を含めて決まる。",
+   "aliases": [
+    "文字の上下の出っ張り",
+    "はみ出し",
+    "gやpの尻尾"
+   ],
+   "preview": {
+    "font": "Lora",
+    "google": true,
+    "fallback": "serif",
+    "weight": 400,
+    "sample": "bdgpq",
+    "sample_long": "hedge pygmy quiz"
+   },
+   "source_ref": "MDN『line-height』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height",
+   "prompt": "【出典】MDN『line-height』／https://developer.mozilla.org/en-US/docs/Web/CSS/line-height\n【作るもの】Ascender / Descender（アセンダー・ディセンダー）\n【再現する見た目・動き】line-height 1.5 以上でディセンダーが次の行に当たらない。切れる場合は padding-bottom 0.1em を足す。\n【指示】〈該当の文字〉にAscender / Descenderを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/serif-sans",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Serif vs Sans-serif",
+   "name_ja": "セリフ体とサンセリフ体（明朝とゴシック）",
+   "description_ja": "文字の端に飾り（うろこ）がある書体がセリフ（明朝）、無い書体がサンセリフ（ゴシック）。",
+   "aliases": [
+    "明朝とゴシック",
+    "うろこ",
+    "飾りのある文字"
+   ],
+   "preview": {
+    "font": "Noto Serif JP",
+    "google": true,
+    "fallback": "serif",
+    "weight": 400,
+    "sample": "明朝 Serif",
+    "sample_long": "明朝とゴシックの違い"
+   },
+   "source_ref": "MDN『font-family』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family",
+   "prompt": "【出典】MDN『font-family』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-family\n【作るもの】Serif vs Sans-serif（セリフ体とサンセリフ体（明朝とゴシック））\n【再現する見た目・動き】font-family: \"Noto Serif JP\", serif（本文・読み物）／ \"Noto Sans JP\", sans-serif（UI）。総称ファミリー serif / sans-serif を末尾に必ず置く。\n【指示】〈該当の文字〉にSerif vs Sans-serifを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/ligature",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Ligature",
+   "name_ja": "合字",
+   "description_ja": "fi や => のように、隣り合う文字を1つの形につなげること。",
+   "aliases": [
+    "文字がつながる",
+    "fi",
+    "矢印になる"
+   ],
+   "preview": {
+    "font": "Fira Code",
+    "google": true,
+    "fallback": "mono",
+    "weight": 400,
+    "sample": "=> != >= ->",
+    "sample_long": "const f = (a) => a != b"
+   },
+   "source_ref": "MDN『font-variant-ligatures』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-ligatures",
+   "prompt": "【出典】MDN『font-variant-ligatures』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-ligatures\n【作るもの】Ligature（合字）\n【再現する見た目・動き】font-variant-ligatures: common-ligatures（通常）／ contextual（コード用）。等幅書体で合字を使うなら Fira Code を指定する。\n【指示】〈該当の文字〉にLigatureを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/tabular-nums",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Tabular figures",
+   "name_ja": "等幅数字",
+   "description_ja": "数字の幅をすべて同じにすること。金額や時刻が縦にそろい、変わっても揺れない。",
+   "aliases": [
+    "数字の幅をそろえる",
+    "桁がそろう",
+    "時計の数字",
+    "タビュラー"
+   ],
+   "preview": {
+    "demo": "ticker",
+    "variant": "tabular"
+   },
+   "source_ref": "MDN『font-variant-numeric』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric",
+   "prompt": "【出典】MDN『font-variant-numeric』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric\n【作るもの】Tabular figures（等幅数字）\n【再現する見た目・動き】font-variant-numeric: tabular-nums（font-feature-settings: \"tnum\" 1 でも可）。表・時計・カウントアップに使う。\n【指示】〈該当の文字〉にTabular figuresを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/proportional-nums",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Proportional figures",
+   "name_ja": "プロポーショナル数字",
+   "description_ja": "数字ごとに幅が違う並べ方。文章の中では自然だが、表では桁がずれる。",
+   "aliases": [
+    "数字の幅が違う",
+    "本文の数字",
+    "プロポーショナル"
+   ],
+   "preview": {
+    "font": "Inter",
+    "google": true,
+    "fallback": "sans-serif",
+    "weight": 400,
+    "sample": "1111 0000",
+    "sample_long": "1,111 / 8,008 / 1,000"
+   },
+   "source_ref": "MDN『font-variant-numeric』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric",
+   "prompt": "【出典】MDN『font-variant-numeric』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric\n【作るもの】Proportional figures（プロポーショナル数字）\n【再現する見た目・動き】font-variant-numeric: proportional-nums。本文中の数字に使い、表・金額には tabular-nums を使う。\n【指示】〈該当の文字〉にProportional figuresを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/opentype-features",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "OpenType features",
+   "name_ja": "OpenType機能",
+   "description_ja": "フォントに入っている合字・数字・字形切り替えなどの機能を CSS で呼び出す仕組み。",
+   "aliases": [
+    "フォントの隠し機能",
+    "font-feature-settings",
+    "字形切り替え"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『font-feature-settings』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings",
+   "prompt": "【出典】MDN『font-feature-settings』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings\n【作るもの】OpenType features（OpenType機能）\n【再現する見た目・動き】font-feature-settings: \"liga\" 1, \"tnum\" 1, \"palt\" 1。まず font-variant-* で足りるか確かめ、足りないときだけ使う。\n【指示】〈該当の文字〉にOpenType featuresを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/palt",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Proportional alternates (palt)",
+   "name_ja": "約物詰め・プロポーショナルメトリクス",
+   "description_ja": "日本語の約物や文字の余白を詰め、字間を自然にする機能。見出しやボタンがきれいに見える。",
+   "aliases": [
+    "約物詰め",
+    "日本語の字間を詰める",
+    "palt",
+    "文字が整う"
+   ],
+   "preview": {
+    "font": "Noto Sans JP",
+    "google": true,
+    "fallback": "sans-serif",
+    "weight": 700,
+    "sample": "「見出し」。（全角）",
+    "sample_long": "ご案内（重要）、お知らせ。"
+   },
+   "source_ref": "MDN『font-feature-settings』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings",
+   "prompt": "【出典】MDN『font-feature-settings』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings\n【作るもの】Proportional alternates (palt)（約物詰め・プロポーショナルメトリクス）\n【再現する見た目・動き】font-feature-settings: \"palt\" 1; letter-spacing: 0.02em。見出し・ボタン・短い文に使い、長い本文には使わない。\n【指示】〈該当の文字〉にProportional alternates (palt)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/text-wrap-balance",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "text-wrap: balance",
+   "name_ja": "見出しの折り返しをそろえる",
+   "description_ja": "複数行の見出しを折り返すとき、各行の長さがそろうよう自動で整える。",
+   "aliases": [
+    "見出しの改行をきれいに",
+    "行末の1文字を防ぐ",
+    "balance"
+   ],
+   "preview": {
+    "demo": "balance"
+   },
+   "source_ref": "MDN『text-wrap』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap",
+   "prompt": "【出典】MDN『text-wrap』／https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap\n【作るもの】text-wrap: balance（見出しの折り返しをそろえる）\n【再現する見た目・動き】text-wrap: balance（見出し・短い段落）／ text-wrap: pretty（本文の最終行の孤立を防ぐ）。長い本文には balance を使わない。\n【指示】〈該当の文字〉にtext-wrap: balanceを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/hanging-punctuation",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Hanging punctuation",
+   "name_ja": "ぶら下げ組み・約物のぶら下がり",
+   "description_ja": "行末の句読点や括弧を枠の外にはみ出させて、行の端をそろえる組み方。",
+   "aliases": [
+    "句読点が外に出る",
+    "ぶら下げ",
+    "行末をそろえる"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『hanging-punctuation』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation",
+   "prompt": "【出典】MDN『hanging-punctuation』／https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation\n【作るもの】Hanging punctuation（ぶら下げ組み・約物のぶら下がり）\n【再現する見た目・動き】hanging-punctuation: first last（Safari のみ。他は未対応）。和文では line-break: strict と組み合わせる。\n【指示】〈該当の文字〉にHanging punctuationを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/ji-okuri",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "字送り (Character spacing)",
+   "name_ja": "字送り",
+   "description_ja": "文字を並べる方向の1文字ぶんの進み幅。日本語の組版では字間の調整を指す。",
+   "aliases": [
+    "字の間隔",
+    "文字送り",
+    "字詰め"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『letter-spacing』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing",
+   "prompt": "【出典】MDN『letter-spacing』／https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing\n【作るもの】字送り (Character spacing)（字送り）\n【再現する見た目・動き】letter-spacing: 0.05em（和文本文で少し広げる）。CSS では字送りは letter-spacing で指定する。\n【指示】〈該当の文字〉に字送り (Character spacing)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/gyou-okuri",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "行送り (Line pitch)",
+   "name_ja": "行送り",
+   "description_ja": "ある行の基準線から次の行の基準線までの距離。CSS の line-height に相当する。",
+   "aliases": [
+    "行間",
+    "行の間隔",
+    "行のピッチ"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『line-height』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height",
+   "prompt": "【出典】MDN『line-height』／https://developer.mozilla.org/en-US/docs/Web/CSS/line-height\n【作るもの】行送り (Line pitch)（行送り）\n【再現する見た目・動き】line-height: 1.8（和文本文）。行送り = 文字サイズ + 行間。単位なしの数値で指定する。\n【指示】〈該当の文字〉に行送り (Line pitch)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/yakumono",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "約物",
+   "name_ja": "約物（やくもの）",
+   "description_ja": "句読点・括弧・中点など、文字以外の記号類。連続すると間が空きすぎるので詰める。",
+   "aliases": [
+    "句読点",
+    "括弧",
+    "記号",
+    "、。「」"
+   ],
+   "preview": {
+    "font": "Noto Sans JP",
+    "google": true,
+    "fallback": "sans-serif",
+    "weight": 400,
+    "sample": "「あ」（い）、。",
+    "sample_long": "（注）「約物」を詰める。"
+   },
+   "source_ref": "MDN『text-spacing-trim』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-spacing-trim",
+   "prompt": "【出典】MDN『text-spacing-trim』／https://developer.mozilla.org/en-US/docs/Web/CSS/text-spacing-trim\n【作るもの】約物（約物（やくもの））\n【再現する見た目・動き】text-spacing-trim: trim-start（行頭の括弧を詰める）／ space-first。対応しない環境は palt で代用する。\n【指示】〈該当の文字〉に約物を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/ruby",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Ruby",
+   "name_ja": "ルビ",
+   "description_ja": "漢字の上に付ける読み仮名。HTML の ruby 要素で書く。",
+   "aliases": [
+    "ふりがな",
+    "読み仮名",
+    "漢字の上の小さい字"
+   ],
+   "preview": {
+    "font": "Noto Serif JP",
+    "google": true,
+    "fallback": "serif",
+    "weight": 400,
+    "sample": "漢字 ふりがな",
+    "sample_long": "吾輩は猫である"
+   },
+   "source_ref": "MDN『ruby 要素』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ruby",
+   "prompt": "【出典】MDN『ruby 要素』／https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ruby\n【作るもの】Ruby（ルビ）\n【再現する見た目・動き】<ruby>漢字<rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>; ruby-position: over; rt の font-size: 0.5em。\n【指示】〈該当の文字〉にRubyを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/vertical-writing",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Vertical writing",
+   "name_ja": "縦書き",
+   "description_ja": "文字を上から下、行を右から左へ並べる日本語の組み方。",
+   "aliases": [
+    "縦組み",
+    "縦に読む",
+    "writing-mode"
+   ],
+   "preview": {
+    "font": "Noto Serif JP",
+    "google": true,
+    "fallback": "serif",
+    "weight": 400,
+    "sample": "縦書き",
+    "sample_long": "吾輩は猫である。"
+   },
+   "source_ref": "MDN『writing-mode』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode",
+   "prompt": "【出典】MDN『writing-mode』／https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode\n【作るもの】Vertical writing（縦書き）\n【再現する見た目・動き】writing-mode: vertical-rl; text-orientation: mixed; 数字は text-combine-upright: digits 2 で横向きにまとめる。\n【指示】〈該当の文字〉にVertical writingを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/font-display",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "font-display: swap",
+   "name_ja": "フォント表示方式（swap）",
+   "description_ja": "Web フォントの読み込み中に、いったん代わりのフォントで文字を見せ、届いたら入れ替える設定。",
+   "aliases": [
+    "フォントの読み込み",
+    "一瞬文字が出ない",
+    "スワップ"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『font-display』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display",
+   "prompt": "【出典】MDN『font-display』／https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display\n【作るもの】font-display: swap（フォント表示方式（swap））\n【再現する見た目・動き】@font-face { font-display: swap }。Google Fonts の URL に &display=swap を付ける。入れ替え時のずれは size-adjust で抑える。\n【指示】〈該当の文字〉にfont-display: swapを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/variable-fonts",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Variable fonts",
+   "name_ja": "可変フォント",
+   "description_ja": "太さや幅などを数値で連続して変えられる、1ファイルのフォント。",
+   "aliases": [
+    "太さが自由",
+    "ウェイトを細かく",
+    "1ファイルで全部の太さ"
+   ],
+   "preview": {
+    "font": "Inter",
+    "google": true,
+    "fallback": "sans-serif",
+    "weight": 600,
+    "sample": "Aa 300 900",
+    "sample_long": "Weight 100 to 900"
+   },
+   "source_ref": "MDN『Variable fonts guide』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide",
+   "prompt": "【出典】MDN『Variable fonts guide』／https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide\n【作るもの】Variable fonts（可変フォント）\n【再現する見た目・動き】font-weight: 100〜900 の任意の数値（例: 550）／ font-variation-settings: \"wght\" 550。読み込みは wght@100..900 の範囲指定。\n【指示】〈該当の文字〉にVariable fontsを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/font-stack",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Fallback font stack",
+   "name_ja": "代替フォントの並び（フォントスタック）",
+   "description_ja": "最初のフォントが無いときに、次に使うフォントを順番に並べた指定。",
+   "aliases": [
+    "フォントが無いとき",
+    "font-family の並べ方",
+    "フォールバック"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『font-family』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family",
+   "prompt": "【出典】MDN『font-family』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-family\n【作るもの】Fallback font stack（代替フォントの並び（フォントスタック））\n【再現する見た目・動き】font-family: \"Noto Sans JP\", \"Hiragino Sans\", \"Yu Gothic\", system-ui, sans-serif。末尾は必ず総称ファミリー（sans-serif／serif／monospace）。\n【指示】〈該当の文字〉にFallback font stackを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/optical-size",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Optical size (opsz)",
+   "name_ja": "オプティカルサイズ",
+   "description_ja": "文字サイズに合わせて字形を自動で調整する機能。小さい文字は太く広め、大きい文字は細く詰めた形になる。",
+   "aliases": [
+    "サイズごとの字形",
+    "opsz",
+    "大きい文字を細く"
+   ],
+   "preview": {
+    "font": "Fraunces",
+    "google": true,
+    "fallback": "serif",
+    "weight": 400,
+    "sample": "Aa Aa",
+    "sample_long": "Optical size small to large"
+   },
+   "source_ref": "MDN『font-optical-sizing』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing",
+   "prompt": "【出典】MDN『font-optical-sizing』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing\n【作るもの】Optical size (opsz)（オプティカルサイズ）\n【再現する見た目・動き】font-optical-sizing: auto（既定）／ font-variation-settings: \"opsz\" 72（大見出し）。opsz 軸のあるフォント（Fraunces など）だけ有効。\n【指示】〈該当の文字〉にOptical size (opsz)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/small-caps",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Small caps",
+   "name_ja": "スモールキャップス",
+   "description_ja": "小文字を小さな大文字の形で見せること。見出しやラベルが上品になる。",
+   "aliases": [
+    "小さい大文字",
+    "スモキャプ",
+    "ラベルの文字"
+   ],
+   "preview": {
+    "font": "Playfair Display",
+    "google": true,
+    "fallback": "serif",
+    "weight": 400,
+    "sample": "Small Caps",
+    "sample_long": "Small Caps Heading"
+   },
+   "source_ref": "MDN『font-variant-caps』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps",
+   "prompt": "【出典】MDN『font-variant-caps』／https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps\n【作るもの】Small caps（スモールキャップス）\n【再現する見た目・動き】font-variant-caps: small-caps; letter-spacing: 0.08em。小さな大文字の字形を持つフォントでのみ本物になる（無いと疑似）。\n【指示】〈該当の文字〉にSmall capsを使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  },
+  {
+   "id": "typography/measure",
+   "kind": "type",
+   "category": "type-term",
+   "name_en": "Measure (line length)",
+   "name_ja": "行の長さ（ライン・レングス）",
+   "description_ja": "1行の長さ。長すぎても短すぎても読みにくく、欧文は45〜75文字、和文は25〜40文字が目安。",
+   "aliases": [
+    "1行の文字数",
+    "読みやすい幅",
+    "段落の幅",
+    "measure"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "MDN『max-width』",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/max-width",
+   "prompt": "【出典】MDN『max-width』／https://developer.mozilla.org/en-US/docs/Web/CSS/max-width\n【作るもの】Measure (line length)（行の長さ（ライン・レングス））\n【再現する見た目・動き】max-width: 65ch（欧文本文）／ 36em（和文本文）。ch 単位は文字数ベースで、書体を変えても読みやすい長さを保つ。\n【指示】〈該当の文字〉にMeasure (line length)を使って。数値は出典の定義に従い、画面幅ごとに確かめて。"
+  }
+ ]
+}

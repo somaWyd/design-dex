@@ -1,0 +1,1885 @@
+{
+ "source": {
+  "id": "animation-vocabulary",
+  "type": "skill",
+  "name": "Animation Vocabulary（モーション用語集）",
+  "ref": "~/.claude/skills/animation-vocabulary",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "animation-vocabulary/fade-in-fade-out",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Fade in / Fade out",
+   "name_ja": "ふわっと出入り",
+   "description_ja": "透明度を変えて、要素をじわっと現したり消したりする動き。",
+   "aliases": [
+    "ふわっと",
+    "じわっと",
+    "すうっと消える",
+    "フェード"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節／https://developer.mozilla.org/en-US/docs/Web/CSS/opacity\n【作るもの】Fade in / Fade out（ふわっと出入り）\n【再現する見た目・動き】opacity 0→1、2.6秒周期・ease-out\n【指示】〈使う場所〉にFade in / Fade outを入れて。透明度を変えて、要素をじわっと現したり消したりする動き。",
+   "preview": {
+    "demo": "enter",
+    "variant": "fade"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
+  },
+  {
+   "id": "animation-vocabulary/slide-in",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Slide in",
+   "name_ja": "横からスライドイン",
+   "description_ja": "画面の外から要素がスッと滑り込んでくる動き。",
+   "aliases": [
+    "スッと入ってくる",
+    "横から出る",
+    "スライド",
+    "滑り込む"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transition\n【作るもの】Slide in（横からスライドイン）\n【再現する見た目・動き】translateX(-70px)→0（2.6秒周期・ease-out）\n【指示】〈使う場所〉にSlide inを入れて。画面の外から要素がスッと滑り込んでくる動き。",
+   "preview": {
+    "demo": "enter",
+    "variant": "slide"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
+  },
+  {
+   "id": "animation-vocabulary/scale-in",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Scale in",
+   "name_ja": "小さく育って出る",
+   "description_ja": "小さい状態から元の大きさまで膨らみながら現れる動き。多くはフェードと併用する。",
+   "aliases": [
+    "ぽんっと大きくなる",
+    "拡大して出る",
+    "ズームイン",
+    "じわっと膨らむ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節／https://developer.mozilla.org/en-US/docs/Web/CSS/scale\n【作るもの】Scale in（小さく育って出る）\n【再現する見た目・動き】scale(.8)→1（2.6秒周期・ease-out）\n【指示】〈使う場所〉にScale inを入れて。小さい状態から元の大きさまで膨らみながら現れる動き。多くはフェードと併用する。",
+   "preview": {
+    "demo": "enter",
+    "variant": "scale"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/scale"
+  },
+  {
+   "id": "animation-vocabulary/pop-in",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Pop in",
+   "name_ja": "ぴょこっと弾んで出る",
+   "description_ja": "少し行き過ぎてから戻る、弾むような出方。",
+   "aliases": [
+    "ぴょこっと",
+    "ぽよんと出る",
+    "弾んで出る",
+    "ポップ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function\n【作るもの】Pop in（ぴょこっと弾んで出る）\n【再現する見た目・動き】scale(.5)→1.12→1（2.6秒周期）\n【指示】〈使う場所〉にPop inを入れて。少し行き過ぎてから戻る、弾むような出方。",
+   "preview": {
+    "demo": "enter",
+    "variant": "pop"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function"
+  },
+  {
+   "id": "animation-vocabulary/reveal",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Reveal",
+   "name_ja": "じわじわ見せる",
+   "description_ja": "マスクやクリップで、隠れていた内容を徐々に見せる動き。",
+   "aliases": [
+    "じわじわ表示",
+    "めくるように出る",
+    "ワイプ",
+    "覆いを外す"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節／https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path\n【作るもの】Reveal（じわじわ見せる）\n【再現する見た目・動き】clip-path inset(0 100% 0 0)→inset(0)、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にRevealを入れて。マスクやクリップで、隠れていた内容を徐々に見せる動き。",
+   "preview": {
+    "demo": "enter",
+    "variant": "clip"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"
+  },
+  {
+   "id": "animation-vocabulary/enter-exit",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Enter / Exit",
+   "name_ja": "入場と退場",
+   "description_ja": "要素が画面に追加されるとき、取り除かれるときに再生される動き全般。",
+   "aliases": [
+    "出入り",
+    "登場と消える",
+    "出る消える",
+    "追加削除の動き"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節／https://motion.dev/docs/react-animate-presence\n【作るもの】Enter / Exit（入場と退場）\n【再現する見た目・動き】opacity 0→1、2.6秒周期・ease-out\n【指示】〈使う場所〉にEnter / Exitを入れて。要素が画面に追加されるとき、取り除かれるときに再生される動き全般。",
+   "preview": {
+    "demo": "enter",
+    "variant": "fade"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Entrances & Exits』節",
+   "ref_url": "https://motion.dev/docs/react-animate-presence"
+  },
+  {
+   "id": "animation-vocabulary/keyframes",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Keyframes",
+   "name_ja": "途中の見せ場指定",
+   "description_ja": "0%・50%・100%など、動きの節目を決めて間をブラウザに補完させる仕組み。",
+   "aliases": [
+    "コマ指定",
+    "段階的な動き",
+    "途中経過",
+    "アニメの設計図"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes\n【作るもの】Keyframes（途中の見せ場指定）\n【再現する見た目・動き】translateY(40px)→0（2.6秒周期・ease-out）\n【指示】〈使う場所〉にKeyframesを入れて。0%・50%・100%など、動きの節目を決めて間をブラウザに補完させる仕組み。",
+   "preview": {
+    "demo": "enter",
+    "variant": "up"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"
+  },
+  {
+   "id": "animation-vocabulary/interpolation-tween",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Interpolation / Tween",
+   "name_ja": "なめらかな間埋め",
+   "description_ja": "開始値と終了値の間の中間コマを作り、動きを連続させること。",
+   "aliases": [
+    "なめらかに変化",
+    "間をつなぐ",
+    "補間",
+    "じわっと変わる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://motion.dev/docs/react-transitions\n【作るもの】Interpolation / Tween（なめらかな間埋め）\n【再現する見た目・動き】下を linear にする\n【指示】〈使う場所〉にInterpolation / Tweenを入れて。開始値と終了値の間の中間コマを作り、動きを連続させること。",
+   "preview": {
+    "demo": "timing",
+    "variant": "tween"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://motion.dev/docs/react-transitions"
+  },
+  {
+   "id": "animation-vocabulary/stagger",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Stagger",
+   "name_ja": "時間差で順番に出す",
+   "description_ja": "複数の要素を少しずつ遅らせて順に動かし、波のように見せる。",
+   "aliases": [
+    "順番にぽんぽん",
+    "ずらして出す",
+    "ドミノ",
+    "カスケード"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://motion.dev/docs/stagger\n【作るもの】Stagger（時間差で順番に出す）\n【再現する見た目・動き】5本のバーが translateY(16px)+opacity 0→1、間隔80ms、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にStaggerを入れて。複数の要素を少しずつ遅らせて順に動かし、波のように見せる。",
+   "preview": {
+    "demo": "stagger"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://motion.dev/docs/stagger"
+  },
+  {
+   "id": "animation-vocabulary/orchestration",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Orchestration",
+   "name_ja": "全体で1つの動きに見せる",
+   "description_ja": "複数のアニメの開始・長さを調整して、1つにまとまった動きに感じさせる。",
+   "aliases": [
+    "連携した動き",
+    "同時に動く",
+    "振り付け",
+    "まとまり"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://motion.dev/docs/react-animation\n【作るもの】Orchestration（全体で1つの動きに見せる）\n【再現する見た目・動き】5本のバーが translateY(16px)+opacity 0→1、間隔80ms、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にOrchestrationを入れて。複数のアニメの開始・長さを調整して、1つにまとまった動きに感じさせる。",
+   "preview": {
+    "demo": "stagger"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://motion.dev/docs/react-animation"
+  },
+  {
+   "id": "animation-vocabulary/delay",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Delay",
+   "name_ja": "動き出しを待つ",
+   "description_ja": "アニメが始まるまでの待ち時間。",
+   "aliases": [
+    "ちょっと待ってから",
+    "遅れて始まる",
+    "間を置く",
+    "時間差"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay\n【作るもの】Delay（動き出しを待つ）\n【再現する見た目・動き】基準に対して下を0.4秒遅らせる\n【指示】〈使う場所〉にDelayを入れて。アニメが始まるまでの待ち時間。",
+   "preview": {
+    "demo": "timing",
+    "variant": "delay"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay"
+  },
+  {
+   "id": "animation-vocabulary/duration",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Duration",
+   "name_ja": "動きの長さ",
+   "description_ja": "アニメが終わるまでにかかる時間。",
+   "aliases": [
+    "速さ",
+    "ゆっくり",
+    "どれくらいかかる",
+    "時間"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration\n【作るもの】Duration（動きの長さ）\n【再現する見た目・動き】基準に対して下を1.3秒にする\n【指示】〈使う場所〉にDurationを入れて。アニメが終わるまでにかかる時間。",
+   "preview": {
+    "demo": "timing",
+    "variant": "duration"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration"
+  },
+  {
+   "id": "animation-vocabulary/fill-mode",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Fill mode",
+   "name_ja": "終わった姿を保つ",
+   "description_ja": "開始前や終了後に、最初・最後の見た目を保つかどうかの設定。",
+   "aliases": [
+    "終わった状態のまま",
+    "元に戻らない",
+    "止まったまま",
+    "保持"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode\n【作るもの】Fill mode（終わった姿を保つ）\n【再現する見た目・動き】下を1回で止めて forwards にする\n【指示】〈使う場所〉にFill modeを入れて。開始前や終了後に、最初・最後の見た目を保つかどうかの設定。",
+   "preview": {
+    "demo": "timing",
+    "variant": "fill"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode"
+  },
+  {
+   "id": "animation-vocabulary/stepped-animation",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Stepped animation",
+   "name_ja": "カクカク段階で進む",
+   "description_ja": "滑らかでなく、決まった段階ごとに区切って進む動き。",
+   "aliases": [
+    "パラパラ",
+    "カウントダウン風",
+    "コマ送り",
+    "段々"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Stepped animation（カクカク段階で進む）\n【再現する見た目・動き】下を steps(5) にする\n【指示】〈使う場所〉にStepped animationを入れて。滑らかでなく、決まった段階ごとに区切って進む動き。",
+   "preview": {
+    "demo": "timing",
+    "variant": "steps"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Sequencing & Timing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/translate",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Translate",
+   "name_ja": "縦横に動かす",
+   "description_ja": "要素をX軸・Y軸方向に動かす。",
+   "aliases": [
+    "スッと移動",
+    "位置をずらす",
+    "横にずれる",
+    "動かす"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/translate\n【作るもの】Translate（縦横に動かす）\n【再現する見た目・動き】translate ±50px\n【指示】〈使う場所〉にTranslateを入れて。要素をX軸・Y軸方向に動かす。",
+   "preview": {
+    "demo": "transform",
+    "variant": "translate"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/translate"
+  },
+  {
+   "id": "animation-vocabulary/scale",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Scale",
+   "name_ja": "大きさを変える",
+   "description_ja": "要素を大きくしたり小さくしたりする。",
+   "aliases": [
+    "拡大縮小",
+    "ぐっと大きく",
+    "ちょっと縮む",
+    "ズーム"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/scale\n【作るもの】Scale（大きさを変える）\n【再現する見た目・動き】scale .6→1.25\n【指示】〈使う場所〉にScaleを入れて。要素を大きくしたり小さくしたりする。",
+   "preview": {
+    "demo": "transform",
+    "variant": "scale"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/scale"
+  },
+  {
+   "id": "animation-vocabulary/rotate",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Rotate",
+   "name_ja": "くるっと回す",
+   "description_ja": "要素をある点を中心に回転させる。",
+   "aliases": [
+    "くるくる",
+    "回転",
+    "ぐるっと",
+    "傾ける"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/rotate\n【作るもの】Rotate（くるっと回す）\n【再現する見た目・動き】rotate 0→180deg\n【指示】〈使う場所〉にRotateを入れて。要素をある点を中心に回転させる。",
+   "preview": {
+    "demo": "transform",
+    "variant": "rotate"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/rotate"
+  },
+  {
+   "id": "animation-vocabulary/skew",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Skew",
+   "name_ja": "斜めにゆがめる",
+   "description_ja": "要素をX軸・Y軸方向に斜めにゆがませ、長方形から崩す。",
+   "aliases": [
+    "斜めに傾ける",
+    "平行四辺形",
+    "ひしゃげる",
+    "斜体風"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew\n【作るもの】Skew（斜めにゆがめる）\n【再現する見た目・動き】skewX(-22deg)\n【指示】〈使う場所〉にSkewを入れて。要素をX軸・Y軸方向に斜めにゆがませ、長方形から崩す。",
+   "preview": {
+    "demo": "transform",
+    "variant": "skew"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew"
+  },
+  {
+   "id": "animation-vocabulary/3d-tilt-flip",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "3D tilt / Flip",
+   "name_ja": "奥行きで傾ける・裏返す",
+   "description_ja": "3D空間で回転させ、奥行きを出す。カードの裏返しなどに使う。",
+   "aliases": [
+    "カードを裏返す",
+    "ぐるんとひっくり返す",
+    "立体的に傾く",
+    "チルト"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms\n【作るもの】3D tilt / Flip（奥行きで傾ける・裏返す）\n【再現する見た目・動き】rotateX/Y ±12〜16deg を3秒で往復\n【指示】〈使う場所〉に3D tilt / Flipを入れて。3D空間で回転させ、奥行きを出す。カードの裏返しなどに使う。",
+   "preview": {
+    "demo": "transform",
+    "variant": "tilt"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms"
+  },
+  {
+   "id": "animation-vocabulary/perspective",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Perspective",
+   "name_ja": "奥行きの強さ",
+   "description_ja": "3D効果の強さ。値が小さいほど奥行きが強調される。",
+   "aliases": [
+    "遠近感",
+    "立体感の強さ",
+    "奥行き",
+    "迫力"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/perspective\n【作るもの】Perspective（奥行きの強さ）\n【再現する見た目・動き】perspective 500px で rotateY 180deg\n【指示】〈使う場所〉にPerspectiveを入れて。3D効果の強さ。値が小さいほど奥行きが強調される。",
+   "preview": {
+    "demo": "transform",
+    "variant": "flip"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/perspective"
+  },
+  {
+   "id": "animation-vocabulary/transform-origin",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Transform origin",
+   "name_ja": "動きの支点",
+   "description_ja": "拡大や回転が起こる中心点。",
+   "aliases": [
+    "どこを中心に",
+    "支点",
+    "基準点",
+    "起点"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin\n【作るもの】Transform origin（動きの支点）\n【再現する見た目・動き】左上を軸に回転\n【指示】〈使う場所〉にTransform originを入れて。拡大や回転が起こる中心点。",
+   "preview": {
+    "demo": "transform",
+    "variant": "origin"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin"
+  },
+  {
+   "id": "animation-vocabulary/origin-aware-animation",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Origin-aware animation",
+   "name_ja": "押した場所から広がる",
+   "description_ja": "要素の中心ではなく、開いたきっかけの場所から広がる動き。",
+   "aliases": [
+    "ボタンから出てくる",
+    "押した所から開く",
+    "起点から",
+    "にゅっと出る"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin\n【作るもの】Origin-aware animation（押した場所から広がる）\n【再現する見た目・動き】transform-origin を押したボタン側（左上）にして scale(.6)→1\n【指示】〈使う場所〉にOrigin-aware animationを入れて。要素の中心ではなく、開いたきっかけの場所から広がる動き。",
+   "preview": {
+    "demo": "popover"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Movement & Transforms』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin"
+  },
+  {
+   "id": "animation-vocabulary/crossfade",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Crossfade",
+   "name_ja": "重ねて入れ替える",
+   "description_ja": "同じ場所で、片方が消えながらもう片方が現れる。",
+   "aliases": [
+    "じわっと切り替え",
+    "重なって変わる",
+    "クロスフェード",
+    "入れ替わり"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API\n【作るもの】Crossfade（重ねて入れ替える）\n【再現する見た目・動き】opacity のクロスフェード\n【指示】〈使う場所〉にCrossfadeを入れて。同じ場所で、片方が消えながらもう片方が現れる。",
+   "preview": {
+    "demo": "cross"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+  },
+  {
+   "id": "animation-vocabulary/continuity-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Continuity transition",
+   "name_ja": "つながって見える変化",
+   "description_ja": "変化の前後を視覚的につなぎ、見失わせない動き。",
+   "aliases": [
+    "同じものが変化",
+    "連続して見える",
+    "つながる動き",
+    "継ぎ目なし"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Continuity transition（つながって見える変化）\n【再現する見た目・動き】translate(-70px,20px) scale(.35)→元の位置と大きさ、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にContinuity transitionを入れて。変化の前後を視覚的につなぎ、見失わせない動き。",
+   "preview": {
+    "demo": "shared"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/morph",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Morph",
+   "name_ja": "形がにゅるっと変わる",
+   "description_ja": "ある形が別の形へ滑らかに変わる動き。Dynamic Island が例。",
+   "aliases": [
+    "にゅるっと変形",
+    "形が変わる",
+    "モーフィング",
+    "ぬるっと"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius\n【作るもの】Morph（形がにゅるっと変わる）\n【再現する見た目・動き】border-radius 12→30px と scaleX 1→2.6、cubic-bezier(.34,1.3,.64,1)\n【指示】〈使う場所〉にMorphを入れて。ある形が別の形へ滑らかに変わる動き。Dynamic Island が例。",
+   "preview": {
+    "demo": "morph"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
+  },
+  {
+   "id": "animation-vocabulary/shared-element-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Shared element transition",
+   "name_ja": "同じものが移動拡大",
+   "description_ja": "要素が別の位置へ移動しながら変形して引き継がれる。サムネが拡大してカードになる。",
+   "aliases": [
+    "サムネが広がる",
+    "ぐわっと拡大",
+    "引き継ぎ",
+    "詳細へ広がる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://motion.dev/docs/layout-animations\n【作るもの】Shared element transition（同じものが移動拡大）\n【再現する見た目・動き】translate(-70px,20px) scale(.35)→元の位置と大きさ、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にShared element transitionを入れて。要素が別の位置へ移動しながら変形して引き継がれる。サムネが拡大してカードになる。",
+   "preview": {
+    "demo": "shared"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://motion.dev/docs/layout-animations"
+  },
+  {
+   "id": "animation-vocabulary/layout-animation",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Layout animation",
+   "name_ja": "位置変更もなめらか",
+   "description_ja": "大きさや位置が変わるとき、瞬時に切り替えず新しい場所へ動く。",
+   "aliases": [
+    "スッとずれる",
+    "並び替えで動く",
+    "ぬるっと移動",
+    "自動で動く"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://motion.dev/docs/layout-animations\n【作るもの】Layout animation（位置変更もなめらか）\n【再現する見た目・動き】translate(-70px,20px) scale(.35)→元の位置と大きさ、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にLayout animationを入れて。大きさや位置が変わるとき、瞬時に切り替えず新しい場所へ動く。",
+   "preview": {
+    "demo": "shared"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://motion.dev/docs/layout-animations"
+  },
+  {
+   "id": "animation-vocabulary/accordion-collapse",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Accordion / Collapse",
+   "name_ja": "にゅっと開閉",
+   "description_ja": "高さを滑らかに伸縮させて、内容を出し入れする。",
+   "aliases": [
+    "開閉",
+    "折りたたみ",
+    "にゅっと開く",
+    "アコーディオン"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transition\n【作るもの】Accordion / Collapse（にゅっと開閉）\n【再現する見た目・動き】本体を transform-origin top で scaleY 0→1\n【指示】〈使う場所〉にAccordion / Collapseを入れて。高さを滑らかに伸縮させて、内容を出し入れする。",
+   "preview": {
+    "demo": "accordion"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
+  },
+  {
+   "id": "animation-vocabulary/direction-aware-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Direction-aware transition",
+   "name_ja": "進む戻るで向きが変わる",
+   "description_ja": "進むときと戻るときで逆向きに動かし、方向感を持たせる。",
+   "aliases": [
+    "行き帰りで逆",
+    "左右に切り替え",
+    "方向のある遷移",
+    "進む戻る"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節／https://motion.dev/docs/react-animate-presence\n【作るもの】Direction-aware transition（進む戻るで向きが変わる）\n【再現する見た目・動き】新画面が translateX(105%)→0、旧画面は -30% と scale(.96)\n【指示】〈使う場所〉にDirection-aware transitionを入れて。進むときと戻るときで逆向きに動かし、方向感を持たせる。",
+   "preview": {
+    "demo": "page"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Transitions Between States』節",
+   "ref_url": "https://motion.dev/docs/react-animate-presence"
+  },
+  {
+   "id": "animation-vocabulary/scroll-reveal",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Scroll reveal",
+   "name_ja": "スクロールで現れる",
+   "description_ja": "画面に入ってきた要素がふわっと、または滑って現れる。",
+   "aliases": [
+    "スクロールするとふわっと",
+    "下から出てくる",
+    "見えたら出る",
+    "ぬるっと表示"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節／https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations\n【作るもの】Scroll reveal（スクロールで現れる）\n【再現する見た目・動き】視界に入った行が translateX(-14px)+opacity で出る\n【指示】〈使う場所〉にScroll revealを入れて。画面に入ってきた要素がふわっと、または滑って現れる。",
+   "preview": {
+    "demo": "scroll"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+  },
+  {
+   "id": "animation-vocabulary/scroll-driven-animation",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Scroll-driven animation",
+   "name_ja": "スクロールに連動",
+   "description_ja": "アニメの進み具合をスクロール位置に直接結びつける。",
+   "aliases": [
+    "スクロールに合わせて動く",
+    "連動",
+    "スクロール量で変わる",
+    "進捗連動"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline\n【作るもの】Scroll-driven animation（スクロールに連動）\n【再現する見た目・動き】上端の進捗バーが scaleX 0→1\n【指示】〈使う場所〉にScroll-driven animationを入れて。アニメの進み具合をスクロール位置に直接結びつける。",
+   "preview": {
+    "demo": "scroll",
+    "variant": "progress"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline"
+  },
+  {
+   "id": "animation-vocabulary/parallax",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Parallax",
+   "name_ja": "奥行きのズレ",
+   "description_ja": "背景と前景がスクロールで違う速さで動き、奥行きが出る。",
+   "aliases": [
+    "視差",
+    "奥行きのあるスクロール",
+    "背景だけゆっくり",
+    "パララックス"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節／https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations\n【作るもの】Parallax（奥行きのズレ）\n【再現する見た目・動き】背景 ±12px、前景 ±50px\n【指示】〈使う場所〉にParallaxを入れて。背景と前景がスクロールで違う速さで動き、奥行きが出る。",
+   "preview": {
+    "demo": "parallax"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+  },
+  {
+   "id": "animation-vocabulary/page-transition",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Page transition",
+   "name_ja": "ページ切替の動き",
+   "description_ja": "別のページへ移動するときに再生される動き。",
+   "aliases": [
+    "ページ移動のアニメ",
+    "画面遷移",
+    "ぬるっと切り替え",
+    "遷移"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節／https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API\n【作るもの】Page transition（ページ切替の動き）\n【再現する見た目・動き】新画面が translateX(105%)→0、旧画面は -30% と scale(.96)\n【指示】〈使う場所〉にPage transitionを入れて。別のページへ移動するときに再生される動き。",
+   "preview": {
+    "demo": "page"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+  },
+  {
+   "id": "animation-vocabulary/view-transition",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "View transition",
+   "name_ja": "ブラウザ標準の遷移",
+   "description_ja": "ブラウザが2つの状態・ページ間を、共通要素を結んで滑らかにつなぐ。",
+   "aliases": [
+    "画面がつながる",
+    "標準の遷移",
+    "共通要素が動く",
+    "ぬるっと画面変更"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節／https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API\n【作るもの】View transition（ブラウザ標準の遷移）\n【再現する見た目・動き】クロスフェード\n【指示】〈使う場所〉にView transitionを入れて。ブラウザが2つの状態・ページ間を、共通要素を結んで滑らかにつなぐ。",
+   "preview": {
+    "demo": "page",
+    "variant": "fade"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Scroll』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+  },
+  {
+   "id": "animation-vocabulary/hover-effect",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Hover effect",
+   "name_ja": "触れると変わる",
+   "description_ja": "カーソルを重ねたときに起こる見た目の変化。",
+   "aliases": [
+    "マウスを乗せると",
+    "ちょっと浮く",
+    "色が変わる",
+    "ホバー"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://developer.mozilla.org/en-US/docs/Web/CSS/:hover\n【作るもの】Hover effect（触れると変わる）\n【再現する見た目・動き】translateY(-3px)+影\n【指示】〈使う場所〉にHover effectを入れて。カーソルを重ねたときに起こる見た目の変化。",
+   "preview": {
+    "demo": "hover"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"
+  },
+  {
+   "id": "animation-vocabulary/press-tap-feedback",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Press / Tap feedback",
+   "name_ja": "押すとぎゅっと縮む",
+   "description_ja": "押したときにわずかに縮み、手応えを出す。",
+   "aliases": [
+    "ぎゅっと押す感じ",
+    "ぽちっと",
+    "押した感",
+    "タップ反応"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://developer.mozilla.org/en-US/docs/Web/CSS/:active\n【作るもの】Press / Tap feedback（押すとぎゅっと縮む）\n【再現する見た目・動き】押下で scale(.94)\n【指示】〈使う場所〉にPress / Tap feedbackを入れて。押したときにわずかに縮み、手応えを出す。",
+   "preview": {
+    "demo": "hover",
+    "variant": "press"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:active"
+  },
+  {
+   "id": "animation-vocabulary/hold-to-confirm",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Hold to confirm",
+   "name_ja": "長押しで確定",
+   "description_ja": "ボタンを押し続けると進捗が満ちていき、確定する効果。",
+   "aliases": [
+    "長押しで実行",
+    "押し続けると",
+    "ゲージが満ちる",
+    "確認"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://motion.dev/docs/react-gestures\n【作るもの】Hold to confirm（長押しで確定）\n【再現する見た目・動き】左から scaleX 0→1 を約1.5秒で塗る\n【指示】〈使う場所〉にHold to confirmを入れて。ボタンを押し続けると進捗が満ちていき、確定する効果。",
+   "preview": {
+    "demo": "hold"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://motion.dev/docs/react-gestures"
+  },
+  {
+   "id": "animation-vocabulary/drag",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Drag",
+   "name_ja": "つかんで動かす",
+   "description_ja": "要素を掴んで動かす操作。離したときに勢いが残ることも。",
+   "aliases": [
+    "ドラッグ",
+    "ひっぱる",
+    "つかんで動かす",
+    "スライドさせる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://motion.dev/docs/react-drag\n【作るもの】Drag（つかんで動かす）\n【再現する見た目・動き】掴んで動かし離すとバネで戻る cubic-bezier(.34,1.4,.64,1)\n【指示】〈使う場所〉にDragを入れて。要素を掴んで動かす操作。離したときに勢いが残ることも。",
+   "preview": {
+    "demo": "drag"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://motion.dev/docs/react-drag"
+  },
+  {
+   "id": "animation-vocabulary/drag-to-reorder",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Drag to reorder",
+   "name_ja": "ドラッグで並べ替え",
+   "description_ja": "リスト項目を掴んで動かすと、他の項目がよけて場所を空ける。",
+   "aliases": [
+    "並び替え",
+    "ずらして入れ替え",
+    "順番を変える",
+    "ドラッグ並べ替え"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://motion.dev/docs/react-reorder\n【作るもの】Drag to reorder（ドラッグで並べ替え）\n【再現する見た目・動き】1行目と2行目が translateY で入れ替わる\n【指示】〈使う場所〉にDrag to reorderを入れて。リスト項目を掴んで動かすと、他の項目がよけて場所を空ける。",
+   "preview": {
+    "demo": "reorder"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://motion.dev/docs/react-reorder"
+  },
+  {
+   "id": "animation-vocabulary/swipe-to-dismiss",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Swipe to dismiss",
+   "name_ja": "払って消す",
+   "description_ja": "画面外へ引っ張って閉じる操作。ドロワーやトースト向け。",
+   "aliases": [
+    "スワイプで閉じる",
+    "払いのける",
+    "横にはじく",
+    "下に引いて閉じる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://motion.dev/docs/react-drag\n【作るもの】Swipe to dismiss（払って消す）\n【再現する見た目・動き】右へ払って消える\n【指示】〈使う場所〉にSwipe to dismissを入れて。画面外へ引っ張って閉じる操作。ドロワーやトースト向け。",
+   "preview": {
+    "demo": "drag",
+    "variant": "swipe"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://motion.dev/docs/react-drag"
+  },
+  {
+   "id": "animation-vocabulary/rubber-banding",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Rubber-banding",
+   "name_ja": "ゴムのように戻る",
+   "description_ja": "境界を超えて引くと抵抗がかかり、離すと戻る。iOS の端のびょよよ。",
+   "aliases": [
+    "ビヨーンと戻る",
+    "端で引っ張られる",
+    "ゴム感",
+    "iOSのスクロール"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Rubber-banding（ゴムのように戻る）\n【再現する見た目・動き】端を越えて引くと抵抗し、戻るとき少し行き過ぎる\n【指示】〈使う場所〉にRubber-bandingを入れて。境界を超えて引くと抵抗がかかり、離すと戻る。iOS の端のびょよよ。",
+   "preview": {
+    "demo": "drag",
+    "variant": "rubber"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/shake-wiggle",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Shake / Wiggle",
+   "name_ja": "ぶるっと震える",
+   "description_ja": "左右に素早く揺れて、エラーや入力拒否を知らせる。",
+   "aliases": [
+    "ブルブル",
+    "エラーで揺れる",
+    "ぷるぷる",
+    "ぶるっ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes\n【作るもの】Shake / Wiggle（ぶるっと震える）\n【再現する見た目・動き】translateX -9,8,-6,4px と減衰\n【指示】〈使う場所〉にShake / Wiggleを入れて。左右に素早く揺れて、エラーや入力拒否を知らせる。",
+   "preview": {
+    "demo": "shake"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"
+  },
+  {
+   "id": "animation-vocabulary/ripple",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Ripple",
+   "name_ja": "波紋が広がる",
+   "description_ja": "タップした点から円が広がり、押したことを伝える。",
+   "aliases": [
+    "水の波紋",
+    "タップでじわっと広がる",
+    "マテリアル風",
+    "波"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes\n【作るもの】Ripple（波紋が広がる）\n【再現する見た目・動き】scale 0→4、opacity .5→0\n【指示】〈使う場所〉にRippleを入れて。タップした点から円が広がり、押したことを伝える。",
+   "preview": {
+    "demo": "ripple"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Feedback & Interaction』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"
+  },
+  {
+   "id": "animation-vocabulary/easing",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Easing",
+   "name_ja": "速さの変化",
+   "description_ja": "アニメが加速したり減速したりする度合い。",
+   "aliases": [
+    "緩急",
+    "スーッと",
+    "加速減速",
+    "動きの速さ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Easing（速さの変化）\n【再現する見た目・動き】cubic-bezier(.16,1,.3,1)\n【指示】〈使う場所〉にEasingを入れて。アニメが加速したり減速したりする度合い。",
+   "preview": {
+    "demo": "ease",
+    "variant": "custom"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/ease-out",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Ease-out",
+   "name_ja": "最初速く後でゆっくり",
+   "description_ja": "始まりが速く、終わりがゆっくりになる。ユーザー操作への反応の標準。",
+   "aliases": [
+    "ふわっと止まる",
+    "スッと動いてゆっくり止まる",
+    "自然に止まる",
+    "イーズアウト"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Ease-out（最初速く後でゆっくり）\n【再現する見た目・動き】cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にEase-outを入れて。始まりが速く、終わりがゆっくりになる。ユーザー操作への反応の標準。",
+   "preview": {
+    "demo": "ease",
+    "variant": "ease-out"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/ease-in",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Ease-in",
+   "name_ja": "最初ゆっくり後で速い",
+   "description_ja": "始まりがゆっくりで、終わりが速い。重く感じやすく普通は避ける。",
+   "aliases": [
+    "もたつく",
+    "じわっと加速",
+    "ゆっくり始まる",
+    "イーズイン"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Ease-in（最初ゆっくり後で速い）\n【再現する見た目・動き】cubic-bezier(.6,0,.9,.4)\n【指示】〈使う場所〉にEase-inを入れて。始まりがゆっくりで、終わりが速い。重く感じやすく普通は避ける。",
+   "preview": {
+    "demo": "ease",
+    "variant": "ease-in"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/ease-in-out",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Ease-in-out",
+   "name_ja": "ゆっくり速くゆっくり",
+   "description_ja": "遅い、速い、遅いの順。画面上でAからBへ動くものに向く。",
+   "aliases": [
+    "なめらかに移動",
+    "滑らか",
+    "ゆったり",
+    "イーズインアウト"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Ease-in-out（ゆっくり速くゆっくり）\n【再現する見た目・動き】cubic-bezier(.65,0,.35,1)\n【指示】〈使う場所〉にEase-in-outを入れて。遅い、速い、遅いの順。画面上でAからBへ動くものに向く。",
+   "preview": {
+    "demo": "ease",
+    "variant": "ease-in-out"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/linear",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Linear",
+   "name_ja": "一定の速さ",
+   "description_ja": "速度が変わらない。UI向きでなく、スピナーやマーキー向き。",
+   "aliases": [
+    "等速",
+    "機械的",
+    "ずっと同じ速さ",
+    "リニア"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Linear（一定の速さ）\n【再現する見た目・動き】linear（比較の基準。一定の速さ）\n【指示】〈使う場所〉にLinearを入れて。速度が変わらない。UI向きでなく、スピナーやマーキー向き。",
+   "preview": {
+    "demo": "ease",
+    "variant": "linear"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/cubic-bezier",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Cubic-bezier",
+   "name_ja": "自分で曲線を決める",
+   "description_ja": "速度変化の曲線を自由に指定して、細かく制御する。",
+   "aliases": [
+    "カスタムの緩急",
+    "オリジナルの動き",
+    "曲線指定",
+    "ベジェ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Cubic-bezier（自分で曲線を決める）\n【再現する見た目・動き】cubic-bezier(.16,1,.3,1)\n【指示】〈使う場所〉にCubic-bezierを入れて。速度変化の曲線を自由に指定して、細かく制御する。",
+   "preview": {
+    "demo": "ease",
+    "variant": "custom"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/asymmetric-easing",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Asymmetric easing",
+   "name_ja": "加速と減速を変える",
+   "description_ja": "加速と減速の度合いを非対称にした曲線。対称より生き生きする。",
+   "aliases": [
+    "生き物っぽい動き",
+    "メリハリ",
+    "キレのある動き",
+    "偏った緩急"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節／https://motion.dev/docs/easing-functions\n【作るもの】Asymmetric easing（加速と減速を変える）\n【再現する見た目・動き】cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にAsymmetric easingを入れて。加速と減速の度合いを非対称にした曲線。対称より生き生きする。",
+   "preview": {
+    "demo": "ease",
+    "variant": "ease-out"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Easing』節",
+   "ref_url": "https://motion.dev/docs/easing-functions"
+  },
+  {
+   "id": "animation-vocabulary/spring",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Spring",
+   "name_ja": "バネの物理で動く",
+   "description_ja": "時間でなく物理（張力・質量・減衰）で動かす。",
+   "aliases": [
+    "ぷるんと動く",
+    "バネっぽい",
+    "ばねの動き",
+    "ぽよんと"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/spring\n【作るもの】Spring（バネの物理で動く）\n【再現する見た目・動き】cubic-bezier(.34,1.56,.64,1)\n【指示】〈使う場所〉にSpringを入れて。時間でなく物理（張力・質量・減衰）で動かす。",
+   "preview": {
+    "demo": "ease",
+    "variant": "spring"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/spring"
+  },
+  {
+   "id": "animation-vocabulary/stiffness-tension",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Stiffness / Tension",
+   "name_ja": "バネの強さ",
+   "description_ja": "バネがどれだけ強く目標へ引くか。大きいほどキビキビする。",
+   "aliases": [
+    "キビキビ",
+    "シャキッと",
+    "強く引く",
+    "硬さ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/spring\n【作るもの】Stiffness / Tension（バネの強さ）\n【再現する見た目・動き】cubic-bezier(.34,1.56,.64,1)\n【指示】〈使う場所〉にStiffness / Tensionを入れて。バネがどれだけ強く目標へ引くか。大きいほどキビキビする。",
+   "preview": {
+    "demo": "ease",
+    "variant": "spring"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/spring"
+  },
+  {
+   "id": "animation-vocabulary/damping",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Damping",
+   "name_ja": "バネの収まり方",
+   "description_ja": "バネがどれだけ早く落ち着くか。小さいほど長く揺れる。",
+   "aliases": [
+    "揺れの収まり",
+    "ぷるぷるが続く",
+    "ブレーキ",
+    "減衰"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/spring\n【作るもの】Damping（バネの収まり方）\n【再現する見た目・動き】終点で2回跳ねる\n【指示】〈使う場所〉にDampingを入れて。バネがどれだけ早く落ち着くか。小さいほど長く揺れる。",
+   "preview": {
+    "demo": "ease",
+    "variant": "bounce"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/spring"
+  },
+  {
+   "id": "animation-vocabulary/mass",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Mass",
+   "name_ja": "重さの感じ",
+   "description_ja": "動く要素の重さ。大きいほどゆっくり重く動く。",
+   "aliases": [
+    "重たい動き",
+    "どっしり",
+    "軽やか",
+    "質量"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/spring\n【作るもの】Mass（重さの感じ）\n【再現する見た目・動き】cubic-bezier(.5,1.8,.4,.8)、3.2秒\n【指示】〈使う場所〉にMassを入れて。動く要素の重さ。大きいほどゆっくり重く動く。",
+   "preview": {
+    "demo": "ease",
+    "variant": "heavy"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/spring"
+  },
+  {
+   "id": "animation-vocabulary/bounce",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Bounce",
+   "name_ja": "弾んで落ち着く",
+   "description_ja": "行き過ぎてから戻って落ち着く、遊び心のあるバネ。",
+   "aliases": [
+    "ぽよんぽよん",
+    "弾む",
+    "ぴょんぴょん",
+    "バウンス"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/spring\n【作るもの】Bounce（弾んで落ち着く）\n【再現する見た目・動き】終点で2回跳ねる\n【指示】〈使う場所〉にBounceを入れて。行き過ぎてから戻って落ち着く、遊び心のあるバネ。",
+   "preview": {
+    "demo": "ease",
+    "variant": "bounce"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/spring"
+  },
+  {
+   "id": "animation-vocabulary/perceptual-duration",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Perceptual duration",
+   "name_ja": "体感の長さ",
+   "description_ja": "バネは内部で揺れ続けても、見た目として終わったと感じる時間。",
+   "aliases": [
+    "終わった感じ",
+    "体感の速さ",
+    "見た目の長さ",
+    "収まったと感じる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/spring\n【作るもの】Perceptual duration（体感の長さ）\n【再現する見た目・動き】cubic-bezier(.34,1.56,.64,1)\n【指示】〈使う場所〉にPerceptual durationを入れて。バネは内部で揺れ続けても、見た目として終わったと感じる時間。",
+   "preview": {
+    "demo": "ease",
+    "variant": "spring"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/spring"
+  },
+  {
+   "id": "animation-vocabulary/momentum",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Momentum",
+   "name_ja": "勢いが残る",
+   "description_ja": "ドラッグや中断のあとにも速度が残って動き続ける。",
+   "aliases": [
+    "慣性",
+    "勢いで滑る",
+    "ヒュッと飛ぶ",
+    "すーっと滑る"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/react-drag\n【作るもの】Momentum（勢いが残る）\n【再現する見た目・動き】掴んで動かし離すとバネで戻る cubic-bezier(.34,1.4,.64,1)\n【指示】〈使う場所〉にMomentumを入れて。ドラッグや中断のあとにも速度が残って動き続ける。",
+   "preview": {
+    "demo": "drag"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/react-drag"
+  },
+  {
+   "id": "animation-vocabulary/velocity",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Velocity",
+   "name_ja": "速さと向き",
+   "description_ja": "要素の速さと進む向き。割り込み時にバネが次の動きへ引き継ぐ。",
+   "aliases": [
+    "弾いた勢い",
+    "フリックの速さ",
+    "スピード",
+    "勢いを引き継ぐ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://motion.dev/docs/react-drag\n【作るもの】Velocity（速さと向き）\n【再現する見た目・動き】掴んで動かし離すとバネで戻る cubic-bezier(.34,1.4,.64,1)\n【指示】〈使う場所〉にVelocityを入れて。要素の速さと進む向き。割り込み時にバネが次の動きへ引き継ぐ。",
+   "preview": {
+    "demo": "drag"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://motion.dev/docs/react-drag"
+  },
+  {
+   "id": "animation-vocabulary/interruptible-animation",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Interruptible animation",
+   "name_ja": "途中で切り替えOK",
+   "description_ja": "終わるのを待たず、途中で別の動きに滑らかに切り替えられる。",
+   "aliases": [
+    "途中で止められる",
+    "動きの途中で反応",
+    "反応が良い",
+    "キャンセルできる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Interruptible animation（途中で切り替えOK）\n【再現する見た目・動き】掴んで動かし離すとバネで戻る cubic-bezier(.34,1.4,.64,1)\n【指示】〈使う場所〉にInterruptible animationを入れて。終わるのを待たず、途中で別の動きに滑らかに切り替えられる。",
+   "preview": {
+    "demo": "drag"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Spring Animations』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/marquee",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Marquee",
+   "name_ja": "流れる文字",
+   "description_ja": "文字や内容が連続してループしながら流れる。",
+   "aliases": [
+    "ニュース速報風",
+    "横に流れる",
+    "流れる文字",
+    "ティッカー"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/marquee\n【作るもの】Marquee（流れる文字）\n【再現する見た目・動き】6秒で -50% を linear で無限ループ\n【指示】〈使う場所〉にMarqueeを入れて。文字や内容が連続してループしながら流れる。",
+   "preview": {
+    "demo": "marquee"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/marquee"
+  },
+  {
+   "id": "animation-vocabulary/loop",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Loop",
+   "name_ja": "繰り返す",
+   "description_ja": "アニメを決まった回数または無限に繰り返す。",
+   "aliases": [
+    "繰り返し",
+    "ずっと動く",
+    "ループ再生",
+    "リピート"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count\n【作るもの】Loop（繰り返す）\n【再現する見た目・動き】1.6秒で1回転\n【指示】〈使う場所〉にLoopを入れて。アニメを決まった回数または無限に繰り返す。",
+   "preview": {
+    "demo": "loop",
+    "variant": "spin"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count"
+  },
+  {
+   "id": "animation-vocabulary/alternate-yoyo",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Alternate (yoyo)",
+   "name_ja": "行って戻るを繰り返す",
+   "description_ja": "前進のあと逆再生しながら繰り返す。始めに飛ばない。",
+   "aliases": [
+    "往復",
+    "行ったり来たり",
+    "ヨーヨー",
+    "揺れる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction\n【作るもの】Alternate (yoyo)（行って戻るを繰り返す）\n【再現する見た目・動き】±50px を往復\n【指示】〈使う場所〉にAlternate (yoyo)を入れて。前進のあと逆再生しながら繰り返す。始めに飛ばない。",
+   "preview": {
+    "demo": "loop",
+    "variant": "yoyo"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction"
+  },
+  {
+   "id": "animation-vocabulary/orbit",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Orbit",
+   "name_ja": "周りを回る",
+   "description_ja": "要素が別の要素の周囲を円を描いて回り続ける。",
+   "aliases": [
+    "ぐるぐる周回",
+    "惑星のように",
+    "周りを回る",
+    "公転"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/CSS/offset-path\n【作るもの】Orbit（周りを回る）\n【再現する見た目・動き】点が円を描く\n【指示】〈使う場所〉にOrbitを入れて。要素が別の要素の周囲を円を描いて回り続ける。",
+   "preview": {
+    "demo": "loop",
+    "variant": "orbit"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/offset-path"
+  },
+  {
+   "id": "animation-vocabulary/pulse",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Pulse",
+   "name_ja": "どくんと脈打つ",
+   "description_ja": "拡大縮小や透明度を静かに繰り返して、注意を引く。",
+   "aliases": [
+    "ドクドク",
+    "ぽわんぽわん",
+    "脈打つ",
+    "点滅風"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count\n【作るもの】Pulse（どくんと脈打つ）\n【再現する見た目・動き】scale 1→1.12 を繰り返す\n【指示】〈使う場所〉にPulseを入れて。拡大縮小や透明度を静かに繰り返して、注意を引く。",
+   "preview": {
+    "demo": "loop",
+    "variant": "pulse"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count"
+  },
+  {
+   "id": "animation-vocabulary/float",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Float",
+   "name_ja": "ふわふわ浮く",
+   "description_ja": "上下にゆっくり漂い、静止物に生気と軽さを持たせる。",
+   "aliases": [
+    "ふわふわ",
+    "ぷかぷか",
+    "浮遊感",
+    "ゆらゆら上下"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count\n【作るもの】Float（ふわふわ浮く）\n【再現する見た目・動き】±6px、2.4秒\n【指示】〈使う場所〉にFloatを入れて。上下にゆっくり漂い、静止物に生気と軽さを持たせる。",
+   "preview": {
+    "demo": "loop",
+    "variant": "float"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count"
+  },
+  {
+   "id": "animation-vocabulary/idle-animation",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Idle animation",
+   "name_ja": "待機中の小さな動き",
+   "description_ja": "操作を待つ間に再生される、控えめな動き。",
+   "aliases": [
+    "待機モーション",
+    "放置中の動き",
+    "息づかい",
+    "そっと動く"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節／https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count\n【作るもの】Idle animation（待機中の小さな動き）\n【再現する見た目・動き】±6px、3.6秒\n【指示】〈使う場所〉にIdle animationを入れて。操作を待つ間に再生される、控えめな動き。",
+   "preview": {
+    "demo": "loop",
+    "variant": "idle"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Looping & Ambient Motion』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count"
+  },
+  {
+   "id": "animation-vocabulary/blur",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Blur",
+   "name_ja": "ぼかして和らげる",
+   "description_ja": "ぼかしフィルタで要素をやわらげ、細かい粗を隠す。",
+   "aliases": [
+    "ぼかし",
+    "もやっと",
+    "ピントが合う",
+    "すりガラス風"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur\n【作るもの】Blur（ぼかして和らげる）\n【再現する見た目・動き】blur(10px)+scale(1.08)→0\n【指示】〈使う場所〉にBlurを入れて。ぼかしフィルタで要素をやわらげ、細かい粗を隠す。",
+   "preview": {
+    "demo": "enter",
+    "variant": "blur"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur"
+  },
+  {
+   "id": "animation-vocabulary/clip-path",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Clip-path",
+   "name_ja": "形で切り抜く",
+   "description_ja": "要素を図形で切り抜く。現れ方、マスク、前後比較に使う。",
+   "aliases": [
+    "切り抜き",
+    "形に切る",
+    "クリップ",
+    "ワイプ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path\n【作るもの】Clip-path（形で切り抜く）\n【再現する見た目・動き】clip-path inset(0 100% 0 0)→inset(0)、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にClip-pathを入れて。要素を図形で切り抜く。現れ方、マスク、前後比較に使う。",
+   "preview": {
+    "demo": "enter",
+    "variant": "clip"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"
+  },
+  {
+   "id": "animation-vocabulary/mask",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Mask",
+   "name_ja": "形やグラデで隠す",
+   "description_ja": "図形やグラデーションで一部を隠す・見せる。クリップより縁をぼかせる。",
+   "aliases": [
+    "じわっと消える縁",
+    "マスク",
+    "ぼかし切り抜き",
+    "グラデで隠す"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/mask\n【作るもの】Mask（形やグラデで隠す）\n【再現する見た目・動き】clip-path circle(0%)→circle(75%)\n【指示】〈使う場所〉にMaskを入れて。図形やグラデーションで一部を隠す・見せる。クリップより縁をぼかせる。",
+   "preview": {
+    "demo": "enter",
+    "variant": "circle"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/mask"
+  },
+  {
+   "id": "animation-vocabulary/before-after-slider",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Before / after slider",
+   "name_ja": "前後を比べる境界線",
+   "description_ja": "ドラッグできる境界で、重ねた2枚の画像を切り替えて比較する。",
+   "aliases": [
+    "ビフォーアフター",
+    "比較スライダー",
+    "境目を動かす",
+    "見比べ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path\n【作るもの】Before / after slider（前後を比べる境界線）\n【再現する見た目・動き】上の層の clip-path を左右に動かす\n【指示】〈使う場所〉にBefore / after sliderを入れて。ドラッグできる境界で、重ねた2枚の画像を切り替えて比較する。",
+   "preview": {
+    "demo": "compare"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"
+  },
+  {
+   "id": "animation-vocabulary/line-drawing",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Line drawing",
+   "name_ja": "線がひとりでに描かれる",
+   "description_ja": "SVGの線が、見えないペンでなぞるように描かれる。",
+   "aliases": [
+    "線が描かれる",
+    "手書き風に出る",
+    "なぞる",
+    "ストローク"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/stroke-dashoffset\n【作るもの】Line drawing（線がひとりでに描かれる）\n【再現する見た目・動き】SVG の stroke-dashoffset 300→0\n【指示】〈使う場所〉にLine drawingを入れて。SVGの線が、見えないペンでなぞるように描かれる。",
+   "preview": {
+    "demo": "draw"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/stroke-dashoffset"
+  },
+  {
+   "id": "animation-vocabulary/text-morph",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Text morph",
+   "name_ja": "文字が1字ずつ変わる",
+   "description_ja": "文字が変わるとき1字ずつアニメし、新しい値に目を向けさせる。",
+   "aliases": [
+    "文字が入れ替わる",
+    "数字が切り替わる",
+    "ちらっと変化",
+    "一文字ずつ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API\n【作るもの】Text morph（文字が1字ずつ変わる）\n【再現する見た目・動き】古い文言が blur(6px)+透明、新しい文言が現れる\n【指示】〈使う場所〉にText morphを入れて。文字が変わるとき1字ずつアニメし、新しい値に目を向けさせる。",
+   "preview": {
+    "demo": "textmorph"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+  },
+  {
+   "id": "animation-vocabulary/skeleton-shimmer",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Skeleton / Shimmer",
+   "name_ja": "読み込み中の光る枠",
+   "description_ja": "読み込み中に出す、光が流れる仮の枠。",
+   "aliases": [
+    "ローディング枠",
+    "ぴかぴか",
+    "スケルトン",
+    "グレーの枠"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes\n【作るもの】Skeleton / Shimmer（読み込み中の光る枠）\n【再現する見た目・動き】灰色の行の上を光が1.4秒で流れる\n【指示】〈使う場所〉にSkeleton / Shimmerを入れて。読み込み中に出す、光が流れる仮の枠。",
+   "preview": {
+    "demo": "skeleton"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"
+  },
+  {
+   "id": "animation-vocabulary/number-ticker",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Number ticker",
+   "name_ja": "数字がカウントアップ",
+   "description_ja": "数字が回転したり増えたりして、目標値まで進む。",
+   "aliases": [
+    "数字が増える",
+    "カウンター",
+    "くるくる数字",
+    "カウントアップ"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://motion.dev/docs/react-animate-number\n【作るもの】Number ticker（数字がカウントアップ）\n【再現する見た目・動き】各桁が translateY で回る、桁ごとに0.1秒遅らせる\n【指示】〈使う場所〉にNumber tickerを入れて。数字が回転したり増えたりして、目標値まで進む。",
+   "preview": {
+    "demo": "ticker"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://motion.dev/docs/react-animate-number"
+  },
+  {
+   "id": "animation-vocabulary/tabular-numbers",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Tabular numbers",
+   "name_ja": "桁がずれない数字",
+   "description_ja": "全部の数字を同じ幅にし、値が変わっても揺れないようにする。",
+   "aliases": [
+    "等幅の数字",
+    "桁そろえ",
+    "数字が揺れない",
+    "タイマー向け"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric\n【作るもの】Tabular numbers（桁がずれない数字）\n【再現する見た目・動き】font-variant-numeric: tabular-nums で桁幅をそろえる\n【指示】〈使う場所〉にTabular numbersを入れて。全部の数字を同じ幅にし、値が変わっても揺れないようにする。",
+   "preview": {
+    "demo": "ticker",
+    "variant": "tabular"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric"
+  },
+  {
+   "id": "animation-vocabulary/typewriter",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Typewriter",
+   "name_ja": "1文字ずつ打たれる",
+   "description_ja": "文字が一文字ずつ打たれるように現れる。",
+   "aliases": [
+    "タイピング風",
+    "カタカタ",
+    "1文字ずつ",
+    "タイプライター"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】Typewriter（1文字ずつ打たれる）\n【再現する見た目・動き】steps(10) で1文字ずつ出す＋点滅カーソル\n【指示】〈使う場所〉にTypewriterを入れて。文字が一文字ずつ打たれるように現れる。",
+   "preview": {
+    "demo": "text",
+    "variant": "type"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Polish & Effects』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "animation-vocabulary/frame-rate-fps",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Frame rate (FPS)",
+   "name_ja": "1秒の描画回数",
+   "description_ja": "1秒に描くコマ数。滑らかな基準は60fps、新しい画面は120fps。",
+   "aliases": [
+    "滑らかさ",
+    "コマ数",
+    "ぬるぬる",
+    "fps"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節／https://web.dev/articles/rendering-performance\n【作るもの】Frame rate (FPS)（1秒の描画回数）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にFrame rate (FPS)を入れて。1秒に描くコマ数。滑らかな基準は60fps、新しい画面は120fps。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節",
+   "ref_url": "https://web.dev/articles/rendering-performance"
+  },
+  {
+   "id": "animation-vocabulary/jank",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Jank",
+   "name_ja": "カクつき",
+   "description_ja": "処理が追いつかずコマが落ち、動きがぎこちなく見えること。",
+   "aliases": [
+    "カクカク",
+    "もたつく",
+    "引っかかる",
+    "ガタつく"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節／https://web.dev/articles/rendering-performance\n【作るもの】Jank（カクつき）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にJankを入れて。処理が追いつかずコマが落ち、動きがぎこちなく見えること。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節",
+   "ref_url": "https://web.dev/articles/rendering-performance"
+  },
+  {
+   "id": "animation-vocabulary/dropped-frame",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Dropped frame",
+   "name_ja": "間に合わなかったコマ",
+   "description_ja": "描画の期限に間に合わず、動きが一瞬引っかかるコマ。",
+   "aliases": [
+    "一瞬止まる",
+    "コマ落ち",
+    "ヒクッとする",
+    "ひっかかり"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節／https://web.dev/articles/rendering-performance\n【作るもの】Dropped frame（間に合わなかったコマ）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にDropped frameを入れて。描画の期限に間に合わず、動きが一瞬引っかかるコマ。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節",
+   "ref_url": "https://web.dev/articles/rendering-performance"
+  },
+  {
+   "id": "animation-vocabulary/compositing",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Compositing",
+   "name_ja": "GPUに任せる",
+   "description_ja": "レイアウトや再描画をせず、GPUが別レイヤーで動かす。",
+   "aliases": [
+    "軽い動き",
+    "GPUで動かす",
+    "スムーズ",
+    "レイヤー化"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節／https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count\n【作るもの】Compositing（GPUに任せる）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にCompositingを入れて。レイアウトや再描画をせず、GPUが別レイヤーで動かす。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節",
+   "ref_url": "https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count"
+  },
+  {
+   "id": "animation-vocabulary/will-change",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "will-change",
+   "name_ja": "動くよと予告",
+   "description_ja": "これから動くことをブラウザに伝え、事前にレイヤー化させる指定。",
+   "aliases": [
+    "動きの準備",
+    "先に伝える",
+    "軽くしたい",
+    "予告"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節／https://developer.mozilla.org/en-US/docs/Web/CSS/will-change\n【作るもの】will-change（動くよと予告）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にwill-changeを入れて。これから動くことをブラウザに伝え、事前にレイヤー化させる指定。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/will-change"
+  },
+  {
+   "id": "animation-vocabulary/layout-thrashing",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Layout thrashing",
+   "name_ja": "レイアウト再計算の連発",
+   "description_ja": "width・top 等を動かすと毎コマ再計算されカクつくこと。",
+   "aliases": [
+    "重くなる動き",
+    "幅を動かして重い",
+    "ガタガタ",
+    "再計算"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節／https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing\n【作るもの】Layout thrashing（レイアウト再計算の連発）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にLayout thrashingを入れて。width・top 等を動かすと毎コマ再計算されカクつくこと。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Performance』節",
+   "ref_url": "https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing"
+  },
+  {
+   "id": "animation-vocabulary/purposeful-animation",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Purposeful animation",
+   "name_ja": "意味のある動き",
+   "description_ja": "飾りでなく、案内・反応・関係の説明という役割を持つ動き。",
+   "aliases": [
+    "必要な動き",
+    "飾りじゃない動き",
+    "理由のある動き",
+    "目的あり"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Purposeful animation（意味のある動き）\n【再現する見た目・動き】行き過ぎて戻る\n【指示】〈使う場所〉にPurposeful animationを入れて。飾りでなく、案内・反応・関係の説明という役割を持つ動き。",
+   "preview": {
+    "demo": "principle",
+    "variant": "follow"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/anticipation",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Anticipation",
+   "name_ja": "動く前のため",
+   "description_ja": "動く前に逆方向へ小さく溜めて、これから起こることを匂わせる。",
+   "aliases": [
+    "予備動作",
+    "ぐっと溜める",
+    "ひと呼吸",
+    "振りかぶる"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Anticipation（動く前のため）\n【再現する見た目・動き】動く前に逆へ14px 引く\n【指示】〈使う場所〉にAnticipationを入れて。動く前に逆方向へ小さく溜めて、これから起こることを匂わせる。",
+   "preview": {
+    "demo": "principle",
+    "variant": "anticipation"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/follow-through",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Follow-through",
+   "name_ja": "動いたあとの余韻",
+   "description_ja": "主な動きが止まったあとも一部が少し動いて収まり、重みが出る。",
+   "aliases": [
+    "余韻",
+    "ふわっと遅れて止まる",
+    "慣性の残り",
+    "ゆり戻し"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Follow-through（動いたあとの余韻）\n【再現する見た目・動き】行き過ぎて戻る\n【指示】〈使う場所〉にFollow-throughを入れて。主な動きが止まったあとも一部が少し動いて収まり、重みが出る。",
+   "preview": {
+    "demo": "principle",
+    "variant": "follow"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/squash-stretch",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Squash & stretch",
+   "name_ja": "つぶれて伸びる",
+   "description_ja": "動くときに形を変えて、重さ・速さ・柔らかさを伝える。",
+   "aliases": [
+    "ぐにょっと伸びる",
+    "ぷにっとつぶれる",
+    "ゴムのように",
+    "弾力"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Squash & stretch（つぶれて伸びる）\n【再現する見た目・動き】着地で scale(1.3,.7) に潰れる\n【指示】〈使う場所〉にSquash & stretchを入れて。動くときに形を変えて、重さ・速さ・柔らかさを伝える。",
+   "preview": {
+    "demo": "principle",
+    "variant": "squash"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/perceived-performance",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Perceived performance",
+   "name_ja": "速く感じさせる",
+   "description_ja": "実際は同じでも、動きによって速く感じられるようにする。",
+   "aliases": [
+    "速く見える",
+    "待たされ感を減らす",
+    "体感速度",
+    "サクサク"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://web.dev/articles/animations-guide\n【作るもの】Perceived performance（速く感じさせる）\n【再現する見た目・動き】灰色の行の上を光が1.4秒で流れる\n【指示】〈使う場所〉にPerceived performanceを入れて。実際は同じでも、動きによって速く感じられるようにする。",
+   "preview": {
+    "demo": "skeleton"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://web.dev/articles/animations-guide"
+  },
+  {
+   "id": "animation-vocabulary/frequency-of-use",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Frequency of use",
+   "name_ja": "頻度で動きを変える",
+   "description_ja": "よく見る動きほど短く控えめにする。",
+   "aliases": [
+    "何度も見る動き",
+    "短く",
+    "うるさくしない",
+    "控えめに"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Frequency of use（頻度で動きを変える）\n【再現する見た目・動き】移動なしのフェードだけ\n【指示】〈使う場所〉にFrequency of useを入れて。よく見る動きほど短く控えめにする。",
+   "preview": {
+    "demo": "principle",
+    "variant": "reduced"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/spatial-consistency",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Spatial consistency",
+   "name_ja": "場所のつながりを保つ",
+   "description_ja": "要素の存在と位置を状態をまたいで保ち、行方を見失わせない。",
+   "aliases": [
+    "どこへ行ったか分かる",
+    "場所が一貫",
+    "迷子にならない",
+    "つながり"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Spatial consistency（場所のつながりを保つ）\n【再現する見た目・動き】translate(-70px,20px) scale(.35)→元の位置と大きさ、cubic-bezier(.2,.8,.2,1)\n【指示】〈使う場所〉にSpatial consistencyを入れて。要素の存在と位置を状態をまたいで保ち、行方を見失わせない。",
+   "preview": {
+    "demo": "shared"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion"
+  },
+  {
+   "id": "animation-vocabulary/hardware-acceleration",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Hardware acceleration",
+   "name_ja": "transform と opacity だけ",
+   "description_ja": "transform と opacity を動かし、GPUで滑らかさを保つ。",
+   "aliases": [
+    "軽く動かす",
+    "GPUで描く",
+    "なめらか",
+    "最適化"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count\n【作るもの】Hardware acceleration（transform と opacity だけ）\n【再現する見た目・動き】滑らか（上）とカクつき（下、steps(7) でコマ落ち）の比較\n【指示】〈使う場所〉にHardware accelerationを入れて。transform と opacity を動かし、GPUで滑らかさを保つ。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count"
+  },
+  {
+   "id": "animation-vocabulary/reduced-motion",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Reduced motion",
+   "name_ja": "動きを控える設定対応",
+   "description_ja": "ユーザーの prefers-reduced-motion 設定を尊重し、動きを弱める・消す。",
+   "aliases": [
+    "動きを減らす",
+    "酔い対策",
+    "アクセシビリティ",
+    "動き抑制"
+   ],
+   "prompt": "【出典】スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節／https://web.dev/articles/prefers-reduced-motion\n【作るもの】Reduced motion（動きを控える設定対応）\n【再現する見た目・動き】移動なしのフェードだけ\n【指示】〈使う場所〉にReduced motionを入れて。ユーザーの prefers-reduced-motion 設定を尊重し、動きを弱める・消す。",
+   "preview": {
+    "demo": "principle",
+    "variant": "reduced"
+   },
+   "source_ref": "スキル animation-vocabulary（~/.claude/skills/animation-vocabulary/SKILL.md）の『Principles to Know』節",
+   "ref_url": "https://web.dev/articles/prefers-reduced-motion"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+/* 動き・素材・配置のリズム（Apple の Designing Fluid Interfaces / HIG Materials に沿う）
+   - 押した瞬間に反応し、跳ねない減速で止まる。開いた場所から出て、同じ道を戻る
+   - 動かすのは transform / opacity / clip-path だけ（描き直しの重い box-shadow・blur は動かさない）
+   - 動きを減らす設定・透明度を下げる設定では、静かな表示に切り替える */
+:root {
+  --ease: cubic-bezier(.22, 1, .36, 1);          /* 跳ねない減速（臨界減衰のばねに近い） */
+  --ease-pop: cubic-bezier(.34, 1.56, .64, 1);   /* 押した手応えにだけ使う小さな弾み */
+  --t-fast: 120ms;
+  --t-base: 240ms;
+  --t-slow: 360ms;
+  --bar-h: 44px;                                  /* 上段（画面切替・検索・歯車・色の行）の高さをそろえる */
+  --edge: 16px;                                   /* 画面の上と左右の余白 */
+  --radius-lg: 14px;
+  --glass: color-mix(in srgb, var(--bg) 74%, transparent);
+  --glass-2: color-mix(in srgb, var(--surface) 82%, transparent);
+  --hairline: inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+
+/* ---- 配置のリズム: 上段はすべて同じ高さ・同じ上端 ---- */
+.side { padding: var(--edge) 12px 24px; }
+.seg.view { height: var(--bar-h); margin: 0 0 16px; padding: 3px; border-radius: 11px; }
+.seg.view button { height: 100%; border-radius: 8px; }
+.main { padding: var(--edge) 24px 60px; }
+.toolbar { margin: calc(var(--edge) * -1) -24px 0; padding: var(--edge) 84px 12px 24px; gap: 12px; }
+.searchbar { height: var(--bar-h); border-radius: 12px; }
+.scope { min-height: 34px; }
+.gear { position: fixed; top: var(--edge); right: var(--edge); z-index: 20; width: var(--bar-h); height: var(--bar-h); border-radius: 50%; }
+#palette { padding-right: 60px; }
+.picker-now { min-height: var(--bar-h); gap: 10px; }
+.picker-swatch { width: var(--bar-h); height: var(--bar-h); }
+.card, .src-panel, .picker { border-radius: var(--radius-lg); }
+#dict .grid, .pal-grid { gap: 16px; }
+.src-panel { margin-bottom: 16px; }
+:root:not([data-labels="icon"]) .toolbar { padding-right: 84px; }
+
+/* ---- サイドバーの階層: 区分（太字・濃い）→ 中見出し（細め・薄い、一段内側）→ 項目（さらに一段内側） ---- */
+.fold { padding: 2px 0; }
+.fold summary { gap: 8px; padding: 9px 10px; color: var(--text); }
+.fold summary .fold-ic { color: var(--text); }
+.fold summary .fold-ic .ic { width: 18px; height: 18px; }
+.fold-t { font-size: 14px; font-weight: 700; letter-spacing: -.01em; }
+.fold summary::after { margin-left: auto; }
+.fold-n, .fold summary .hist-count { margin-left: 2px; }
+.list .group { padding: 12px 10px 4px 32px; font-size: 12px; font-weight: 500; color: var(--text-2); letter-spacing: .01em; }
+.side .list .group .lbl { display: inline !important; }   /* 中見出しの名前はボタン表示の設定に関わらず出す */
+.list .group .ic { width: 15px; height: 15px; opacity: .8; }
+.list li.sub > button { padding-left: 54px; }
+.list li.sub > button::before { left: 39px; }
+#fav-list li.sub > button, #pal-favs .hist-open, #pal-history .hist-open { padding-left: 32px; }
+#fav-list li.sub > button::before { display: none; }
+.fav-entry .ic { width: 15px; height: 15px; color: var(--text-2); }
+.list .fav-entry { justify-content: flex-start; gap: 8px; }
+#pal-history .group { padding-left: 32px; }
+
+/* ---- 素材: 上に浮く層は半透明（下の一覧が透ける）。大きい面ほど影を深く ---- */
+.toolbar { background: var(--glass); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%); }
+.gear { background: var(--glass-2); -webkit-backdrop-filter: blur(16px) saturate(180%); backdrop-filter: blur(16px) saturate(180%); box-shadow: 0 2px 10px rgba(0, 0, 0, .12), inset 0 0 0 1px var(--border); color: var(--text); }
+.card, .src-panel, .picker { box-shadow: var(--hairline), 0 1px 2px rgba(0, 0, 0, .06); }
+.searchbar { box-shadow: var(--hairline), 0 6px 20px rgba(0, 0, 0, .08); }
+.btn { background: linear-gradient(180deg, color-mix(in oklch, var(--accent) 88%, white), var(--accent)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22), 0 2px 8px color-mix(in srgb, var(--accent) 35%, transparent); }
+dialog#settings { background: var(--glass-2); -webkit-backdrop-filter: blur(28px) saturate(180%); backdrop-filter: blur(28px) saturate(180%); box-shadow: 0 30px 80px rgba(0, 0, 0, .35), inset 0 0 0 1px var(--border); border: 0; border-radius: 18px; }
+@media (prefers-reduced-transparency: reduce) {
+  .toolbar { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .gear, dialog#settings { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+
+/* ---- 押した瞬間の手応え（離すまで待たない） ---- */
+:is(button, .btn, a.icon-btn, .src-cmd, .chip):not(.pk-cell):not(:disabled) { transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
+:is(button, .btn, a.icon-btn, .src-cmd, .chip):not(.pk-cell):active { transform: scale(.96); transition-duration: 60ms; }
+.list button:active { transform: scale(.98); }
+
+/* ---- カード: 乗せた1枚だけが浮き上がる（影の変化は乗せたカードだけなので描き直しは小さい。
+   疑似要素の影は content-visibility の描画範囲で切れるため使わない） ---- */
+.card { position: relative; transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease); }
+@media (hover: hover) {
+  .card:hover { transform: translateY(-3px); box-shadow: var(--hairline), 0 14px 34px rgba(0, 0, 0, .18), 0 2px 6px rgba(0, 0, 0, .08); }
+}
+.card.enter { animation: rise var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 28ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.985); } }
+.card.flash, .pal-card.flash { animation: flash 1.4s var(--ease); }
+
+/* 星: マウスを乗せたら現れ、押したら小さく弾む */
+.star { transition: opacity var(--t-base) var(--ease), transform var(--t-fast) var(--ease); }
+.star.pop svg { animation: pop 380ms var(--ease-pop); }
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.32); } 100% { transform: scale(1); } }
+
+/* 絞り込みのチップ: 増えたものだけ、出てきた位置から膨らむ */
+.chip.new { animation: chip-in var(--t-base) var(--ease) both; }
+@keyframes chip-in { from { opacity: 0; transform: scale(.85); } }
+.src-panel:not([hidden]) { animation: rise var(--t-slow) var(--ease) both; }
+
+/* 説明の吹き出し: 指した方向から少しだけ近づいて現れる */
+.tooltip { transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease); transform: translateY(-3px) scale(.97); }
+.tooltip[data-side="above"] { transform: translateY(3px) scale(.97); }
+.tooltip.show { transform: none; }
+
+/* 設定: 右上の歯車から広がり、閉じるときは歯車へ縮んで戻る。背景は暗くして作業を一時停止していると示す */
+dialog#settings { transform-origin: top right; }
+dialog#settings[open] { animation: sheet-in var(--t-slow) var(--ease); }
+dialog#settings.closing { animation: sheet-out var(--t-base) var(--ease) forwards; }
+dialog#settings::backdrop { background: rgba(0, 0, 0, .32); animation: fade-in var(--t-slow) var(--ease); }
+dialog#settings.closing::backdrop { animation: fade-out var(--t-base) var(--ease) forwards; }
+@keyframes sheet-in { from { opacity: 0; transform: translate(12px, -12px) scale(.94); } }
+@keyframes sheet-out { to { opacity: 0; transform: translate(12px, -12px) scale(.94); } }
+@keyframes fade-in { from { opacity: 0; } }
+@keyframes fade-out { to { opacity: 0; } }
+
+/* 画面の切替（辞典 ⇄ 配色）: View Transitions。辞典→配色は右から、戻るときは左から */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: var(--t-slow); animation-timing-function: var(--ease); }
+:root[data-dir="fwd"]::view-transition-new(root) { animation-name: vt-in-right; }
+:root[data-dir="fwd"]::view-transition-old(root) { animation-name: fade-out; }
+:root[data-dir="back"]::view-transition-new(root) { animation-name: vt-in-left; }
+:root[data-dir="back"]::view-transition-old(root) { animation-name: fade-out; }
+@keyframes vt-in-right { from { opacity: 0; transform: translateX(18px); } }
+@keyframes vt-in-left { from { opacity: 0; transform: translateX(-18px); } }
+.view-in { animation: rise var(--t-slow) var(--ease) both; }
+.seg button { transition: color var(--t-base) var(--ease), transform var(--t-fast) var(--ease); }
+
+/* 配色: 色が決まったら、カードが時間差で入れ替わる。色の4枠と見本も同じ減速で */
+.pal-card.enter { animation: rise var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 40ms); }
+.pk-block { box-shadow: var(--hairline); }
+.picker-swatch { transition: transform var(--t-fast) var(--ease); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1), 0 4px 14px rgba(0, 0, 0, .15); }
+
+/* 消したあとの「元に戻す」と、コピーしたときの通知 */
+.hist-undo { animation: rise var(--t-base) var(--ease) both; }
+.toast { transition: opacity var(--t-base) var(--ease), transform var(--t-base) var(--ease); }
+
+/* スマホ幅: 歯車（右上に固定）と画面切替が重ならないよう、サイドバーの右に歯車の分だけ空ける */
+@media (max-width: 760px) {
+  .side { padding-right: calc(var(--edge) + var(--bar-h) + 8px); }
+  .toolbar { padding-right: 16px; margin: 0 -16px; }
+  .main { padding: 12px 16px 48px; }
+  #palette { padding-right: 0; }
+}
+
+/* 動きを減らす設定: 移動・拡大はやめ、短いクロスフェードだけにする */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; }
+  .card:hover { transform: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
+}

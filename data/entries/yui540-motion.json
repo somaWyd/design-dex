@@ -1,0 +1,344 @@
+{
+ "source": {
+  "id": "yui540-motion",
+  "type": "skill",
+  "name": "yui540 CSS アニメーション集",
+  "ref": "~/.claude/skills/yui540-motion",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "yui540-motion/like-animation",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Like animation (heart burst)",
+   "name_ja": "いいね（ハートが弾ける）",
+   "description_ja": "ハートを押すと円が広がり、小さな点が散って弾むように色が変わる。3種類のデモがある。",
+   "aliases": [
+    "いいねボタン",
+    "ハートがはじける",
+    "お気に入り"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://github.com/yui540/css-animations（2026-06-07/tips-1〜3（keyframes: circle-anim move scale-in scale-out popup／fly／cross-line-slide cross-seg-slide））\n【作るもの】Like animation (heart burst)（いいね（ハートが弾ける））\n【再現する見た目・動き】2026-06-07/tips-1〜3（keyframes: circle-anim move scale-in scale-out popup／fly／cross-line-slide cross-seg-slide）。プレビューは縮んでから scale(1.25) に弾け、点線の輪が広がる\n【指示】Like animation (heart burst) を次の条件で実装して。〈いいねボタン〉に移植して。色とサイズはトークンに替え、押すたびに再生する。",
+   "preview": {
+    "demo": "like"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://github.com/yui540/css-animations"
+  },
+  {
+   "id": "yui540-motion/bookmark-animation",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Bookmark animation",
+   "name_ja": "ブックマーク（きらっと切り替わり）",
+   "description_ja": "しおりが跳ねて色が変わり、きらめきや光が走る。保存した感触を出す。3種類のデモがある。",
+   "aliases": [
+    "保存ボタン",
+    "しおり",
+    "きらきら"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://github.com/yui540/css-animations（2026-06-08/tips-1〜3（keyframes: scale up reset color down kira／panel-enter bookmark-swing shine-sweep／bounce））\n【作るもの】Bookmark animation（ブックマーク（きらっと切り替わり））\n【再現する見た目・動き】2026-06-08/tips-1〜3（keyframes: scale up reset color down kira／panel-enter bookmark-swing shine-sweep／bounce）。プレビューは上から落ちてバネで止まる\n【指示】Bookmark animation を次の条件で実装して。〈保存ボタン〉に移植して。トリガーは aria-pressed、prefers-reduced-motion 対応も足す。",
+   "preview": {
+    "demo": "like",
+    "variant": "bookmark"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://github.com/yui540/css-animations"
+  },
+  {
+   "id": "yui540-motion/shutter-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Shutter transition",
+   "name_ja": "シャッター遷移",
+   "description_ja": "面がブロック状に閉じて画面を覆い、次の画面へつなぐ画面切り替え。",
+   "aliases": [
+    "画面切り替え",
+    "シャッターで切替",
+    "ブロックで覆う"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-22/tips-1.html（keyframes: block-in block-out））\n【作るもの】Shutter transition（シャッター遷移）\n【再現する見た目・動き】2026-04-22/tips-1.html（keyframes: block-in block-out）。プレビューは4本の帯が上から順に閉じて開く\n【指示】Shutter transition を次の条件で実装して。〈ページ遷移〉に使って。",
+   "preview": {
+    "demo": "wipe",
+    "variant": "shutter"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/curtain-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Curtain (幕) transition",
+   "name_ja": "幕遷移",
+   "description_ja": "幕が左右や上から閉じて開く画面切り替え。",
+   "aliases": [
+    "幕が閉じる",
+    "カーテンで切替",
+    "幕が開く"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-22/tips-2.html（keyframes: close open））\n【作るもの】Curtain (幕) transition（幕遷移）\n【再現する見た目・動き】2026-04-22/tips-2.html（keyframes: close open）。プレビューは左右から幕が閉じる\n【指示】Curtain (幕) transition を次の条件で実装して。〈画面切り替え〉に使って。色はデザイントークンに替える。",
+   "preview": {
+    "demo": "wipe",
+    "variant": "curtain"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/fill-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Fill (塗り) transition",
+   "name_ja": "塗り遷移",
+   "description_ja": "色の面がスライドして画面を塗りつぶし、次の画面に移る切り替え。",
+   "aliases": [
+    "色が走る",
+    "塗りつぶして切替",
+    "面がスライド"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-22/tips-3.html（keyframes: slide-in slide-out））\n【作るもの】Fill (塗り) transition（塗り遷移）\n【再現する見た目・動き】2026-04-22/tips-3.html（keyframes: slide-in slide-out）。プレビューは左下から円が広がって塗りつぶす\n【指示】Fill (塗り) transition を次の条件で実装して。〈セクション切り替え〉に使って。",
+   "preview": {
+    "demo": "wipe",
+    "variant": "fill"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/thread-transition",
+   "kind": "motion",
+   "category": "transition",
+   "name_en": "Thread (糸) transition",
+   "name_ja": "糸遷移",
+   "description_ja": "細い線が伸びて広がる形で切り替わる遷移。",
+   "aliases": [
+    "線が伸びて切替",
+    "糸のような遷移"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-22/tips-4.html（keyframes: scale-in scale-out））\n【作るもの】Thread (糸) transition（糸遷移）\n【再現する見た目・動き】2026-04-22/tips-4.html（keyframes: scale-in scale-out）。プレビューは細い線が伸びてから上下に広がる\n【指示】Thread (糸) transition を次の条件で実装して。〈画面切り替え〉に使って。",
+   "preview": {
+    "demo": "wipe",
+    "variant": "thread"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/popup-pop-out",
+   "kind": "motion",
+   "category": "entrance",
+   "name_en": "Popup (飛び出す)",
+   "name_ja": "飛び出すポップアップ",
+   "description_ja": "要素が弾むように飛び出して現れる。ボタンや吹き出しの出現用。",
+   "aliases": [
+    "ぴょこっと出る",
+    "飛び出す",
+    "ポンと出る"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-17/tips-1.html（keyframes: popup））\n【作るもの】Popup (飛び出す)（飛び出すポップアップ）\n【再現する見た目・動き】2026-04-17/tips-1.html（keyframes: popup）。プレビューは scale(.5)→1.12→1\n【指示】Popup (飛び出す) を次の条件で実装して。〈通知バッジ〉の出現に使って。",
+   "preview": {
+    "demo": "enter",
+    "variant": "pop"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/scroll-roll",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Scroll (巻き物) animation",
+   "name_ja": "巻き物",
+   "description_ja": "線が描かれ、巻き物のように開いたり巻き戻ったりする。",
+   "aliases": [
+    "巻物",
+    "くるくる開く",
+    "線が引かれる"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-25/tips-1.html（keyframes: draw-line rotate slide-in slide-out））\n【作るもの】Scroll (巻き物) animation（巻き物）\n【再現する見た目・動き】2026-04-25/tips-1.html（keyframes: draw-line rotate slide-in slide-out）。線が描かれ巻き物のように開閉。プレビューは上を軸に rotateX(-80deg)\n【指示】Scroll (巻き物) animation を次の条件で実装して。〈見出しの装飾〉に使って。",
+   "preview": {
+    "demo": "fold"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/ripple-wave",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Ripple (波紋)",
+   "name_ja": "波紋",
+   "description_ja": "中心から輪が広がり、薄く消える。押したことや通知を伝える。",
+   "aliases": [
+    "波紋",
+    "水の輪っか",
+    "広がる輪"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-25/tips-4.html（keyframes: fade-in-out））\n【作るもの】Ripple (波紋)（波紋）\n【再現する見た目・動き】2026-04-25/tips-4.html（keyframes: fade-in-out）。プレビューは scale 0→4、opacity .5→0\n【指示】Ripple (波紋) を次の条件で実装して。〈押した位置のフィードバック〉に使って。",
+   "preview": {
+    "demo": "ripple"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/bounce-fall",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Clunk (ガタンガタン)",
+   "name_ja": "ガタンガタン（落ちて弾む）",
+   "description_ja": "要素が落ちて弾みながら止まる。重みのある出現に使える。",
+   "aliases": [
+    "落ちて弾む",
+    "バウンドして止まる",
+    "ガタン"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-25/tips-2.html（keyframes: bounce fall））\n【作るもの】Clunk (ガタンガタン)（ガタンガタン（落ちて弾む））\n【再現する見た目・動き】2026-04-25/tips-2.html（keyframes: bounce fall）。プレビューは箱がガタンと段階的に落ちる\n【指示】Clunk (ガタンガタン) を次の条件で実装して。〈カードが落ちてくる出現〉に使って。",
+   "preview": {
+    "demo": "domino",
+    "variant": "clunk"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/flip-over",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Flip (ひっくり返す)",
+   "name_ja": "ひっくり返す",
+   "description_ja": "カードや板が引かれて揺れ、裏返って切り替わる動き。",
+   "aliases": [
+    "カードが裏返る",
+    "くるっと回る",
+    "反転"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-29/tips-2.html（keyframes: pull sway sway-reverse turn turn-reverse））\n【作るもの】Flip (ひっくり返す)（ひっくり返す）\n【再現する見た目・動き】2026-04-29/tips-2.html（keyframes: pull sway sway-reverse turn turn-reverse）。プレビューは perspective 500px で rotateY 180deg\n【指示】Flip (ひっくり返す) を次の条件で実装して。〈カードの表裏切り替え〉に使って。",
+   "preview": {
+    "demo": "transform",
+    "variant": "flip"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/fold",
+   "kind": "motion",
+   "category": "transform",
+   "name_en": "Fold (折りたたみ)",
+   "name_ja": "折りたたみ",
+   "description_ja": "面が折れて畳まれ、広がる動き。",
+   "aliases": [
+    "折れ曲がる",
+    "畳む",
+    "パタンと閉じる"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-29/tips-3.html（keyframes: rotate rotate-over））\n【作るもの】Fold (折りたたみ)（折りたたみ）\n【再現する見た目・動き】2026-04-29/tips-3.html（keyframes: rotate rotate-over）。プレビューは上を軸に rotateX(-80deg)\n【指示】Fold (折りたたみ) を次の条件で実装して。〈折りたたみパネル〉に使って。",
+   "preview": {
+    "demo": "fold"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/domino",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Domino (ドミノ)",
+   "name_ja": "ドミノ倒し",
+   "description_ja": "並んだ要素が順番に倒れていく時間差の動き。",
+   "aliases": [
+    "順番に倒れる",
+    "連鎖",
+    "ドミノ"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-04-18/tips-2.html（keyframes: fall-down-1 fall-down-2 fall-down-3 fall-down-4））\n【作るもの】Domino (ドミノ)（ドミノ倒し）\n【再現する見た目・動き】2026-04-18/tips-2.html（keyframes: fall-down-1 fall-down-2 fall-down-3 fall-down-4）。プレビューは板が0.1秒ずつ倒れる\n【指示】Domino (ドミノ) を次の条件で実装して。〈リストの順次表示〉に使って。",
+   "preview": {
+    "demo": "domino"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/loading-svg",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "SVG loading icons",
+   "name_ja": "SVGのローディングアイコン",
+   "description_ja": "SVGとCSSだけで動く5種類のローディング表示。",
+   "aliases": [
+    "くるくる",
+    "読み込み中の表示",
+    "スピナー"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://github.com/yui540/css-animations（2025-03-11/index.html と loading-1.svg〜loading-5.svg（SVG＋CSS のみ））\n【作るもの】SVG loading icons（SVGのローディングアイコン）\n【再現する見た目・動き】2025-03-11/index.html と loading-1.svg〜loading-5.svg（SVG＋CSS のみ）。プレビューは棒が順に脈打つ\n【指示】SVG loading icons を次の条件で実装して。〈読み込み表示〉に5種類から1つ選んで使い、色はトークンに替える。",
+   "preview": {
+    "demo": "domino",
+    "variant": "loader"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://github.com/yui540/css-animations"
+  },
+  {
+   "id": "yui540-motion/download-bar-chart",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Download / bar chart animation",
+   "name_ja": "ダウンロードと棒グラフの動き",
+   "description_ja": "ダウンロードの矢印と棒グラフが伸びる動き。完了や増加を見せる。",
+   "aliases": [
+    "ダウンロード完了",
+    "棒が伸びる",
+    "グラフが育つ"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-05-02/tips-3.html（keyframes: download-arrow download-bottom chart-up chart-down））\n【作るもの】Download / bar chart animation（ダウンロードと棒グラフの動き）\n【再現する見た目・動き】2026-05-02/tips-3.html（keyframes: download-arrow download-bottom chart-up chart-down）。プレビューは棒グラフが下から伸びる\n【指示】Download / bar chart animation を次の条件で実装して。〈保存完了の表示〉に使って。",
+   "preview": {
+    "demo": "domino",
+    "variant": "chart"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  },
+  {
+   "id": "yui540-motion/manga-viewer",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Comimi manga viewer",
+   "name_ja": "漫画ビューワー（右開き・見開き）",
+   "description_ja": "サイトに載せる漫画ビューワー。右開き・見開きが既定で、読んだページを覚えている。",
+   "aliases": [
+    "漫画リーダー",
+    "マンガ表示",
+    "ページめくり"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/SKILL.md）の『手順（comimi）』節／https://github.com/yui540/comimi（@yui540/comimi の createMangaViewer（右開き・見開きが既定、読んだページを記憶））\n【作るもの】Comimi manga viewer（漫画ビューワー（右開き・見開き））\n【再現する見た目・動き】@yui540/comimi の createMangaViewer（右開き・見開きが既定、読んだページを記憶）。プレビューは左を軸に rotateY(-170deg) でめくる\n【指示】Comimi manga viewer を次の条件で実装して。〈作品ページ〉に入れて。manga.id を必ず指定する。",
+   "preview": {
+    "demo": "fold",
+    "variant": "book"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/SKILL.md）の『手順（comimi）』節",
+   "ref_url": "https://github.com/yui540/comimi"
+  },
+  {
+   "id": "yui540-motion/cat-character",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Animated cat character",
+   "name_ja": "動く猫キャラ",
+   "description_ja": "猫が歩いて入り、呼吸し、しっぽや耳が動く。キャラの常時アニメーション。",
+   "aliases": [
+    "ゆらゆらキャラ",
+    "猫が動く",
+    "マスコット"
+   ],
+   "prompt": "【出典】スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節／https://yui540.github.io/css-animations/（2026-06-09/tips-1・2（keyframes: walk-in bob breathe tail-wag ears-bob ほか））\n【作るもの】Animated cat character（動く猫キャラ）\n【再現する見た目・動き】2026-06-09/tips-1・2（keyframes: walk-in bob breathe tail-wag ears-bob ほか）。プレビューは着地で潰れて弾む\n【指示】Animated cat character を次の条件で実装して。〈マスコット〉に使って。ループは prefers-reduced-motion で止める。",
+   "preview": {
+    "demo": "cat"
+   },
+   "source_ref": "スキル yui540-motion（~/.agents/skills/yui540-motion/references/catalog.md）の『デモ索引』節",
+   "ref_url": "https://yui540.github.io/css-animations/"
+  }
+ ]
+}

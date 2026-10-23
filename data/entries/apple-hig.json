@@ -1,0 +1,1379 @@
+{
+ "source": {
+  "id": "apple-hig",
+  "type": "doc",
+  "name": "Apple Human Interface Guidelines",
+  "ref": "https://developer.apple.com/design/human-interface-guidelines",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "apple-hig/charts",
+   "kind": "ui",
+   "category": "data",
+   "name_en": "Charts",
+   "name_ja": "グラフ・チャート",
+   "description_ja": "数値の変化や比較を棒・線・点などで見せる部品。軸・凡例・選択時の詳細表示で読み取りやすくする。",
+   "aliases": [
+    "グラフ",
+    "棒グラフ",
+    "折れ線",
+    "データ可視化"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "Apple HIG 公式『Charts』ページ（Components > Content）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/charts",
+   "prompt": "【出典】Apple HIG 公式『Charts』ページ（Components > Content）／https://developer.apple.com/design/human-interface-guidelines/charts\n【作るもの】Charts（グラフ・チャート）\n【再現する見た目・動き】軸と目盛りは必要最小限にし、強調したい系列だけ色を変える。タップ・ドラッグで値を選ぶと該当点に吹き出しで数値を出す。アクセシビリティ用に値の音声説明を付ける\n【指示】〈使う場所〉にChartsを入れて。Apple HIG『Charts』ページの指針に従い、SwiftUI の Charts（Chart / BarMark / LineMark）を使って。"
+  },
+  {
+   "id": "apple-hig/image-views",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Image views",
+   "name_ja": "画像ビュー",
+   "description_ja": "1枚の画像（または連続画像）を透明または背景付きの領域に表示する部品。",
+   "aliases": [
+    "画像表示",
+    "写真枠",
+    "イメージビュー"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Image views』ページ（Components > Content）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/image-views",
+   "prompt": "【出典】Apple HIG 公式『Image views』ページ（Components > Content）／https://developer.apple.com/design/human-interface-guidelines/image-views\n【作るもの】Image views（画像ビュー）\n【再現する見た目・動き】画像は表示サイズの@2x/@3x を用意し、縦横比を保ったまま枠に収める。装飾でない画像には代替テキストを付ける\n【指示】〈使う場所〉にImage viewsを入れて。Apple HIG『Image views』ページの指針に従い、SwiftUI の Image / UIKit の UIImageViewを使って。"
+  },
+  {
+   "id": "apple-hig/text-views",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Text views",
+   "name_ja": "テキストビュー",
+   "description_ja": "複数行で装飾付きの文章を表示する部品。編集可能にもできる。",
+   "aliases": [
+    "複数行入力",
+    "テキストエリア",
+    "メモ欄"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "Apple HIG 公式『Text views』ページ（Components > Content）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/text-views",
+   "prompt": "【出典】Apple HIG 公式『Text views』ページ（Components > Content）／https://developer.apple.com/design/human-interface-guidelines/text-views\n【作るもの】Text views（テキストビュー）\n【再現する見た目・動き】本文は Dynamic Type に追従させる。編集可能な場合、キーボード表示時に入力位置が隠れないよう余白を確保する\n【指示】〈使う場所〉にText viewsを入れて。Apple HIG『Text views』ページの指針に従い、SwiftUI の TextEditor / UIKit の UITextViewを使って。"
+  },
+  {
+   "id": "apple-hig/web-views",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Web views",
+   "name_ja": "Webビュー",
+   "description_ja": "アプリ内にHTMLやWebサイトを埋め込んで表示する部品。",
+   "aliases": [
+    "アプリ内ブラウザ",
+    "WebView",
+    "埋め込みサイト"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Web views』ページ（Components > Content）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/web-views",
+   "prompt": "【出典】Apple HIG 公式『Web views』ページ（Components > Content）／https://developer.apple.com/design/human-interface-guidelines/web-views\n【作るもの】Web views（Webビュー）\n【再現する見た目・動き】読み込み中は進捗を示し、ブラウザ代わりに使うなら戻る・進むなど最低限の操作を用意する。外部サイトを開く用途は Safari 表示に任せる\n【指示】〈使う場所〉にWeb viewsを入れて。Apple HIG『Web views』ページの指針に従い、WKWebView / SFSafariViewControllerを使って。"
+  },
+  {
+   "id": "apple-hig/boxes",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Boxes",
+   "name_ja": "ボックス（グループ枠）",
+   "description_ja": "関連する情報や部品をひとまとまりの枠で囲んで見せる部品（主に macOS）。",
+   "aliases": [
+    "枠で囲む",
+    "グループボックス",
+    "区画"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Boxes』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/boxes",
+   "prompt": "【出典】Apple HIG 公式『Boxes』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/boxes\n【作るもの】Boxes（ボックス（グループ枠））\n【再現する見た目・動き】枠は細い線か薄い背景で示し、タイトルは枠の上に短く置く。入れ子にしすぎない\n【指示】〈使う場所〉にBoxesを入れて。Apple HIG『Boxes』ページの指針に従い、SwiftUI の GroupBoxを使って。"
+  },
+  {
+   "id": "apple-hig/collections",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Collections",
+   "name_ja": "コレクション（グリッド一覧）",
+   "description_ja": "並び順のある項目を、格子状や横流しなど視覚的なレイアウトで並べる部品。",
+   "aliases": [
+    "グリッド",
+    "写真一覧",
+    "タイル並び",
+    "ギャラリー"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "Apple HIG 公式『Collections』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/collections",
+   "prompt": "【出典】Apple HIG 公式『Collections』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/collections\n【作るもの】Collections（コレクション（グリッド一覧））\n【再現する見た目・動き】項目は同じ大きさで等間隔に並べ、画面幅に応じて列数を変える。選択・並べ替え・スクロールに対応し、画像は遅延読み込みする\n【指示】〈使う場所〉にCollectionsを入れて。Apple HIG『Collections』ページの指針に従い、SwiftUI の LazyVGrid / UIKit の UICollectionViewを使って。"
+  },
+  {
+   "id": "apple-hig/column-views",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Column views",
+   "name_ja": "カラムビュー",
+   "description_ja": "階層データを縦の列を横に並べてたどる部品（macOS の Finder 風）。",
+   "aliases": [
+    "Finderの列表示",
+    "階層ブラウザ",
+    "多段リスト"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Apple HIG 公式『Column views』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/column-views",
+   "prompt": "【出典】Apple HIG 公式『Column views』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/column-views\n【作るもの】Column views（カラムビュー）\n【再現する見た目・動き】選んだ項目の中身が右の新しい列に現れ、列は横スクロールできる。列幅はドラッグで調整できる\n【指示】〈使う場所〉にColumn viewsを入れて。Apple HIG『Column views』ページの指針に従い、NSBrowserを使って。"
+  },
+  {
+   "id": "apple-hig/disclosure-controls",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Disclosure controls",
+   "name_ja": "開閉コントロール（ディスクロージャー）",
+   "description_ja": "関連する情報や機能を開いたり隠したりする三角・矢印などの部品。",
+   "aliases": [
+    "アコーディオン",
+    "折りたたみ",
+    "開閉矢印",
+    "詳細を見る"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Apple HIG 公式『Disclosure controls』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/disclosure-controls",
+   "prompt": "【出典】Apple HIG 公式『Disclosure controls』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/disclosure-controls\n【作るもの】Disclosure controls（開閉コントロール（ディスクロージャー））\n【再現する見た目・動き】三角形は閉じると右向き、開くと下向きに回転する。見出し全体をタップ領域にし、開いた内容は見出しの直下に出す\n【指示】〈使う場所〉にDisclosure controlsを入れて。Apple HIG『Disclosure controls』ページの指針に従い、SwiftUI の DisclosureGroupを使って。"
+  },
+  {
+   "id": "apple-hig/labels",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Labels",
+   "name_ja": "ラベル",
+   "description_ja": "読めるが編集できない固定の文字。コピーできる場合もある。",
+   "aliases": [
+    "見出し文字",
+    "キャプション",
+    "説明文"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Apple HIG 公式『Labels』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/labels",
+   "prompt": "【出典】Apple HIG 公式『Labels』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/labels\n【作るもの】Labels（ラベル）\n【再現する見た目・動き】文字はシステムフォントと Dynamic Type に従い、重要度は太さとサイズで示す。操作を促す語は使わずボタンとは別物にする\n【指示】〈使う場所〉にLabelsを入れて。Apple HIG『Labels』ページの指針に従い、SwiftUI の Text / Labelを使って。"
+  },
+  {
+   "id": "apple-hig/lists-and-tables",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Lists and tables",
+   "name_ja": "リストとテーブル",
+   "description_ja": "行を縦に並べてデータを1列以上で見せる部品。",
+   "aliases": [
+    "一覧",
+    "テーブル",
+    "設定リスト",
+    "行リスト"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Apple HIG 公式『Lists and tables』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/lists-and-tables",
+   "prompt": "【出典】Apple HIG 公式『Lists and tables』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/lists-and-tables\n【作るもの】Lists and tables（リストとテーブル）\n【再現する見た目・動き】行の高さは最小44ptの押しやすさ。区切り線は文字の開始位置から引く。スワイプで削除などの行アクションを出し、選択・並べ替えに対応する\n【指示】〈使う場所〉にLists and tablesを入れて。Apple HIG『Lists and tables』ページの指針に従い、SwiftUI の List / Table、UIKit の UITableViewを使って。"
+  },
+  {
+   "id": "apple-hig/lockups",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Lockups",
+   "name_ja": "ロックアップ",
+   "description_ja": "複数のビューを1つの操作単位にまとめた部品（tvOS のカード等）。",
+   "aliases": [
+    "まとまった項目",
+    "タイトルと画像のセット"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Lockups』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/lockups",
+   "prompt": "【出典】Apple HIG 公式『Lockups』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/lockups\n【作るもの】Lockups（ロックアップ）\n【再現する見た目・動き】画像と文字をひとまとめにしてフォーカス時に一緒に拡大・浮き上がる。内側の要素は個別には反応させない\n【指示】〈使う場所〉にLockupsを入れて。Apple HIG『Lockups』ページの指針に従い、tvOS のロックアップ表示を使って。"
+  },
+  {
+   "id": "apple-hig/outline-views",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Outline views",
+   "name_ja": "アウトラインビュー",
+   "description_ja": "階層データを折りたたみ可能な列付きの一覧で見せる部品（macOS）。",
+   "aliases": [
+    "ツリー表示",
+    "階層リスト",
+    "フォルダツリー"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "Apple HIG 公式『Outline views』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/outline-views",
+   "prompt": "【出典】Apple HIG 公式『Outline views』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/outline-views\n【作るもの】Outline views（アウトラインビュー）\n【再現する見た目・動き】親行の三角で子行を開閉し、子はインデントで深さを示す。列見出しをクリックして並べ替える\n【指示】〈使う場所〉にOutline viewsを入れて。Apple HIG『Outline views』ページの指針に従い、NSOutlineView / SwiftUI の OutlineGroupを使って。"
+  },
+  {
+   "id": "apple-hig/split-views",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Split views",
+   "name_ja": "スプリットビュー（分割画面）",
+   "description_ja": "隣り合う複数の領域を同時に見せ、境界で幅を調整できる構造。",
+   "aliases": [
+    "2カラム",
+    "3カラム",
+    "マスター・ディテール",
+    "画面分割"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Split views』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/split-views",
+   "prompt": "【出典】Apple HIG 公式『Split views』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/split-views\n【作るもの】Split views（スプリットビュー（分割画面））\n【再現する見た目・動き】サイドバー・一覧・詳細の2〜3ペインを並べ、幅に応じて折りたたむ。境界線はドラッグで幅を変えられる\n【指示】〈使う場所〉にSplit viewsを入れて。Apple HIG『Split views』ページの指針に従い、SwiftUI の NavigationSplitViewを使って。"
+  },
+  {
+   "id": "apple-hig/tab-views",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Tab views",
+   "name_ja": "タブビュー",
+   "description_ja": "同じ領域で排他的に切り替える複数の面を持つ部品。",
+   "aliases": [
+    "タブ切り替え",
+    "タブ画面",
+    "ページ切替"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Tab views』ページ（Components > Layout and organization）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/tab-views",
+   "prompt": "【出典】Apple HIG 公式『Tab views』ページ（Components > Layout and organization）／https://developer.apple.com/design/human-interface-guidelines/tab-views\n【作るもの】Tab views（タブビュー）\n【再現する見た目・動き】タブは3〜5個程度までにして名前は短く。選択中のタブを色や下線で示し、切り替えで前の画面の状態を保つ\n【指示】〈使う場所〉にTab viewsを入れて。Apple HIG『Tab views』ページの指針に従い、SwiftUI の TabViewを使って。"
+  },
+  {
+   "id": "apple-hig/activity-views",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Activity views",
+   "name_ja": "アクティビティビュー（共有シート）",
+   "description_ja": "現在の文脈でできる操作（共有・コピー・保存など）を並べるシート。",
+   "aliases": [
+    "共有メニュー",
+    "シェアシート",
+    "共有ボタン"
+   ],
+   "preview": {
+    "demo": "sheet"
+   },
+   "source_ref": "Apple HIG 公式『Activity views』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/activity-views",
+   "prompt": "【出典】Apple HIG 公式『Activity views』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/activity-views\n【作るもの】Activity views（アクティビティビュー（共有シート））\n【再現する見た目・動き】画面下から出る半モーダルのシートで、上に共有対象、下にアクションの列。アプリ固有の操作は必要最小限にする\n【指示】〈使う場所〉にActivity viewsを入れて。Apple HIG『Activity views』ページの指針に従い、ShareLink / UIActivityViewControllerを使って。"
+  },
+  {
+   "id": "apple-hig/buttons",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Buttons",
+   "name_ja": "ボタン",
+   "description_ja": "1回押して即座に実行する部品。種類は塗り・枠・テキストなど。",
+   "aliases": [
+    "押すやつ",
+    "ボタン",
+    "CTA",
+    "実行ボタン"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "Apple HIG 公式『Buttons』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/buttons",
+   "prompt": "【出典】Apple HIG 公式『Buttons』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/buttons\n【作るもの】Buttons（ボタン）\n【再現する見た目・動き】押せる範囲は最小44×44pt（visionOS は60pt）。主要操作は塗り、補助は枠・テキストにして強さを段階づける。破壊的操作は赤系のロールで示す。ラベルは動詞で始める\n【指示】〈使う場所〉にButtonsを入れて。Apple HIG『Buttons』ページの指針に従い、SwiftUI の Button と buttonStyle(.borderedProminent など)を使って。"
+  },
+  {
+   "id": "apple-hig/context-menus",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Context menus",
+   "name_ja": "コンテキストメニュー",
+   "description_ja": "項目の長押しや右クリックで出る、その項目専用の操作メニュー。",
+   "aliases": [
+    "長押しメニュー",
+    "右クリックメニュー",
+    "ポップアップ操作"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Context menus』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/context-menus",
+   "prompt": "【出典】Apple HIG 公式『Context menus』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/context-menus\n【作るもの】Context menus（コンテキストメニュー）\n【再現する見た目・動き】長押しで項目が持ち上がり、周囲がぼけてメニューが出る。項目は少なめにし、破壊的操作は最下部で赤くする。重要操作はここだけに置かない\n【指示】〈使う場所〉にContext menusを入れて。Apple HIG『Context menus』ページの指針に従い、SwiftUI の .contextMenuを使って。"
+  },
+  {
+   "id": "apple-hig/dock-menus",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Dock menus",
+   "name_ja": "Dockメニュー",
+   "description_ja": "Dockのアプリアイコンを副クリックして出る、アプリ固有のメニュー（macOS）。",
+   "aliases": [
+    "Dockの右クリック",
+    "アイコンメニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Dock menus』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/dock-menus",
+   "prompt": "【出典】Apple HIG 公式『Dock menus』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/dock-menus\n【作るもの】Dock menus（Dockメニュー）\n【再現する見た目・動き】開いているウインドウ名や頻出の操作を並べる。標準項目は残し、追加は少数に絞る\n【指示】〈使う場所〉にDock menusを入れて。Apple HIG『Dock menus』ページの指針に従い、NSApplication の applicationDockMenuを使って。"
+  },
+  {
+   "id": "apple-hig/edit-menus",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Edit menus",
+   "name_ja": "編集メニュー",
+   "description_ja": "選択した内容に対して切り取り・コピー・貼り付けなどを行う小さなメニュー。",
+   "aliases": [
+    "コピペメニュー",
+    "選択メニュー",
+    "切り取りコピー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Edit menus』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/edit-menus",
+   "prompt": "【出典】Apple HIG 公式『Edit menus』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/edit-menus\n【作るもの】Edit menus（編集メニュー）\n【再現する見た目・動き】文字選択の上に横並びの小さなバブルとして出る。標準の項目順を保ち、独自項目は末尾に足す\n【指示】〈使う場所〉にEdit menusを入れて。Apple HIG『Edit menus』ページの指針に従い、UIEditMenuInteraction / SwiftUI の .textSelectionを使って。"
+  },
+  {
+   "id": "apple-hig/home-screen-quick-actions",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Home Screen quick actions",
+   "name_ja": "ホーム画面クイックアクション",
+   "description_ja": "ホーム画面でアプリアイコンを長押しして出る、アプリ固有のショートカット。",
+   "aliases": [
+    "アイコン長押し",
+    "ホーム画面ショートカット"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Home Screen quick actions』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions",
+   "prompt": "【出典】Apple HIG 公式『Home Screen quick actions』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions\n【作るもの】Home Screen quick actions（ホーム画面クイックアクション）\n【再現する見た目・動き】最大4つまで。ラベルは短く、アイコンは SF Symbols。アプリを開いてから使う機能に直行できるものを選ぶ\n【指示】〈使う場所〉にHome Screen quick actionsを入れて。Apple HIG『Home Screen quick actions』ページの指針に従い、UIApplicationShortcutItemを使って。"
+  },
+  {
+   "id": "apple-hig/menus",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Menus",
+   "name_ja": "メニュー",
+   "description_ja": "押すと選択肢が現れ、少ない面積で多くのコマンドを出せる部品。",
+   "aliases": [
+    "ドロップダウン",
+    "プルダウン",
+    "メニュー",
+    "三点メニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Menus』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/menus",
+   "prompt": "【出典】Apple HIG 公式『Menus』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/menus\n【作るもの】Menus（メニュー）\n【再現する見た目・動き】項目は動詞で始め、使えない項目は薄くして残す。区切り線で関連項目をまとめ、サブメニューは1階層までに抑える\n【指示】〈使う場所〉にMenusを入れて。Apple HIG『Menus』ページの指針に従い、SwiftUI の Menuを使って。"
+  },
+  {
+   "id": "apple-hig/ornaments",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Ornaments",
+   "name_ja": "オーナメント（visionOS）",
+   "description_ja": "ウインドウの外側に浮かび、ウインドウに関する操作や情報を出す部品。",
+   "aliases": [
+    "窓の横の操作バー",
+    "浮かぶツールバー"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Ornaments』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/ornaments",
+   "prompt": "【出典】Apple HIG 公式『Ornaments』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/ornaments\n【作るもの】Ornaments（オーナメント（visionOS））\n【再現する見た目・動き】ウインドウの端に沿って少し離して配置し、ガラス素材の背景を使う。ウインドウ内容を隠さない\n【指示】〈使う場所〉にOrnamentsを入れて。Apple HIG『Ornaments』ページの指針に従い、visionOS の .ornamentを使って。"
+  },
+  {
+   "id": "apple-hig/pop-up-buttons",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Pop-up buttons",
+   "name_ja": "ポップアップボタン",
+   "description_ja": "互いに排他な選択肢のメニューを出すボタン。選んだ値がボタンに表示される。",
+   "aliases": [
+    "セレクトボックス",
+    "ドロップダウン選択",
+    "選択メニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Pop-up buttons』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons",
+   "prompt": "【出典】Apple HIG 公式『Pop-up buttons』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons\n【作るもの】Pop-up buttons（ポップアップボタン）\n【再現する見た目・動き】現在の値をボタンの文言にして上下の小さな矢印を添える。メニューには選択中の項目にチェックを付ける\n【指示】〈使う場所〉にPop-up buttonsを入れて。Apple HIG『Pop-up buttons』ページの指針に従い、SwiftUI の Picker(.menu)を使って。"
+  },
+  {
+   "id": "apple-hig/pull-down-buttons",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Pull-down buttons",
+   "name_ja": "プルダウンボタン",
+   "description_ja": "ボタンの目的に関連する項目や操作のメニューを下に出すボタン。",
+   "aliases": [
+    "三点ボタン",
+    "その他メニュー",
+    "ドロップダウン操作"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『Pull-down buttons』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons",
+   "prompt": "【出典】Apple HIG 公式『Pull-down buttons』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons\n【作るもの】Pull-down buttons（プルダウンボタン）\n【再現する見た目・動き】ボタンの下にメニューが出て、項目は動詞で始める。ラベルは変えず選択結果を表示しない（ポップアップとの違い）\n【指示】〈使う場所〉にPull-down buttonsを入れて。Apple HIG『Pull-down buttons』ページの指針に従い、SwiftUI の Menuを使って。"
+  },
+  {
+   "id": "apple-hig/the-menu-bar",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "The menu bar",
+   "name_ja": "メニューバー",
+   "description_ja": "画面上端に最上位のメニューを並べる帯（Mac・iPad）。",
+   "aliases": [
+    "画面上部メニュー",
+    "アプリメニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『The menu bar』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/the-menu-bar",
+   "prompt": "【出典】Apple HIG 公式『The menu bar』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/the-menu-bar\n【作るもの】The menu bar（メニューバー）\n【再現する見た目・動き】アプリ名・ファイル・編集・表示などの標準順を守る。主要コマンドにはキーボードショートカットを付ける\n【指示】〈使う場所〉にThe menu barを入れて。Apple HIG『The menu bar』ページの指針に従い、SwiftUI の .commands / CommandMenuを使って。"
+  },
+  {
+   "id": "apple-hig/toolbars",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Toolbars",
+   "name_ja": "ツールバー",
+   "description_ja": "よく使う操作・ナビ・検索への入り口を並べる帯。",
+   "aliases": [
+    "上部ボタン帯",
+    "ナビゲーションバー",
+    "ツールバー"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Toolbars』ページ（Components > Menus and actions）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+   "prompt": "【出典】Apple HIG 公式『Toolbars』ページ（Components > Menus and actions）／https://developer.apple.com/design/human-interface-guidelines/toolbars\n【作るもの】Toolbars（ツールバー）\n【再現する見た目・動き】アイコンボタンは44pt領域で3〜4個程度。Liquid Glass ではバーが背景から浮いた半透明で、スクロール端で効果が変わる。タイトルを左または中央に置く\n【指示】〈使う場所〉にToolbarsを入れて。Apple HIG『Toolbars』ページの指針に従い、SwiftUI の .toolbarを使って。"
+  },
+  {
+   "id": "apple-hig/path-controls",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Path controls",
+   "name_ja": "パスコントロール",
+   "description_ja": "選択中のファイルやフォルダの場所を階層で示す部品（macOS）。",
+   "aliases": [
+    "パンくず",
+    "ファイルの場所",
+    "パス表示"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "Apple HIG 公式『Path controls』ページ（Components > Navigation and search）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/path-controls",
+   "prompt": "【出典】Apple HIG 公式『Path controls』ページ（Components > Navigation and search）／https://developer.apple.com/design/human-interface-guidelines/path-controls\n【作るもの】Path controls（パスコントロール）\n【再現する見た目・動き】階層を > や区切りで並べ、各段をクリックしてその階層へ移動できる\n【指示】〈使う場所〉にPath controlsを入れて。Apple HIG『Path controls』ページの指針に従い、NSPathControlを使って。"
+  },
+  {
+   "id": "apple-hig/search-fields",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Search fields",
+   "name_ja": "検索フィールド",
+   "description_ja": "入力した語で内容を絞り込む検索欄。",
+   "aliases": [
+    "検索バー",
+    "検索欄",
+    "検索ボックス"
+   ],
+   "preview": {
+    "demo": "search"
+   },
+   "source_ref": "Apple HIG 公式『Search fields』ページ（Components > Navigation and search）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/search-fields",
+   "prompt": "【出典】Apple HIG 公式『Search fields』ページ（Components > Navigation and search）／https://developer.apple.com/design/human-interface-guidelines/search-fields\n【作るもの】Search fields（検索フィールド）\n【再現する見た目・動き】角丸の薄い背景に虫眼鏡アイコンとプレースホルダー。入力中に候補・結果を出し、右端に消去ボタンを付ける。iOS 26 では下部に配置する形もある\n【指示】〈使う場所〉にSearch fieldsを入れて。Apple HIG『Search fields』ページの指針に従い、SwiftUI の .searchableを使って。"
+  },
+  {
+   "id": "apple-hig/sidebars",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Sidebars",
+   "name_ja": "サイドバー",
+   "description_ja": "画面の左側に置き、アプリの主要な領域に移動する縦のナビ。",
+   "aliases": [
+    "左メニュー",
+    "サイドメニュー",
+    "ナビレール"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Sidebars』ページ（Components > Navigation and search）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+   "prompt": "【出典】Apple HIG 公式『Sidebars』ページ（Components > Navigation and search）／https://developer.apple.com/design/human-interface-guidelines/sidebars\n【作るもの】Sidebars（サイドバー）\n【再現する見た目・動き】項目はアイコン＋短い名前。選択中の行を色付きで示し、見出しで区分する。幅が狭いと隠してトグルで出す。背景は半透明の素材を使う\n【指示】〈使う場所〉にSidebarsを入れて。Apple HIG『Sidebars』ページの指針に従い、SwiftUI の NavigationSplitView の sidebarを使って。"
+  },
+  {
+   "id": "apple-hig/tab-bars",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Tab bars",
+   "name_ja": "タブバー",
+   "description_ja": "アプリの最上位の領域を切り替える画面下部の帯。",
+   "aliases": [
+    "下タブ",
+    "ボトムナビ",
+    "タブバー"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Tab bars』ページ（Components > Navigation and search）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+   "prompt": "【出典】Apple HIG 公式『Tab bars』ページ（Components > Navigation and search）／https://developer.apple.com/design/human-interface-guidelines/tab-bars\n【作るもの】Tab bars（タブバー）\n【再現する見た目・動き】3〜5個の項目。アイコン＋短いラベルで選択中を色付けする。画面遷移しても消さず、操作ボタンは置かない。iOS 26 は浮いたガラスの帯\n【指示】〈使う場所〉にTab barsを入れて。Apple HIG『Tab bars』ページの指針に従い、SwiftUI の TabView と Tabを使って。"
+  },
+  {
+   "id": "apple-hig/token-fields",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Token fields",
+   "name_ja": "トークンフィールド",
+   "description_ja": "入力した文字を選択・移動しやすい塊（トークン）に変える入力欄。",
+   "aliases": [
+    "タグ入力",
+    "宛先入力",
+    "チップ入力"
+   ],
+   "preview": {
+    "demo": "chips"
+   },
+   "source_ref": "Apple HIG 公式『Token fields』ページ（Components > Navigation and search）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/token-fields",
+   "prompt": "【出典】Apple HIG 公式『Token fields』ページ（Components > Navigation and search）／https://developer.apple.com/design/human-interface-guidelines/token-fields\n【作るもの】Token fields（トークンフィールド）\n【再現する見た目・動き】区切り文字や確定でテキストが角丸の塊になり、削除できる。候補をタイプ中に提示する\n【指示】〈使う場所〉にToken fieldsを入れて。Apple HIG『Token fields』ページの指針に従い、NSTokenField / SwiftUI の searchable の tokensを使って。"
+  },
+  {
+   "id": "apple-hig/action-sheets",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Action sheets",
+   "name_ja": "アクションシート",
+   "description_ja": "ユーザーが始めた操作に関する選択肢を出すモーダル。",
+   "aliases": [
+    "選択肢シート",
+    "下から出る選択",
+    "確認シート"
+   ],
+   "preview": {
+    "demo": "sheet"
+   },
+   "source_ref": "Apple HIG 公式『Action sheets』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/action-sheets",
+   "prompt": "【出典】Apple HIG 公式『Action sheets』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/action-sheets\n【作るもの】Action sheets（アクションシート）\n【再現する見た目・動き】選択肢を縦に並べ、破壊的な項目は赤。取消しボタンを最下部に離して置く。iPad ではポップオーバーとして出る\n【指示】〈使う場所〉にAction sheetsを入れて。Apple HIG『Action sheets』ページの指針に従い、SwiftUI の .confirmationDialogを使って。"
+  },
+  {
+   "id": "apple-hig/alerts",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Alerts",
+   "name_ja": "アラート",
+   "description_ja": "すぐに知らせる必要がある重要な情報を出すダイアログ。",
+   "aliases": [
+    "確認ダイアログ",
+    "警告",
+    "ポップアップ",
+    "モーダル"
+   ],
+   "preview": {
+    "demo": "dialog",
+    "variant": "alert"
+   },
+   "source_ref": "Apple HIG 公式『Alerts』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/alerts",
+   "prompt": "【出典】Apple HIG 公式『Alerts』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/alerts\n【作るもの】Alerts（アラート）\n【再現する見た目・動き】タイトルは短く、ボタンは2つまで（多くて3つ）を推奨。既定の安全な操作を太字にし、破壊的操作は赤。画面を暗くして中央に表示\n【指示】〈使う場所〉にAlertsを入れて。Apple HIG『Alerts』ページの指針に従い、SwiftUI の .alertを使って。"
+  },
+  {
+   "id": "apple-hig/page-controls",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Page controls",
+   "name_ja": "ページコントロール（ドット）",
+   "description_ja": "ページ数と現在位置を並べた小さな点で示す部品。",
+   "aliases": [
+    "ドットインジケーター",
+    "スライドの点",
+    "ページ点"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "Apple HIG 公式『Page controls』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/page-controls",
+   "prompt": "【出典】Apple HIG 公式『Page controls』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/page-controls\n【作るもの】Page controls（ページコントロール（ドット））\n【再現する見た目・動き】現在のページの点を濃く、他を薄くする。最大でもおおよそ10点まで。点をタップでページ移動できる\n【指示】〈使う場所〉にPage controlsを入れて。Apple HIG『Page controls』ページの指針に従い、SwiftUI の TabView(.page) / UIPageControlを使って。"
+  },
+  {
+   "id": "apple-hig/panels",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Panels",
+   "name_ja": "パネル",
+   "description_ja": "他のウインドウの上に浮かんで補助的な操作や情報を出す窓（macOS）。",
+   "aliases": [
+    "フローティングパネル",
+    "インスペクタ",
+    "ツールパレット"
+   ],
+   "preview": {
+    "demo": "popover"
+   },
+   "source_ref": "Apple HIG 公式『Panels』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/panels",
+   "prompt": "【出典】Apple HIG 公式『Panels』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/panels\n【作るもの】Panels（パネル）\n【再現する見た目・動き】標準ウインドウより小さく、タイトルバーも簡素。フォーカスを奪わず常に手前に出る\n【指示】〈使う場所〉にPanelsを入れて。Apple HIG『Panels』ページの指針に従い、NSPanel / SwiftUI の inspectorを使って。"
+  },
+  {
+   "id": "apple-hig/popovers",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Popovers",
+   "name_ja": "ポップオーバー",
+   "description_ja": "ボタンなどの操作元から出る一時的な小窓。",
+   "aliases": [
+    "吹き出し",
+    "ポップアップ小窓",
+    "ツールチップ的な窓"
+   ],
+   "preview": {
+    "demo": "popover"
+   },
+   "source_ref": "Apple HIG 公式『Popovers』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/popovers",
+   "prompt": "【出典】Apple HIG 公式『Popovers』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/popovers\n【作るもの】Popovers（ポップオーバー）\n【再現する見た目・動き】操作元から矢印が伸び、transform-origin をその位置にして scale(.6)→1 で出る。外側をタップで閉じる。内容は少なくし、重ねて出さない\n【指示】〈使う場所〉にPopoversを入れて。Apple HIG『Popovers』ページの指針に従い、SwiftUI の .popoverを使って。"
+  },
+  {
+   "id": "apple-hig/scroll-views",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Scroll views",
+   "name_ja": "スクロールビュー",
+   "description_ja": "枠より大きい内容を縦横に動かして見せる部品。",
+   "aliases": [
+    "スクロール領域",
+    "スクロールバー",
+    "引っ張る領域"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "Apple HIG 公式『Scroll views』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/scroll-views",
+   "prompt": "【出典】Apple HIG 公式『Scroll views』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/scroll-views\n【作るもの】Scroll views（スクロールビュー）\n【再現する見た目・動き】端を超えると抵抗してバウンスで戻る（ラバーバンド）。スクロールバーは操作中だけ出る。ページ単位で止める場合は paging を使う\n【指示】〈使う場所〉にScroll viewsを入れて。Apple HIG『Scroll views』ページの指針に従い、SwiftUI の ScrollViewを使って。"
+  },
+  {
+   "id": "apple-hig/sheets",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Sheets",
+   "name_ja": "シート",
+   "description_ja": "いまの文脈に近い範囲の作業を行わせる、下から出るパネル。",
+   "aliases": [
+    "ボトムシート",
+    "下から出る画面",
+    "モーダルシート"
+   ],
+   "preview": {
+    "demo": "sheet"
+   },
+   "source_ref": "Apple HIG 公式『Sheets』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+   "prompt": "【出典】Apple HIG 公式『Sheets』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/sheets\n【作るもの】Sheets（シート）\n【再現する見た目・動き】下から translateY(100%)→指定高さで出て背景が暗くなり、後ろの画面が少し沈む。detents（半分・全体）で高さを選べ、グラバーで引き下げて閉じる\n【指示】〈使う場所〉にSheetsを入れて。Apple HIG『Sheets』ページの指針に従い、SwiftUI の .sheet と presentationDetentsを使って。"
+  },
+  {
+   "id": "apple-hig/windows",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Windows",
+   "name_ja": "ウインドウ",
+   "description_ja": "アプリのビューや部品を載せる窓（Mac・iPad・visionOS）。",
+   "aliases": [
+    "窓",
+    "アプリウインドウ",
+    "画面枠"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Windows』ページ（Components > Presentation）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/windows",
+   "prompt": "【出典】Apple HIG 公式『Windows』ページ（Components > Presentation）／https://developer.apple.com/design/human-interface-guidelines/windows\n【作るもの】Windows（ウインドウ）\n【再現する見た目・動き】タイトルバー・閉じる最小化ボタンを備え、サイズ変更で内容を再配置する。最小サイズを設定する\n【指示】〈使う場所〉にWindowsを入れて。Apple HIG『Windows』ページの指針に従い、SwiftUI の WindowGroupを使って。"
+  },
+  {
+   "id": "apple-hig/color-wells",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Color wells",
+   "name_ja": "カラーウェル",
+   "description_ja": "文字・図形などの色を調整する入力部品。",
+   "aliases": [
+    "色選択",
+    "カラーピッカー",
+    "色見本ボタン"
+   ],
+   "preview": {
+    "demo": "swatches"
+   },
+   "source_ref": "Apple HIG 公式『Color wells』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/color-wells",
+   "prompt": "【出典】Apple HIG 公式『Color wells』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/color-wells\n【作るもの】Color wells（カラーウェル）\n【再現する見た目・動き】色見本の丸（または角丸）をタップするとシステムの色選択を開く。選択色をそのまま見本に表示する\n【指示】〈使う場所〉にColor wellsを入れて。Apple HIG『Color wells』ページの指針に従い、SwiftUI の ColorPickerを使って。"
+  },
+  {
+   "id": "apple-hig/combo-boxes",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Combo boxes",
+   "name_ja": "コンボボックス",
+   "description_ja": "入力欄とプルダウンを1つにした部品（macOS）。",
+   "aliases": [
+    "入力もできる選択",
+    "サジェスト付き入力"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "Apple HIG 公式『Combo boxes』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/combo-boxes",
+   "prompt": "【出典】Apple HIG 公式『Combo boxes』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/combo-boxes\n【作るもの】Combo boxes（コンボボックス）\n【再現する見た目・動き】文字を直接入力でき、右の矢印で候補一覧を出す。候補にない値も入力可能\n【指示】〈使う場所〉にCombo boxesを入れて。Apple HIG『Combo boxes』ページの指針に従い、NSComboBoxを使って。"
+  },
+  {
+   "id": "apple-hig/digit-entry-views",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Digit entry views",
+   "name_ja": "数字入力ビュー",
+   "description_ja": "PINなど一連の数字を入力させる全画面のビュー。",
+   "aliases": [
+    "暗証番号入力",
+    "PIN入力",
+    "テンキー画面"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "Apple HIG 公式『Digit entry views』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/digit-entry-views",
+   "prompt": "【出典】Apple HIG 公式『Digit entry views』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/digit-entry-views\n【作るもの】Digit entry views（数字入力ビュー）\n【再現する見た目・動き】入力済みの桁を点で示し、数字は大きなキーで入力する。誤りは振動と揺れで知らせる\n【指示】〈使う場所〉にDigit entry viewsを入れて。Apple HIG『Digit entry views』ページの指針に従い、tvOS・iOS のパスコード入力を使って。"
+  },
+  {
+   "id": "apple-hig/image-wells",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Image wells",
+   "name_ja": "イメージウェル",
+   "description_ja": "編集可能な画像ビュー。画像をドロップ・選択して差し替えられる（macOS）。",
+   "aliases": [
+    "画像ドロップ枠",
+    "アイコン差し替え"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Image wells』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/image-wells",
+   "prompt": "【出典】Apple HIG 公式『Image wells』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/image-wells\n【作るもの】Image wells（イメージウェル）\n【再現する見た目・動き】点線または枠で囲み、画像をドラッグして置ける。選択中は枠の色が変わる\n【指示】〈使う場所〉にImage wellsを入れて。Apple HIG『Image wells』ページの指針に従い、NSImageView（editable）を使って。"
+  },
+  {
+   "id": "apple-hig/pickers",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Pickers",
+   "name_ja": "ピッカー",
+   "description_ja": "複数の候補を縦に回して1つを選ぶ部品（日付・時刻・値）。",
+   "aliases": [
+    "ドラムロール",
+    "日付選択",
+    "スピナー",
+    "回して選ぶ"
+   ],
+   "preview": {
+    "demo": "calendar"
+   },
+   "source_ref": "Apple HIG 公式『Pickers』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/pickers",
+   "prompt": "【出典】Apple HIG 公式『Pickers』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/pickers\n【作るもの】Pickers（ピッカー）\n【再現する見た目・動き】選択中の行を中央の帯で強調し、上下はフェード。スクロールで吸着し、触感の振動を返す。日付は DatePicker のスタイル（コンパクト・ホイール・グラフィカル）を使い分ける\n【指示】〈使う場所〉にPickersを入れて。Apple HIG『Pickers』ページの指針に従い、SwiftUI の Picker / DatePickerを使って。"
+  },
+  {
+   "id": "apple-hig/segmented-controls",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Segmented controls",
+   "name_ja": "セグメントコントロール",
+   "description_ja": "2つ以上の選択肢が横に並び、それぞれがボタンとして働く部品。",
+   "aliases": [
+    "タブ風切替",
+    "3択切り替え",
+    "セグメント"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "Apple HIG 公式『Segmented controls』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/segmented-controls",
+   "prompt": "【出典】Apple HIG 公式『Segmented controls』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/segmented-controls\n【作るもの】Segmented controls（セグメントコントロール）\n【再現する見た目・動き】選択中の背景が滑って移動する。ラベルは短く、項目は5つ程度まで。幅は均等に\n【指示】〈使う場所〉にSegmented controlsを入れて。Apple HIG『Segmented controls』ページの指針に従い、SwiftUI の Picker(.segmented)を使って。"
+  },
+  {
+   "id": "apple-hig/sliders",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Sliders",
+   "name_ja": "スライダー",
+   "description_ja": "最小値と最大値の間を、つまみ（thumb）で調整する横線の部品。",
+   "aliases": [
+    "つまみバー",
+    "音量バー",
+    "シークバー"
+   ],
+   "preview": {
+    "demo": "slider"
+   },
+   "source_ref": "Apple HIG 公式『Sliders』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/sliders",
+   "prompt": "【出典】Apple HIG 公式『Sliders』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/sliders\n【作るもの】Sliders（スライダー）\n【再現する見た目・動き】つまみを動かすと塗りが追従する。両端にアイコンで意味を示せる。細かな値には現在値を併記し、離散値ならメモリを付ける\n【指示】〈使う場所〉にSlidersを入れて。Apple HIG『Sliders』ページの指針に従い、SwiftUI の Sliderを使って。"
+  },
+  {
+   "id": "apple-hig/steppers",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Steppers",
+   "name_ja": "ステッパー",
+   "description_ja": "＋と－の2つのボタンで値を少しずつ増減する部品。",
+   "aliases": [
+    "プラスマイナス",
+    "数量変更",
+    "カウンター"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "Apple HIG 公式『Steppers』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/steppers",
+   "prompt": "【出典】Apple HIG 公式『Steppers』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/steppers\n【作るもの】Steppers（ステッパー）\n【再現する見た目・動き】2分割の部品で、押し続けると連続で変化する。現在値は隣に別のラベルで表示する\n【指示】〈使う場所〉にSteppersを入れて。Apple HIG『Steppers』ページの指針に従い、SwiftUI の Stepperを使って。"
+  },
+  {
+   "id": "apple-hig/text-fields",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Text fields",
+   "name_ja": "テキストフィールド",
+   "description_ja": "短い文字を入力・編集する矩形の入力欄。",
+   "aliases": [
+    "入力欄",
+    "フォーム",
+    "テキストボックス"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "Apple HIG 公式『Text fields』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
+   "prompt": "【出典】Apple HIG 公式『Text fields』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/text-fields\n【作るもの】Text fields（テキストフィールド）\n【再現する見た目・動き】プレースホルダーは入力例で、ラベルの代わりにしない。フォーカスで枠が強調され、右端に消去ボタンを出せる。キーボードの種類を入力内容に合わせる\n【指示】〈使う場所〉にText fieldsを入れて。Apple HIG『Text fields』ページの指針に従い、SwiftUI の TextField / SecureFieldを使って。"
+  },
+  {
+   "id": "apple-hig/toggles",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Toggles",
+   "name_ja": "トグル（スイッチ）",
+   "description_ja": "オン・オフのように対になる2状態を切り替える部品。",
+   "aliases": [
+    "スイッチ",
+    "ON/OFF",
+    "切り替え",
+    "トグルスイッチ"
+   ],
+   "preview": {
+    "demo": "switch"
+   },
+   "source_ref": "Apple HIG 公式『Toggles』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/toggles",
+   "prompt": "【出典】Apple HIG 公式『Toggles』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/toggles\n【作るもの】Toggles（トグル（スイッチ））\n【再現する見た目・動き】つまみが左右にバネで動き、オンで緑に変わる。ラベルは何がオンになるかを示し、即時に反映する（確定ボタンは不要）\n【指示】〈使う場所〉にTogglesを入れて。Apple HIG『Toggles』ページの指針に従い、SwiftUI の Toggleを使って。"
+  },
+  {
+   "id": "apple-hig/virtual-keyboards",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Virtual keyboards",
+   "name_ja": "ソフトウェアキーボード",
+   "description_ja": "物理キーボードのない端末で出る、入力内容に応じたキーボード。",
+   "aliases": [
+    "画面キーボード",
+    "キーボード種類",
+    "数字キーボード"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "Apple HIG 公式『Virtual keyboards』ページ（Components > Selection and input）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/virtual-keyboards",
+   "prompt": "【出典】Apple HIG 公式『Virtual keyboards』ページ（Components > Selection and input）／https://developer.apple.com/design/human-interface-guidelines/virtual-keyboards\n【作るもの】Virtual keyboards（ソフトウェアキーボード）\n【再現する見た目・動き】メール・URL・数字など入力に合わせた種類を指定する。入力欄がキーボードに隠れないよう上にずらす\n【指示】〈使う場所〉にVirtual keyboardsを入れて。Apple HIG『Virtual keyboards』ページの指針に従い、SwiftUI の .keyboardType（UIKit の UIKeyboardType）を使って。"
+  },
+  {
+   "id": "apple-hig/activity-rings",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Activity rings",
+   "name_ja": "アクティビティリング",
+   "description_ja": "ムーブ・エクササイズ・スタンドの目標進捗を三重の輪で示す部品。",
+   "aliases": [
+    "三重の輪",
+    "Appleウォッチの輪",
+    "円形の進捗"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Apple HIG 公式『Activity rings』ページ（Components > Status）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/activity-rings",
+   "prompt": "【出典】Apple HIG 公式『Activity rings』ページ（Components > Status）／https://developer.apple.com/design/human-interface-guidelines/activity-rings\n【作るもの】Activity rings（アクティビティリング）\n【再現する見た目・動き】3本の同心円を赤・緑・青で示し、一周で目標達成。2周目以降は同じ色で重ねる。標準の見た目はそのまま使い、別の用途に流用しない\n【指示】〈使う場所〉にActivity ringsを入れて。Apple HIG『Activity rings』ページの指針に従い、HealthKit の HKActivityRingViewを使って。"
+  },
+  {
+   "id": "apple-hig/gauges",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Gauges",
+   "name_ja": "ゲージ",
+   "description_ja": "ある範囲の中の数値の位置を示すメーター。",
+   "aliases": [
+    "メーター",
+    "円形ゲージ",
+    "残量バー"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Apple HIG 公式『Gauges』ページ（Components > Status）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/gauges",
+   "prompt": "【出典】Apple HIG 公式『Gauges』ページ（Components > Status）／https://developer.apple.com/design/human-interface-guidelines/gauges\n【作るもの】Gauges（ゲージ）\n【再現する見た目・動き】最小値と最大値を示し、現在位置を塗りや針で見せる。ゲージの色は意味（低・高など）を示す\n【指示】〈使う場所〉にGaugesを入れて。Apple HIG『Gauges』ページの指針に従い、SwiftUI の Gaugeを使って。"
+  },
+  {
+   "id": "apple-hig/progress-indicators",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Progress indicators",
+   "name_ja": "プログレスインジケーター",
+   "description_ja": "読み込み・長い処理が止まっていないことを示す部品。バーと回転（スピナー）がある。",
+   "aliases": [
+    "ローディング",
+    "進捗バー",
+    "スピナー",
+    "くるくる"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Apple HIG 公式『Progress indicators』ページ（Components > Status）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/progress-indicators",
+   "prompt": "【出典】Apple HIG 公式『Progress indicators』ページ（Components > Status）／https://developer.apple.com/design/human-interface-guidelines/progress-indicators\n【作るもの】Progress indicators（プログレスインジケーター）\n【再現する見た目・動き】終わりが分かるなら左から伸びるバー（determinate）、不明なら回転するスピナー（indeterminate）。進捗は止めたり戻したりせず、完了後は速やかに消す\n【指示】〈使う場所〉にProgress indicatorsを入れて。Apple HIG『Progress indicators』ページの指針に従い、SwiftUI の ProgressViewを使って。"
+  },
+  {
+   "id": "apple-hig/rating-indicators",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Rating indicators",
+   "name_ja": "レーティングインジケーター",
+   "description_ja": "星などの記号を並べて評価を示す部品。",
+   "aliases": [
+    "星評価",
+    "レーティング",
+    "★表示"
+   ],
+   "preview": {
+    "demo": "badge"
+   },
+   "source_ref": "Apple HIG 公式『Rating indicators』ページ（Components > Status）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/rating-indicators",
+   "prompt": "【出典】Apple HIG 公式『Rating indicators』ページ（Components > Status）／https://developer.apple.com/design/human-interface-guidelines/rating-indicators\n【作るもの】Rating indicators（レーティングインジケーター）\n【再現する見た目・動き】標準は星5つ。評価を塗りで示し、入力用と表示用で見た目を分ける\n【指示】〈使う場所〉にRating indicatorsを入れて。Apple HIG『Rating indicators』ページの指針に従い、NSLevelIndicatorを使って。"
+  },
+  {
+   "id": "apple-hig/app-shortcuts",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "App Shortcuts",
+   "name_ja": "アプリショートカット",
+   "description_ja": "アプリの主要機能にシステム全体から素早く行ける入口（Siri・Spotlight 等）。",
+   "aliases": [
+    "Siriショートカット",
+    "Spotlight 操作"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "Apple HIG 公式『App Shortcuts』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/app-shortcuts",
+   "prompt": "【出典】Apple HIG 公式『App Shortcuts』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/app-shortcuts\n【作るもの】App Shortcuts（アプリショートカット）\n【再現する見た目・動き】短い句で呼び出せるフレーズと SF Symbols のアイコンを用意し、アプリを開かず実行できる操作にする\n【指示】〈使う場所〉にApp Shortcutsを入れて。Apple HIG『App Shortcuts』ページの指針に従い、App Intents の AppShortcutを使って。"
+  },
+  {
+   "id": "apple-hig/complications",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Complications",
+   "name_ja": "コンプリケーション",
+   "description_ja": "文字盤に時々刻々の情報を見せる小さな部品（watchOS）。",
+   "aliases": [
+    "文字盤の小窓",
+    "ウォッチ表示"
+   ],
+   "preview": {
+    "demo": "badge"
+   },
+   "source_ref": "Apple HIG 公式『Complications』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/complications",
+   "prompt": "【出典】Apple HIG 公式『Complications』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/complications\n【作るもの】Complications（コンプリケーション）\n【再現する見た目・動き】小さな枠に1〜2つの短い情報を置き、色は文字盤に合わせて淡くする。更新間隔は必要最小限にする\n【指示】〈使う場所〉にComplicationsを入れて。Apple HIG『Complications』ページの指針に従い、WidgetKit の accessory ウィジェットを使って。"
+  },
+  {
+   "id": "apple-hig/controls",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Controls",
+   "name_ja": "コントロール（コントロールセンター等）",
+   "description_ja": "コントロールセンター・ロック画面・アクションボタンから使える機能の入口。",
+   "aliases": [
+    "コントロールセンターのボタン",
+    "ロック画面ボタン"
+   ],
+   "preview": {
+    "demo": "switch"
+   },
+   "source_ref": "Apple HIG 公式『Controls』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/controls",
+   "prompt": "【出典】Apple HIG 公式『Controls』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/controls\n【作るもの】Controls（コントロール（コントロールセンター等））\n【再現する見た目・動き】アイコン1つと短いラベルで、押すとすぐに実行または切り替えが起きる。状態をアイコンの色で示す\n【指示】〈使う場所〉にControlsを入れて。Apple HIG『Controls』ページの指針に従い、WidgetKit の ControlWidgetを使って。"
+  },
+  {
+   "id": "apple-hig/live-activities",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Live Activities",
+   "name_ja": "ライブアクティビティ",
+   "description_ja": "進行中の出来事（配達・スポーツなど）を、ロック画面やダイナミックアイランドで見せ続ける部品。",
+   "aliases": [
+    "ダイナミックアイランド",
+    "ロック画面の進捗",
+    "配達状況"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Apple HIG 公式『Live Activities』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/live-activities",
+   "prompt": "【出典】Apple HIG 公式『Live Activities』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/live-activities\n【作るもの】Live Activities（ライブアクティビティ）\n【再現する見た目・動き】ロック画面に大きな領域、ダイナミックアイランドに簡易・展開の表示。最大8時間続き、更新は少ない文字で重要な変化だけ\n【指示】〈使う場所〉にLive Activitiesを入れて。Apple HIG『Live Activities』ページの指針に従い、ActivityKit と WidgetKitを使って。"
+  },
+  {
+   "id": "apple-hig/notifications",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Notifications",
+   "name_ja": "通知",
+   "description_ja": "時間に関係する大事な情報を一目で伝える知らせ。",
+   "aliases": [
+    "プッシュ通知",
+    "バナー",
+    "お知らせ"
+   ],
+   "preview": {
+    "demo": "toast"
+   },
+   "source_ref": "Apple HIG 公式『Notifications』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/notifications",
+   "prompt": "【出典】Apple HIG 公式『Notifications』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/notifications\n【作るもの】Notifications（通知）\n【再現する見た目・動き】タイトルは短く本文は1〜2行。バナー・ロック画面・通知センターで表示され、アクション付きにできる。頻度が高すぎないようにする\n【指示】〈使う場所〉にNotificationsを入れて。Apple HIG『Notifications』ページの指針に従い、UserNotifications の UNNotificationContentを使って。"
+  },
+  {
+   "id": "apple-hig/snippets",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Snippets",
+   "name_ja": "スニペット",
+   "description_ja": "Siri やアプリショートカットで実行した結果や確認を、小さなカードで見せる表示。",
+   "aliases": [
+    "Siriの結果カード",
+    "確認カード"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Snippets』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/snippets",
+   "prompt": "【出典】Apple HIG 公式『Snippets』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/snippets\n【作るもの】Snippets（スニペット）\n【再現する見た目・動き】結果は短い文と大きな数値・画像で見せ、確認を求めるときはボタンを2つまでにする\n【指示】〈使う場所〉にSnippetsを入れて。Apple HIG『Snippets』ページの指針に従い、App Intents の snippetを使って。"
+  },
+  {
+   "id": "apple-hig/status-bars",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Status bars",
+   "name_ja": "ステータスバー",
+   "description_ja": "画面上端に端末の状態（時刻・電波・電池）を出す帯。",
+   "aliases": [
+    "画面上の時計",
+    "電池表示",
+    "電波表示"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "Apple HIG 公式『Status bars』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/status-bars",
+   "prompt": "【出典】Apple HIG 公式『Status bars』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/status-bars\n【作るもの】Status bars（ステータスバー）\n【再現する見た目・動き】通常は表示したままにし、背景に合わせて文字色を明暗で切り替える。内容は隠さない\n【指示】〈使う場所〉にStatus barsを入れて。Apple HIG『Status bars』ページの指針に従い、UIKit の preferredStatusBarStyle / SwiftUI の .statusBarHiddenを使って。"
+  },
+  {
+   "id": "apple-hig/top-shelf",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Top Shelf",
+   "name_ja": "トップシェルフ",
+   "description_ja": "Apple TV のホーム画面上部に、おすすめ内容を大きく見せる領域。",
+   "aliases": [
+    "Apple TVの上の大画面",
+    "おすすめ枠"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "Apple HIG 公式『Top Shelf』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/top-shelf",
+   "prompt": "【出典】Apple HIG 公式『Top Shelf』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/top-shelf\n【作るもの】Top Shelf（トップシェルフ）\n【再現する見た目・動き】大きな画像またはカルーセルで、フォーカスしたアプリの内容を見せる。画像は高解像度で余白を保つ\n【指示】〈使う場所〉にTop Shelfを入れて。Apple HIG『Top Shelf』ページの指針に従い、TVTopShelfContentProviderを使って。"
+  },
+  {
+   "id": "apple-hig/watch-faces",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Watch faces",
+   "name_ja": "文字盤",
+   "description_ja": "Apple Watch でユーザーが主な画面として選ぶ表示。",
+   "aliases": [
+    "ウォッチフェイス",
+    "時計の画面"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Watch faces』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/watch-faces",
+   "prompt": "【出典】Apple HIG 公式『Watch faces』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/watch-faces\n【作るもの】Watch faces（文字盤）\n【再現する見た目・動き】時刻を中心に、コンプリケーションを配置する。色・スタイルの選択を許し、アプリ固有の文字盤は提供できない\n【指示】〈使う場所〉にWatch facesを入れて。Apple HIG『Watch faces』ページの指針に従い、watchOS の文字盤共有を使って。"
+  },
+  {
+   "id": "apple-hig/widgets",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Widgets",
+   "name_ja": "ウィジェット",
+   "description_ja": "アプリの重要な情報と簡単な操作を、ホーム画面などに置く小さな部品。",
+   "aliases": [
+    "ホーム画面の小窓",
+    "ロック画面ウィジェット"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "Apple HIG 公式『Widgets』ページ（Components > System experiences）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/widgets",
+   "prompt": "【出典】Apple HIG 公式『Widgets』ページ（Components > System experiences）／https://developer.apple.com/design/human-interface-guidelines/widgets\n【作るもの】Widgets（ウィジェット）\n【再現する見た目・動き】小・中・大のサイズ。一目で分かる1つの情報に絞り、背景は透明感か単色で統一する。タップでアプリの該当画面へ飛ばす\n【指示】〈使う場所〉にWidgetsを入れて。Apple HIG『Widgets』ページの指針に従い、WidgetKit の Widgetを使って。"
+  },
+  {
+   "id": "apple-hig/color",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Color",
+   "name_ja": "カラー",
+   "description_ja": "色の使い方（システムカラー・意味づけ・コントラスト）の指針。",
+   "aliases": [
+    "配色",
+    "システムカラー",
+    "色使い"
+   ],
+   "preview": {
+    "demo": "swatches"
+   },
+   "source_ref": "Apple HIG 公式『Color』ページ（Foundations）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/color",
+   "prompt": "【出典】Apple HIG 公式『Color』ページ（Foundations）／https://developer.apple.com/design/human-interface-guidelines/color\n【作るもの】Color（カラー）\n【再現する見た目・動き】システムカラーを使い、明暗モードと高コントラストで自動調整させる。色だけで意味を伝えず、本文のコントラスト比は4.5:1以上\n【指示】〈使う場所〉にColorを入れて。Apple HIG『Color』ページの指針に従い、SwiftUI の Color（.accentColor など）を使って。"
+  },
+  {
+   "id": "apple-hig/dark-mode",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Dark Mode",
+   "name_ja": "ダークモード",
+   "description_ja": "システム全体で暗い配色にする外観設定。",
+   "aliases": [
+    "ダークテーマ",
+    "夜の画面",
+    "暗い配色"
+   ],
+   "preview": {
+    "demo": "swatches",
+    "variant": "gray"
+   },
+   "source_ref": "Apple HIG 公式『Dark Mode』ページ（Foundations）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/dark-mode",
+   "prompt": "【出典】Apple HIG 公式『Dark Mode』ページ（Foundations）／https://developer.apple.com/design/human-interface-guidelines/dark-mode\n【作るもの】Dark Mode（ダークモード）\n【再現する見た目・動き】真っ黒ではなくシステムの暗いグレーを使い、層ごとに少しずつ明るくして奥行きを出す。色はセマンティックカラーで定義する\n【指示】〈使う場所〉にDark Modeを入れて。Apple HIG『Dark Mode』ページの指針に従い、SwiftUI の colorScheme / セマンティックカラーを使って。"
+  },
+  {
+   "id": "apple-hig/layout",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Layout",
+   "name_ja": "レイアウト",
+   "description_ja": "画面サイズ・向き・マルチタスクに適応する配置の指針。",
+   "aliases": [
+    "余白",
+    "セーフエリア",
+    "画面の並べ方"
+   ],
+   "preview": {
+    "demo": "safearea"
+   },
+   "source_ref": "Apple HIG 公式『Layout』ページ（Foundations）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+   "prompt": "【出典】Apple HIG 公式『Layout』ページ（Foundations）／https://developer.apple.com/design/human-interface-guidelines/layout\n【作るもの】Layout（レイアウト）\n【再現する見た目・動き】安全領域（セーフエリア）を避けて配置し、余白を8ptの倍数でそろえる。重要情報を最初に見える位置に置き、サイズクラスで再配置する\n【指示】〈使う場所〉にLayoutを入れて。Apple HIG『Layout』ページの指針に従い、SwiftUI の safeAreaInset / ViewThatFitsを使って。"
+  },
+  {
+   "id": "apple-hig/materials",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Materials",
+   "name_ja": "マテリアル（素材）",
+   "description_ja": "奥行き・階層を表す半透明のぼかしなどの視覚効果。",
+   "aliases": [
+    "すりガラス",
+    "ぼかし背景",
+    "半透明",
+    "Liquid Glass"
+   ],
+   "preview": {
+    "demo": "glass"
+   },
+   "source_ref": "Apple HIG 公式『Materials』ページ（Foundations）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/materials",
+   "prompt": "【出典】Apple HIG 公式『Materials』ページ（Foundations）／https://developer.apple.com/design/human-interface-guidelines/materials\n【作るもの】Materials（マテリアル（素材））\n【再現する見た目・動き】背景をぼかして上の内容を読みやすくし、厚み（ultra thin〜ultra thick）で濃さを選ぶ。Liquid Glass は透明感と屈折でコントロールを浮かせる。文字は素材上でも十分なコントラストを保つ\n【指示】〈使う場所〉にMaterialsを入れて。Apple HIG『Materials』ページの指針に従い、SwiftUI の Material（.ultraThinMaterial）と glassEffectを使って。"
+  },
+  {
+   "id": "apple-hig/motion",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Motion",
+   "name_ja": "モーション（動き）",
+   "description_ja": "滑らかな動きで状態を伝え、操作へ反応を返す指針。",
+   "aliases": [
+    "アニメーション",
+    "動きの方針",
+    "ふわっと動く"
+   ],
+   "preview": {
+    "demo": "principle"
+   },
+   "source_ref": "Apple HIG 公式『Motion』ページ（Foundations）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+   "prompt": "【出典】Apple HIG 公式『Motion』ページ（Foundations）／https://developer.apple.com/design/human-interface-guidelines/motion\n【作るもの】Motion（モーション（動き））\n【再現する見た目・動き】動きは目的があるものだけにし、ユーザー操作に追従させて中断可能にする。「視差効果を減らす」設定ではフェードに置き換える\n【指示】〈使う場所〉の動きはMotionの指針に従って。SwiftUI の withAnimation / .animationを使って。"
+  },
+  {
+   "id": "apple-hig/sf-symbols",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "SF Symbols",
+   "name_ja": "SFシンボル",
+   "description_ja": "Appleの文字と調和する数千種類のアイコン集。",
+   "aliases": [
+    "システムアイコン",
+    "Apple純正アイコン",
+    "記号アイコン"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "Apple HIG 公式『SF Symbols』ページ（Foundations）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols",
+   "prompt": "【出典】Apple HIG 公式『SF Symbols』ページ（Foundations）／https://developer.apple.com/design/human-interface-guidelines/sf-symbols\n【作るもの】SF Symbols（SFシンボル）\n【再現する見た目・動き】太さ（9段階）・サイズ（小中大）・モノクロ／階層／パレット／マルチカラーの描画モードを選べる。文字の太さに合わせて自動で調整される\n【指示】〈使う場所〉にSF Symbolsを入れて。Apple HIG『SF Symbols』ページの指針に従い、SwiftUI の Image(systemName:)を使って。"
+  },
+  {
+   "id": "apple-hig/modality",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Modality",
+   "name_ja": "モダリティ（別モードの表示）",
+   "description_ja": "現在の作業を中断して、別の専用モードで内容を出す設計手法。",
+   "aliases": [
+    "モーダル",
+    "全画面ポップアップ",
+    "別画面で開く"
+   ],
+   "preview": {
+    "demo": "sheet"
+   },
+   "source_ref": "Apple HIG 公式『Modality』ページ（Patterns）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/modality",
+   "prompt": "【出典】Apple HIG 公式『Modality』ページ（Patterns）／https://developer.apple.com/design/human-interface-guidelines/modality\n【作るもの】Modality（モダリティ（別モードの表示））\n【再現する見た目・動き】モーダルは集中が必要な作業にだけ使い、閉じる手段（完了・キャンセル）を必ず用意する。重ねて出さない\n【指示】〈使う場所〉にModalityを入れて。Apple HIG『Modality』ページの指針に従い、SwiftUI の .sheet / .fullScreenCoverを使って。"
+  },
+  {
+   "id": "apple-hig/loading",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Loading",
+   "name_ja": "読み込み表示",
+   "description_ja": "内容が読み込まれるまでの待ち時間の見せ方の指針。",
+   "aliases": [
+    "ローディング",
+    "スケルトン",
+    "待ち表示"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "Apple HIG 公式『Loading』ページ（Patterns）",
+   "ref_url": "https://developer.apple.com/design/human-interface-guidelines/loading",
+   "prompt": "【出典】Apple HIG 公式『Loading』ページ（Patterns）／https://developer.apple.com/design/human-interface-guidelines/loading\n【作るもの】Loading（読み込み表示）\n【再現する見た目・動き】可能なら先に枠や前回の内容を見せ、進捗が分かれば示す。長い待ちは予想時間かキャンセルを用意し、ユーザーを待たせたことを悟らせない\n【指示】〈使う場所〉にLoadingを入れて。Apple HIG『Loading』ページの指針に従い、SwiftUI の ProgressView / redacted(reason: .placeholder)を使って。"
+  }
+ ]
+}

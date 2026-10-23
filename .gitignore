@@ -1,0 +1,9 @@
+# ビルド成果物
+web/dist/
+mac/build/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 個人用データ（自分のスキル・MCP 由来の項目と対象外リスト）。公開しない
+data/local/

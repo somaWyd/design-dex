@@ -1,0 +1,146 @@
+[
+ {
+  "id": "entrance",
+  "kind": "motion",
+  "name_ja": "出現・退場",
+  "hint": "要素が現れる／消えるときの動き"
+ },
+ {
+  "id": "sequence",
+  "kind": "motion",
+  "name_ja": "順番・タイミング",
+  "hint": "複数の要素を時間差で動かす"
+ },
+ {
+  "id": "transform",
+  "kind": "motion",
+  "name_ja": "移動・変形",
+  "hint": "位置・大きさ・角度が変わる"
+ },
+ {
+  "id": "transition",
+  "kind": "motion",
+  "name_ja": "切り替え・遷移",
+  "hint": "状態や画面をつなぐ動き"
+ },
+ {
+  "id": "scroll",
+  "kind": "motion",
+  "name_ja": "スクロール・ジェスチャー",
+  "hint": "スクロールや指の動きに連動"
+ },
+ {
+  "id": "feedback",
+  "kind": "motion",
+  "name_ja": "操作への反応",
+  "hint": "押す・触れる・成功/失敗の反応"
+ },
+ {
+  "id": "easing",
+  "kind": "motion",
+  "name_ja": "イージング・バネ",
+  "hint": "速度の変化・物理的な弾み"
+ },
+ {
+  "id": "text-motion",
+  "kind": "motion",
+  "name_ja": "文字・数字の動き",
+  "hint": "文字や数字が動いて現れる"
+ },
+ {
+  "id": "ambient",
+  "kind": "motion",
+  "name_ja": "ループ・装飾",
+  "hint": "常に動く・細部の演出"
+ },
+ {
+  "id": "principle",
+  "kind": "motion",
+  "name_ja": "考え方・性能",
+  "hint": "動きの原則・滑らかさ"
+ },
+ {
+  "id": "button",
+  "kind": "ui",
+  "name_ja": "ボタン・アクション",
+  "hint": "押して何かを実行する部品"
+ },
+ {
+  "id": "input",
+  "kind": "ui",
+  "name_ja": "入力・フォーム",
+  "hint": "文字・数値・選択の入力"
+ },
+ {
+  "id": "navigation",
+  "kind": "ui",
+  "name_ja": "ナビ・タブ・メニュー",
+  "hint": "移動先を選ぶ部品"
+ },
+ {
+  "id": "overlay",
+  "kind": "ui",
+  "name_ja": "モーダル・シート・ポップオーバー",
+  "hint": "画面の上に重なって出る部品"
+ },
+ {
+  "id": "notice",
+  "kind": "ui",
+  "name_ja": "通知・ローディング・状態",
+  "hint": "知らせる・待たせる・状態を示す"
+ },
+ {
+  "id": "data",
+  "kind": "ui",
+  "name_ja": "表・グラフ・データ",
+  "hint": "数値や一覧を見せる"
+ },
+ {
+  "id": "layout",
+  "kind": "ui",
+  "name_ja": "カード・レイアウト・メディア",
+  "hint": "見せ方の枠・画像・一覧の並べ方"
+ },
+ {
+  "id": "ai",
+  "kind": "ui",
+  "name_ja": "AI・チャット",
+  "hint": "AIエージェントや会話の画面部品"
+ },
+ {
+  "id": "page",
+  "kind": "ui",
+  "name_ja": "ページ・ブロック",
+  "hint": "1画面ぶんの完成した区画"
+ },
+ {
+  "id": "type-jp",
+  "kind": "type",
+  "name_ja": "和文書体",
+  "hint": "日本語のフォント"
+ },
+ {
+  "id": "type-en",
+  "kind": "type",
+  "name_ja": "欧文書体",
+  "hint": "英数字のフォント"
+ },
+ {
+  "id": "type-mono",
+  "kind": "type",
+  "name_ja": "等幅書体",
+  "hint": "コード・数字向け"
+ },
+ {
+  "id": "type-system",
+  "kind": "type",
+  "name_ja": "デザインシステムの文字",
+  "hint": "Apple・Material・デジタル庁の文字設定"
+ },
+ {
+  "id": "type-term",
+  "kind": "type",
+  "name_ja": "組版・文字の用語",
+  "hint": "字間・行間・太さなどの名前"
+ }
+]

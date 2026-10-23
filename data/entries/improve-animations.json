@@ -1,0 +1,184 @@
+{
+ "source": {
+  "id": "improve-animations",
+  "type": "skill",
+  "name": "Improve Animations（アニメーション監査）",
+  "ref": "~/.claude/skills/improve-animations",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "improve-animations/frequency-purpose-audit",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Purpose & frequency audit",
+   "name_ja": "使う回数と目的で動きを決める",
+   "description_ja": "100回以上使う操作は動かさず、たまに見るものだけ動かす。目的が答えられない動きは削る。",
+   "aliases": [
+    "動きを減らす",
+    "アニメ削除",
+    "要るか判断"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『1. Purpose & frequency』節／https://emilkowal.ski/ui/you-dont-need-animations\n【作るもの】Purpose & frequency audit（使う回数と目的で動きを決める）\n【再現する見た目・動き】1日100回以上の操作は動かさない。目的に答えられない動きは削る。プレビューは移動なしのフェードだけ\n【指示】Purpose & frequency audit を次の条件で実装して。〈アプリの動き全体〉を洗い出し、高頻度のものは動きを外す案を出して。",
+   "preview": {
+    "demo": "principle",
+    "variant": "reduced"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『1. Purpose & frequency』節",
+   "ref_url": "https://emilkowal.ski/ui/you-dont-need-animations"
+  },
+  {
+   "id": "improve-animations/ease-in-ban",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "No ease-in on UI",
+   "name_ja": "UIにease-inを使わない",
+   "description_ja": "始まりが遅いease-inは反応が鈍く感じる。出入りには ease-out を使う。",
+   "aliases": [
+    "もっさりする",
+    "遅く感じる",
+    "反応が鈍い"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『2. Easing & duration』節／https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function\n【作るもの】No ease-in on UI（UIにease-inを使わない）\n【再現する見た目・動き】出入りは ease-out（プレビューは cubic-bezier(.2,.8,.2,1)）、ease-in (.6,0,.9,.4) は使わない。UIは300ms以内\n【指示】No ease-in on UI を次の条件で実装して。〈全アニメ〉から ease-in を探して ease-out に直して。",
+   "preview": {
+    "demo": "ease",
+    "variant": "ease-out"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『2. Easing & duration』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function"
+  },
+  {
+   "id": "improve-animations/duration-budget",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Duration budgets",
+   "name_ja": "動きの長さの目安",
+   "description_ja": "ボタン100〜160ms、ツールチップ125〜200ms、ドロップダウン150〜250ms、モーダル200〜500ms。UIは300ms以内。",
+   "aliases": [
+    "速さの基準",
+    "何ミリ秒",
+    "長すぎる"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『2. Easing & duration』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration\n【作るもの】Duration budgets（動きの長さの目安）\n【再現する見た目・動き】ボタン100〜160ms、ツールチップ125〜200ms、ドロップダウン150〜250ms、モーダル200〜500ms。UIは300ms以内\n【指示】Duration budgets を次の条件で実装して。〈ドロップダウン〉を180msにして。",
+   "preview": {
+    "demo": "timing",
+    "variant": "duration"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『2. Easing & duration』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration"
+  },
+  {
+   "id": "improve-animations/asymmetric-timing",
+   "kind": "motion",
+   "category": "easing",
+   "name_en": "Asymmetric timing",
+   "name_ja": "行きと戻りで速さを変える",
+   "description_ja": "押している間はゆっくり、離したときの反応は素早くする。意図的な操作と反応の速さを分ける。",
+   "aliases": [
+    "行きは遅く戻りは速く",
+    "長押しと解除"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『3. Physicality & origin』節／https://emilkowal.ski/ui/good-vs-great-animations\n【作るもの】Asymmetric timing（行きと戻りで速さを変える）\n【再現する見た目・動き】押下（意図的な操作）は2秒 linear でゆっくり、解除（反応）は200ms ease-out で素早く。プレビューは左から scaleX 0→1 を約1.5秒\n【指示】Asymmetric timing を次の条件で実装して。〈長押しボタン〉を押下と解除で速さを変えて。",
+   "preview": {
+    "demo": "hold"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『3. Physicality & origin』節",
+   "ref_url": "https://emilkowal.ski/ui/good-vs-great-animations"
+  },
+  {
+   "id": "improve-animations/transition-all-ban",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "No transition: all",
+   "name_ja": "transition: all を使わない",
+   "description_ja": "全プロパティを動かすと意図しない描き直しが起きる。動かすものだけを書く。",
+   "aliases": [
+    "遅い原因",
+    "カクつく原因",
+    "allをやめる"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『5. Performance』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property\n【作るもの】No transition: all（transition: all を使わない）\n【再現する見た目・動き】transition: all をやめ、transition-property: transform, opacity だけにする。プレビューは滑らか（上）とカクつき（下）の比較\n【指示】No transition: all を次の条件で実装して。〈全CSS〉から transition: all を探して限定して。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『5. Performance』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property"
+  },
+  {
+   "id": "improve-animations/hover-media-query",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Hover media query gate",
+   "name_ja": "ホバー動作をマウスだけに限定",
+   "description_ja": "タッチで触れたとき誤ってホバーが出るのを防ぐため、hover 可能な環境だけに動きを付ける。",
+   "aliases": [
+    "スマホで誤反応",
+    "タップでホバー"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『6. Accessibility』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover\n【作るもの】Hover media query gate（ホバー動作をマウスだけに限定）\n【再現する見た目・動き】@media (hover: hover) and (pointer: fine) の中にだけホバーの動きを書く。プレビューは translateY(-3px)＋影\n【指示】Hover media query gate を次の条件で実装して。〈ホバーの動き〉をこの条件の中に入れて。",
+   "preview": {
+    "demo": "hover"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『6. Accessibility』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover"
+  },
+  {
+   "id": "improve-animations/reduced-motion-gentle",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Reduced motion (gentler, not zero)",
+   "name_ja": "動きを減らす設定には穏やかに",
+   "description_ja": "動き設定オフの人には、移動を消して短いフェードなど意味を伝える最小限の変化だけ残す。",
+   "aliases": [
+    "動きを抑える",
+    "酔い対策",
+    "アクセシビリティ"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『6. Accessibility』節／https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion\n【作るもの】Reduced motion (gentler, not zero)（動きを減らす設定には穏やかに）\n【再現する見た目・動き】@media (prefers-reduced-motion: reduce) で移動を消し、opacity の短い変化だけ残す（ゼロにしない）\n【指示】Reduced motion (gentler, not zero) を次の条件で実装して。〈全アニメ〉に prefers-reduced-motion を入れて。",
+   "preview": {
+    "demo": "principle",
+    "variant": "reduced"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『6. Accessibility』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+  },
+  {
+   "id": "improve-animations/stagger-30-80",
+   "kind": "motion",
+   "category": "sequence",
+   "name_en": "Stagger (30-80ms)",
+   "name_ja": "30〜80msずつずらす",
+   "description_ja": "並んだ要素が少しずつ遅れて現れる。装飾なので操作の邪魔にしない。",
+   "aliases": [
+    "時間差",
+    "順番に出る",
+    "ずらして表示"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『7. Cohesion & tokens』節／https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay\n【作るもの】Stagger (30-80ms)（30〜80msずつずらす）\n【再現する見た目・動き】30〜80msずつ遅らせる。プレビューは translateY(16px)＋opacity 0→1、間隔80ms、cubic-bezier(.2,.8,.2,1)\n【指示】Stagger (30-80ms) を次の条件で実装して。〈リストの出現〉を50msずつずらして。操作はブロックしない。",
+   "preview": {
+    "demo": "stagger"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『7. Cohesion & tokens』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay"
+  },
+  {
+   "id": "improve-animations/framer-transform-string",
+   "kind": "motion",
+   "category": "principle",
+   "name_en": "Hardware-accelerated transform string",
+   "name_ja": "transform文字列で滑らかに",
+   "description_ja": "Framer Motionのx・yなどの省略指定は重い画面で止まるため、transformの文字列で指定する。",
+   "aliases": [
+    "カクつく",
+    "GPUで動かす",
+    "Framer Motionが重い"
+   ],
+   "prompt": "【出典】スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『5. Performance』節／https://motion.dev/docs/performance\n【作るもの】Hardware-accelerated transform string（transform文字列で滑らかに）\n【再現する見た目・動き】x/y/scale の省略指定は主スレッドで動くため、animate={{ transform: \"translateX(100px)\" }} のように文字列で指定する\n【指示】Hardware-accelerated transform string を次の条件で実装して。〈Framer Motion の x/y/scale〉を transform 文字列に直して。",
+   "preview": {
+    "demo": "perf"
+   },
+   "source_ref": "スキル improve-animations（~/.agents/skills/improve-animations/AUDIT.md）の『5. Performance』節",
+   "ref_url": "https://motion.dev/docs/performance"
+  }
+ ]
+}

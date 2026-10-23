@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DesignDex</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="demos.css">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" data-i18n-label="filters">
+    <div class="seg view" role="radiogroup" id="view">
+      <button role="radio" aria-checked="true" data-view="dict" data-icon="dict" data-tip="view_dict"></button>
+      <button role="radio" aria-checked="false" data-view="palette" data-icon="palette" data-tip="view_palette"></button>
+    </div>
+    <div id="dict-filters">
+    <details class="fold" data-fold="favs" open>
+      <summary><span class="fold-ic" data-icon="star" data-plain></span><span class="fold-t" data-i18n="favs"></span><span class="fold-n" id="favs-n"></span></summary>
+      <ul class="list" id="fav-list"></ul>
+    </details>
+    <details class="fold" data-fold="sources" open>
+      <summary><span class="fold-ic" data-icon="source" data-plain></span><span class="fold-t" data-i18n="source"></span><span class="fold-n" id="sources-n"></span></summary>
+      <ul class="list" id="sources"></ul>
+    </details>
+    <details class="fold" data-fold="cats" open>
+      <summary><span class="fold-ic" data-icon="category" data-plain></span><span class="fold-t" data-i18n="category"></span><span class="fold-n" id="cats-n"></span></summary>
+      <ul class="list" id="cats"></ul>
+    </details>
+    </div>
+    <div id="pal-side" hidden>
+      <details class="fold" data-fold="pal-favs" open>
+        <summary><span class="fold-ic" data-icon="star" data-plain></span><span class="fold-t" data-i18n="pal_favs"></span><span class="hist-count" id="pal-favs-count"></span></summary>
+        <ul class="list hist" id="pal-favs"></ul>
+      </details>
+      <details class="fold" data-fold="pal-history" open>
+        <summary><span class="fold-ic" data-icon="history" data-plain></span><span class="fold-t" data-i18n="pal_history"></span><span class="hist-count" id="pal-history-count"></span></summary>
+        <ul class="list hist" id="pal-history"></ul>
+      </details>
+    </div>
+  </aside>
+  <main class="main">
+    <div id="dict">
+    <div class="toolbar">
+      <div class="searchbar">
+        <span data-icon="search" data-plain></span>
+        <input id="q" type="search" data-i18n-ph="search_ph" placeholder="" autocomplete="off">
+        <button class="q-clear" id="q-clear" data-icon="close" data-plain data-tip="clear_search" hidden></button>
+      </div>
+      <div class="scope">
+        <div class="seg" role="radiogroup" id="kind" data-i18n-label="kind"></div>
+        <span class="count" id="count" aria-live="polite"></span>
+      </div>
+      <div class="chips" id="chips" hidden></div>
+    </div>
+    <section class="src-panel" id="src-panel" hidden></section>
+    <div class="grid" id="grid"></div>
+    </div>
+    <section id="palette" hidden>
+      <div class="picker">
+        <div class="picker-now">
+          <span class="picker-swatch" id="pal-now"></span>
+          <div class="picker-id">
+            <input type="text" id="pal-hex" spellcheck="false" data-i18n-label="pal_hex" placeholder="#2f6fed">
+            <span class="picker-name" id="pal-name"></span>
+          </div>
+          <button class="icon-btn act" id="pal-eyedrop" data-icon="dropper" data-tip="pick_screen" hidden></button>
+          <span id="pal-star-slot"></span>
+        </div>
+        <div class="picker-body" id="picker-body"></div>
+      </div>
+      <p class="err pal-err" id="pal-error" role="alert"></p>
+      <div class="grid pal-grid" id="pal-sets"></div>
+      <div class="pal-tones" id="pal-tones" data-tip="pal_tones"></div>
+    </section>
+  </main>
+</div>
+<button class="icon-btn gear" id="open-settings" data-icon="settings" data-tip="settings"></button>
+<div class="toast" id="toast" role="status"></div>
+<dialog id="guide" class="sheet" data-i18n-label="guide"></dialog>
+<dialog id="settings" data-i18n-label="settings">
+  <div id="settings-body"></div>
+</dialog>
+<script src="dist/catalog.js"></script>
+<script src="icons.js"></script>
+<script src="settings.js"></script>
+<script src="demos.js"></script>
+<script src="imports.js"></script>
+<script src="app.js"></script>
+<script src="picker.js"></script>
+<script src="palette.js"></script>
+<script src="guide.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+"設定…" = "Settings…";
+"辞典のフォルダを選ぶ…" = "Choose Data Folder…";
+"同梱のデータに戻す" = "Use Bundled Data";
+"検索" = "Search";
+"表示" = "View";
+"辞典を読み込み直す" = "Reload";
+"辞典" = "Dictionary";
+"配色" = "Colors";
+"DesignDex のリポジトリのフォルダ（web/index.html があるフォルダ）を選んでください" = "Choose the DesignDex repository folder (the one that contains web/index.html).";
+"このフォルダは使えません" = "This folder can't be used";
+"web/index.html が見つかりません。リポジトリの一番上のフォルダを選んでください。" = "web/index.html was not found. Choose the top folder of the repository.";

@@ -1,0 +1,160 @@
+{
+ "source": {
+  "id": "baseline-ui",
+  "type": "skill",
+  "name": "Baseline UI",
+  "ref": "~/.claude/skills/baseline-ui",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "baseline-ui/alert-dialog",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "AlertDialog (destructive confirm)",
+   "name_ja": "取り消せない操作の確認ダイアログ",
+   "description_ja": "削除などの元に戻せない操作の前に、はっきり確認を出す専用のダイアログ。",
+   "aliases": [
+    "削除の確認",
+    "本当に消しますか"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節／https://base-ui.com/react/components/alert-dialog\n【作るもの】AlertDialog (destructive confirm)（取り消せない操作の確認ダイアログ）\n【再現する見た目・動き】背景が暗くなり、ダイアログが scale(.9)→1。決定ボタンは赤（破壊的操作）\n【指示】AlertDialog (destructive confirm) を次の条件で実装して。〈削除ボタン〉に AlertDialog を付けて。部品は Base UI か Radix を使う。",
+   "preview": {
+    "demo": "dialog",
+    "variant": "alert"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節",
+   "ref_url": "https://base-ui.com/react/components/alert-dialog"
+  },
+  {
+   "id": "baseline-ui/structural-skeleton",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Structural skeleton (loading)",
+   "name_ja": "形に合わせた骨組み表示",
+   "description_ja": "読み込み中に、最終的なレイアウトに似た灰色の骨組みを出す。ぐるぐるよりも落ち着く。",
+   "aliases": [
+    "スケルトン",
+    "読み込み中の枠",
+    "ガイド表示"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節／https://github.com/ibelick/ui-skills\n【作るもの】Structural skeleton (loading)（形に合わせた骨組み表示）\n【再現する見た目・動き】最終レイアウトに似た灰色の骨組みの上を、光が1.4秒で流れる\n【指示】Structural skeleton (loading) を次の条件で実装して。〈一覧の読み込み中表示〉を構造つきスケルトンにして。",
+   "preview": {
+    "demo": "skeleton"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節",
+   "ref_url": "https://github.com/ibelick/ui-skills"
+  },
+  {
+   "id": "baseline-ui/empty-state-action",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Empty state with one clear action",
+   "name_ja": "空の状態に次の1手",
+   "description_ja": "データがないときは、説明と次にやる操作を1つだけ出す。",
+   "aliases": [
+    "データなし表示",
+    "何もない画面",
+    "空っぽの画面"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Design』節／https://github.com/ibelick/ui-skills\n【作るもの】Empty state with one clear action（空の状態に次の1手）\n【再現する見た目・動き】説明文と次の操作ボタン1つだけ（静止）\n【指示】Empty state with one clear action を次の条件で実装して。〈空の一覧〉に説明文と〈作成〉ボタン1つだけを出して。",
+   "preview": {
+    "demo": "empty"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Design』節",
+   "ref_url": "https://github.com/ibelick/ui-skills"
+  },
+  {
+   "id": "baseline-ui/inline-error",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Error next to the action",
+   "name_ja": "操作の隣にエラー",
+   "description_ja": "エラーはその操作をした場所のすぐ近くに出し、遠くに置かない。",
+   "aliases": [
+    "エラー表示の位置",
+    "入力欄の下のエラー"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節／https://github.com/ibelick/ui-skills\n【作るもの】Error next to the action（操作の隣にエラー）\n【再現する見た目・動き】入力欄の下にエラー文（静止）\n【指示】Error next to the action を次の条件で実装して。〈フォームのエラー〉を各入力欄の直近に出して。",
+   "preview": {
+    "demo": "error"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節",
+   "ref_url": "https://github.com/ibelick/ui-skills"
+  },
+  {
+   "id": "baseline-ui/dvh-safe-area",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "h-dvh and safe-area-inset",
+   "name_ja": "スマホのバーに隠れない全画面",
+   "description_ja": "h-screen でなく h-dvh を使い、固定要素は safe-area-inset を避ける。スマホで下が切れない。",
+   "aliases": [
+    "iPhoneで下が切れる",
+    "ノッチ対応",
+    "全画面の高さ"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節／https://developer.mozilla.org/en-US/docs/Web/CSS/env\n【作るもの】h-dvh and safe-area-inset（スマホのバーに隠れない全画面）\n【再現する見た目・動き】h-screen でなく h-dvh、固定要素は safe-area-inset（env(safe-area-inset-bottom) など）で余白を取る（静止）\n【指示】h-dvh and safe-area-inset を次の条件で実装して。〈全画面レイアウト〉を h-dvh にし、固定フッターに safe-area-inset を効かせて。",
+   "preview": {
+    "demo": "safearea"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Interaction』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/env"
+  },
+  {
+   "id": "baseline-ui/tabular-nums",
+   "kind": "ui",
+   "category": "data",
+   "name_en": "tabular-nums for data",
+   "name_ja": "数字の幅をそろえる",
+   "description_ja": "表や数値の表示では、どの数字も同じ幅にして桁が揃うようにする。",
+   "aliases": [
+    "桁をそろえる",
+    "数字がずれる"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Typography』節／https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric\n【作るもの】tabular-nums for data（数字の幅をそろえる）\n【再現する見た目・動き】font-variant-numeric: tabular-nums（Tailwind は tabular-nums）で桁幅をそろえる\n【指示】tabular-nums for data を次の条件で実装して。〈数値の列〉に tabular-nums を付けて。",
+   "preview": {
+    "demo": "ticker",
+    "variant": "tabular"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Typography』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric"
+  },
+  {
+   "id": "baseline-ui/text-balance-pretty",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "text-balance / text-pretty",
+   "name_ja": "見出しとお知らせの折り返し調整",
+   "description_ja": "見出しは行の長さをそろえ（balance）、本文は最終行の一文字残りを避ける（pretty）。",
+   "aliases": [
+    "折り返しがきれい",
+    "見出しの改行"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Typography』節／https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap\n【作るもの】text-balance / text-pretty（見出しとお知らせの折り返し調整）\n【再現する見た目・動き】見出しに text-wrap: balance（text-balance）、本文に text-wrap: pretty（text-pretty）。プレビューは左=未調整、右=balance\n【指示】text-balance / text-pretty を次の条件で実装して。〈見出し〉に text-balance、〈本文〉に text-pretty を付けて。",
+   "preview": {
+    "demo": "balance"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Typography』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap"
+  },
+  {
+   "id": "baseline-ui/fixed-z-scale",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Fixed z-index scale",
+   "name_ja": "重なり順を決まった段階に",
+   "description_ja": "z-index は任意の数字でなく、決まった数段階だけを使う。",
+   "aliases": [
+    "前後関係の混乱",
+    "重なる順番"
+   ],
+   "prompt": "【出典】スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Layout』節／https://developer.mozilla.org/en-US/docs/Web/CSS/z-index\n【作るもの】Fixed z-index scale（重なり順を決まった段階に）\n【再現する見た目・動き】任意の z-* を使わず、決まった段階表（例: 10 / 20 / 30 / 40 / 50）だけを使う（静止）\n【指示】Fixed z-index scale を次の条件で実装して。〈z-index〉を固定の段階表に置き換えて。",
+   "preview": {
+    "demo": "layers"
+   },
+   "source_ref": "スキル baseline-ui（~/.agents/skills/baseline-ui/SKILL.md）の『Layout』節",
+   "ref_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"
+  }
+ ]
+}

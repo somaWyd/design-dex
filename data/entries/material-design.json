@@ -1,0 +1,324 @@
+{
+  "source": {
+    "id": "material-design",
+    "type": "skill",
+    "name": "Material Design 3",
+    "ref": "~/.claude/skills/material-design",
+    "added_at": "2026-10-22"
+  },
+  "entries": [
+    {
+      "id": "material-design/state-layer",
+      "kind": "motion",
+      "category": "feedback",
+      "name_en": "State layer",
+      "name_ja": "状態レイヤー（半透明の重ね色）",
+      "description_ja": "部品の上に文字色を半透明で重ねて、hover・focus・押下を示す。hover 8%、focus と押下 12%。",
+      "aliases": [
+        "hoverで色が変わる",
+        "押した色",
+        "ホバー効果"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『エレベーションと状態レイヤー』節／https://m3.material.io/foundations/interaction/states/overview\n【作るもの】State layer（状態レイヤー（半透明の重ね色））\n【再現する見た目・動き】文字色を半透明で重ねる。hover 8% / focus 12% / pressed 12% / dragged 16%。transition は opacity 150ms cubic-bezier(.2,0,0,1)。プレビューは白の重ね18%\n【指示】Material Design 3 の State layer で〈ボタン〉の hover/focus/pressed を作って。重ねる不透明度は 8% / 12% / 12%。",
+      "url": "https://m3.material.io/foundations/interaction/states/state-layers/overview",
+      "preview": {
+        "demo": "hover",
+        "variant": "state"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『エレベーションと状態レイヤー』節",
+      "ref_url": "https://m3.material.io/foundations/interaction/states/overview"
+    },
+    {
+      "id": "material-design/fab",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "Floating action button (FAB)",
+      "name_ja": "浮かぶ丸い主要ボタン",
+      "description_ja": "画面の右下などに浮かぶ、その画面で一番大事な操作のボタン。標準56px。",
+      "aliases": [
+        "右下の丸ボタン",
+        "追加ボタン",
+        "フローティングボタン"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/floating-action-button/overview\n【作るもの】Floating action button (FAB)（浮かぶ丸い主要ボタン）\n【再現する見た目・動き】small 40 / 標準 56 / large 96px、アイコン24px。角丸は標準 large(16px)、小さい FAB は medium(12px)、大きい FAB は extra-large(28px)。右下に置き pop で出す\n【指示】Material Design 3 の FAB（Floating action button）を〈画面右下〉に置いて。サイズは〈標準56px〉、アイコンは〈追加〉。",
+      "preview": {
+        "demo": "toast",
+        "variant": "fab"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/floating-action-button/overview"
+    },
+    {
+      "id": "material-design/navigation-bar",
+      "kind": "ui",
+      "category": "navigation",
+      "name_en": "Navigation bar",
+      "name_ja": "下部ナビゲーションバー",
+      "description_ja": "スマホ幅の画面の下に並ぶ、3〜5個の行き先を切り替えるバー。選ぶと印がつく。",
+      "aliases": [
+        "下のタブ",
+        "ボトムタブ",
+        "下のメニュー"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/navigation-bar/overview\n【作るもの】Navigation bar（下部ナビゲーションバー）\n【再現する見た目・動き】高さ80px、選択中の印は 64×32px、角丸 none。compact 幅（<600px）の下部に置く。プレビューは選択中の丸い背景が移動\n【指示】Material Design 3 の Navigation bar（高さ80px）を compact 幅の下部に置いて。選択中は 64×32px の印をつけて。",
+      "preview": {
+        "demo": "nav"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/navigation-bar/overview"
+    },
+    {
+      "id": "material-design/navigation-rail",
+      "kind": "ui",
+      "category": "navigation",
+      "name_en": "Navigation rail",
+      "name_ja": "横の細いナビレール",
+      "description_ja": "タブレットや中幅の画面の左端に縦に並ぶ、アイコン中心のナビ。",
+      "aliases": [
+        "左の縦メニュー",
+        "細いサイドバー",
+        "アイコンだけ縦"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/navigation-rail/overview\n【作るもの】Navigation rail（横の細いナビレール）\n【再現する見た目・動き】medium 幅（600px以上）の左端に縦帯で置く。compact は navigation bar に切り替える\n【指示】Material Design 3 の Navigation rail を〈medium 幅以上〉の左端に置いて。compact では navigation bar に切り替えて。",
+      "preview": {
+        "demo": "nav",
+        "variant": "rail"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/navigation-rail/overview"
+    },
+    {
+      "id": "material-design/navigation-drawer",
+      "kind": "ui",
+      "category": "navigation",
+      "name_en": "Navigation drawer",
+      "name_ja": "ナビゲーションドロワー",
+      "description_ja": "画面の端から出る、行き先の一覧を載せたパネル。広い画面では常時表示もできる。",
+      "aliases": [
+        "ハンバーガーメニュー",
+        "横から出るメニュー",
+        "サイドメニュー"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/navigation-drawer/overview\n【作るもの】Navigation drawer（ナビゲーションドロワー）\n【再現する見た目・動き】expanded 幅（840px以上）で常時表示。狭い幅では隠し、左から translateX(-102%)→0 で出す\n【指示】Material Design 3 の Navigation drawer を〈expanded 幅以上〉で常時表示にして、狭い幅では隠して。",
+      "preview": {
+        "demo": "sheet",
+        "variant": "drawer"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/navigation-drawer/overview"
+    },
+    {
+      "id": "material-design/snackbar",
+      "kind": "ui",
+      "category": "notice",
+      "name_en": "Snackbar",
+      "name_ja": "スナックバー（下の短い通知）",
+      "description_ja": "操作の結果を画面下に短く出し、すぐ消える。取り消しなどの1アクションを添えられる。",
+      "aliases": [
+        "下に出る通知",
+        "トースト",
+        "一言通知"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『カラーロール（tone の割り当て）』節／https://m3.material.io/components/snackbar/overview\n【作るもの】Snackbar（スナックバー（下の短い通知））\n【再現する見た目・動き】面は inverse-surface（light N20 / dark N90）、文字は inverse-on-surface、アクションは inverse-primary。下から translateY(70px)→0、表示約4秒\n【指示】Material Design 3 の Snackbar を〈削除の取り消し〉に使って。面は inverse-surface、表示時間は〈4秒〉。",
+      "preview": {
+        "demo": "toast"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『カラーロール（tone の割り当て）』節",
+      "ref_url": "https://m3.material.io/components/snackbar/overview"
+    },
+    {
+      "id": "material-design/chips",
+      "kind": "ui",
+      "category": "input",
+      "name_en": "Chips (assist / filter / input / suggestion)",
+      "name_ja": "チップ（小さな選択タグ）",
+      "description_ja": "短い言葉や候補を角丸の小さなボタンにしたもの。絞り込みや候補、入力済みの項目を表す。",
+      "aliases": [
+        "タグ風ボタン",
+        "絞り込みタグ",
+        "小さな丸ボタン"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/chips/overview\n【作るもの】Chips (assist / filter / input / suggestion)（チップ（小さな選択タグ））\n【再現する見た目・動き】高さ32px、角丸 small(8px)。選択中は secondary-container に切り替わる。状態反応は state layer（hover 8%）\n【指示】Material Design 3 の Filter chips で〈検索結果の絞り込み〉を作って。高さ32px、角丸 small(8px)、選択中は secondary-container。",
+      "preview": {
+        "demo": "chips"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/chips/overview"
+    },
+    {
+      "id": "material-design/tonal-button",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "Filled tonal button",
+      "name_ja": "トーナルボタン（淡い塗り）",
+      "description_ja": "塗りボタンより一段控えめな、淡い色の塗りのボタン。強さは filled → tonal → outlined → text。",
+      "aliases": [
+        "薄い塗りボタン",
+        "サブボタン",
+        "控えめボタン"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/buttons/overview\n【作るもの】Filled tonal button（トーナルボタン（淡い塗り））\n【再現する見た目・動き】高さ40px、角丸 full、左右 padding 24px、面は secondary-container。強さは filled → tonal → elevated → outlined → text の順で、filled は1画面に1つ\n【指示】Material Design 3 の Filled tonal button を〈キャンセルの隣の副ボタン〉に使って。1画面で filled は1つだけに絞って。",
+      "preview": {
+        "demo": "buttons"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/buttons/overview"
+    },
+    {
+      "id": "material-design/top-app-bar",
+      "kind": "ui",
+      "category": "navigation",
+      "name_en": "Top app bar",
+      "name_ja": "トップアプリバー",
+      "description_ja": "画面の上端に置くタイトルと操作のバー。スクロールで色や高さが変わることがある。",
+      "aliases": [
+        "上のヘッダー",
+        "タイトルバー",
+        "アプリバー"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/components/top-app-bar/overview\n【作るもの】Top app bar（トップアプリバー）\n【再現する見た目・動き】small は高さ64px、面は surface。スクロールで面が surface-container に変わる\n【指示】Material Design 3 の Top app bar（small、高さ64px）を〈一覧画面〉の上に置いて。面は surface にして。",
+      "preview": {
+        "demo": "nav",
+        "variant": "top"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/components/top-app-bar/overview"
+    },
+    {
+      "id": "material-design/bottom-sheet",
+      "kind": "ui",
+      "category": "overlay",
+      "name_en": "Bottom sheet",
+      "name_ja": "ボトムシート",
+      "description_ja": "画面の下から引き出して出す、補助の操作や情報のパネル。標準と全面のモーダルがある。",
+      "aliases": [
+        "下から出るパネル",
+        "引き出しパネル"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『形状（角丸）』節／https://m3.material.io/components/bottom-sheets/overview\n【作るもの】Bottom sheet（ボトムシート）\n【再現する見た目・動き】角丸 large(16px)、面は surface-container-low。出入りは emphasized easing（入り .05,.7,.1,1／出 .3,0,.8,.15）。プレビューは translateY(100%)→30%\n【指示】Material Design 3 の Bottom sheet で〈共有メニュー〉を出して。角丸 large(16px)、出入りは emphasized の easing で。",
+      "preview": {
+        "demo": "sheet"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『形状（角丸）』節",
+      "ref_url": "https://m3.material.io/components/bottom-sheets/overview"
+    },
+    {
+      "id": "material-design/dialog",
+      "kind": "ui",
+      "category": "overlay",
+      "name_en": "Dialog",
+      "name_ja": "ダイアログ",
+      "description_ja": "確認や小さな入力のため、背景を暗くして中央に出す小さなウィンドウ。角丸は大きめ(28px)。",
+      "aliases": [
+        "確認ポップアップ",
+        "モーダル",
+        "警告ダイアログ"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『形状（角丸）』節／https://m3.material.io/components/dialogs/overview\n【作るもの】Dialog（ダイアログ）\n【再現する見た目・動き】角丸 extra-large(28px)。背景を暗くし scale(.9)→1。ボタンは text button を右寄せで2つ\n【指示】Material Design 3 の Dialog（角丸 extra-large 28px）で〈削除の確認〉を出して。ボタンは text button を2つ並べて。",
+      "preview": {
+        "demo": "dialog"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『形状（角丸）』節",
+      "ref_url": "https://m3.material.io/components/dialogs/overview"
+    },
+    {
+      "id": "material-design/color-roles-tonal-palette",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Color roles (tonal palette, source color)",
+      "name_ja": "色の役割と明るさの段階",
+      "description_ja": "1色の元の色から、役割（primary・container・surface など）ごとに明るさを決めて配色する。",
+      "aliases": [
+        "配色の作り方",
+        "カラースキーム",
+        "テーマカラー"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『カラーロール（tone の割り当て）』節／https://m3.material.io/styles/color/roles\n【作るもの】Color roles (tonal palette, source color)（色の役割と明るさの段階）\n【再現する見た目・動き】source color #6750a4 から tone で決まる。primary は light 40 / dark 80（#6750a4 / #d0bcff）、on-primary 100 / 20、primary-container 90 / 30。部品には hex でなくロール名の CSS 変数。P40/白 = 6.44:1\n【指示】Material Design 3 の Color roles で配色を作って。source color は〈#6750a4〉、色は hex でなくロール名の CSS 変数で使って。",
+      "url": "https://m3.material.io/styles/color/roles",
+      "preview": {
+        "demo": "swatches"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『カラーロール（tone の割り当て）』節",
+      "ref_url": "https://m3.material.io/styles/color/roles"
+    },
+    {
+      "id": "material-design/surface-container",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Surface container levels (tone elevation)",
+      "name_ja": "面の色で高さを出す",
+      "description_ja": "影ではなく、面の色の段階（lowest〜highest）で前後関係を示す。影は動いたときだけ足す。",
+      "aliases": [
+        "影なしの立体感",
+        "カードの色の段",
+        "重なりの表現"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『カラーロール（tone の割り当て）』節／https://m3.material.io/styles/elevation/overview\n【作るもの】Surface container levels (tone elevation)（面の色で高さを出す）\n【再現する見た目・動き】surface-container は lowest→highest（light N100/96/94/92/90、dark N4/10/12/17/22）。段差は影でなく面の色。影は hover（level1）とドラッグ中（level3）だけ\n【指示】Material Design 3 の Surface container（lowest〜highest）でカード・シート・ナビの前後を示して。影は hover とドラッグ中だけにして。",
+      "preview": {
+        "demo": "elevation"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『カラーロール（tone の割り当て）』節",
+      "ref_url": "https://m3.material.io/styles/elevation/overview"
+    },
+    {
+      "id": "material-design/emphasized-easing",
+      "kind": "motion",
+      "category": "easing",
+      "name_en": "Emphasized easing (decelerate / accelerate)",
+      "name_ja": "メリハリのある速度カーブ",
+      "description_ja": "入るときは速く入ってゆっくり止まり、出るときはゆっくり始まって速く消える。画面の出入り向け。",
+      "aliases": [
+        "きびきび動く",
+        "入りは減速",
+        "出は加速"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『モーション』節／https://m3.material.io/styles/motion/easing-and-duration/tokens-specs\n【作るもの】Emphasized easing (decelerate / accelerate)（メリハリのある速度カーブ）\n【再現する見た目・動き】emphasized .2,0,0,1／decelerate（入り）.05,.7,.1,1／accelerate（出）.3,0,.8,.15。時間はシートの出入り medium2〜long2（300〜500ms）。プレビューの custom は (.16,1,.3,1)\n【指示】Material Design 3 の Emphasized easing を〈シートの出入り〉に使って。入りは cubic-bezier(.05,.7,.1,1)、出は(.3,0,.8,.15)。",
+      "url": "https://m3.material.io/styles/motion/easing-and-duration/tokens-specs",
+      "preview": {
+        "demo": "ease",
+        "variant": "custom"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『モーション』節",
+      "ref_url": "https://m3.material.io/styles/motion/easing-and-duration/tokens-specs"
+    },
+    {
+      "id": "material-design/shape-scale",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Shape scale (corner tokens)",
+      "name_ja": "角丸のものさし",
+      "description_ja": "角丸を none〜full の段階（4px・8px・12px・16px・28px）で決め、部品ごとに割り当てる。",
+      "aliases": [
+        "角丸の大きさ",
+        "丸み統一",
+        "角の丸さ"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『形状（角丸）』節／https://m3.material.io/styles/shape/shape-scale-tokens\n【作るもの】Shape scale (corner tokens)（角丸のものさし）\n【再現する見た目・動き】none 0／extra-small 4／small 8（チップ）／medium 12（カード）／large 16（FAB・シート）／extra-large 28（ダイアログ）／full 9999px（ボタン）\n【指示】Material Design 3 の Shape scale で角丸をそろえて。チップ8px、カード12px、ダイアログ28px、ボタンは full。",
+      "url": "https://m3.material.io/styles/shape/shape-scale-tokens",
+      "preview": {
+        "demo": "shapes"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『形状（角丸）』節",
+      "ref_url": "https://m3.material.io/styles/shape/shape-scale-tokens"
+    },
+    {
+      "id": "material-design/window-size-classes",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "Window size classes (compact / medium / expanded)",
+      "name_ja": "画面幅の区分",
+      "description_ja": "幅 600・840・1200px などの境目で、ナビや段組みの形を切り替える考え方。",
+      "aliases": [
+        "レスポンシブの境目",
+        "ブレークポイント",
+        "画面幅で変える"
+      ],
+      "prompt": "【出典】スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節／https://m3.material.io/foundations/layout/understanding-layout/\n【作るもの】Window size classes (compact / medium / expanded)（画面幅の区分）\n【再現する見た目・動き】compact <600／medium 600–839／expanded 840–1199／large 1200–1599／extra-large ≥1600px。compact は下部 navigation bar、medium 以上は rail、expanded 以上は drawer も可\n【指示】Material Design 3 の Window size classes で〈レイアウト〉を切り替えて。compact は下部バー、medium 以上はレール。",
+      "preview": {
+        "demo": "windows"
+      },
+      "source_ref": "スキル material-design（~/.agents/skills/material-design/SKILL.md）の『レイアウトと寸法』節",
+      "ref_url": "https://m3.material.io/foundations/layout/understanding-layout/"
+    }
+  ]
+}

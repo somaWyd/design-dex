@@ -1,0 +1,1080 @@
+{
+ "source": {
+  "id": "dads",
+  "type": "doc",
+  "name": "デジタル庁デザインシステム",
+  "ref": "https://design.digital.go.jp",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "dads/accordion",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Accordion",
+   "name_ja": "アコーディオン",
+   "description_ja": "同種のセクションが並ぶとき、見出しをクリックして中身を開閉し一覧性を上げる部品。",
+   "aliases": [
+    "開閉パネル",
+    "折りたたみ",
+    "FAQの開くやつ"
+   ],
+   "preview": {
+    "demo": "accordion"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『アコーディオン』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/accordion/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『アコーディオン』ページ／https://design.digital.go.jp/dads/components/accordion/\n【作るもの】Accordion（アコーディオン）\n【再現する見た目・動き】見出し行は全幅でクリック可能、開閉は矢印アイコンで示す。本体の開閉はプレビューの scaleY 0→1（transform-origin top）。見出し文字は#1a1a1a、区切りは#cccccc\n【指示】〈使う場所〉にAccordionを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/blockquote",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Blockquote",
+   "name_ja": "引用ブロック",
+   "description_ja": "段落単位の引用を表す、それ自体も段落のブロック。出典を添えられる。",
+   "aliases": [
+    "引用",
+    "引用枠",
+    "クォート"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『引用ブロック』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/blockquote/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『引用ブロック』ページ／https://design.digital.go.jp/dads/components/blockquote/\n【作るもの】Blockquote（引用ブロック）\n【再現する見た目・動き】左に太い縦線（#cccccc系）、本文16px/行間1.7、出典は補足色#4d4d4d\n【指示】〈使う場所〉にBlockquoteを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/bottom-navigation",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Bottom navigation",
+   "name_ja": "ボトムナビゲーション",
+   "description_ja": "画面下に固定し、2〜5個の目的地へ移動する下部タブ。",
+   "aliases": [
+    "下のタブバー",
+    "ボトムバー",
+    "タブバー"
+   ],
+   "preview": {
+    "demo": "nav"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ボトムナビゲーション』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/bottom-navigation/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ボトムナビゲーション』ページ／https://design.digital.go.jp/dads/components/bottom-navigation/\n【作るもの】Bottom navigation（ボトムナビゲーション）\n【再現する見た目・動き】項目は2〜5個、アイコン＋短いラベル、選択中は強調（背景または色）、タップ領域44px以上\n【指示】〈使う場所〉にBottom navigationを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/breadcrumb",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Breadcrumb",
+   "name_ja": "パンくずナビゲーション",
+   "description_ja": "階層の中の現在位置を、トップから順に区切って示す。",
+   "aliases": [
+    "パンくず",
+    "パンくずリスト",
+    "階層ナビ"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『パンくずナビゲーション』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/breadcrumb/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『パンくずナビゲーション』ページ／https://design.digital.go.jp/dads/components/breadcrumb/\n【作るもの】Breadcrumb（パンくずナビゲーション）\n【再現する見た目・動き】リンクを区切り記号でつなぎ、最後は現在ページ（リンクなし）。リンクは下線つき、文字16px\n【指示】〈使う場所〉にBreadcrumbを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Button",
+   "name_ja": "ボタン",
+   "description_ja": "アクション実行やページ遷移のきっかけとなる部品。塗り・枠線・テキストの種類がある。",
+   "aliases": [
+    "押すやつ",
+    "CTA",
+    "送信ボタン"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ボタン』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/button/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ボタン』ページ／https://design.digital.go.jp/dads/components/button/\n【作るもの】Button（ボタン）\n【再現する見た目・動き】ボタン高さ lg56/md48/sm36/xs28px、角丸8px（sm6・xs4）、塗りは背景#0017c1・文字白、hover #00118f、active #000060。枠線は白地＋1px #0017c1、テキストは下線1px。無効は背景#b3b3b3・文字#f2f2f2。最小幅 136/96/80/72px。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にButtonを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/card",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Card",
+   "name_ja": "カード",
+   "description_ja": "単一の主題の内容をまとめて見せる枠。画像・見出し・本文・操作を入れる。",
+   "aliases": [
+    "カード型",
+    "囲み枠",
+    "タイル"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『カード』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/card/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『カード』ページ／https://design.digital.go.jp/dads/components/card/\n【作るもの】Card（カード）\n【再現する見た目・動き】角丸12〜16px、1px の灰色枠または影(エレベーション1)、内側余白16〜24px（8の倍数）。カード全体をリンクにする場合は見出しにリンクを置く\n【指示】〈使う場所〉にCardを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/carousel",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Carousel",
+   "name_ja": "カルーセル",
+   "description_ja": "複数のスライドを順に見せる部品。サイトのアイキャッチにも使う。",
+   "aliases": [
+    "スライダー",
+    "横スライド",
+    "バナー切り替え"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『カルーセル』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/carousel/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『カルーセル』ページ／https://design.digital.go.jp/dads/components/carousel/\n【作るもの】Carousel（カルーセル）\n【再現する見た目・動き】前へ・次へボタンと現在位置のインジケーター、自動再生には一時停止ボタンを必ず付ける。横移動のプレビュー動き\n【指示】〈使う場所〉にCarouselを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/checkbox",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Checkbox",
+   "name_ja": "チェックボックス",
+   "description_ja": "複数の選択肢から複数を選ぶ、または1つのオン・オフを切り替える部品。",
+   "aliases": [
+    "チェック欄",
+    "複数選択",
+    "同意チェック"
+   ],
+   "preview": {
+    "demo": "check"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『チェックボックス』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/checkbox/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『チェックボックス』ページ／https://design.digital.go.jp/dads/components/checkbox/\n【作るもの】Checkbox（チェックボックス）\n【再現する見た目・動き】ラベルと一体で押せる範囲をとる（44px以上）、枠は#666666、選択時は塗り#0017c1に白のチェック。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にCheckboxを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/chip-label",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Chip label",
+   "name_ja": "チップラベル",
+   "description_ja": "状態や分類を示すキーワードを小さく表示する飾りの要素。",
+   "aliases": [
+    "ステータスラベル",
+    "バッジ風",
+    "タグ（表示のみ）"
+   ],
+   "preview": {
+    "demo": "chips"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『チップラベル』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/chip-label/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『チップラベル』ページ／https://design.digital.go.jp/dads/components/chip-label/\n【作るもの】Chip label（チップラベル）\n【再現する見た目・動き】角丸の小さな箱に短い文字、色は意味ごと（エラー#ec0000系・成功#259d63系など）、色だけで伝えず文字も添える\n【指示】〈使う場所〉にChip labelを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/chip-tag",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Chip tag",
+   "name_ja": "チップタグ",
+   "description_ja": "属性や選択した項目をアイテム化して並べ、削除もしやすくする要素。",
+   "aliases": [
+    "タグ",
+    "絞り込みチップ",
+    "削除できるタグ"
+   ],
+   "preview": {
+    "demo": "chips"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『チップタグ』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/chip-tag/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『チップタグ』ページ／https://design.digital.go.jp/dads/components/chip-tag/\n【作るもの】Chip tag（チップタグ）\n【再現する見た目・動き】丸い箱にラベル＋閉じるアイコン、削除ボタンの押せる範囲は44px以上、選択状態は塗りで示す\n【指示】〈使う場所〉にChip tagを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/combobox",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Combobox",
+   "name_ja": "コンボボックス",
+   "description_ja": "入力と候補選択を組み合わせた、select だけでは足りない複合入力。",
+   "aliases": [
+    "サジェスト入力",
+    "オートコンプリート",
+    "候補つき入力"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『コンボボックス』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/combobox/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『コンボボックス』ページ／https://design.digital.go.jp/dads/components/combobox/\n【作るもの】Combobox（コンボボックス）\n【再現する見た目・動き】高さ sm40/md48/lg56px、padding 12px 16px、角丸8px、枠1px #666666（hover黒）、ラベル#333333、候補リストは入力欄の直下に表示、上下キーで候補移動\n【指示】〈使う場所〉にComboboxを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/date-picker",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Date picker / Calendar",
+   "name_ja": "日付ピッカー／カレンダー",
+   "description_ja": "日付を選ぶ入力欄と、その選択を助けるカレンダー。",
+   "aliases": [
+    "日付入力",
+    "日付選択",
+    "カレンダー選択"
+   ],
+   "preview": {
+    "demo": "calendar"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『日付ピッカー／カレンダー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/date-picker/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『日付ピッカー／カレンダー』ページ／https://design.digital.go.jp/dads/components/date-picker/\n【作るもの】Date picker / Calendar（日付ピッカー／カレンダー）\n【再現する見た目・動き】入力欄は高さ sm40/md48/lg56px、padding 12px 16px、角丸8px、枠1px #666666（hover黒）、ラベル#333333。カレンダーは7列の格子、選んだ日を塗りで強調（プレビューは脈打つ）\n【指示】〈使う場所〉にDate picker / Calendarを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/description-list",
+   "kind": "ui",
+   "category": "data",
+   "name_en": "Description list",
+   "name_ja": "説明リスト",
+   "description_ja": "項目名とその説明のペアを複数並べる一覧。",
+   "aliases": [
+    "定義リスト",
+    "項目と値の一覧",
+    "詳細情報の表"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『説明リスト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/description-list/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『説明リスト』ページ／https://design.digital.go.jp/dads/components/description-list/\n【作るもの】Description list（説明リスト）\n【再現する見た目・動き】項目名は太字(700)、説明は通常(400)、ペアの間は区切り線#e6e6e6、余白は8の倍数\n【指示】〈使う場所〉にDescription listを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/disclosure",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Disclosure",
+   "name_ja": "ディスクロージャー",
+   "description_ja": "メイン情報の追加情報を折りたたんで見せる部品。1つだけの開閉。",
+   "aliases": [
+    "もっと見る",
+    "詳細を開く",
+    "折りたたみ1個"
+   ],
+   "preview": {
+    "demo": "accordion"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ディスクロージャー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/disclosure/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ディスクロージャー』ページ／https://design.digital.go.jp/dads/components/disclosure/\n【作るもの】Disclosure（ディスクロージャー）\n【再現する見た目・動き】見出し＋三角アイコン、クリックで本文を開閉。ネイティブの details/summary で作る\n【指示】〈使う場所〉にDisclosureを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/divider",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Divider",
+   "name_ja": "ディバイダー",
+   "description_ja": "セクションや部品のまとまりの間に引く、視覚的な区切り線。",
+   "aliases": [
+    "区切り線",
+    "罫線",
+    "hr"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ディバイダー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/divider/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ディバイダー』ページ／https://design.digital.go.jp/dads/components/divider/\n【作るもの】Divider（ディバイダー）\n【再現する見た目・動き】1pxの実線、色は#cccccc（強めは#767676）、上下余白は8の倍数\n【指示】〈使う場所〉にDividerを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/drawer",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Drawer",
+   "name_ja": "ドロワー",
+   "description_ja": "画面の四辺のいずれかから開く、メニューなどを入れる容器。",
+   "aliases": [
+    "引き出しメニュー",
+    "サイドメニュー",
+    "スライドインパネル"
+   ],
+   "preview": {
+    "demo": "sheet",
+    "variant": "drawer"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ドロワー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/drawer/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ドロワー』ページ／https://design.digital.go.jp/dads/components/drawer/\n【作るもの】Drawer（ドロワー）\n【再現する見た目・動き】左から translateX(-102%)→0 で開く、背面はオーバーレイシェードで暗くする、閉じるボタンとEscで閉じる\n【指示】〈使う場所〉にDrawerを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/emergency-banner",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Emergency banner",
+   "name_ja": "緊急時バナー",
+   "description_ja": "本来の内容を止めてでも、ファーストビューを占めて注意を促す全幅の帯。",
+   "aliases": [
+    "緊急お知らせ",
+    "災害時バナー",
+    "全面の警告帯"
+   ],
+   "preview": {
+    "demo": "toast"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『緊急時バナー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/emergency-banner/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『緊急時バナー』ページ／https://design.digital.go.jp/dads/components/emergency-banner/\n【作るもの】Emergency banner（緊急時バナー）\n【再現する見た目・動き】ページ最上部に全幅、背景は赤系(#ec0000系)に白文字または黄系に黒文字、緊急時のみ使い常時は出さない\n【指示】〈使う場所〉にEmergency bannerを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/file-upload",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "File upload / Drop area",
+   "name_ja": "ファイルアップロード／ドロップエリア",
+   "description_ja": "ファイルを選ぶ、または破線の枠へドラッグして送る部品。",
+   "aliases": [
+    "ファイル選択",
+    "ドラッグ＆ドロップ",
+    "添付欄"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ファイルアップロード／ドロップエリア』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/file-upload/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ファイルアップロード／ドロップエリア』ページ／https://design.digital.go.jp/dads/components/file-upload/\n【作るもの】File upload / Drop area（ファイルアップロード／ドロップエリア）\n【再現する見た目・動き】破線の枠、中に「ファイルを選択」ボタンと説明、選んだファイル名の一覧と削除ボタンを下に出す。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にFile upload / Drop areaを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/hamburger-menu-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Hamburger menu button",
+   "name_ja": "ハンバーガーメニューボタン",
+   "description_ja": "横三本線のアイコンで、モバイルメニューを開閉するボタン。",
+   "aliases": [
+    "三本線",
+    "ハンバーガー",
+    "メニューボタン"
+   ],
+   "preview": {
+    "demo": "buttons"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ハンバーガーメニューボタン』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/hamburger-menu-button/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ハンバーガーメニューボタン』ページ／https://design.digital.go.jp/dads/components/hamburger-menu-button/\n【作るもの】Hamburger menu button（ハンバーガーメニューボタン）\n【再現する見た目・動き】三本線のアイコン＋可能ならラベル「メニュー」、押せる範囲44px以上、開くと閉じる×に切り替える\n【指示】〈使う場所〉にHamburger menu buttonを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/header-container",
+   "kind": "ui",
+   "category": "page",
+   "name_en": "Header container",
+   "name_ja": "ヘッダーコンテナ",
+   "description_ja": "ロゴ・メニュー・検索など、ヘッダーに入る部品を入れる枠。",
+   "aliases": [
+    "ヘッダー",
+    "サイトの頭",
+    "ページ上部"
+   ],
+   "preview": {
+    "demo": "windows"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ヘッダーコンテナ』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/header-container/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ヘッダーコンテナ』ページ／https://design.digital.go.jp/dads/components/header-container/\n【作るもの】Header container（ヘッダーコンテナ）\n【再現する見た目・動き】ページ最上部に全幅、下に1pxの線、内側はマージン・12カラムグリッドに合わせる。画面幅の区分で並びを切り替える\n【指示】〈使う場所〉にHeader containerを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/heading",
+   "kind": "ui",
+   "category": "page",
+   "name_en": "Heading",
+   "name_ja": "見出し",
+   "description_ja": "ページやセクションの主題を表す、本文の前に置く見出し。",
+   "aliases": [
+    "タイトル",
+    "h1 h2",
+    "大見出し"
+   ],
+   "preview": {
+    "demo": "typescale"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『見出し』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/heading/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『見出し』ページ／https://design.digital.go.jp/dads/components/heading/\n【作るもの】Heading（見出し）\n【再現する見た目・動き】太さは700、行間1.5、字間0.01〜0.02em、レベルを飛ばさない。Std-24B-150 は24px\n【指示】〈使う場所〉にHeadingを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/horizontal-menu",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Horizontal menu",
+   "name_ja": "水平メニュー",
+   "description_ja": "ページへ誘導する、横並びのナビゲーションメニュー。",
+   "aliases": [
+    "グローバルナビ",
+    "横メニュー",
+    "ヘッダーメニュー"
+   ],
+   "preview": {
+    "demo": "nav",
+    "variant": "top"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『水平メニュー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/horizontal-menu/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『水平メニュー』ページ／https://design.digital.go.jp/dads/components/horizontal-menu/\n【作るもの】Horizontal menu（水平メニュー）\n【再現する見た目・動き】横一列に項目、選択中は下線または太字で示す、タップ領域44px以上。プレビューは上端のナビ\n【指示】〈使う場所〉にHorizontal menuを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/image-slider",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Image slider",
+   "name_ja": "イメージスライダー",
+   "description_ja": "ギャラリーのように複数の画像を切り替えて見せる部品。",
+   "aliases": [
+    "画像ギャラリー",
+    "写真スライド",
+    "サムネ切り替え"
+   ],
+   "preview": {
+    "demo": "carousel"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『イメージスライダー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/image-slider/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『イメージスライダー』ページ／https://design.digital.go.jp/dads/components/image-slider/\n【作るもの】Image slider（イメージスライダー）\n【再現する見た目・動き】大きい画像1枚＋前後ボタン＋サムネの列、現在の画像を枠で示す、代替テキスト必須\n【指示】〈使う場所〉にImage sliderを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/image",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Image",
+   "name_ja": "画像",
+   "description_ja": "ページ内に画像を置く部品。キャプションと組み合わせられる。",
+   "aliases": [
+    "写真",
+    "図版",
+    "img"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『画像』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/image/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『画像』ページ／https://design.digital.go.jp/dads/components/image/\n【作るもの】Image（画像）\n【再現する見た目・動き】alt（代替テキスト）必須、装飾画像は alt を空、キャプションは補足色#4d4d4d・14px程度\n【指示】〈使う場所〉にImageを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/input-text",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Input text",
+   "name_ja": "インプットテキスト",
+   "description_ja": "名前や電話番号など、1行以内の文字を入力する欄。",
+   "aliases": [
+    "入力欄",
+    "テキストボックス",
+    "1行入力"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『インプットテキスト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/input-text/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『インプットテキスト』ページ／https://design.digital.go.jp/dads/components/input-text/\n【作るもの】Input text（インプットテキスト）\n【再現する見た目・動き】高さ sm40/md48/lg56px、padding 12px 16px、角丸8px、枠1px #666666（hover黒）、ラベル#333333、エラー時は枠#ce0000＋下にエラー文。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にInput textを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/language-selector",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Language selector",
+   "name_ja": "ランゲージセレクター",
+   "description_ja": "表示言語を選ぶための部品。",
+   "aliases": [
+    "言語切替",
+    "言語選択",
+    "Language"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ランゲージセレクター』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/language-selector/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ランゲージセレクター』ページ／https://design.digital.go.jp/dads/components/language-selector/\n【作るもの】Language selector（ランゲージセレクター）\n【再現する見た目・動き】地球儀アイコン＋現在の言語名のボタン、押すと言語の一覧が出る、各言語は自言語表記で並べる\n【指示】〈使う場所〉にLanguage selectorを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/list",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "List",
+   "name_ja": "箇条書きリスト",
+   "description_ja": "1つ以上の項目を列挙する箇条書き。点付き・番号付きがある。",
+   "aliases": [
+    "箇条書き",
+    "ul ol",
+    "リスト"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『箇条書きリスト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/list/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『箇条書きリスト』ページ／https://design.digital.go.jp/dads/components/list/\n【作るもの】List（箇条書きリスト）\n【再現する見た目・動き】点付き(ul)・番号付き(ol)、項目間の余白は8px、本文16px/行間1.7\n【指示】〈使う場所〉にListを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/mega-menu",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Mega menu",
+   "name_ja": "メガメニュー",
+   "description_ja": "水平メニューから開く、広い領域に多くの項目や画像を入れるメニュー。",
+   "aliases": [
+    "大きなドロップダウン",
+    "全面メニュー",
+    "展開メニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『メガメニュー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/mega-menu/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『メガメニュー』ページ／https://design.digital.go.jp/dads/components/mega-menu/\n【作るもの】Mega menu（メガメニュー）\n【再現する見た目・動き】水平メニューの項目から全幅級のパネルを開く、見出しごとにグループ化、Escで閉じる。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にMega menuを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/menu-list-box",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Menu list box",
+   "name_ja": "メニューリストボックス",
+   "description_ja": "ラベルと開閉アイコンのボタンから、メニューリストを開く部品。",
+   "aliases": [
+    "ドロップダウンメニュー",
+    "プルダウンメニュー",
+    "開閉メニュー"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『メニューリストボックス』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/menu-list-box/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『メニューリストボックス』ページ／https://design.digital.go.jp/dads/components/menu-list-box/\n【作るもの】Menu list box（メニューリストボックス）\n【再現する見た目・動き】ボタン（ラベル＋上下の矢印）の下に項目の箱が出る（プレビューと同じ）、外側クリックで閉じる\n【指示】〈使う場所〉にMenu list boxを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/menu-list",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Menu list",
+   "name_ja": "メニューリスト",
+   "description_ja": "メニューアイテムを束ねた一覧。ローカルメニューにも使う。",
+   "aliases": [
+    "メニュー一覧",
+    "サイドメニュー",
+    "項目リスト"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『メニューリスト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/menu-list/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『メニューリスト』ページ／https://design.digital.go.jp/dads/components/menu-list/\n【作るもの】Menu list（メニューリスト）\n【再現する見た目・動き】各項目は高さ44px以上、選択中は強調、項目間は区切り線#e6e6e6\n【指示】〈使う場所〉にMenu listを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/mobile-menu",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Mobile menu",
+   "name_ja": "モバイルメニュー",
+   "description_ja": "タップ操作を前提にした、ハンバーガーメニューボタンから開くメニュー。",
+   "aliases": [
+    "スマホメニュー",
+    "全画面メニュー",
+    "ハンバーガーの中身"
+   ],
+   "preview": {
+    "demo": "sheet",
+    "variant": "drawer"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『モバイルメニュー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/mobile-menu/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『モバイルメニュー』ページ／https://design.digital.go.jp/dads/components/mobile-menu/\n【作るもの】Mobile menu（モバイルメニュー）\n【再現する見た目・動き】ボタンで開閉、項目はタップ領域44px以上、ドロワーの中に格納できる\n【指示】〈使う場所〉にMobile menuを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/modal-dialog",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Modal dialog",
+   "name_ja": "モーダルダイアログ",
+   "description_ja": "開いている間はダイアログの中だけ操作できる、中央のウィンドウ。",
+   "aliases": [
+    "ポップアップ",
+    "確認ダイアログ",
+    "モーダル"
+   ],
+   "preview": {
+    "demo": "dialog"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『モーダルダイアログ』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/modal-dialog/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『モーダルダイアログ』ページ／https://design.digital.go.jp/dads/components/modal-dialog/\n【作るもの】Modal dialog（モーダルダイアログ）\n【再現する見た目・動き】背景が暗くなり（オーバーレイシェード）、中央のダイアログが scale(.9)→1。角丸16px程度、エレベーション2以上、Escと閉じるボタンで閉じる。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にModal dialogを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/notice-block",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Notice block",
+   "name_ja": "注釈ブロック",
+   "description_ja": "補足情報を強調して見せる枠。入力のヘルプや例示に使う。",
+   "aliases": [
+    "補足ボックス",
+    "注意書き枠",
+    "ヒント欄"
+   ],
+   "preview": {
+    "demo": "card"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『注釈ブロック』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/notice-block/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『注釈ブロック』ページ／https://design.digital.go.jp/dads/components/notice-block/\n【作るもの】Notice block（注釈ブロック）\n【再現する見た目・動き】背景を薄い灰色(#f2f2f2)や薄い色で囲み、左に色の縦線、文字16px\n【指示】〈使う場所〉にNotice blockを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/notification-banner",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Notification banner",
+   "name_ja": "ノティフィケーションバナー",
+   "description_ja": "サイトやページ全体に関わる重要な情報を、操作と関係なく知らせる帯。",
+   "aliases": [
+    "お知らせバナー",
+    "通知バー",
+    "アラート"
+   ],
+   "preview": {
+    "demo": "toast"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ノティフィケーションバナー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/notification-banner/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ノティフィケーションバナー』ページ／https://design.digital.go.jp/dads/components/notification-banner/\n【作るもの】Notification banner（ノティフィケーションバナー）\n【再現する見た目・動き】種類は情報・成功・警告・エラー、アイコン＋見出し＋本文、閉じられる場合は×ボタン。成功#259d63、エラー#ec0000、警告#927200\n【指示】〈使う場所〉にNotification bannerを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/page-navigation",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Page navigation",
+   "name_ja": "ページナビゲーション",
+   "description_ja": "分割されたページを前後に移動するページ送り。",
+   "aliases": [
+    "ページネーション",
+    "ページ送り",
+    "次へ前へ"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ページナビゲーション』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/page-navigation/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ページナビゲーション』ページ／https://design.digital.go.jp/dads/components/page-navigation/\n【作るもの】Page navigation（ページナビゲーション）\n【再現する見た目・動き】前へ・次へ＋ページ番号、現在のページは塗りで強調（プレビューの白い背景の移動）、タップ領域44px以上\n【指示】〈使う場所〉にPage navigationを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/progress-indicator",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Progress indicator",
+   "name_ja": "プログレスインジケーター",
+   "description_ja": "処理が進んでいることを知らせる、読み込み中の表示。",
+   "aliases": [
+    "ローディング",
+    "読み込み中",
+    "スピナー"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『プログレスインジケーター』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/progress-indicator/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『プログレスインジケーター』ページ／https://design.digital.go.jp/dads/components/progress-indicator/\n【作るもの】Progress indicator（プログレスインジケーター）\n【再現する見た目・動き】左から伸びるバー、またはぐるぐる回る表示。待ち時間の文言も添え、色#0017c1\n【指示】〈使う場所〉にProgress indicatorを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/radio",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Radio",
+   "name_ja": "ラジオボタン",
+   "description_ja": "選択肢の中から1つだけ選ぶ丸いボタン。",
+   "aliases": [
+    "単一選択",
+    "丸い選択",
+    "ラジオ"
+   ],
+   "preview": {
+    "demo": "check"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ラジオボタン』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/radio/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ラジオボタン』ページ／https://design.digital.go.jp/dads/components/radio/\n【作るもの】Radio（ラジオボタン）\n【再現する見た目・動き】丸い枠#666666、選択時は中に塗りの丸、ラベルと一体で押せる（44px以上）。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にRadioを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/resource-list",
+   "kind": "ui",
+   "category": "data",
+   "name_en": "Resource list",
+   "name_ja": "リソースリスト",
+   "description_ja": "共通の形のオブジェクト（案件・書類など）の状態を一覧で見せる。",
+   "aliases": [
+    "一覧",
+    "データのリスト",
+    "行リスト"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『リソースリスト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/resource-list/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『リソースリスト』ページ／https://design.digital.go.jp/dads/components/resource-list/\n【作るもの】Resource list（リソースリスト）\n【再現する見た目・動き】1行ごとに主題・状態ラベル・補足を並べ、行間に区切り線、行全体をリンクにできる\n【指示】〈使う場所〉にResource listを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/scroll-top-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Scroll top button",
+   "name_ja": "スクロールトップボタン",
+   "description_ja": "ページの先頭へすばやく戻るためのボタン。",
+   "aliases": [
+    "トップへ戻る",
+    "ページ上部へ",
+    "上に戻るボタン"
+   ],
+   "preview": {
+    "demo": "toast",
+    "variant": "fab"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『スクロールトップボタン』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/scroll-top-button/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『スクロールトップボタン』ページ／https://design.digital.go.jp/dads/components/scroll-top-button/\n【作るもの】Scroll top button（スクロールトップボタン）\n【再現する見た目・動き】右下などに浮かぶ角丸ボタン（プレビューは右下に pop）、押せる範囲44px以上、一定量スクロールで表示\n【指示】〈使う場所〉にScroll top buttonを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/search-box",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Search box",
+   "name_ja": "検索ボックス",
+   "description_ja": "サイト内検索の入力欄。詳細検索やキーワードのショートカットも備えられる。",
+   "aliases": [
+    "検索欄",
+    "検索バー",
+    "サイト内検索"
+   ],
+   "preview": {
+    "demo": "search"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『検索ボックス』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/search-box/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『検索ボックス』ページ／https://design.digital.go.jp/dads/components/search-box/\n【作るもの】Search box（検索ボックス）\n【再現する見た目・動き】高さ sm40/md48/lg56px、padding 12px 16px、角丸8px、枠1px #666666（hover黒）、ラベル#333333、右に検索ボタン（虫眼鏡アイコン＋ラベル）\n【指示】〈使う場所〉にSearch boxを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/select",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Select",
+   "name_ja": "セレクトボックス",
+   "description_ja": "複数の選択肢から選ぶフォームコントロール。",
+   "aliases": [
+    "プルダウン",
+    "ドロップダウン",
+    "選択欄"
+   ],
+   "preview": {
+    "demo": "menu"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『セレクトボックス』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/select/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『セレクトボックス』ページ／https://design.digital.go.jp/dads/components/select/\n【作るもの】Select（セレクトボックス）\n【再現する見た目・動き】高さ sm40/md48/lg56px、padding 12px 16px、角丸8px、枠1px #666666（hover黒）、ラベル#333333、右端に下向き矢印。HTML標準の select を使う\n【指示】〈使う場所〉にSelectを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/step-navigation",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Step navigation",
+   "name_ja": "ステップナビゲーション",
+   "description_ja": "一連の手続きをステップに分け、全体と今の位置を見せる部品。",
+   "aliases": [
+    "ステッパー",
+    "手順バー",
+    "進行ステップ"
+   ],
+   "preview": {
+    "demo": "progress"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ステップナビゲーション』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/step-navigation/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ステップナビゲーション』ページ／https://design.digital.go.jp/dads/components/step-navigation/\n【作るもの】Step navigation（ステップナビゲーション）\n【再現する見た目・動き】番号つきの丸と短いラベルを並べる、現在のステップは強調、完了は印を付ける\n【指示】〈使う場所〉にStep navigationを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/switch",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Switch",
+   "name_ja": "スイッチ",
+   "description_ja": "切り替えるとすぐ反映される設定のオン・オフ部品。",
+   "aliases": [
+    "トグル",
+    "オンオフ",
+    "切り替えスイッチ"
+   ],
+   "preview": {
+    "demo": "switch"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『スイッチ』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/switch/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『スイッチ』ページ／https://design.digital.go.jp/dads/components/switch/\n【作るもの】Switch（スイッチ）\n【再現する見た目・動き】つまみが右へ動き色が変わる（プレビューはバネ）、オン時 #0017c1、ラベル併記、押せる範囲44px以上\n【指示】〈使う場所〉にSwitchを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/tab",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Tab",
+   "name_ja": "タブ",
+   "description_ja": "インデックスの見出しのようなラベルと、対応するパネルの組。",
+   "aliases": [
+    "タブ切り替え",
+    "タブメニュー",
+    "見出しタブ"
+   ],
+   "preview": {
+    "demo": "nav",
+    "variant": "tabs"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『タブ』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/tab/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『タブ』ページ／https://design.digital.go.jp/dads/components/tab/\n【作るもの】Tab（タブ）\n【再現する見た目・動き】選択中は下線またはラベルを強調、下線が移動（プレビュー）、左右キーで移動。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にTabを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/table-control",
+   "kind": "ui",
+   "category": "data",
+   "name_en": "Table control",
+   "name_ja": "テーブルコントロール",
+   "description_ja": "表の行や列を絞り込む、並べ替えなどの操作群。",
+   "aliases": [
+    "表の絞り込み",
+    "並べ替えボタン",
+    "フィルター"
+   ],
+   "preview": {
+    "demo": "segmented"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『テーブルコントロール』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/table-control/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『テーブルコントロール』ページ／https://design.digital.go.jp/dads/components/table-control/\n【作るもの】Table control（テーブルコントロール）\n【再現する見た目・動き】表の上に配置、検索・絞り込み・件数切替など、各操作は高さ44px以上\n【指示】〈使う場所〉にTable controlを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/table",
+   "kind": "ui",
+   "category": "data",
+   "name_en": "Table / Data table",
+   "name_ja": "テーブル／データテーブル",
+   "description_ja": "データを行と列で構造化した表組み。",
+   "aliases": [
+    "表",
+    "データ表",
+    "グリッド表"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『テーブル／データテーブル』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/table/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『テーブル／データテーブル』ページ／https://design.digital.go.jp/dads/components/table/\n【作るもの】Table / Data table（テーブル／データテーブル）\n【再現する見た目・動き】見出しセルは太字(700)＋背景#f2f2f2、行間の線#e6e6e6、数値は右揃え、th に scope を付ける\n【指示】〈使う場所〉にTable / Data tableを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/textarea",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Textarea",
+   "name_ja": "テキストエリア",
+   "description_ja": "自由に長い文を書くための複数行入力欄。",
+   "aliases": [
+    "複数行入力",
+    "コメント欄",
+    "長文入力"
+   ],
+   "preview": {
+    "demo": "input"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『テキストエリア』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/textarea/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『テキストエリア』ページ／https://design.digital.go.jp/dads/components/textarea/\n【作るもの】Textarea（テキストエリア）\n【再現する見た目・動き】最小高さを複数行ぶん確保、他は高さ sm40/md48/lg56px、padding 12px 16px、角丸8px、枠1px #666666（hover黒）、ラベル#333333。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にTextareaを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/toc",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Table of contents",
+   "name_ja": "目次",
+   "description_ja": "長いページの見出しを取り出して、冒頭に並べる目次。",
+   "aliases": [
+    "ページ内目次",
+    "もくじ",
+    "アンカーリスト"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『目次』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/toc/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『目次』ページ／https://design.digital.go.jp/dads/components/toc/\n【作るもの】Table of contents（目次）\n【再現する見た目・動き】見出しへのリンクを箇条書きで並べる、リンクは下線つき、階層はインデントで示す\n【指示】〈使う場所〉にTable of contentsを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/utility-link",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Utility link",
+   "name_ja": "ユーティリティリンク",
+   "description_ja": "ヘッダー上部などに並ぶ、通常のリンク列よりコンパクトなリンク集。",
+   "aliases": [
+    "補助リンク",
+    "ヘッダー上のリンク",
+    "サブナビ"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『ユーティリティリンク』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/components/utility-link/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『ユーティリティリンク』ページ／https://design.digital.go.jp/dads/components/utility-link/\n【作るもの】Utility link（ユーティリティリンク）\n【再現する見た目・動き】小さめ文字(14px程度)のリンクを横並び、リンクは下線つき、押せる範囲は44px以上\n【指示】〈使う場所〉にUtility linkを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。実装例はHTML版 https://github.com/digital-go-jp/design-system-example-components-html と Figma コンポーネントが公式から配布されている。"
+  },
+  {
+   "id": "dads/color",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Color",
+   "name_ja": "カラー",
+   "description_ja": "キーカラー・グレー・意味の色など、デザイン全体の色の決め方。",
+   "aliases": [
+    "配色",
+    "カラーパレット",
+    "色の段階"
+   ],
+   "preview": {
+    "demo": "swatches"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『カラー』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/color/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『カラー』ページ／https://design.digital.go.jp/dads/foundations/color/\n【作るもの】Color（カラー）\n【再現する見た目・動き】文字は背景に対して4.5:1以上、境界は3:1以上。Solid Gray は #f2f2f2・#e6e6e6・#cccccc・#767676・#4d4d4d・#1a1a1a、キーは Blue #0017c1/#00118f/#000060、エラー#ec0000、成功#259d63\n【指示】〈使う場所〉にColorを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  },
+  {
+   "id": "dads/corner-shapes",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Corner shapes",
+   "name_ja": "角の形状",
+   "description_ja": "ボタンやカードの角の丸さを5段階の目安で決める基準。",
+   "aliases": [
+    "角丸",
+    "丸み",
+    "radius"
+   ],
+   "preview": {
+    "demo": "shapes"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『角の形状』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/corner-shapes/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『角の形状』ページ／https://design.digital.go.jp/dads/foundations/corner-shapes/\n【作るもの】Corner shapes（角の形状）\n【再現する見た目・動き】角丸は 4/6/8/12/16/24/32px と全円(9999px)、ボタン・入力欄8px、カード12〜16px、小さい図形ほど丸く見えるので部品ごとに調整\n【指示】〈使う場所〉にCorner shapesを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  },
+  {
+   "id": "dads/elevation",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Elevation",
+   "name_ja": "エレベーション",
+   "description_ja": "部品の高さの度合いを、影とオーバーレイシェードで見せる基準。",
+   "aliases": [
+    "影",
+    "浮き",
+    "シャドウ"
+   ],
+   "preview": {
+    "demo": "elevation"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『エレベーション』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/elevation/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『エレベーション』ページ／https://design.digital.go.jp/dads/foundations/elevation/\n【作るもの】Elevation（エレベーション）\n【再現する見た目・動き】高さレベル0が既定、Style 1〜8の影を高さに応じて使う。例: 0 2px 8px 1px rgba(0,0,0,.1) と 0 1px 5px 0 rgba(0,0,0,.3) の2つ重ね。ダイアログはレベル2以上\n【指示】〈使う場所〉にElevationを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  },
+  {
+   "id": "dads/icon",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Icon",
+   "name_ja": "アイコン",
+   "description_ja": "意味を絵で補う記号。文字ラベルと組み合わせて使う。",
+   "aliases": [
+    "アイコン",
+    "マーク",
+    "SVGアイコン"
+   ],
+   "preview": {
+    "demo": "tap"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『アイコン』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/icon/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『アイコン』ページ／https://design.digital.go.jp/dads/foundations/icon/\n【作るもの】Icon（アイコン）\n【再現する見た目・動き】装飾のアイコンは aria-hidden、意味を持つものは代替テキストを付ける、押せるアイコンは44px以上の領域\n【指示】〈使う場所〉にIconを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  },
+  {
+   "id": "dads/layout",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Layout",
+   "name_ja": "レイアウト",
+   "description_ja": "マージン・カラム・ガターのグリッドと、画面幅ごとの切り替え点。",
+   "aliases": [
+    "グリッド",
+    "12カラム",
+    "ブレークポイント"
+   ],
+   "preview": {
+    "demo": "windows"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『レイアウト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/layout/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『レイアウト』ページ／https://design.digital.go.jp/dads/foundations/layout/\n【作るもの】Layout（レイアウト）\n【再現する見た目・動き】12カラムのグリッド、ガターは原則として本文文字サイズの2倍、画面幅の区分（小・中・大）で配置を切り替える\n【指示】〈使う場所〉にLayoutを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  },
+  {
+   "id": "dads/link-text",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Link text",
+   "name_ja": "リンクテキスト",
+   "description_ja": "リンクの見た目と書き方の基準。下線と色で示す。",
+   "aliases": [
+    "リンクの色",
+    "下線リンク",
+    "文字リンク"
+   ],
+   "preview": {
+    "demo": "list"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『リンクテキスト』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/link-text/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『リンクテキスト』ページ／https://design.digital.go.jp/dads/foundations/link-text/\n【作るもの】Link text（リンクテキスト）\n【再現する見た目・動き】リンクは下線つき、未訪問#00118f、訪問済み#8b008b、hover #0017c1。リンク先が分かる文言にする（「こちら」は避ける）。フォーカスは黒の4px実線の輪＋外側に黄色(#ffd43d)2pxの縁取り（角丸4px）\n【指示】〈使う場所〉にLink textを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  },
+  {
+   "id": "dads/spacing",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Spacing",
+   "name_ja": "余白",
+   "description_ja": "パディング・マージン・行間など、要素の間の空きの決め方。",
+   "aliases": [
+    "マージン",
+    "パディング",
+    "8pxの格子"
+   ],
+   "preview": {
+    "demo": "spacing"
+   },
+   "source_ref": "デジタル庁デザインシステム公式『余白』ページ",
+   "ref_url": "https://design.digital.go.jp/dads/foundations/spacing/",
+   "prompt": "【出典】デジタル庁デザインシステム公式『余白』ページ／https://design.digital.go.jp/dads/foundations/spacing/\n【作るもの】Spacing（余白）\n【再現する見た目・動き】余白は8pxの倍数（8/16/24/32/40/64…）、要素同士の関係が近いほど狭くする\n【指示】〈使う場所〉にSpacingを入れて。公式ページの構成・状態・アクセシビリティの注記に従う。"
+  }
+ ]
+}

@@ -1,0 +1,273 @@
+{
+  "source": {
+    "id": "dads-design",
+    "type": "skill",
+    "name": "デジタル庁デザインシステム（DADS）",
+    "ref": "~/.claude/skills/dads-design",
+    "added_at": "2026-10-22"
+  },
+  "entries": [
+    {
+      "id": "dads-design/focus-ring",
+      "kind": "ui",
+      "category": "input",
+      "name_en": "DADS focus indicator",
+      "name_ja": "黒と黄色のフォーカス枠",
+      "description_ja": "キーボードで選んだ部品を、黒い太枠と黄色の縁で囲む。誰でも今どこにいるか分かる。",
+      "aliases": [
+        "フォーカスの枠",
+        "選択中の枠",
+        "キーボード操作の枠"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『トークン CSS（コピーして使う）』節／https://design.digital.go.jp/dads/foundations/color/accessibility/\n【作るもの】DADS focus indicator（黒と黄色のフォーカス枠）\n【再現する見た目・動き】outline: 4px solid #000; outline-offset: 2px; box-shadow: 0 0 0 2px #ffd43d; border-radius: 4px（:focus-visible）。outline: none を残さない\n【指示】デジタル庁デザインシステム（DADS）のフォーカス表示（黒4px＋黄2px）を〈全ての操作要素〉に付けて。outline: none は消して。",
+      "preview": {
+        "demo": "focus"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『トークン CSS（コピーして使う）』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/color/accessibility/"
+    },
+    {
+      "id": "dads-design/button-sizes",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "DADS button (lg / md / sm / xs)",
+      "name_ja": "4段階サイズのボタン",
+      "description_ja": "高さ56・48・36・28pxの4種類。最小幅と角丸もサイズごとに決まっている。",
+      "aliases": [
+        "ボタンの大きさ",
+        "標準ボタン",
+        "大中小"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節／https://design.digital.go.jp/dads/components/button/\n【作るもの】DADS button (lg / md / sm / xs)（4段階サイズのボタン）\n【再現する見た目・動き】高さ lg56 / md48 / sm36 / xs28px、最小幅 136 / 96 / 80 / 72px、角丸8px（sm 6・xs 4）、文字16px・字間0.02em。sm・xs は ::after で押せる範囲を44px以上に\n【指示】DADS のボタン（〈md 48px〉、角丸8px、最小幅96px）で〈送信ボタン〉を作って。sm・xs は::afterでタップ領域を44px以上に広げて。",
+      "preview": {
+        "demo": "sizes"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節",
+      "ref_url": "https://design.digital.go.jp/dads/components/button/"
+    },
+    {
+      "id": "dads-design/button-solid",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "DADS solid button",
+      "name_ja": "塗りのボタン（主操作）",
+      "description_ja": "キーカラーで塗り、白文字のボタン。hoverで少し濃く、押すとさらに濃くなる。",
+      "aliases": [
+        "メインボタン",
+        "青いボタン",
+        "主ボタン"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節／https://design.digital.go.jp/dads/components/button/\n【作るもの】DADS solid button（塗りのボタン（主操作））\n【再現する見た目・動き】背景 key-900（#0017c1）、文字白。hover key-1000（#00118f）、active key-1200（#000060）。無効は背景 gray-300・文字 gray-50\n【指示】DADS の塗りボタンを〈主操作〉に使って。背景 key-900、hover key-1000、active key-1200。",
+      "preview": {
+        "demo": "buttons"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節",
+      "ref_url": "https://design.digital.go.jp/dads/components/button/"
+    },
+    {
+      "id": "dads-design/button-outline",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "DADS outline button",
+      "name_ja": "枠線のボタン（副操作）",
+      "description_ja": "白地にキーカラーの細い枠と文字のボタン。主操作の隣に置く副の操作用。",
+      "aliases": [
+        "枠だけボタン",
+        "サブボタン",
+        "白いボタン"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節／https://design.digital.go.jp/dads/components/button/\n【作るもの】DADS outline button（枠線のボタン（副操作））\n【再現する見た目・動き】白地＋key-900 の1px枠と文字。hover 背景 key-200（#c5d7fb）、active key-300（#9db7f9）\n【指示】DADS の枠線ボタンを〈キャンセル〉に使って。白地、key-900 の1px枠、hover 背景は key-200。",
+      "preview": {
+        "demo": "buttons"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節",
+      "ref_url": "https://design.digital.go.jp/dads/components/button/"
+    },
+    {
+      "id": "dads-design/button-text",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "DADS text button",
+      "name_ja": "下線つきテキストボタン",
+      "description_ja": "背景も枠もなく、下線つきの文字だけのボタン。hoverで下線が太くなる。",
+      "aliases": [
+        "リンク風ボタン",
+        "文字だけボタン"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節／https://design.digital.go.jp/dads/components/button/\n【作るもの】DADS text button（下線つきテキストボタン）\n【再現する見た目・動き】透明地＋key-900 の文字＋下線1px。hover で背景 key-50（#e8f1fe）・下線3px\n【指示】DADS のテキストボタンを〈詳細を見る〉に使って。下線1px、hover で背景 key-50・下線3px。",
+      "preview": {
+        "demo": "buttons"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節",
+      "ref_url": "https://design.digital.go.jp/dads/components/button/"
+    },
+    {
+      "id": "dads-design/input-text",
+      "kind": "ui",
+      "category": "input",
+      "name_en": "DADS text input",
+      "name_ja": "テキスト入力欄",
+      "description_ja": "高さ40〜56pxの入力欄。枠は濃い灰色で、hoverで黒になる。ラベルは上に置く。",
+      "aliases": [
+        "入力フォーム",
+        "テキストボックス",
+        "記入欄"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節／https://design.digital.go.jp/dads/components/input-text/\n【作るもの】DADS text input（テキスト入力欄）\n【再現する見た目・動き】高さ sm40 / md48 / lg56px、padding 12px 16px、角丸8px、枠 gray-600（#666）、hover は黒。ラベルは上に置き gray-800。focus で枠が強調され、カーソルが点滅（プレビュー）\n【指示】DADS の入力欄（〈md 48px〉、padding 12px 16px、角丸8px、枠 gray-600）で〈氏名欄〉を作って。ラベルは上に置いて。",
+      "preview": {
+        "demo": "input"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節",
+      "ref_url": "https://design.digital.go.jp/dads/components/input-text/"
+    },
+    {
+      "id": "dads-design/link-text",
+      "kind": "ui",
+      "category": "navigation",
+      "name_en": "DADS link text",
+      "name_ja": "下線つきリンク",
+      "description_ja": "リンクは必ず下線をつけ、色だけで区別しない。訪問済みは紫に変わる。",
+      "aliases": [
+        "リンクの見た目",
+        "下線リンク",
+        "訪問済み色"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『トークン CSS（コピーして使う）』節／https://design.digital.go.jp/dads/foundations/link-text/\n【作るもの】DADS link text（下線つきリンク）\n【再現する見た目・動き】下線つき。通常 #00118f、訪問済み #8b008b、hover #0017c1。色だけで区別しない\n【指示】DADS のリンク表現で〈本文中のリンク〉を整えて。下線つき、通常 #00118f、訪問済み #8b008b。",
+      "preview": {
+        "demo": "buttons"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『トークン CSS（コピーして使う）』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/link-text/"
+    },
+    {
+      "id": "dads-design/elevation",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "DADS elevation",
+      "name_ja": "影の段階（浮き上がり）",
+      "description_ja": "二つの影を重ねた4段階の浮き方。hoverは弱く、ダイアログは強くする。",
+      "aliases": [
+        "影の付け方",
+        "浮いて見える",
+        "カードの影"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『トークン CSS（コピーして使う）』節／https://design.digital.go.jp/dads/foundations/elevation/\n【作るもの】DADS elevation（影の段階（浮き上がり））\n【再現する見た目・動き】2つの影の組。level1: 0 2px 8px 1px rgba(0,0,0,.1), 0 1px 5px 0 rgba(0,0,0,.3)。level2: 0 2px 12px 2px ..., level3: 0 4px 16px 3px ..., level4: 0 6px 20px 4px ...。hover は1、ダイアログは2以上\n【指示】DADS の Elevation で〈カード〉に影を付けて。hoverは level 1、ダイアログは level 2 以上。",
+      "preview": {
+        "demo": "elevation"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『トークン CSS（コピーして使う）』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/elevation/"
+    },
+    {
+      "id": "dads-design/corner-shapes",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "DADS corner shapes",
+      "name_ja": "角丸の使い分け",
+      "description_ja": "ボタン・入力欄は8px、カードは12〜16px、フォーカスは4pxなど、部品ごとの角丸ルール。",
+      "aliases": [
+        "角の丸み",
+        "丸角ルール"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『余白・角丸』節／https://design.digital.go.jp/dads/foundations/corner-shapes/\n【作るもの】DADS corner shapes（角丸の使い分け）\n【再現する見た目・動き】4 / 6 / 8 / 12 / 16 / 24 / 32px / full(9999px)。ボタン・入力欄8px（小さいボタン 6・4）、カード12〜16px、フォーカス4px\n【指示】DADS の角丸ルールで〈カード（12px）とボタン（8px）〉をそろえて。",
+      "preview": {
+        "demo": "shapes"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『余白・角丸』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/corner-shapes/"
+    },
+    {
+      "id": "dads-design/typography-scale",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "DADS typography scale (Std-16N-170 etc.)",
+      "name_ja": "文字サイズ表（太さは2つだけ）",
+      "description_ja": "本文16px・行間1.7を基本に、見出しは太字700。太さは400と700だけ使う。",
+      "aliases": [
+        "文字の大きさ",
+        "見出しの太さ",
+        "行間の目安"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『文字（タイプスケール）』節／https://design.digital.go.jp/dads/foundations/typography/\n【作るもの】DADS typography scale (Std-16N-170 etc.)（文字サイズ表（太さは2つだけ））\n【再現する見た目・動き】Std-16N-170（本文）= 16px/400/行間1.7/字間0.02em、Std-32B-150 = 32px/700/1.5/0.01em、Std-24B-150 = 24px/700/1.5/0.02em。太さは400と700のみ。書体 Noto Sans JP\n【指示】DADS のタイプスケールで本文を〈Std-16N-170〉、見出しを〈Std-32B-150〉にして。太さは400と700だけ。",
+      "preview": {
+        "demo": "typescale"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『文字（タイプスケール）』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/typography/"
+    },
+    {
+      "id": "dads-design/spacing-8px",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "DADS spacing (8px grid)",
+      "name_ja": "8の倍数の余白",
+      "description_ja": "余白をすべて8・16・24・32・40・64pxなど8の倍数でそろえる。",
+      "aliases": [
+        "余白の基準",
+        "8pxグリッド",
+        "間隔をそろえる"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『余白・角丸』節／https://design.digital.go.jp/dads/foundations/spacing/\n【作るもの】DADS spacing (8px grid)（8の倍数の余白）\n【再現する見た目・動き】余白は8の倍数（8 / 16 / 24 / 32 / 40 / 64 …）\n【指示】DADS の Spacing に合わせて、〈画面全体〉の余白を8の倍数にそろえて。",
+      "preview": {
+        "demo": "spacing"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『余白・角丸』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/spacing/"
+    },
+    {
+      "id": "dads-design/solid-gray-scale",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "DADS solid gray scale",
+      "name_ja": "灰色の段階表",
+      "description_ja": "50〜900の灰色の段階。本文は900、補足は600〜700、枠は600など用途で決まっている。",
+      "aliases": [
+        "グレーの使い分け",
+        "文字色の灰色"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『色の規則』節／https://design.digital.go.jp/dads/foundations/color/\n【作るもの】DADS solid gray scale（灰色の段階表）\n【再現する見た目・動き】本文 gray-900 #1a1a1a、ラベル gray-800 #333、補足 gray-700 #4d4d4d／gray-600 #666（白地5.74:1）、区切り線 gray-100〜200、無効 背景 gray-50・文字枠 gray-300。文字は4.5:1以上\n【指示】DADS の Solid Gray で文字・枠・無効の色を決めて。本文 gray-900、補足 gray-700、無効の背景 gray-50。",
+      "preview": {
+        "demo": "swatches",
+        "variant": "gray"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『色の規則』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/color/"
+    },
+    {
+      "id": "dads-design/key-color-swap",
+      "kind": "ui",
+      "category": "layout",
+      "name_en": "DADS key color replacement",
+      "name_ja": "キーカラーの差し替え",
+      "description_ja": "構造はそのままで、青をブランド色に置き換える。文字に使うときは必ず4.5:1以上を計算する。",
+      "aliases": [
+        "ブランドカラーに変更",
+        "テーマ色変更"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『色の規則』節／https://design.digital.go.jp/dads/foundations/color/accessibility/\n【作るもの】DADS key color replacement（キーカラーの差し替え）\n【再現する見た目・動き】キーカラー既定 key-900 #0017c1 / 1000 #00118f / 1200 #000060 / 50 #e8f1fe。差し替えは同じ色相で900/1000/1100/50を用意し、白地・実際の背景でのコントラスト比を Python で計算（4.5:1以上）。gray-50上では比が下がる\n【指示】DADS の構造を保ったまま、キーカラーを〈ブランド色〉に差し替えて。白地の文字に使えるか Python でコントラスト比を計算して。",
+      "preview": {
+        "demo": "swatches"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『色の規則』節",
+      "ref_url": "https://design.digital.go.jp/dads/foundations/color/accessibility/"
+    },
+    {
+      "id": "dads-design/tap-target-44",
+      "kind": "ui",
+      "category": "button",
+      "name_en": "DADS tap target (44px)",
+      "name_ja": "押しやすさ44px以上",
+      "description_ja": "見た目が小さいボタンでも、押せる範囲を44px以上に広げる。",
+      "aliases": [
+        "タップ領域",
+        "押しやすいサイズ"
+      ],
+      "prompt": "【出典】スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節／https://design.digital.go.jp/dads/components/button/\n【作るもの】DADS tap target (44px)（押しやすさ44px以上）\n【再現する見た目・動き】押せる範囲は44px以上。小さいボタンは ::after で領域だけ広げ、見た目は変えない（プレビューの点線が押せる範囲）\n【指示】DADS のタップ領域（44px以上）を〈小さいボタン〉に確保して。見た目はそのままで ::after で押せる範囲を広げて。",
+      "preview": {
+        "demo": "tap"
+      },
+      "source_ref": "スキル dads-design（~/.agents/skills/dads-design/SKILL.md）の『部品の寸法』節",
+      "ref_url": "https://design.digital.go.jp/dads/components/button/"
+    }
+  ]
+}

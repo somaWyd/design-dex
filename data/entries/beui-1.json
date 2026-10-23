@@ -1,0 +1,1597 @@
+{
+ "source": {
+  "id": "beui",
+  "type": "skill+mcp",
+  "name": "beUI",
+  "ref": "https://beui.dev",
+  "added_at": "2026-10-22"
+ },
+ "entries": [
+  {
+   "id": "beui/timeline",
+   "slug": "timeline",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Timeline",
+   "name_ja": "ドラッグで動かす年表",
+   "description_ja": "日付つきの出来事が横に並び、ドラッグすると選んだカードが中央に来て大きく表示される。",
+   "aliases": [
+    "年表",
+    "歴史の流れ",
+    "経歴の一覧",
+    "時系列",
+    "ずらして見る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"timeline\")／shadcn レジストリ @beui/timeline）／https://beui.dev/components/motion/timeline\n【作るもの】Timeline（ドラッグで動かす年表）\n【再現する見た目・動き】見本ページのプレビューと同じ。日付つきの出来事が横に並び、ドラッグすると選んだカードが中央に来て大きく表示される。\n【指示】`npx shadcn@latest add @beui/timeline` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/timeline",
+   "preview": {
+    "image": "previews/beui/timeline.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"timeline\")／shadcn レジストリ @beui/timeline）",
+   "ref_url": "https://beui.dev/components/motion/timeline"
+  },
+  {
+   "id": "beui/alert",
+   "slug": "alert",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Animated Alert",
+   "name_ja": "動く注意バナー",
+   "description_ja": "成功・警告・エラーなどのお知らせ枠。出入りがなめらかに動く。",
+   "aliases": [
+    "お知らせ枠",
+    "警告表示",
+    "エラー表示",
+    "注意書き",
+    "アラート"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"alert\")／shadcn レジストリ @beui/alert）／https://beui.dev/components/motion/alert\n【作るもの】Animated Alert（動く注意バナー）\n【再現する見た目・動き】見本ページのプレビューと同じ。成功・警告・エラーなどのお知らせ枠。出入りがなめらかに動く。\n【指示】`npx shadcn@latest add @beui/alert` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/alert",
+   "preview": {
+    "image": "previews/beui/alert.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"alert\")／shadcn レジストリ @beui/alert）",
+   "ref_url": "https://beui.dev/components/motion/alert"
+  },
+  {
+   "id": "beui/collapsible",
+   "slug": "collapsible",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Animated Collapsible",
+   "name_ja": "開閉する詳細欄",
+   "description_ja": "クリックすると中身がなめらかに開いたり閉じたりする欄。",
+   "aliases": [
+    "折りたたみ",
+    "もっと見る",
+    "開いたり閉じたり",
+    "詳細を隠す"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"collapsible\")／shadcn レジストリ @beui/collapsible）／https://beui.dev/components/motion/collapsible\n【作るもの】Animated Collapsible（開閉する詳細欄）\n【再現する見た目・動き】見本ページのプレビューと同じ。クリックすると中身がなめらかに開いたり閉じたりする欄。\n【指示】`npx shadcn@latest add @beui/collapsible` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/collapsible",
+   "preview": {
+    "image": "previews/beui/collapsible.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"collapsible\")／shadcn レジストリ @beui/collapsible）",
+   "ref_url": "https://beui.dev/components/motion/collapsible"
+  },
+  {
+   "id": "beui/aspect-ratio",
+   "slug": "aspect-ratio",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Aspect Ratio",
+   "name_ja": "比率を保つ画像枠",
+   "description_ja": "画像や動画の枠の縦横比を保ち、比率を変えるときもなめらかに切り替わる。",
+   "aliases": [
+    "画像の枠",
+    "縦横比",
+    "サムネの枠",
+    "16:9"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"aspect-ratio\")／shadcn レジストリ @beui/aspect-ratio）／https://beui.dev/components/motion/aspect-ratio\n【作るもの】Aspect Ratio（比率を保つ画像枠）\n【再現する見た目・動き】見本ページのプレビューと同じ。画像や動画の枠の縦横比を保ち、比率を変えるときもなめらかに切り替わる。\n【指示】`npx shadcn@latest add @beui/aspect-ratio` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/aspect-ratio",
+   "preview": {
+    "image": "previews/beui/aspect-ratio.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"aspect-ratio\")／shadcn レジストリ @beui/aspect-ratio）",
+   "ref_url": "https://beui.dev/components/motion/aspect-ratio"
+  },
+  {
+   "id": "beui/arc-picker",
+   "slug": "arc-picker",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Arc Picker",
+   "name_ja": "弧に並ぶ選択ホイール",
+   "description_ja": "選択肢が弧状に並び、ホイールを回すように回して選ぶ。",
+   "aliases": [
+    "ルーレット風",
+    "くるくる回して選ぶ",
+    "丸く並べる",
+    "ダイヤル"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"arc-picker\")／shadcn レジストリ @beui/arc-picker）／https://beui.dev/components/motion/arc-picker\n【作るもの】Arc Picker（弧に並ぶ選択ホイール）\n【再現する見た目・動き】見本ページのプレビューと同じ。選択肢が弧状に並び、ホイールを回すように回して選ぶ。\n【指示】`npx shadcn@latest add @beui/arc-picker` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/arc-picker",
+   "preview": {
+    "image": "previews/beui/arc-picker.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"arc-picker\")／shadcn レジストリ @beui/arc-picker）",
+   "ref_url": "https://beui.dev/components/motion/arc-picker"
+  },
+  {
+   "id": "beui/sortable-stack",
+   "slug": "sortable-stack",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Sortable List",
+   "name_ja": "ドラッグで並べ替える一覧",
+   "description_ja": "項目をつかんで上下にドラッグして順番を入れ替えられる一覧。",
+   "aliases": [
+    "並べ替えリスト",
+    "順番を変える",
+    "ドラッグ移動",
+    "ドラッグ&ドロップ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"sortable-stack\")／shadcn レジストリ @beui/sortable-stack）／https://beui.dev/components/motion/sortable-stack\n【作るもの】Sortable List（ドラッグで並べ替える一覧）\n【再現する見た目・動き】見本ページのプレビューと同じ。項目をつかんで上下にドラッグして順番を入れ替えられる一覧。\n【指示】`npx shadcn@latest add @beui/sortable-stack` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/sortable-stack",
+   "preview": {
+    "image": "previews/beui/sortable-stack.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"sortable-stack\")／shadcn レジストリ @beui/sortable-stack）",
+   "ref_url": "https://beui.dev/components/motion/sortable-stack"
+  },
+  {
+   "id": "beui/morphing-lightbox",
+   "slug": "morphing-lightbox",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Image Viewer Morphing",
+   "name_ja": "サムネから広がる画像ビューア",
+   "description_ja": "小さな画像をクリックすると、その位置から大きな表示へ形が変わりながら広がる。",
+   "aliases": [
+    "画像拡大",
+    "ギャラリー",
+    "写真をクリックして大きく",
+    "ライトボックス"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"morphing-lightbox\")／shadcn レジストリ @beui/morphing-lightbox）／https://beui.dev/components/motion/image-viewer\n【作るもの】Image Viewer Morphing（サムネから広がる画像ビューア）\n【再現する見た目・動き】見本ページのプレビューと同じ。小さな画像をクリックすると、その位置から大きな表示へ形が変わりながら広がる。\n【指示】`npx shadcn@latest add @beui/morphing-lightbox` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/image-viewer",
+   "preview": {
+    "image": "previews/beui/morphing-lightbox.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"morphing-lightbox\")／shadcn レジストリ @beui/morphing-lightbox）",
+   "ref_url": "https://beui.dev/components/motion/image-viewer"
+  },
+  {
+   "id": "beui/date-range-picker",
+   "slug": "date-range-picker",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Date Range Picker",
+   "name_ja": "期間を選ぶカレンダー",
+   "description_ja": "開始日と終了日をカレンダー上でまとめて選べる入力。",
+   "aliases": [
+    "日付範囲",
+    "期間指定",
+    "カレンダー選択",
+    "日にち選び"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"date-range-picker\")／shadcn レジストリ @beui/date-range-picker）／https://beui.dev/components/motion/date-range-picker\n【作るもの】Date Range Picker（期間を選ぶカレンダー）\n【再現する見た目・動き】見本ページのプレビューと同じ。開始日と終了日をカレンダー上でまとめて選べる入力。\n【指示】`npx shadcn@latest add @beui/date-range-picker` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/date-range-picker",
+   "preview": {
+    "image": "previews/beui/date-range-picker.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"date-range-picker\")／shadcn レジストリ @beui/date-range-picker）",
+   "ref_url": "https://beui.dev/components/motion/date-range-picker"
+  },
+  {
+   "id": "beui/card",
+   "slug": "card",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Card",
+   "name_ja": "見出し付きカード",
+   "description_ja": "タイトル・説明・操作・本文・フッターを組み合わせられる箱型の枠。",
+   "aliases": [
+    "カード枠",
+    "箱で囲む",
+    "情報のかたまり",
+    "パネル"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"card\")／shadcn レジストリ @beui/card）／https://beui.dev/components/motion/card\n【作るもの】Card（見出し付きカード）\n【再現する見た目・動き】見本ページのプレビューと同じ。タイトル・説明・操作・本文・フッターを組み合わせられる箱型の枠。\n【指示】`npx shadcn@latest add @beui/card` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/card",
+   "preview": {
+    "image": "previews/beui/card.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"card\")／shadcn レジストリ @beui/card）",
+   "ref_url": "https://beui.dev/components/motion/card"
+  },
+  {
+   "id": "beui/color-picker",
+   "slug": "color-picker",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Color Picker",
+   "name_ja": "広がる色選びパネル",
+   "description_ja": "色の小さな丸をクリックすると、色の選択パネルへ形が変わって広がる。",
+   "aliases": [
+    "カラーパレット",
+    "色を選ぶ",
+    "色の選択",
+    "スポイト"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"color-picker\")／shadcn レジストリ @beui/color-picker）／https://beui.dev/components/motion/color-picker\n【作るもの】Color Picker（広がる色選びパネル）\n【再現する見た目・動き】見本ページのプレビューと同じ。色の小さな丸をクリックすると、色の選択パネルへ形が変わって広がる。\n【指示】`npx shadcn@latest add @beui/color-picker` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/color-picker",
+   "preview": {
+    "image": "previews/beui/color-picker.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"color-picker\")／shadcn レジストリ @beui/color-picker）",
+   "ref_url": "https://beui.dev/components/motion/color-picker"
+  },
+  {
+   "id": "beui/color-selector",
+   "slug": "color-selector",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Animated Color Selector",
+   "name_ja": "リングが滑る色見本",
+   "description_ja": "色見本が並び、選択の輪がバネのように次の色へ滑って移る。",
+   "aliases": [
+    "色の選択",
+    "色見本",
+    "カラーチップ",
+    "丸い色の一覧"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"color-selector\")／shadcn レジストリ @beui/color-selector）／https://beui.dev/components/motion/color-selector\n【作るもの】Animated Color Selector（リングが滑る色見本）\n【再現する見た目・動き】見本ページのプレビューと同じ。色見本が並び、選択の輪がバネのように次の色へ滑って移る。\n【指示】`npx shadcn@latest add @beui/color-selector` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/color-selector",
+   "preview": {
+    "image": "previews/beui/color-selector.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"color-selector\")／shadcn レジストリ @beui/color-selector）",
+   "ref_url": "https://beui.dev/components/motion/color-selector"
+  },
+  {
+   "id": "beui/breadcrumb",
+   "slug": "breadcrumb",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Animated Breadcrumb",
+   "name_ja": "なめらかなパンくずリスト",
+   "description_ja": "今いる場所までの道筋を横に並べ、切り替わりがやわらかく動く。",
+   "aliases": [
+    "パンくず",
+    "今どこ表示",
+    "階層の道しるべ",
+    "ホーム＞〜"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"breadcrumb\")／shadcn レジストリ @beui/breadcrumb）／https://beui.dev/components/motion/breadcrumb\n【作るもの】Animated Breadcrumb（なめらかなパンくずリスト）\n【再現する見た目・動き】見本ページのプレビューと同じ。今いる場所までの道筋を横に並べ、切り替わりがやわらかく動く。\n【指示】`npx shadcn@latest add @beui/breadcrumb` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/breadcrumb",
+   "preview": {
+    "image": "previews/beui/breadcrumb.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"breadcrumb\")／shadcn レジストリ @beui/breadcrumb）",
+   "ref_url": "https://beui.dev/components/motion/breadcrumb"
+  },
+  {
+   "id": "beui/tilt-card",
+   "slug": "tilt-card",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Tilt Card",
+   "name_ja": "マウスで傾くカード",
+   "description_ja": "カーソルに合わせてカードが立体的に傾き、光沢が追いかける。",
+   "aliases": [
+    "傾くカード",
+    "3Dカード",
+    "ホバーでぐにゃっ",
+    "キラッと光る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"tilt-card\")／shadcn レジストリ @beui/tilt-card）／https://beui.dev/components/motion/tilt-card\n【作るもの】Tilt Card（マウスで傾くカード）\n【再現する見た目・動き】見本ページのプレビューと同じ。カーソルに合わせてカードが立体的に傾き、光沢が追いかける。\n【指示】`npx shadcn@latest add @beui/tilt-card` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/tilt-card",
+   "preview": {
+    "image": "previews/beui/tilt-card.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"tilt-card\")／shadcn レジストリ @beui/tilt-card）",
+   "ref_url": "https://beui.dev/components/motion/tilt-card"
+  },
+  {
+   "id": "beui/button-metallic",
+   "slug": "button-metallic",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Button Metallic Button",
+   "name_ja": "金属の縁取りボタン",
+   "description_ja": "金属のような光る縁に囲まれた、押しがいのあるボタン。",
+   "aliases": [
+    "メタリックボタン",
+    "銀色のボタン",
+    "クロームのボタン",
+    "高級感ボタン"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"button-metallic\")／shadcn レジストリ @beui/button-metallic）／https://beui.dev/components/motion/button\n【作るもの】Button Metallic Button（金属の縁取りボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。金属のような光る縁に囲まれた、押しがいのあるボタン。\n【指示】`npx shadcn@latest add @beui/button-metallic` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/button",
+   "preview": {
+    "image": "previews/beui/button-metallic.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"button-metallic\")／shadcn レジストリ @beui/button-metallic）",
+   "ref_url": "https://beui.dev/components/motion/button"
+  },
+  {
+   "id": "beui/button-base",
+   "slug": "button-base",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Button Button",
+   "name_ja": "押すと沈む基本ボタン",
+   "description_ja": "押すと少し縮み、触れると浮く基本のボタン。色とサイズの種類つき。",
+   "aliases": [
+    "普通のボタン",
+    "ぷにっと押せる",
+    "基本ボタン",
+    "クリックボタン"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"button-base\")／shadcn レジストリ @beui/button-base）／https://beui.dev/components/motion/button\n【作るもの】Button Button（押すと沈む基本ボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。押すと少し縮み、触れると浮く基本のボタン。色とサイズの種類つき。\n【指示】`npx shadcn@latest add @beui/button-base` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/button",
+   "preview": {
+    "image": "previews/beui/button-base.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"button-base\")／shadcn レジストリ @beui/button-base）",
+   "ref_url": "https://beui.dev/components/motion/button"
+  },
+  {
+   "id": "beui/button-stateful",
+   "slug": "button-stateful",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Button Stateful Button",
+   "name_ja": "状態が変わるボタン",
+   "description_ja": "待機から読み込み中、成功・失敗へ、ぼかしながら文字と幅が切り替わるボタン。",
+   "aliases": [
+    "送信中ボタン",
+    "成功したら変わる",
+    "ローディング付き",
+    "ぐるぐるボタン"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"button-stateful\")／shadcn レジストリ @beui/button-stateful）／https://beui.dev/components/motion/button\n【作るもの】Button Stateful Button（状態が変わるボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。待機から読み込み中、成功・失敗へ、ぼかしながら文字と幅が切り替わるボタン。\n【指示】`npx shadcn@latest add @beui/button-stateful` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/button",
+   "preview": {
+    "image": "previews/beui/button-stateful.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"button-stateful\")／shadcn レジストリ @beui/button-stateful）",
+   "ref_url": "https://beui.dev/components/motion/button"
+  },
+  {
+   "id": "beui/button-magnetic",
+   "slug": "button-magnetic",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Button Magnetic Button",
+   "name_ja": "カーソルに吸い付くボタン",
+   "description_ja": "カーソルを近づけると、ボタンが磁石のように引き寄せられて動く。",
+   "aliases": [
+    "吸い付くボタン",
+    "磁石みたい",
+    "カーソルに寄ってくる",
+    "ふわっと追う"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"button-magnetic\")／shadcn レジストリ @beui/button-magnetic）／https://beui.dev/components/motion/button\n【作るもの】Button Magnetic Button（カーソルに吸い付くボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。カーソルを近づけると、ボタンが磁石のように引き寄せられて動く。\n【指示】`npx shadcn@latest add @beui/button-magnetic` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/button",
+   "preview": {
+    "image": "previews/beui/button-magnetic.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"button-magnetic\")／shadcn レジストリ @beui/button-magnetic）",
+   "ref_url": "https://beui.dev/components/motion/button"
+  },
+  {
+   "id": "beui/expanding-arrow-button",
+   "slug": "expanding-arrow-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Animated CTA Buttons Expanding Arrow Button",
+   "name_ja": "矢印が伸びるボタン",
+   "description_ja": "触れると色のタイルが広がり、点線の矢印が伸びる誘導ボタン。",
+   "aliases": [
+    "矢印ボタン",
+    "伸びるボタン",
+    "CTAボタン",
+    "次へ進むボタン"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"expanding-arrow-button\")／shadcn レジストリ @beui/expanding-arrow-button）／https://beui.dev/components/motion/expanding-arrow-button\n【作るもの】Animated CTA Buttons Expanding Arrow Button（矢印が伸びるボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。触れると色のタイルが広がり、点線の矢印が伸びる誘導ボタン。\n【指示】`npx shadcn@latest add @beui/expanding-arrow-button` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/expanding-arrow-button",
+   "preview": {
+    "image": "previews/beui/expanding-arrow-button.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"expanding-arrow-button\")／shadcn レジストリ @beui/expanding-arrow-button）",
+   "ref_url": "https://beui.dev/components/motion/expanding-arrow-button"
+  },
+  {
+   "id": "beui/hold-action-button",
+   "slug": "hold-action-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Animated CTA Buttons Hold Action Button",
+   "name_ja": "長押しで完了するボタン",
+   "description_ja": "押し続けると液体が満ちるように塗られ、満タンで実行。途中で離すと戻る。",
+   "aliases": [
+    "長押しボタン",
+    "押し続ける",
+    "削除の確認",
+    "液体で満ちる"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"hold-action-button\")／shadcn レジストリ @beui/hold-action-button）／https://beui.dev/components/motion/button\n【作るもの】Animated CTA Buttons Hold Action Button（長押しで完了するボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。押し続けると液体が満ちるように塗られ、満タンで実行。途中で離すと戻る。\n【指示】`npx shadcn@latest add @beui/hold-action-button` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/button",
+   "preview": {
+    "image": "previews/beui/hold-action-button.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"hold-action-button\")／shadcn レジストリ @beui/hold-action-button）",
+   "ref_url": "https://beui.dev/components/motion/button"
+  },
+  {
+   "id": "beui/slide-action-button",
+   "slug": "slide-action-button",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Animated CTA Buttons Slide Action Button",
+   "name_ja": "スライドで確定するボタン",
+   "description_ja": "つまみを端までドラッグして確定。途中で離すとバネで戻る。",
+   "aliases": [
+    "スワイプで確定",
+    "スライドして送信",
+    "ロック解除風",
+    "引っ張るボタン"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"slide-action-button\")／shadcn レジストリ @beui/slide-action-button）／https://beui.dev/components/motion/button\n【作るもの】Animated CTA Buttons Slide Action Button（スライドで確定するボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。つまみを端までドラッグして確定。途中で離すとバネで戻る。\n【指示】`npx shadcn@latest add @beui/slide-action-button` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/button",
+   "preview": {
+    "image": "previews/beui/slide-action-button.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"slide-action-button\")／shadcn レジストリ @beui/slide-action-button）",
+   "ref_url": "https://beui.dev/components/motion/button"
+  },
+  {
+   "id": "beui/expandable-control",
+   "slug": "expandable-control",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Expandable Control",
+   "name_ja": "押すとラベルが出る操作",
+   "description_ja": "小さなボタンやチップをクリックすると、ラベルや追加の操作が横に広がる。",
+   "aliases": [
+    "広がるボタン",
+    "アイコンが文字になる",
+    "ぴょこっと出る",
+    "チップ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"expandable-control\")／shadcn レジストリ @beui/expandable-control）／https://beui.dev/components/motion/expandable-control\n【作るもの】Expandable Control（押すとラベルが出る操作）\n【再現する見た目・動き】見本ページのプレビューと同じ。小さなボタンやチップをクリックすると、ラベルや追加の操作が横に広がる。\n【指示】`npx shadcn@latest add @beui/expandable-control` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/expandable-control",
+   "preview": {
+    "image": "previews/beui/expandable-control.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"expandable-control\")／shadcn レジストリ @beui/expandable-control）",
+   "ref_url": "https://beui.dev/components/motion/expandable-control"
+  },
+  {
+   "id": "beui/adaptive-stepper",
+   "slug": "adaptive-stepper",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Adaptive Stepper",
+   "name_ja": "数を増減するステッパー",
+   "description_ja": "プラスとマイナスで数を変える部品。最小値では幅が自然に変わる。",
+   "aliases": [
+    "数量ボタン",
+    "＋−ボタン",
+    "個数の入力",
+    "カウンター"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"adaptive-stepper\")／shadcn レジストリ @beui/adaptive-stepper）／https://beui.dev/components/motion/adaptive-stepper\n【作るもの】Adaptive Stepper（数を増減するステッパー）\n【再現する見た目・動き】見本ページのプレビューと同じ。プラスとマイナスで数を変える部品。最小値では幅が自然に変わる。\n【指示】`npx shadcn@latest add @beui/adaptive-stepper` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/adaptive-stepper",
+   "preview": {
+    "image": "previews/beui/adaptive-stepper.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"adaptive-stepper\")／shadcn レジストリ @beui/adaptive-stepper）",
+   "ref_url": "https://beui.dev/components/motion/adaptive-stepper"
+  },
+  {
+   "id": "beui/marquee",
+   "slug": "marquee",
+   "kind": "motion",
+   "category": "ambient",
+   "name_en": "Marquee",
+   "name_ja": "流れ続けるテロップ",
+   "description_ja": "ロゴや文字が横（縦）にずっと流れ続ける。触れると止まる。",
+   "aliases": [
+    "流れる文字",
+    "ニュースのテロップ",
+    "ロゴが流れる",
+    "無限スクロール"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"marquee\")／shadcn レジストリ @beui/marquee）／https://beui.dev/components/motion/marquee\n【作るもの】Marquee（流れ続けるテロップ）\n【再現する見た目・動き】見本ページのプレビューと同じ。ロゴや文字が横（縦）にずっと流れ続ける。触れると止まる。\n【指示】`npx shadcn@latest add @beui/marquee` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/marquee",
+   "preview": {
+    "image": "previews/beui/marquee.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"marquee\")／shadcn レジストリ @beui/marquee）",
+   "ref_url": "https://beui.dev/components/motion/marquee"
+  },
+  {
+   "id": "beui/tabs",
+   "slug": "tabs",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Tabs",
+   "name_ja": "なめらかなタブ",
+   "description_ja": "切り替え用のタブ。選択中の印が次のタブへバネのように滑って移る。",
+   "aliases": [
+    "タブ切り替え",
+    "切り替えボタン",
+    "下線が動く",
+    "セグメント"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"tabs\")／shadcn レジストリ @beui/tabs）／https://beui.dev/components/motion/tabs\n【作るもの】Tabs（なめらかなタブ）\n【再現する見た目・動き】見本ページのプレビューと同じ。切り替え用のタブ。選択中の印が次のタブへバネのように滑って移る。\n【指示】`npx shadcn@latest add @beui/tabs` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/tabs",
+   "preview": {
+    "image": "previews/beui/tabs.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"tabs\")／shadcn レジストリ @beui/tabs）",
+   "ref_url": "https://beui.dev/components/motion/tabs"
+  },
+  {
+   "id": "beui/switch",
+   "slug": "switch",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Switch",
+   "name_ja": "バネで動くスイッチ",
+   "description_ja": "オンとオフを切り替える部品。つまみがバネのように動く。",
+   "aliases": [
+    "オンオフ",
+    "トグル",
+    "スイッチボタン",
+    "切り替えスイッチ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"switch\")／shadcn レジストリ @beui/switch）／https://beui.dev/components/motion/switch\n【作るもの】Switch（バネで動くスイッチ）\n【再現する見た目・動き】見本ページのプレビューと同じ。オンとオフを切り替える部品。つまみがバネのように動く。\n【指示】`npx shadcn@latest add @beui/switch` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/switch",
+   "preview": {
+    "image": "previews/beui/switch.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"switch\")／shadcn レジストリ @beui/switch）",
+   "ref_url": "https://beui.dev/components/motion/switch"
+  },
+  {
+   "id": "beui/input",
+   "slug": "input",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Input",
+   "name_ja": "アイコン付き入力欄",
+   "description_ja": "ラベルや左右のアイコン、エラー表示欄を持つ文字入力欄。",
+   "aliases": [
+    "入力欄",
+    "テキストボックス",
+    "フォームの枠",
+    "文字を打つ所"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"input\")／shadcn レジストリ @beui/input）／https://beui.dev/components/motion/input\n【作るもの】Input（アイコン付き入力欄）\n【再現する見た目・動き】見本ページのプレビューと同じ。ラベルや左右のアイコン、エラー表示欄を持つ文字入力欄。\n【指示】`npx shadcn@latest add @beui/input` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/input",
+   "preview": {
+    "image": "previews/beui/input.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"input\")／shadcn レジストリ @beui/input）",
+   "ref_url": "https://beui.dev/components/motion/input"
+  },
+  {
+   "id": "beui/select",
+   "slug": "select",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Select Select",
+   "name_ja": "なめらかなプルダウン",
+   "description_ja": "クリックすると選択肢の一覧が開く、基本のプルダウン。",
+   "aliases": [
+    "プルダウン",
+    "ドロップダウン",
+    "選択ボックス",
+    "リストから選ぶ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"select\")／shadcn レジストリ @beui/select）／https://beui.dev/components/motion/select\n【作るもの】Select Select（なめらかなプルダウン）\n【再現する見た目・動き】見本ページのプレビューと同じ。クリックすると選択肢の一覧が開く、基本のプルダウン。\n【指示】`npx shadcn@latest add @beui/select` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/select",
+   "preview": {
+    "image": "previews/beui/select.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"select\")／shadcn レジストリ @beui/select）",
+   "ref_url": "https://beui.dev/components/motion/select"
+  },
+  {
+   "id": "beui/select-morph",
+   "slug": "select-morph",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Select Morph Select",
+   "name_ja": "形が変わるプルダウン",
+   "description_ja": "ボタンがそのまま選択肢の一覧に変形して広がるプルダウン。",
+   "aliases": [
+    "広がるプルダウン",
+    "変形するメニュー",
+    "ぐにっと開く",
+    "セレクト"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"select-morph\")／shadcn レジストリ @beui/select-morph）／https://beui.dev/components/motion/select\n【作るもの】Select Morph Select（形が変わるプルダウン）\n【再現する見た目・動き】見本ページのプレビューと同じ。ボタンがそのまま選択肢の一覧に変形して広がるプルダウン。\n【指示】`npx shadcn@latest add @beui/select-morph` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/select",
+   "preview": {
+    "image": "previews/beui/select-morph.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"select-morph\")／shadcn レジストリ @beui/select-morph）",
+   "ref_url": "https://beui.dev/components/motion/select"
+  },
+  {
+   "id": "beui/combobox",
+   "slug": "combobox",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Combobox",
+   "name_ja": "検索できるプルダウン",
+   "description_ja": "文字を打って候補を絞り込みながら選べる入力。",
+   "aliases": [
+    "検索付き選択",
+    "サジェスト",
+    "絞り込み入力",
+    "候補が出る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"combobox\")／shadcn レジストリ @beui/combobox）／https://beui.dev/components/motion/combobox\n【作るもの】Combobox（検索できるプルダウン）\n【再現する見た目・動き】見本ページのプレビューと同じ。文字を打って候補を絞り込みながら選べる入力。\n【指示】`npx shadcn@latest add @beui/combobox` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/combobox",
+   "preview": {
+    "image": "previews/beui/combobox.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"combobox\")／shadcn レジストリ @beui/combobox）",
+   "ref_url": "https://beui.dev/components/motion/combobox"
+  },
+  {
+   "id": "beui/multi-select",
+   "slug": "multi-select",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Multi Select",
+   "name_ja": "複数選べる選択欄",
+   "description_ja": "複数の選択肢を検索しながら選び、選んだものを小さな札で外せる。",
+   "aliases": [
+    "タグ入力",
+    "複数選択",
+    "チェックして選ぶ",
+    "ラベルを付ける"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"multi-select\")／shadcn レジストリ @beui/multi-select）／https://beui.dev/components/motion/multi-select\n【作るもの】Multi Select（複数選べる選択欄）\n【再現する見た目・動き】見本ページのプレビューと同じ。複数の選択肢を検索しながら選び、選んだものを小さな札で外せる。\n【指示】`npx shadcn@latest add @beui/multi-select` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/multi-select",
+   "preview": {
+    "image": "previews/beui/multi-select.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"multi-select\")／shadcn レジストリ @beui/multi-select）",
+   "ref_url": "https://beui.dev/components/motion/multi-select"
+  },
+  {
+   "id": "beui/checkbox",
+   "slug": "checkbox",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Checkbox",
+   "name_ja": "線が描かれるチェック",
+   "description_ja": "チェックの印が手書きのように描かれ、押すと弾む。",
+   "aliases": [
+    "チェックボックス",
+    "ちぇっくマーク",
+    "四角にチェック",
+    "選択の印"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"checkbox\")／shadcn レジストリ @beui/checkbox）／https://beui.dev/components/motion/checkbox\n【作るもの】Checkbox（線が描かれるチェック）\n【再現する見た目・動き】見本ページのプレビューと同じ。チェックの印が手書きのように描かれ、押すと弾む。\n【指示】`npx shadcn@latest add @beui/checkbox` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/checkbox",
+   "preview": {
+    "image": "previews/beui/checkbox.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"checkbox\")／shadcn レジストリ @beui/checkbox）",
+   "ref_url": "https://beui.dev/components/motion/checkbox"
+  },
+  {
+   "id": "beui/radio",
+   "slug": "radio",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Radio Group",
+   "name_ja": "滑る丸印の単一選択",
+   "description_ja": "複数から1つを選ぶ部品。選択の丸印が次へ滑って動く。",
+   "aliases": [
+    "ラジオボタン",
+    "1つだけ選ぶ",
+    "丸い選択",
+    "択一"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"radio\")／shadcn レジストリ @beui/radio）／https://beui.dev/components/motion/radio\n【作るもの】Radio Group（滑る丸印の単一選択）\n【再現する見た目・動き】見本ページのプレビューと同じ。複数から1つを選ぶ部品。選択の丸印が次へ滑って動く。\n【指示】`npx shadcn@latest add @beui/radio` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/radio",
+   "preview": {
+    "image": "previews/beui/radio.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"radio\")／shadcn レジストリ @beui/radio）",
+   "ref_url": "https://beui.dev/components/motion/radio"
+  },
+  {
+   "id": "beui/bottom-sheet",
+   "slug": "bottom-sheet",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Bottom Sheet",
+   "name_ja": "下から引き出すパネル",
+   "description_ja": "画面の下から引き出せるパネル。止まる高さを決められ、指の勢いで動く。",
+   "aliases": [
+    "ボトムシート",
+    "下から出る",
+    "引き出しメニュー",
+    "スワイプで出る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"bottom-sheet\")／shadcn レジストリ @beui/bottom-sheet）／https://beui.dev/components/motion/bottom-sheet\n【作るもの】Bottom Sheet（下から引き出すパネル）\n【再現する見た目・動き】見本ページのプレビューと同じ。画面の下から引き出せるパネル。止まる高さを決められ、指の勢いで動く。\n【指示】`npx shadcn@latest add @beui/bottom-sheet` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/bottom-sheet",
+   "preview": {
+    "image": "previews/beui/bottom-sheet.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"bottom-sheet\")／shadcn レジストリ @beui/bottom-sheet）",
+   "ref_url": "https://beui.dev/components/motion/bottom-sheet"
+  },
+  {
+   "id": "beui/pull-to-refresh",
+   "slug": "pull-to-refresh",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Pull to Refresh",
+   "name_ja": "引いて更新",
+   "description_ja": "リストを下へ引っ張ると更新が始まる。引く重さや反応が自然に付く。",
+   "aliases": [
+    "引っ張って更新",
+    "下に引いて再読み込み",
+    "リロード操作",
+    "スマホの更新"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"pull-to-refresh\")／shadcn レジストリ @beui/pull-to-refresh）／https://beui.dev/components/motion/pull-to-refresh\n【作るもの】Pull to Refresh（引いて更新）\n【再現する見た目・動き】見本ページのプレビューと同じ。リストを下へ引っ張ると更新が始まる。引く重さや反応が自然に付く。\n【指示】`npx shadcn@latest add @beui/pull-to-refresh` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/pull-to-refresh",
+   "preview": {
+    "image": "previews/beui/pull-to-refresh.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"pull-to-refresh\")／shadcn レジストリ @beui/pull-to-refresh）",
+   "ref_url": "https://beui.dev/components/motion/pull-to-refresh"
+  },
+  {
+   "id": "beui/shared-layout-bg",
+   "slug": "shared-layout-bg",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Shared Layout Background",
+   "name_ja": "滑る選択ハイライト",
+   "description_ja": "メニュー項目の上を、丸い背景が触れた項目へ滑るように移る。",
+   "aliases": [
+    "ホバーで動く背景",
+    "メニューの強調",
+    "滑るハイライト",
+    "丸い背景"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"shared-layout-bg\")／shadcn レジストリ @beui/shared-layout-bg）／https://beui.dev/components/motion/shared-layout-bg\n【作るもの】Shared Layout Background（滑る選択ハイライト）\n【再現する見た目・動き】見本ページのプレビューと同じ。メニュー項目の上を、丸い背景が触れた項目へ滑るように移る。\n【指示】`npx shadcn@latest add @beui/shared-layout-bg` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/shared-layout-bg",
+   "preview": {
+    "image": "previews/beui/shared-layout-bg.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"shared-layout-bg\")／shadcn レジストリ @beui/shared-layout-bg）",
+   "ref_url": "https://beui.dev/components/motion/shared-layout-bg"
+  },
+  {
+   "id": "beui/bounce-sidebar",
+   "slug": "bounce-sidebar",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Bounce Sidebar",
+   "name_ja": "点が跳ねるサイドバー",
+   "description_ja": "縦のメニューで、選択中の点が行き先へ跳ねて移動する。",
+   "aliases": [
+    "跳ねるメニュー",
+    "縦メニュー",
+    "サイドメニュー",
+    "ぴょんと移る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"bounce-sidebar\")／shadcn レジストリ @beui/bounce-sidebar）／https://beui.dev/components/motion/bounce-sidebar\n【作るもの】Bounce Sidebar（点が跳ねるサイドバー）\n【再現する見た目・動き】見本ページのプレビューと同じ。縦のメニューで、選択中の点が行き先へ跳ねて移動する。\n【指示】`npx shadcn@latest add @beui/bounce-sidebar` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/bounce-sidebar",
+   "preview": {
+    "image": "previews/beui/bounce-sidebar.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"bounce-sidebar\")／shadcn レジストリ @beui/bounce-sidebar）",
+   "ref_url": "https://beui.dev/components/motion/bounce-sidebar"
+  },
+  {
+   "id": "beui/animated-sidebar",
+   "slug": "animated-sidebar",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Animated Sidebar",
+   "name_ja": "入れ子が広がるサイドバー",
+   "description_ja": "アプリ用の左メニュー。入れ子の項目がなめらかに開閉して変形する。",
+   "aliases": [
+    "左メニュー",
+    "アプリの横メニュー",
+    "階層メニュー",
+    "サイドバー"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"animated-sidebar\")／shadcn レジストリ @beui/animated-sidebar）／https://beui.dev/components/motion/animated-sidebar\n【作るもの】Animated Sidebar（入れ子が広がるサイドバー）\n【再現する見た目・動き】見本ページのプレビューと同じ。アプリ用の左メニュー。入れ子の項目がなめらかに開閉して変形する。\n【指示】`npx shadcn@latest add @beui/animated-sidebar` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/animated-sidebar",
+   "preview": {
+    "image": "previews/beui/animated-sidebar.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"animated-sidebar\")／shadcn レジストリ @beui/animated-sidebar）",
+   "ref_url": "https://beui.dev/components/motion/animated-sidebar"
+  },
+  {
+   "id": "beui/file-tree",
+   "slug": "file-tree",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "File Tree",
+   "name_ja": "ファイルの階層表示",
+   "description_ja": "フォルダとファイルを枝のように開閉でき、選択も滑って移る。",
+   "aliases": [
+    "フォルダツリー",
+    "エクスプローラー",
+    "ファイル一覧",
+    "階層一覧"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"file-tree\")／shadcn レジストリ @beui/file-tree）／https://beui.dev/components/motion/file-tree\n【作るもの】File Tree（ファイルの階層表示）\n【再現する見た目・動き】見本ページのプレビューと同じ。フォルダとファイルを枝のように開閉でき、選択も滑って移る。\n【指示】`npx shadcn@latest add @beui/file-tree` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/file-tree",
+   "preview": {
+    "image": "previews/beui/file-tree.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"file-tree\")／shadcn レジストリ @beui/file-tree）",
+   "ref_url": "https://beui.dev/components/motion/file-tree"
+  },
+  {
+   "id": "beui/preview-rail",
+   "slug": "preview-rail",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Preview Rail",
+   "name_ja": "小さな目盛りのナビ",
+   "description_ja": "小さな目盛りが並び、触れると広がって内容を見せるナビ。",
+   "aliases": [
+    "目盛りナビ",
+    "縦の点メニュー",
+    "章の目次",
+    "ミニナビ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"preview-rail\")／shadcn レジストリ @beui/preview-rail）／https://beui.dev/components/motion/preview-rail\n【作るもの】Preview Rail（小さな目盛りのナビ）\n【再現する見た目・動き】見本ページのプレビューと同じ。小さな目盛りが並び、触れると広がって内容を見せるナビ。\n【指示】`npx shadcn@latest add @beui/preview-rail` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/preview-rail",
+   "preview": {
+    "image": "previews/beui/preview-rail.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"preview-rail\")／shadcn レジストリ @beui/preview-rail）",
+   "ref_url": "https://beui.dev/components/motion/preview-rail"
+  },
+  {
+   "id": "beui/dock",
+   "slug": "dock",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Dock",
+   "name_ja": "Mac風のドック",
+   "description_ja": "アイコンがグループで並び、選択中を丸い背景が滑って示す。",
+   "aliases": [
+    "ドック",
+    "下のアイコン帯",
+    "Macのメニュー",
+    "アプリ一覧"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"dock\")／shadcn レジストリ @beui/dock）／https://beui.dev/components/motion/dock\n【作るもの】Dock（Mac風のドック）\n【再現する見た目・動き】見本ページのプレビューと同じ。アイコンがグループで並び、選択中を丸い背景が滑って示す。\n【指示】`npx shadcn@latest add @beui/dock` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/dock",
+   "preview": {
+    "image": "previews/beui/dock.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"dock\")／shadcn レジストリ @beui/dock）",
+   "ref_url": "https://beui.dev/components/motion/dock"
+  },
+  {
+   "id": "beui/tooltip",
+   "slug": "tooltip",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Tooltip",
+   "name_ja": "触れると出るヒント",
+   "description_ja": "触れる・フォーカス・タップで小さな説明が現れる。",
+   "aliases": [
+    "ツールチップ",
+    "ホバー説明",
+    "吹き出しヒント",
+    "ちいさい説明"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"tooltip\")／shadcn レジストリ @beui/tooltip）／https://beui.dev/components/motion/tooltip\n【作るもの】Tooltip（触れると出るヒント）\n【再現する見た目・動き】見本ページのプレビューと同じ。触れる・フォーカス・タップで小さな説明が現れる。\n【指示】`npx shadcn@latest add @beui/tooltip` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/tooltip",
+   "preview": {
+    "image": "previews/beui/tooltip.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"tooltip\")／shadcn レジストリ @beui/tooltip）",
+   "ref_url": "https://beui.dev/components/motion/tooltip"
+  },
+  {
+   "id": "beui/context-menu",
+   "slug": "context-menu",
+   "kind": "ui",
+   "category": "navigation",
+   "name_en": "Animated Context Menu",
+   "name_ja": "右クリックメニュー",
+   "description_ja": "右クリックした場所から広がって現れる操作メニュー。",
+   "aliases": [
+    "右クリック",
+    "メニュー",
+    "長押しメニュー",
+    "操作一覧"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"context-menu\")／shadcn レジストリ @beui/context-menu）／https://beui.dev/components/motion/context-menu\n【作るもの】Animated Context Menu（右クリックメニュー）\n【再現する見た目・動き】見本ページのプレビューと同じ。右クリックした場所から広がって現れる操作メニュー。\n【指示】`npx shadcn@latest add @beui/context-menu` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/context-menu",
+   "preview": {
+    "image": "previews/beui/context-menu.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"context-menu\")／shadcn レジストリ @beui/context-menu）",
+   "ref_url": "https://beui.dev/components/motion/context-menu"
+  },
+  {
+   "id": "beui/popover",
+   "slug": "popover",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Popover Gooey Popover",
+   "name_ja": "にじみ出る吹き出し",
+   "description_ja": "ボタンから液体がにじみ出るように現れる小さなパネル。",
+   "aliases": [
+    "ぽわっと出る",
+    "吹き出しパネル",
+    "ポップアップ",
+    "ぷにっと出る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"popover\")／shadcn レジストリ @beui/popover）／https://beui.dev/components/motion/popover\n【作るもの】Popover Gooey Popover（にじみ出る吹き出し）\n【再現する見た目・動き】見本ページのプレビューと同じ。ボタンから液体がにじみ出るように現れる小さなパネル。\n【指示】`npx shadcn@latest add @beui/popover` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/popover",
+   "preview": {
+    "image": "previews/beui/popover.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"popover\")／shadcn レジストリ @beui/popover）",
+   "ref_url": "https://beui.dev/components/motion/popover"
+  },
+  {
+   "id": "beui/popover-morph",
+   "slug": "popover-morph",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Popover Morph Popover",
+   "name_ja": "変形する吹き出し",
+   "description_ja": "ボタンそのものがパネルの形に変わって広がる吹き出し。",
+   "aliases": [
+    "ボタンが広がる",
+    "変形ポップアップ",
+    "ぐにっと変わる",
+    "ミニパネル"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"popover-morph\")／shadcn レジストリ @beui/popover-morph）／https://beui.dev/components/motion/popover\n【作るもの】Popover Morph Popover（変形する吹き出し）\n【再現する見た目・動き】見本ページのプレビューと同じ。ボタンそのものがパネルの形に変わって広がる吹き出し。\n【指示】`npx shadcn@latest add @beui/popover-morph` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/popover",
+   "preview": {
+    "image": "previews/beui/popover-morph.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"popover-morph\")／shadcn レジストリ @beui/popover-morph）",
+   "ref_url": "https://beui.dev/components/motion/popover"
+  },
+  {
+   "id": "beui/morphing-modal",
+   "slug": "morphing-modal",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Morphing Modal",
+   "name_ja": "高さが変わるモーダル",
+   "description_ja": "1枚のパネルがステップごとに高さを変えて中身を切り替えるモーダル。",
+   "aliases": [
+    "ステップ付きモーダル",
+    "ポップアップ",
+    "段階表示",
+    "ウィザード"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"morphing-modal\")／shadcn レジストリ @beui/morphing-modal）／https://beui.dev/components/motion/morphing-modal\n【作るもの】Morphing Modal（高さが変わるモーダル）\n【再現する見た目・動き】見本ページのプレビューと同じ。1枚のパネルがステップごとに高さを変えて中身を切り替えるモーダル。\n【指示】`npx shadcn@latest add @beui/morphing-modal` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/morphing-modal",
+   "preview": {
+    "image": "previews/beui/morphing-modal.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"morphing-modal\")／shadcn レジストリ @beui/morphing-modal）",
+   "ref_url": "https://beui.dev/components/motion/morphing-modal"
+  },
+  {
+   "id": "beui/center-morph-modal",
+   "slug": "center-morph-modal",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Center Morph Modal",
+   "name_ja": "中央から広がるモーダル",
+   "description_ja": "ボタンの中心から画面全体のパネルが広がって現れるモーダル。",
+   "aliases": [
+    "中央に出るウィンドウ",
+    "ポップアップ",
+    "広がる画面",
+    "ダイアログ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"center-morph-modal\")／shadcn レジストリ @beui/center-morph-modal）／https://beui.dev/components/motion/center-morph-modal\n【作るもの】Center Morph Modal（中央から広がるモーダル）\n【再現する見た目・動き】見本ページのプレビューと同じ。ボタンの中心から画面全体のパネルが広がって現れるモーダル。\n【指示】`npx shadcn@latest add @beui/center-morph-modal` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/center-morph-modal",
+   "preview": {
+    "image": "previews/beui/center-morph-modal.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"center-morph-modal\")／shadcn レジストリ @beui/center-morph-modal）",
+   "ref_url": "https://beui.dev/components/motion/center-morph-modal"
+  },
+  {
+   "id": "beui/text-scramble",
+   "slug": "text-scramble",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Text Animation Text Scramble",
+   "name_ja": "文字がシャッフルして定まる",
+   "description_ja": "文字がでたらめに入れ替わってから、正しい文字に落ち着く。",
+   "aliases": [
+    "文字がバラバラ",
+    "ハッカー風",
+    "パチパチ変わる",
+    "暗号みたいに出る"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"text-scramble\")／shadcn レジストリ @beui/text-scramble）／https://beui.dev/components/motion/text-animation\n【作るもの】Text Animation Text Scramble（文字がシャッフルして定まる）\n【再現する見た目・動き】見本ページのプレビューと同じ。文字がでたらめに入れ替わってから、正しい文字に落ち着く。\n【指示】`npx shadcn@latest add @beui/text-scramble` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/text-animation",
+   "preview": {
+    "image": "previews/beui/text-scramble.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"text-scramble\")／shadcn レジストリ @beui/text-scramble）",
+   "ref_url": "https://beui.dev/components/motion/text-animation"
+  },
+  {
+   "id": "beui/chromatic-text-reveal",
+   "slug": "chromatic-text-reveal",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Text Animation Dia Text Animation",
+   "name_ja": "色がにじむ文字切り替え",
+   "description_ja": "固定の文の後ろで、単語が色にじみとともに次々入れ替わる。",
+   "aliases": [
+    "文字が切り替わる",
+    "色ずれする文字",
+    "ゆれる見出し",
+    "単語が入れ替わる"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"chromatic-text-reveal\")／shadcn レジストリ @beui/chromatic-text-reveal）／https://beui.dev/components/motion/text-animation\n【作るもの】Text Animation Dia Text Animation（色がにじむ文字切り替え）\n【再現する見た目・動き】見本ページのプレビューと同じ。固定の文の後ろで、単語が色にじみとともに次々入れ替わる。\n【指示】`npx shadcn@latest add @beui/chromatic-text-reveal` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/text-animation",
+   "preview": {
+    "image": "previews/beui/chromatic-text-reveal.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"chromatic-text-reveal\")／shadcn レジストリ @beui/chromatic-text-reveal）",
+   "ref_url": "https://beui.dev/components/motion/text-animation"
+  },
+  {
+   "id": "beui/text-reveal",
+   "slug": "text-reveal",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Text Animation Text Reveal",
+   "name_ja": "ふわっと文字が現れる",
+   "description_ja": "単語や文字が下から滑り込み、ぼかしが取れながら現れる。",
+   "aliases": [
+    "文字がふわっと出る",
+    "下からせり上がる",
+    "ぼかして出る",
+    "一文字ずつ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"text-reveal\")／shadcn レジストリ @beui/text-reveal）／https://beui.dev/components/motion/text-animation\n【作るもの】Text Animation Text Reveal（ふわっと文字が現れる）\n【再現する見た目・動き】見本ページのプレビューと同じ。単語や文字が下から滑り込み、ぼかしが取れながら現れる。\n【指示】`npx shadcn@latest add @beui/text-reveal` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/text-animation",
+   "preview": {
+    "image": "previews/beui/text-reveal.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"text-reveal\")／shadcn レジストリ @beui/text-reveal）",
+   "ref_url": "https://beui.dev/components/motion/text-animation"
+  },
+  {
+   "id": "beui/text-shimmer",
+   "slug": "text-shimmer",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Text Animation Text Shimmer",
+   "name_ja": "文字を走る光",
+   "description_ja": "文字の上をグラデーションの光が左から右へ流れる。",
+   "aliases": [
+    "キラッと光る文字",
+    "光が走る",
+    "待機中の文字",
+    "ツヤのある文字"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"text-shimmer\")／shadcn レジストリ @beui/text-shimmer）／https://beui.dev/components/motion/text-animation\n【作るもの】Text Animation Text Shimmer（文字を走る光）\n【再現する見た目・動き】見本ページのプレビューと同じ。文字の上をグラデーションの光が左から右へ流れる。\n【指示】`npx shadcn@latest add @beui/text-shimmer` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/text-animation",
+   "preview": {
+    "image": "previews/beui/text-shimmer.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"text-shimmer\")／shadcn レジストリ @beui/text-shimmer）",
+   "ref_url": "https://beui.dev/components/motion/text-animation"
+  },
+  {
+   "id": "beui/text-cascade",
+   "slug": "text-cascade",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Text Animation Text Cascade",
+   "name_ja": "一文字ずつ転がる切り替え",
+   "description_ja": "古い文字が下に落ち、新しい文字が一文字ずつ入れ替わって現れる。",
+   "aliases": [
+    "文字が落ちる",
+    "ガチャガチャ変わる",
+    "ルーレットの文字",
+    "一文字ずつ入れ替え"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"text-cascade\")／shadcn レジストリ @beui/text-cascade）／https://beui.dev/components/motion/text-animation\n【作るもの】Text Animation Text Cascade（一文字ずつ転がる切り替え）\n【再現する見た目・動き】見本ページのプレビューと同じ。古い文字が下に落ち、新しい文字が一文字ずつ入れ替わって現れる。\n【指示】`npx shadcn@latest add @beui/text-cascade` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/text-animation",
+   "preview": {
+    "image": "previews/beui/text-cascade.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"text-cascade\")／shadcn レジストリ @beui/text-cascade）",
+   "ref_url": "https://beui.dev/components/motion/text-animation"
+  },
+  {
+   "id": "beui/digit-swap",
+   "slug": "digit-swap",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Number Animation Digit Swap",
+   "name_ja": "桁ごとに回る数字",
+   "description_ja": "数が変わると、桁ごとに数字が上下に回って切り替わる。",
+   "aliases": [
+    "数字が回る",
+    "カウンターの数字",
+    "桁が変わる",
+    "スロット"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"digit-swap\")／shadcn レジストリ @beui/digit-swap）／https://beui.dev/components/motion/number\n【作るもの】Number Animation Digit Swap（桁ごとに回る数字）\n【再現する見た目・動き】見本ページのプレビューと同じ。数が変わると、桁ごとに数字が上下に回って切り替わる。\n【指示】`npx shadcn@latest add @beui/digit-swap` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/number",
+   "preview": {
+    "image": "previews/beui/digit-swap.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"digit-swap\")／shadcn レジストリ @beui/digit-swap）",
+   "ref_url": "https://beui.dev/components/motion/number"
+  },
+  {
+   "id": "beui/number-ticker",
+   "slug": "number-ticker",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Number Animation Number Ticker",
+   "name_ja": "スロット式に転がる数字",
+   "description_ja": "数字がスロットマシンのように時間差で転がって入る。",
+   "aliases": [
+    "数字がくるくる",
+    "カチカチ変わる",
+    "スロットの数字",
+    "ランキングの数"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"number-ticker\")／shadcn レジストリ @beui/number-ticker）／https://beui.dev/components/motion/number\n【作るもの】Number Animation Number Ticker（スロット式に転がる数字）\n【再現する見た目・動き】見本ページのプレビューと同じ。数字がスロットマシンのように時間差で転がって入る。\n【指示】`npx shadcn@latest add @beui/number-ticker` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/number",
+   "preview": {
+    "image": "previews/beui/number-ticker.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"number-ticker\")／shadcn レジストリ @beui/number-ticker）",
+   "ref_url": "https://beui.dev/components/motion/number"
+  },
+  {
+   "id": "beui/animated-number",
+   "slug": "animated-number",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Number Animation Animated Number",
+   "name_ja": "数えて上がる数値",
+   "description_ja": "画面に入ると、数値が0からバネのように数え上がる。",
+   "aliases": [
+    "カウントアップ",
+    "数字が増える",
+    "数が上がっていく",
+    "実績の数字"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"animated-number\")／shadcn レジストリ @beui/animated-number）／https://beui.dev/components/motion/number\n【作るもの】Number Animation Animated Number（数えて上がる数値）\n【再現する見た目・動き】見本ページのプレビューと同じ。画面に入ると、数値が0からバネのように数え上がる。\n【指示】`npx shadcn@latest add @beui/animated-number` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/number",
+   "preview": {
+    "image": "previews/beui/animated-number.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"animated-number\")／shadcn レジストリ @beui/animated-number）",
+   "ref_url": "https://beui.dev/components/motion/number"
+  },
+  {
+   "id": "beui/animated-badge",
+   "slug": "animated-badge",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Animated Badge",
+   "name_ja": "動く状態バッジ",
+   "description_ja": "状態を示す小さなバッジ。アイコンが動き、脈打って状態を伝える。",
+   "aliases": [
+    "バッジ",
+    "ステータス表示",
+    "小さいラベル",
+    "ピコピコする印"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"animated-badge\")／shadcn レジストリ @beui/animated-badge）／https://beui.dev/components/motion/animated-badge\n【作るもの】Animated Badge（動く状態バッジ）\n【再現する見た目・動き】見本ページのプレビューと同じ。状態を示す小さなバッジ。アイコンが動き、脈打って状態を伝える。\n【指示】`npx shadcn@latest add @beui/animated-badge` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/animated-badge",
+   "preview": {
+    "image": "previews/beui/animated-badge.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"animated-badge\")／shadcn レジストリ @beui/animated-badge）",
+   "ref_url": "https://beui.dev/components/motion/animated-badge"
+  },
+  {
+   "id": "beui/action-swap-cascade",
+   "slug": "action-swap-cascade",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Action Swap Cascade",
+   "name_ja": "一文字ずつ入れ替わるボタン文言",
+   "description_ja": "ボタンの文字が、古い文字から順に落ちて新しい文字に入れ替わる。",
+   "aliases": [
+    "文字が落ちて変わる",
+    "ボタンの文言が変わる",
+    "ガチャっと入れ替え",
+    "一文字ずつ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"action-swap-cascade\")／shadcn レジストリ @beui/action-swap-cascade）／https://beui.dev/components/motion/action-swap\n【作るもの】Action Swap Cascade（一文字ずつ入れ替わるボタン文言）\n【再現する見た目・動き】見本ページのプレビューと同じ。ボタンの文字が、古い文字から順に落ちて新しい文字に入れ替わる。\n【指示】`npx shadcn@latest add @beui/action-swap-cascade` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/action-swap",
+   "preview": {
+    "image": "previews/beui/action-swap-cascade.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"action-swap-cascade\")／shadcn レジストリ @beui/action-swap-cascade）",
+   "ref_url": "https://beui.dev/components/motion/action-swap"
+  },
+  {
+   "id": "beui/action-swap-blur",
+   "slug": "action-swap-blur",
+   "kind": "motion",
+   "category": "feedback",
+   "name_en": "Action Swap Blur",
+   "name_ja": "ぼかして切り替わる表示",
+   "description_ja": "コピーしたときなど、ぼかしと縮小で文字やアイコンが入れ替わる。",
+   "aliases": [
+    "コピーしました表示",
+    "ぼやっと切り替え",
+    "ふわっと変わる",
+    "アイコン切替"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"action-swap-blur\")／shadcn レジストリ @beui/action-swap-blur）／https://beui.dev/components/motion/action-swap\n【作るもの】Action Swap Blur（ぼかして切り替わる表示）\n【再現する見た目・動き】見本ページのプレビューと同じ。コピーしたときなど、ぼかしと縮小で文字やアイコンが入れ替わる。\n【指示】`npx shadcn@latest add @beui/action-swap-blur` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/action-swap",
+   "preview": {
+    "image": "previews/beui/action-swap-blur.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"action-swap-blur\")／shadcn レジストリ @beui/action-swap-blur）",
+   "ref_url": "https://beui.dev/components/motion/action-swap"
+  },
+  {
+   "id": "beui/action-swap-roll",
+   "slug": "action-swap-roll",
+   "kind": "motion",
+   "category": "text-motion",
+   "name_en": "Action Swap Roll",
+   "name_ja": "下から転がり込む切り替え",
+   "description_ja": "新しい文字やアイコンが、ぼかしながら下から転がり込んで入れ替わる。",
+   "aliases": [
+    "下から入れ替え",
+    "ぐるっと変わる",
+    "ロールする",
+    "スロットのような切替"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"action-swap-roll\")／shadcn レジストリ @beui/action-swap-roll）／https://beui.dev/components/motion/action-swap\n【作るもの】Action Swap Roll（下から転がり込む切り替え）\n【再現する見た目・動き】見本ページのプレビューと同じ。新しい文字やアイコンが、ぼかしながら下から転がり込んで入れ替わる。\n【指示】`npx shadcn@latest add @beui/action-swap-roll` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/action-swap",
+   "preview": {
+    "image": "previews/beui/action-swap-roll.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"action-swap-roll\")／shadcn レジストリ @beui/action-swap-roll）",
+   "ref_url": "https://beui.dev/components/motion/action-swap"
+  },
+  {
+   "id": "beui/animated-toast-stack",
+   "slug": "animated-toast-stack",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Animated Toast Stack",
+   "name_ja": "積み重なる通知",
+   "description_ja": "通知が積み重なって出て、スワイプで消せる。状態が変形で切り替わる。",
+   "aliases": [
+    "トースト",
+    "ポップアップ通知",
+    "スナックバー",
+    "右下の通知"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"animated-toast-stack\")／shadcn レジストリ @beui/animated-toast-stack）／https://beui.dev/components/motion/animated-toast-stack\n【作るもの】Animated Toast Stack（積み重なる通知）\n【再現する見た目・動き】見本ページのプレビューと同じ。通知が積み重なって出て、スワイプで消せる。状態が変形で切り替わる。\n【指示】`npx shadcn@latest add @beui/animated-toast-stack` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/animated-toast-stack",
+   "preview": {
+    "image": "previews/beui/animated-toast-stack.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"animated-toast-stack\")／shadcn レジストリ @beui/animated-toast-stack）",
+   "ref_url": "https://beui.dev/components/motion/animated-toast-stack"
+  },
+  {
+   "id": "beui/theme-toggle",
+   "slug": "theme-toggle",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Theme Toggle",
+   "name_ja": "画面全体が塗り替わるテーマ切替",
+   "description_ja": "ライト・ダークの切り替えで、ページ全体が波のように塗り替わる。",
+   "aliases": [
+    "ダークモード切替",
+    "昼夜切替",
+    "テーマ変更",
+    "画面の色が変わる"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"theme-toggle\")／shadcn レジストリ @beui/theme-toggle）／https://beui.dev/components/motion/theme-toggle\n【作るもの】Theme Toggle（画面全体が塗り替わるテーマ切替）\n【再現する見た目・動き】見本ページのプレビューと同じ。ライト・ダークの切り替えで、ページ全体が波のように塗り替わる。\n【指示】`npx shadcn@latest add @beui/theme-toggle` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/theme-toggle",
+   "preview": {
+    "image": "previews/beui/theme-toggle.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"theme-toggle\")／shadcn レジストリ @beui/theme-toggle）",
+   "ref_url": "https://beui.dev/components/motion/theme-toggle"
+  },
+  {
+   "id": "beui/bouncy-accordion",
+   "slug": "bouncy-accordion",
+   "kind": "ui",
+   "category": "layout",
+   "name_en": "Bouncy Accordion",
+   "name_ja": "弾んで開くアコーディオン",
+   "description_ja": "1つだけ開く開閉リスト。重みのあるバネで弾むように開閉する。",
+   "aliases": [
+    "開閉リスト",
+    "FAQの開閉",
+    "ぼよんと開く",
+    "折りたたみ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"bouncy-accordion\")／shadcn レジストリ @beui/bouncy-accordion）／https://beui.dev/components/motion/bouncy-accordion\n【作るもの】Bouncy Accordion（弾んで開くアコーディオン）\n【再現する見た目・動き】見本ページのプレビューと同じ。1つだけ開く開閉リスト。重みのあるバネで弾むように開閉する。\n【指示】`npx shadcn@latest add @beui/bouncy-accordion` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/bouncy-accordion",
+   "preview": {
+    "image": "previews/beui/bouncy-accordion.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"bouncy-accordion\")／shadcn レジストリ @beui/bouncy-accordion）",
+   "ref_url": "https://beui.dev/components/motion/bouncy-accordion"
+  },
+  {
+   "id": "beui/drawer",
+   "slug": "drawer",
+   "kind": "ui",
+   "category": "overlay",
+   "name_en": "Drawer",
+   "name_ja": "横から出るパネル",
+   "description_ja": "左右から滑り込む側面パネル。背景が暗くなり、バネで動く。",
+   "aliases": [
+    "サイドパネル",
+    "引き出し",
+    "横から出るメニュー",
+    "スライドメニュー"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"drawer\")／shadcn レジストリ @beui/drawer）／https://beui.dev/components/motion/drawer\n【作るもの】Drawer（横から出るパネル）\n【再現する見た目・動き】見本ページのプレビューと同じ。左右から滑り込む側面パネル。背景が暗くなり、バネで動く。\n【指示】`npx shadcn@latest add @beui/drawer` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/drawer",
+   "preview": {
+    "image": "previews/beui/drawer.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"drawer\")／shadcn レジストリ @beui/drawer）",
+   "ref_url": "https://beui.dev/components/motion/drawer"
+  },
+  {
+   "id": "beui/smooth-scroll",
+   "slug": "smooth-scroll",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Scroll Animation Smooth Scroll",
+   "name_ja": "なめらかなスクロール",
+   "description_ja": "スクロールの動きが慣性つきでなめらかになる。",
+   "aliases": [
+    "ぬるぬるスクロール",
+    "滑らかに動く",
+    "慣性スクロール",
+    "ふわっと止まる"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"smooth-scroll\")／shadcn レジストリ @beui/smooth-scroll）／https://beui.dev/components/motion/scroll-animation\n【作るもの】Scroll Animation Smooth Scroll（なめらかなスクロール）\n【再現する見た目・動き】見本ページのプレビューと同じ。スクロールの動きが慣性つきでなめらかになる。\n【指示】`npx shadcn@latest add @beui/smooth-scroll` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/scroll-animation",
+   "preview": {
+    "image": "previews/beui/smooth-scroll.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"smooth-scroll\")／shadcn レジストリ @beui/smooth-scroll）",
+   "ref_url": "https://beui.dev/components/motion/scroll-animation"
+  },
+  {
+   "id": "beui/scroll-progress",
+   "slug": "scroll-progress",
+   "kind": "ui",
+   "category": "notice",
+   "name_en": "Scroll Animation Scroll Progress",
+   "name_ja": "読み進めの進捗表示",
+   "description_ja": "スクロール量に合わせて、上部のバーや丸い輪が進む。",
+   "aliases": [
+    "読了バー",
+    "進み具合",
+    "スクロールバー",
+    "進捗の線"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"scroll-progress\")／shadcn レジストリ @beui/scroll-progress）／https://beui.dev/components/motion/scroll-animation\n【作るもの】Scroll Animation Scroll Progress（読み進めの進捗表示）\n【再現する見た目・動き】見本ページのプレビューと同じ。スクロール量に合わせて、上部のバーや丸い輪が進む。\n【指示】`npx shadcn@latest add @beui/scroll-progress` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/scroll-animation",
+   "preview": {
+    "image": "previews/beui/scroll-progress.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"scroll-progress\")／shadcn レジストリ @beui/scroll-progress）",
+   "ref_url": "https://beui.dev/components/motion/scroll-animation"
+  },
+  {
+   "id": "beui/parallax",
+   "slug": "parallax",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Scroll Animation Parallax",
+   "name_ja": "奥行きのずれスクロール",
+   "description_ja": "スクロールに合わせて要素が違う速さでずれて動き、奥行きが出る。",
+   "aliases": [
+    "視差効果",
+    "奥行きスクロール",
+    "背景がゆっくり動く",
+    "ずれて動く"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"parallax\")／shadcn レジストリ @beui/parallax）／https://beui.dev/components/motion/scroll-animation\n【作るもの】Scroll Animation Parallax（奥行きのずれスクロール）\n【再現する見た目・動き】見本ページのプレビューと同じ。スクロールに合わせて要素が違う速さでずれて動き、奥行きが出る。\n【指示】`npx shadcn@latest add @beui/parallax` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/scroll-animation",
+   "preview": {
+    "image": "previews/beui/parallax.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"parallax\")／shadcn レジストリ @beui/parallax）",
+   "ref_url": "https://beui.dev/components/motion/scroll-animation"
+  },
+  {
+   "id": "beui/scroll-to",
+   "slug": "scroll-to",
+   "kind": "ui",
+   "category": "button",
+   "name_en": "Scroll Animation Scroll To",
+   "name_ja": "押すと滑って移動するボタン",
+   "description_ja": "押すと目的の場所までなめらかにスクロールするボタン。",
+   "aliases": [
+    "ページ内リンク",
+    "トップに戻る",
+    "ジャンプボタン",
+    "アンカーリンク"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"scroll-to\")／shadcn レジストリ @beui/scroll-to）／https://beui.dev/components/motion/scroll-animation\n【作るもの】Scroll Animation Scroll To（押すと滑って移動するボタン）\n【再現する見た目・動き】見本ページのプレビューと同じ。押すと目的の場所までなめらかにスクロールするボタン。\n【指示】`npx shadcn@latest add @beui/scroll-to` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/scroll-animation",
+   "preview": {
+    "image": "previews/beui/scroll-to.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"scroll-to\")／shadcn レジストリ @beui/scroll-to）",
+   "ref_url": "https://beui.dev/components/motion/scroll-animation"
+  },
+  {
+   "id": "beui/scroll-reveal",
+   "slug": "scroll-reveal",
+   "kind": "motion",
+   "category": "scroll",
+   "name_en": "Scroll Animation Scroll Reveal",
+   "name_ja": "スクロールで現れる",
+   "description_ja": "画面に入った要素が、スライドとぼかしの解除で現れる。",
+   "aliases": [
+    "スクロールでふわっと",
+    "下からせり上がる",
+    "見えたら出る",
+    "フェードイン"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"scroll-reveal\")／shadcn レジストリ @beui/scroll-reveal）／https://beui.dev/components/motion/scroll-animation\n【作るもの】Scroll Animation Scroll Reveal（スクロールで現れる）\n【再現する見た目・動き】見本ページのプレビューと同じ。画面に入った要素が、スライドとぼかしの解除で現れる。\n【指示】`npx shadcn@latest add @beui/scroll-reveal` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/scroll-animation",
+   "preview": {
+    "image": "previews/beui/scroll-reveal.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"scroll-reveal\")／shadcn レジストリ @beui/scroll-reveal）",
+   "ref_url": "https://beui.dev/components/motion/scroll-animation"
+  },
+  {
+   "id": "beui/range-slider-inline",
+   "slug": "range-slider-inline",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Range Slider Inline Slider",
+   "name_ja": "文字入りのスライダー",
+   "description_ja": "バーの中にラベルと値が入り、10個の止まる位置を持つスライダー。",
+   "aliases": [
+    "バー付きスライダー",
+    "値入りバー",
+    "音量バー",
+    "つまみ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"range-slider-inline\")／shadcn レジストリ @beui/range-slider-inline）／https://beui.dev/components/motion/range-slider\n【作るもの】Range Slider Inline Slider（文字入りのスライダー）\n【再現する見た目・動き】見本ページのプレビューと同じ。バーの中にラベルと値が入り、10個の止まる位置を持つスライダー。\n【指示】`npx shadcn@latest add @beui/range-slider-inline` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/range-slider",
+   "preview": {
+    "image": "previews/beui/range-slider-inline.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"range-slider-inline\")／shadcn レジストリ @beui/range-slider-inline）",
+   "ref_url": "https://beui.dev/components/motion/range-slider"
+  },
+  {
+   "id": "beui/range-slider",
+   "slug": "range-slider",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Range Slider Range Slider",
+   "name_ja": "目盛りが跳ねるスライダー",
+   "description_ja": "目盛りの点があり、縦棒のつまみが止まる位置で弾む。",
+   "aliases": [
+    "スライダー",
+    "つまみを動かす",
+    "目盛り付き",
+    "バー"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"range-slider\")／shadcn レジストリ @beui/range-slider）／https://beui.dev/components/motion/range-slider\n【作るもの】Range Slider Range Slider（目盛りが跳ねるスライダー）\n【再現する見た目・動き】見本ページのプレビューと同じ。目盛りの点があり、縦棒のつまみが止まる位置で弾む。\n【指示】`npx shadcn@latest add @beui/range-slider` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/range-slider",
+   "preview": {
+    "image": "previews/beui/range-slider.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"range-slider\")／shadcn レジストリ @beui/range-slider）",
+   "ref_url": "https://beui.dev/components/motion/range-slider"
+  },
+  {
+   "id": "beui/range-slider-fluid",
+   "slug": "range-slider-fluid",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Range Slider Fluid Slider",
+   "name_ja": "液体のスライダー",
+   "description_ja": "つまみが無く、丸い液体の先端が塗りを引きながら進むスライダー。",
+   "aliases": [
+    "液体バー",
+    "ぷにぷにバー",
+    "つまみ無し",
+    "音量調整"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"range-slider-fluid\")／shadcn レジストリ @beui/range-slider-fluid）／https://beui.dev/components/motion/range-slider\n【作るもの】Range Slider Fluid Slider（液体のスライダー）\n【再現する見た目・動き】見本ページのプレビューと同じ。つまみが無く、丸い液体の先端が塗りを引きながら進むスライダー。\n【指示】`npx shadcn@latest add @beui/range-slider-fluid` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/range-slider",
+   "preview": {
+    "image": "previews/beui/range-slider-fluid.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"range-slider-fluid\")／shadcn レジストリ @beui/range-slider-fluid）",
+   "ref_url": "https://beui.dev/components/motion/range-slider"
+  },
+  {
+   "id": "beui/range-slider-wave",
+   "slug": "range-slider-wave",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Range Slider Wave Slider",
+   "name_ja": "波打つスライダー",
+   "description_ja": "つまみの周りで棒グラフが波のように盛り上がり、通り過ぎると戻る。",
+   "aliases": [
+    "イコライザー風",
+    "波のスライダー",
+    "音量バー",
+    "ぴょこぴょこ"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"range-slider-wave\")／shadcn レジストリ @beui/range-slider-wave）／https://beui.dev/components/motion/range-slider\n【作るもの】Range Slider Wave Slider（波打つスライダー）\n【再現する見た目・動き】見本ページのプレビューと同じ。つまみの周りで棒グラフが波のように盛り上がり、通り過ぎると戻る。\n【指示】`npx shadcn@latest add @beui/range-slider-wave` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/range-slider",
+   "preview": {
+    "image": "previews/beui/range-slider-wave.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"range-slider-wave\")／shadcn レジストリ @beui/range-slider-wave）",
+   "ref_url": "https://beui.dev/components/motion/range-slider"
+  },
+  {
+   "id": "beui/range-slider-bubble",
+   "slug": "range-slider-bubble",
+   "kind": "ui",
+   "category": "input",
+   "name_en": "Range Slider Bubble Slider",
+   "name_ja": "泡が出るスライダー",
+   "description_ja": "つまみを掴むと値の泡が出て、動きに合わせて傾く。",
+   "aliases": [
+    "吹き出し付きスライダー",
+    "値が出るバー",
+    "ぷくっと出る",
+    "ぽこっとバー"
+   ],
+   "prompt": "【出典】beUI 公式（MCP beui の get_component(\"range-slider-bubble\")／shadcn レジストリ @beui/range-slider-bubble）／https://beui.dev/components/motion/range-slider\n【作るもの】Range Slider Bubble Slider（泡が出るスライダー）\n【再現する見た目・動き】見本ページのプレビューと同じ。つまみを掴むと値の泡が出て、動きに合わせて傾く。\n【指示】`npx shadcn@latest add @beui/range-slider-bubble` で入れて、〈使う場所〉に置いて。動き・余白・色は beUI のソースのまま変えず、文言とデータだけ差し替えて。",
+   "url": "https://beui.dev/components/motion/range-slider",
+   "preview": {
+    "image": "previews/beui/range-slider-bubble.webp"
+   },
+   "source_ref": "beUI 公式（MCP beui の get_component(\"range-slider-bubble\")／shadcn レジストリ @beui/range-slider-bubble）",
+   "ref_url": "https://beui.dev/components/motion/range-slider"
+  }
+ ]
+}
