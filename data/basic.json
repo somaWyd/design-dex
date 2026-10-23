@@ -1,0 +1,9 @@
+{
+  "_comment": "公開版・Mac アプリに同梱する「基本」の選び方。出典に依らない一般的な UI・動き・文字の名前だけを、出典「基本」1つにまとめる。それ以外のスキル・MCP・公式ドキュメント由来の項目は、各自が「自分のスキルを取り込む」で足す（2026-10-23）",
+  "source": { "id": "basic", "type": "basic", "name": "基本", "name_en": "Basics", "ref": "" },
+  "include": [
+    { "source": "animation-vocabulary", "why": "モーションの一般的な用語（Fade in・Slide in・Stagger・Duration など）" },
+    { "source": "material3", "why": "UI 部品の一般的な名前（ボタン・カード・ダイアログ・チップなど）" },
+    { "source": "typography", "categories": ["type-term", "type-system"], "why": "文字の一般的な用語（字間・行間・ウェイトなど）と型の体系" }
+  ]
+}

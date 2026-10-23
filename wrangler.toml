@@ -1,0 +1,7 @@
+# Cloudflare Pages の設定。web/ を静的ファイルとして配り、functions/ の Google ログインで全体を守る。
+# 公開前に必ず `python3 tools/build.py --public` で web/dist/catalog.js を公開データだけで作り直す。
+# 秘密の値（GOOGLE_CLIENT_ID・GOOGLE_CLIENT_SECRET・SESSION_SECRET）はここに書かず、
+# `npx wrangler pages secret put <名前> --project-name design-dex` で登録する
+name = "design-dex"
+pages_build_output_dir = "web"
+compatibility_date = "2025-09-01"

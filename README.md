@@ -2,7 +2,7 @@
 
 <h1 align="center">DesignDex</h1>
 
-<p align="center">UI・モーション・配色・書体の「名前」と、AI にそのまま渡せる指示文を引く辞典<br>
+<p align="center">UI・モーション・配色・書体の「名前」と、AI にそのまま渡せるプロンプトを引く辞典<br>
 A dictionary of names and ready-to-paste prompts for UI, motion, color and type.</p>
 
 <p align="center"><a href="#日本語">日本語</a> · <a href="#english">English</a></p>
@@ -17,8 +17,8 @@ A dictionary of names and ready-to-paste prompts for UI, motion, color and type.
 
 | 機能 | 内容 |
 |---|---|
-| 辞典 | 589項目（モーション 162・UI 340・タイポ 87）。見た目の言葉で検索し、動くプレビューで確かめる |
-| 出典つき指示文 | 各項目に「どの公式ドキュメント／ライブラリの、どの節か」と再現に必要な数値を入れた指示文。公式ページの URL もコピーできる |
+| 辞典 | 標準で「基本」162項目（動き 93・UI 40・文字 29）。見た目の言葉で検索し、動くプレビューで確かめる。スキル・MCP・公式ドキュメント由来の項目は、各自が Claude Code / Codex から取り込んで足す |
+| 出典つきプロンプト | 各項目に「どの公式ドキュメント／ライブラリの、どの節か」と再現に必要な数値を入れたプロンプト。公式ページの URL もコピーできる |
 | 配色の提案 | 1色を選ぶと、配色ルール（類似色・補色・分裂補色・トライアド・同系色）ごとに相性のよい3色セットを出す。コントラスト比（WCAG）つき |
 | 設定 | テーマカラー・外観（自動／ライト／ダーク）・言語（日本語／English）・文字の大きさ・プレビューの動き・カードの表示・ボタンの表示（アイコン／文字／両方）・起動時の画面・スキルの取り込み・使い方 |
 
@@ -55,7 +55,7 @@ bash mac/build_app.sh             # Mac アプリ（mac/build/DesignDex.app）�
 
 アプリを初めて開くと案内が出ます。あとからは、右上の歯車 →「自分のスキルを取り込む」でいつでも始められます。
 
-1. アプリの［指示文をコピー］を押す
+1. アプリの［プロンプトをコピー］を押す
 2. ターミナルで `claude`（または `codex`）を起動し、貼り付けて Enter。AI が `~/.claude/skills`・`~/.agents/skills` などのデザイン系スキルを読み、`~/Downloads/designdex-import.json` を書き出す
 3. アプリでそのファイルを選ぶ（枠に置くか、押して選ぶ）
 
@@ -87,7 +87,7 @@ docs/       書式・デモ一覧・スクリーンショット
 
 DesignDex helps you name what you see — "the panel that slides up", "that springy pop" — so you can give AI coding tools precise instructions.
 
-- **Dictionary**: 589 entries (motion, UI components, typography) with live previews, searchable by everyday words (Japanese and English names).
+- **Dictionary**: ships with 162 "Basics" (93 motion, 40 UI, 29 type) with live previews, searchable by everyday words. Items from skills, MCP servers and official docs are added by each user by importing from Claude Code / Codex.
 - **Sourced prompts**: every entry has a prompt that cites the exact official page or library section and the values needed to reproduce the preview, plus a copyable official URL.
 - **Color suggestions**: pick one color and get 3-color sets for each harmony rule, with WCAG contrast ratios.
 - **Settings**: theme color, appearance, language (interface text; entry descriptions are Japanese), text size, preview motion, card layout, start screen.

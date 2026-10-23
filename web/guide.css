@@ -131,3 +131,111 @@ dialog#settings { width: min(720px, calc(100vw - 32px)); }
 .set-seg button { white-space: normal; text-align: center; line-height: 1.25; min-height: 40px; padding: 4px 6px; flex-wrap: wrap; row-gap: 2px; }
 .set-row .set-ic { flex: 1 1 200px; }
 .set-foot { padding-top: 12px; }
+
+/* 設定: 文字を途中で折り返さない。入り切らない幅では、選択肢の列ごと名前の下へ回す */
+dialog#settings { width: min(860px, calc(100vw - 32px)); }
+.set-row { flex-wrap: wrap; row-gap: 8px; }
+.set-row .set-ic, :root:not([data-labels="icon"]) .set-row .set-ic { flex: 1 0 auto; }
+.set-row .set-ic .lbl, .set-seg button, .set-open, .set-seg .lbl { white-space: nowrap; }
+.set-seg { flex: 0 0 auto; min-width: 0; grid-auto-columns: minmax(max-content, 1fr); }
+.set-seg button { padding: 0 12px; }
+.set-themes { flex: 0 0 auto; }
+.set-foot { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+.set-open.danger { color: #d93025; }
+.set-open.danger:hover { background: color-mix(in srgb, #d93025 10%, transparent); }
+
+/* 取り消しの効かない操作の前の確認（設定の上に重ねて出す） */
+dialog.confirm { width: min(440px, calc(100vw - 32px)); min-height: 0; text-align: center; padding: 26px 26px 20px; }
+dialog.confirm .c-icon { width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; font-weight: 800; color: #fff; background: #d93025; box-shadow: 0 8px 20px color-mix(in srgb, #d93025 35%, transparent); animation: pop 380ms var(--ease-pop); }
+dialog.confirm h2 { font-size: 18px; line-height: 1.4; margin: 0 0 8px; }
+dialog.confirm p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--text-2); }
+dialog.confirm .c-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+dialog.confirm .g-ghost { background: var(--surface-2); color: var(--text); }
+.g-primary.danger { background: linear-gradient(180deg, #e8564d, #d93025); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22), 0 4px 14px rgba(217, 48, 37, .35); }
+dialog.confirm[open] { animation: confirm-in var(--t-base) var(--ease-pop); }
+@keyframes confirm-in { from { opacity: 0; transform: scale(.92); } }
+
+/* カードの詳細（押したカードの位置から広がり、閉じると戻る） */
+.card { cursor: pointer; }
+.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+dialog.detail { width: min(720px, calc(100vw - 32px)); padding: 18px 22px 20px; text-align: left; }
+dialog.detail[open] { animation: detail-in var(--t-slow) var(--ease); }
+dialog.detail.closing { animation: detail-out var(--t-base) var(--ease) forwards; }
+@keyframes detail-in { from { opacity: 0; transform: translate(var(--from-x, 0), var(--from-y, 0)) scale(.6); } }
+@keyframes detail-out { to { opacity: 0; transform: translate(var(--from-x, 0), var(--from-y, 0)) scale(.6); } }
+.d-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.d-top .badge { font-size: 12px; padding: 3px 10px; }
+.d-top-actions { display: flex; align-items: center; gap: 4px; }
+.detail .d-preview { height: 240px; border-radius: 14px; }
+.detail .d-preview.demo-img { height: 280px; }
+.d-title { font-size: 24px; letter-spacing: -.01em; margin: 16px 0 2px; line-height: 1.3; }
+.d-sub { font-size: 13px; }
+.d-desc { font-size: 15px; line-height: 1.75; margin: 10px 0 8px; }
+.detail .aliases { margin-bottom: 4px; }
+.d-src, .d-prompt { margin-top: 16px; padding: 14px; border-radius: 14px; background: var(--surface-2); }
+.d-label { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.d-label .ic { width: 18px; height: 18px; color: var(--accent); }
+.d-ref { font-size: 12px; color: var(--text-2); margin: 0 0 10px; line-height: 1.6; }
+.d-src .src-cmd { background: var(--surface); }
+.d-prompt pre { margin: 0; white-space: pre-wrap; word-break: break-word; font: 12.5px/1.7 var(--mono); color: var(--text); max-height: 220px; overflow: auto; }
+.d-actions { margin-top: 16px; }
+@media (max-width: 760px) { .detail .d-preview { height: 180px; } .d-title { font-size: 20px; } }
+
+.set-account { display: flex; align-items: center; gap: 10px; margin: 0; }
+.set-email { font-size: 13px; color: var(--text-2); white-space: nowrap; }
+
+/* 詳細のプロンプト欄は全体がコピーのボタン */
+button.d-prompt { display: block; width: 100%; text-align: left; border: 0; color: inherit; font: inherit; cursor: pointer; transition: transform var(--t-fast) var(--ease), box-shadow var(--t-base) var(--ease); }
+button.d-prompt:hover { box-shadow: inset 0 0 0 1.5px var(--accent); }
+button.d-prompt .d-label { color: var(--accent); }
+
+/* 閉じる × は、どのポップアップでも右上の同じ位置・同じ形 */
+.x-close { position: absolute; top: 12px; right: 12px; z-index: 2; width: 34px; height: 34px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+  background: var(--surface-2); color: var(--text-2); transition: transform var(--t-fast) var(--ease), background-color var(--t-base) var(--ease), color var(--t-base) var(--ease); }
+.x-close:hover { background: var(--border); color: var(--text); transform: rotate(90deg); }
+.x-close:active { transform: scale(.9); }
+.x-close .ic { width: 18px; height: 18px; }
+dialog#settings { padding-top: 56px; }
+dialog.sheet { padding-top: 22px; }
+.g-top { padding-right: 44px; }
+.d-top { padding-right: 44px; }
+dialog.confirm { padding-top: 34px; }
+@media (prefers-reduced-motion: reduce) { .x-close:hover { transform: none; } }
+
+/* サイドバー: 区分の見出しはスクロールしても上に残し、選択数の横にその区分だけの「解除」を出す */
+.side .fold > summary { position: sticky; top: -16px; z-index: 2; background: var(--surface); }
+.fold-clear { margin-left: 2px; width: 22px; height: 22px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; background: var(--surface-2); color: var(--text-2);
+  animation: chip-in var(--t-base) var(--ease-pop) both; }
+.fold-clear:hover { background: var(--border); color: var(--text); }
+.fold-clear .ic { width: 12px; height: 12px; }
+.list .add-src > button { color: var(--accent); gap: 8px; justify-content: flex-start; }
+.list .add-src > button::before { display: none; }
+.list .add-src .ic { width: 16px; height: 16px; }
+
+/* 選択のピル（選んだ項目まで滑って移る背景） */
+.seg { position: relative; }
+.seg-ind { position: absolute; left: 0; top: 0; transform-origin: 0 0; border-radius: 7px; background: var(--surface); pointer-events: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .12), 0 3px 10px rgba(0, 0, 0, .08); }
+.seg.view .seg-ind { border-radius: 8px; }
+.seg.has-ind > button { position: relative; z-index: 1; }
+.seg.has-ind > button[aria-checked="true"] { background: transparent; box-shadow: none; }
+
+/* 星が飛ぶ・一覧に行が入る・件数が弾む */
+.fly-star { position: fixed; width: 20px; height: 20px; z-index: 1000; pointer-events: none; color: #f5b301; filter: drop-shadow(0 4px 8px rgba(245, 179, 1, .5)); }
+.fly-star .ic { width: 20px; height: 20px; }
+.fly-star .ic path { fill: currentColor; }
+.row-in { animation: row-in 460ms var(--ease-pop) both; }
+.row-in > button { animation: row-flash 1.2s var(--ease) both; }
+@keyframes row-in { from { opacity: 0; transform: translateX(-18px) scale(.96); } }
+@keyframes row-flash { 0%, 30% { background: var(--accent-soft); } 100% { background: transparent; } }
+#count, .fold-n { display: inline-block; }
+
+/* 種類の見出し（まとめて選ぶチェック欄つき） */
+.list .group-toggle { padding: 8px 6px 2px 22px; }
+.list .group-toggle > button { width: auto; gap: 8px; padding: 4px 8px; font-size: 12px; font-weight: 600; color: var(--text-2); justify-content: flex-start; }
+.list .group-toggle > button::before { display: none; }
+.list .group-toggle > button[aria-pressed="true"] { background: none; color: var(--accent); }
+.list .group-toggle .lbl { display: inline !important; }
+.check.mixed { background: var(--accent); border-color: var(--accent); position: relative; }
+.check.mixed svg { opacity: 0; }
+.check.mixed::after { content: ""; position: absolute; left: 3px; right: 3px; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: #fff; }

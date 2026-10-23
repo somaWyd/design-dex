@@ -3,7 +3,7 @@
 
 使い方:
   python3 tools/build.py            検証して書き出す（エラーなら書き出さず終了コード1）
-  python3 tools/build.py --public   公開データだけで書き出す（配布・GitHub Pages 用）
+  python3 tools/build.py --public   公開版（Web・Mac アプリの同梱）を書き出す。中身は data/basic.json で選んだ「基本」だけ
   python3 tools/build.py --sources  Claude Code・Codex に導入済みのスキル・MCP・プラグインのうち、未登録のものを一覧する
 """
 import json
@@ -79,10 +79,42 @@ def validate(categories, files, demos=None):
     return errors, sources, entries
 
 
+HOST_NAMES = {"developer.mozilla.org": "MDN Web Docs", "m3.material.io": "Material Design 3", "fonts.google.com": "Google Fonts",
+              "developer.apple.com": "Apple Developer", "web.dev": "web.dev", "www.w3.org": "W3C", "design.digital.go.jp": "デジタル庁デザインシステム"}
+
+
+def to_basic(files, spec):
+    """data/basic.json の選び方で、元の項目を出典「基本」1つにまとめ直す。
+    出典表記から作者の手元のスキルのパスを外し、公式ページの URL だけを残す（公開版の人はそのスキルを持っていないため）"""
+    from urllib.parse import urlparse
+    src = {k: v for k, v in spec["source"].items()}
+    rules = {r["source"]: set(r.get("categories") or []) for r in spec["include"]}
+    out = []
+    for _, data in files:
+        sid = data["source"]["id"]
+        if sid not in rules:
+            continue
+        for e in data["entries"]:
+            if rules[sid] and e["category"] not in rules[sid]:
+                continue
+            host = urlparse(e["ref_url"]).hostname or ""
+            ref = HOST_NAMES.get(host, host)
+            lines = e["prompt"].split("\n")
+            if lines and lines[0].startswith("【出典】"):
+                lines[0] = f"【出典】{ref}／{e['ref_url']}"
+            out.append({**e, "id": "basic/" + e["id"].split("/", 1)[1], "source": src["id"], "source_ref": ref, "prompt": "\n".join(lines)})
+    return [src], out
+
+
 def build(public=False):
     categories = load_json(DATA / "categories.json")
     files = [(p, load_json(p)) for p in entry_files(public)]
     errors, sources, entries = validate(categories, files)
+    if public and not errors:
+        sources, entries = to_basic(files, load_json(DATA / "basic.json"))
+        ids = [e["id"] for e in entries]
+        if len(ids) != len(set(ids)):
+            errors.append("基本: id が重複している")
     if errors:
         print("検証エラー（catalog.js は更新していません）:")
         print("\n".join(f"  - {e}" for e in errors))
@@ -100,7 +132,7 @@ IMPORT_SKILL = ROOT / "integrations/designdex-import/SKILL.md"
 
 
 def import_skill():
-    """アプリの「スキルを取り込む」でコピーする指示文の本体（SKILL.md の frontmatter を除いた部分）"""
+    """アプリの「スキルを取り込む」でコピーするプロンプトの本体（SKILL.md の frontmatter を除いた部分）"""
     text = IMPORT_SKILL.read_text(encoding="utf-8")
     return text.split("---", 2)[2].strip() if text.startswith("---") else text.strip()
 

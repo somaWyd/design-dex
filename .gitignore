@@ -5,5 +5,9 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# Cloudflare の手元実行用の秘密（wrangler pages dev が読む）と作業フォルダ
+.dev.vars
+.wrangler/
+
 # 個人用データ（自分のスキル・MCP 由来の項目と対象外リスト）。公開しない
 data/local/

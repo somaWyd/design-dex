@@ -23,11 +23,11 @@
       <ul class="list" id="fav-list"></ul>
     </details>
     <details class="fold" data-fold="sources" open>
-      <summary><span class="fold-ic" data-icon="source" data-plain></span><span class="fold-t" data-i18n="source"></span><span class="fold-n" id="sources-n"></span></summary>
+      <summary><span class="fold-ic" data-icon="source" data-plain></span><span class="fold-t" data-i18n="source"></span><span class="fold-n" id="sources-n"></span><button class="fold-clear" id="sources-clear" type="button" hidden></button></summary>
       <ul class="list" id="sources"></ul>
     </details>
     <details class="fold" data-fold="cats" open>
-      <summary><span class="fold-ic" data-icon="category" data-plain></span><span class="fold-t" data-i18n="category"></span><span class="fold-n" id="cats-n"></span></summary>
+      <summary><span class="fold-ic" data-icon="category" data-plain></span><span class="fold-t" data-i18n="category"></span><span class="fold-n" id="cats-n"></span><button class="fold-clear" id="cats-clear" type="button" hidden></button></summary>
       <ul class="list" id="cats"></ul>
     </details>
     </div>
@@ -81,6 +81,8 @@
 <button class="icon-btn gear" id="open-settings" data-icon="settings" data-tip="settings"></button>
 <div class="toast" id="toast" role="status"></div>
 <dialog id="guide" class="sheet" data-i18n-label="guide"></dialog>
+<dialog id="detail" class="sheet detail" data-i18n-label="detail"></dialog>
+<dialog id="confirm" class="sheet confirm" role="alertdialog" aria-modal="true"></dialog>
 <dialog id="settings" data-i18n-label="settings">
   <div id="settings-body"></div>
 </dialog>

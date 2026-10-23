@@ -75,7 +75,7 @@ dialog#settings { background: var(--glass-2); -webkit-backdrop-filter: blur(28px
 @media (hover: hover) {
   .card:hover { transform: translateY(-3px); box-shadow: var(--hairline), 0 14px 34px rgba(0, 0, 0, .18), 0 2px 6px rgba(0, 0, 0, .08); }
 }
-.card.enter { animation: rise var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 28ms); }
+.card.enter { animation: rise var(--t-slow) var(--ease) both; animation-delay: var(--d, 0ms); }
 @keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.985); } }
 .card.flash, .pal-card.flash { animation: flash 1.4s var(--ease); }
 

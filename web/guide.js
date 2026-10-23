@@ -1,6 +1,6 @@
 // 初めて開いたときの案内と、自分のスキルの取り込み。どちらも設定からいつでも開ける。
 // 案内: お礼 → 探し方 → コピーして AI に渡す → 配色 → スキルの取り込みへ
-// 取り込み: ①指示文をコピー → ②Claude Code か Codex に貼って実行（designdex-import.json ができる）→ ③そのファイルを選ぶ
+// 取り込み: ①プロンプトをコピー → ②Claude Code か Codex に貼って実行（designdex-import.json ができる）→ ③そのファイルを選ぶ
 const GUIDE_DONE_KEY = "guide-done";
 const IMPORT_FILE = "designdex-import.json";
 const IMPORT_MAX_BYTES = 5 * 1024 * 1024;
@@ -45,7 +45,8 @@ function renderGuide() {
         el("button", { class: "g-primary", onclick: () => { store.set(GUIDE_DONE_KEY, true); renderImport(); } }, face("dict", t("g_import_start"))))
     : el("button", { class: "g-primary", onclick: () => { guideStep += 1; renderGuide(); } }, t(guideStep === 0 ? "g_start" : "g_next"));
   $("guide").replaceChildren(
-    el("div", { class: "g-top" }, dots, el("button", { class: "g-ghost g-skip", onclick: () => closeGuide(true) }, t("g_skip"))),
+    closeX(() => closeGuide(true)),
+    el("div", { class: "g-top" }, dots),
     el("div", { class: "g-body" }, guideArt(step.art), el("h2", {}, t(step.title)), el("p", {}, t(step.body))),
     el("div", { class: "g-foot" }, back, next));
   $("guide").querySelector(".g-body").classList.add("g-enter");
@@ -56,7 +57,7 @@ function importPrompt() {
   const cats = (window.CATALOG?.categories || []).map((c) => `${c.id} (${c.kind})`).join(", ");
   const demos = Object.keys(TEMPLATES).join(", ");
   // 最初から入っている導入元は取り込んでも除外されるので、AI に読ませる前に飛ばしてもらう（手間と時間の節約）
-  const builtIn = (window.CATALOG?.sources || []).filter((src) => !src.imported && src.type !== "doc").map((src) => src.id).join(", ");
+  const builtIn = (window.CATALOG?.sources || []).filter((src) => !src.imported && /^(skill|mcp)/.test(src.type)).map((src) => src.id).join(", ") || "(none)";
   return [t("imp_prompt_intro"), "", window.CATALOG?.import_skill || "", "",
     `Already included in DesignDex (skip these skill ids): ${builtIn}`,
     `Allowed category ids: ${cats}`, `Allowed demo ids: ${demos}`].join("\n");
@@ -78,7 +79,8 @@ function renderImport(result) {
   drop.addEventListener("drop", (ev) => { ev.preventDefault(); drop.classList.remove("over"); const f = ev.dataTransfer.files[0]; if (f) readImport(f); });
   const now = window.CATALOG?.imported;
   $("guide").replaceChildren(...[
-    el("div", { class: "g-top" }, el("h2", { class: "imp-title" }, t("imp_title")), el("button", { class: "g-ghost g-skip", onclick: () => closeGuide(true) }, t("g_close"))),
+    closeX(() => closeGuide(true)),
+    el("div", { class: "g-top" }, el("h2", { class: "imp-title" }, t("imp_title"))),
     el("p", { class: "imp-lead" }, t("imp_lead")),
     el("ol", { class: "imp-steps" },
       importStep(1, t("imp_s1_title"), t("imp_s1_body"),
@@ -86,8 +88,7 @@ function renderImport(result) {
       importStep(2, t("imp_s2_title"), t("imp_s2_body"), codeChip("claude"), codeChip("codex")),
       importStep(3, t("imp_s3_title"), t("imp_s3_body", IMPORT_FILE), drop)),
     result ? el("p", { class: "imp-result " + (result.ok ? "ok" : "ng"), role: "status" }, result.text) : null,
-    now ? el("div", { class: "imp-now" }, el("span", {}, t("imp_now", now.entries, now.sources)),
-      el("button", { class: "g-ghost danger", onclick: clearImport }, t("imp_clear"))) : null,
+    now ? el("div", { class: "imp-now" }, el("span", {}, t("imp_now", now.entries, now.sources))) : null,
   ].filter(Boolean));
   if (!$("guide").open) $("guide").showModal();
 }
@@ -107,14 +108,6 @@ async function readImport(file) {
   catch { renderImport({ ok: false, text: t("imp_no_space") }); return; }
   renderImport({ ok: true, text: t("imp_done", entries.length, sources.length, errors.length) });
   setTimeout(() => location.reload(), RELOAD_DELAY_MS);
-}
-
-// 2回押して消す（1回目は確認の文言に変わる）。confirm() は Mac アプリの WebView で使えないため
-function clearImport(ev) {
-  const b = ev.currentTarget;
-  if (!b.dataset.armed) { b.dataset.armed = "1"; b.textContent = t("imp_clear_confirm"); return; }
-  try { localStorage.removeItem(IMPORT_KEY); } catch { /* 消せなくても再読み込みで状態を見せる */ }
-  location.reload();
 }
 
 // ---- 開く・閉じる ----

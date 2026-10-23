@@ -228,9 +228,16 @@ function shortTime(at) {
 }
 
 // サイドバーの1行。左に色（お気に入りの配色はセットの色を並べる）、右に時刻と操作
-function sideRow({ hex, rule = -1, at }, { title, onOpen, actions }) {
+// 前回描いた行の鍵（一覧ごと）。新しく増えた行だけを滑り込ませる
+const drawnRows = { favs: null, history: null };
+function markNew(list, which, keyOf) {
+  const keys = list.map(keyOf), before = drawnRows[which];
+  drawnRows[which] = new Set(keys);
+  return (item) => before !== null && !before.has(keyOf(item)) && !reduceMotion();
+}
+function sideRow({ hex, rule = -1, at }, { title, onOpen, actions, isNew = false }) {
   const colors = rule < 0 ? [hex] : harmonies(rgbToOklch(hexToRgb(hex)))[rule].colors.map(([, h]) => h);
-  return el("li", { class: "hist-item" },
+  return el("li", { class: "hist-item" + (isNew ? " row-in" : "") },
     el("button", { class: "hist-open", "data-hex": hex, "data-rule": rule, "aria-label": `${title} ${hex}`, onclick: onOpen },
       el("span", { class: "hist-sw" }, ...colors.map((c) => el("i", { style: `background:${c}` }))),
       el("span", { class: "hist-text" }, el("span", { class: "hist-name" }, title), el("span", { class: "hist-hex" }, hex)),
@@ -241,7 +248,9 @@ function sideRow({ hex, rule = -1, at }, { title, onOpen, actions }) {
 function renderFavs() {
   const list = loadFavs();
   $("pal-favs-count").textContent = list.length || "";
+  const isNew = markNew(list, "favs", (f) => `${f.hex}:${f.rule}`);
   const rows = list.map((f) => sideRow(f, {
+    isNew: isNew(f),
     title: f.rule < 0 ? colorName(f.hex) : `${ruleShort(harmonies(rgbToOklch(hexToRgb(f.hex)))[f.rule].rule)}・${colorName(f.hex)}`,
     onOpen: () => openFav(f),
     actions: [starButton(true, t("fav_remove"), () => removeWithUndo(FAVS_KEY, loadFavs().filter((x) => !(x.hex === f.hex && x.rule === f.rule)), t("fav_removed")))],
@@ -260,6 +269,7 @@ function openFav({ hex, rule }) {
 
 function renderHistory() {
   const list = loadHistory();
+  const isNewH = markNew(list, "history", (h) => h.hex);
   $("pal-history-count").textContent = list.length ? `${list.length}/${HISTORY_MAX}` : "";
   let group = null;
   const rows = [];
@@ -267,6 +277,7 @@ function renderHistory() {
     const g = dayGroup(h.at);
     if (g !== group) { group = g; rows.push(el("li", { class: "group" }, g)); }
     rows.push(sideRow(h, {
+      isNew: isNewH(h),
       title: colorName(h.hex), onOpen: () => { renderPalette(h.hex, false); swapSets(); },
       actions: [el("button", { class: "hist-del", "data-tt": t("pal_history_del", h.hex), "aria-label": t("pal_history_del", h.hex),
         onclick: () => removeWithUndo(HISTORY_KEY, loadHistory().filter((x) => x.hex !== h.hex), t("pal_history_removed", h.hex)) },
@@ -274,7 +285,9 @@ function renderHistory() {
     }));
   });
   const clear = rows.length ? el("li", { class: "hist-foot" }, el("button", { class: "icon-btn", "data-tt": t("pal_history_clear"), "aria-label": t("pal_history_clear"),
-    onclick: () => removeWithUndo(HISTORY_KEY, [], t("pal_history_cleared", list.length)) }, icon("trash"))) : null;
+    onclick: async () => {
+      if (await confirmAction({ title: t("c_hist_title"), body: t("c_hist_body", list.length), ok: t("c_hist_ok") })) removeWithUndo(HISTORY_KEY, [], t("pal_history_cleared", list.length));
+    } }, icon("trash"))) : null;
   $("pal-history").replaceChildren(...[undoBar(HISTORY_KEY), ...rows, clear, rows.length ? null : el("li", { class: "hist-empty" }, t("pal_history_empty"))].filter(Boolean));
   markCurrent();
 }
@@ -319,6 +332,7 @@ function setView(view) {
 function applyView(view) {
   const isPalette = view === "palette";
   document.querySelectorAll("#view button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.view === view)));
+  requestAnimationFrame(() => syncSeg($("view"), "view"));
   $("dict-filters").hidden = isPalette;
   $("pal-side").hidden = !isPalette;
   $("dict").hidden = isPalette;

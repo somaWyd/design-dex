@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""beUI の項目に preview（実物スクショ）・出典・公式URL・出典つき指示文を付ける。
+"""beUI の項目に preview（実物スクショ）・出典・公式URL・出典つきプロンプトを付ける。
 
 使い方: python3 tools/beui_entries.py   （tools/shoot_beui.py の後に実行）
 スクショが無い項目は、カテゴリに近いデモで代わりに見せる。

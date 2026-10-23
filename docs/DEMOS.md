@@ -5,9 +5,9 @@ entries の `preview` は次のどれか1つ:
 - `{"image": "previews/beui/<slug>.webp"}` … 実物のスクショ（beUI）
 - `{"font": "<書体名>", "google": true|false, "fallback": "sans|serif|mono", "weight": 400, "sample": "あ永 Aa", "sample_long": "..."}` … タイポ
 
-指示文には「プレビューの動き」欄の数値をそのまま書くこと（プレビューと同じものが再現できるように）。
+プロンプトには「プレビューの動き」欄の数値をそのまま書くこと（プレビューと同じものが再現できるように）。
 
-| id | variant | 見せているもの | プレビューの動き（指示文に書く値） |
+| id | variant | 見せているもの | プレビューの動き（プロンプトに書く値） |
 |---|---|---|---|
 | enter | (無印)=fade, slide, up, scale, pop, clip, circle, blur | 要素の出現と退場 | fade: opacity 0→1、2.6秒周期・ease-out／slide: translateX(-70px)→0／up: translateY(40px)→0／scale: scale(.8)→1／pop: scale(.5)→1.12→1／clip: clip-path inset(0 100% 0 0)→inset(0)、cubic-bezier(.2,.8,.2,1)／circle: clip-path circle(0%)→circle(75%)／blur: blur(10px)+scale(1.08)→0 |
 | stagger | - | 5本のバーが時間差で下から出る | translateY(16px)+opacity 0→1、間隔80ms、cubic-bezier(.2,.8,.2,1) |

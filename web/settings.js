@@ -1,5 +1,11 @@
 // 設定（テーマカラー・外観・言語・文字の大きさ・プレビューの動き・カードの表示・起動時の画面）と画面の文言。
 // 設定はこの端末のブラウザ（Mac アプリでは WebView）に保存する。保存できない環境でも既定値で動く。
+// どのポップアップでも、右上に同じ形の × を置いて閉じられるようにする
+function closeX(onclick) {
+  const label = t("g_close");
+  return el("button", { class: "x-close", type: "button", "aria-label": label, "data-tt": label, onclick }, icon("close"));
+}
+
 // アイコンと文字の組。:root[data-labels] で「アイコンのみ／文字のみ／両方」を出し分ける（style.css）
 function frag(...nodes) { const f = document.createDocumentFragment(); f.append(...nodes.filter(Boolean)); return f; }
 function face(name, label) {
@@ -8,20 +14,20 @@ function face(name, label) {
 }
 const I18N = {
   ja: {
-    title: "DesignDex", tagline: "UI・モーション・配色・書体の名前と指示文",
+    title: "DesignDex", tagline: "UI・モーション・配色・書体の名前とプロンプト",
     view_dict: "辞典", view_palette: "配色", kind: "種類", category: "カテゴリ", source: "出典",
     reset_filters: "絞り込みを解除", settings: "設定",
     search_ph: "検索", filters: "絞り込み", how_to_use: "使い方", invoke_claude: "Claude Code", invoke_codex: "Codex", invoke_mcp: "MCP", src_ref: "置き場所", src_open: "公式ページを開く", copy_path: "置き場所をコピー", open_source_only: "この出典だけを見る",
     k_all: "すべて", k_motion: "モーション", k_ui: "UI", k_type: "タイポ",
-    g_skill: "スキル", g_mcp: "MCP", g_doc: "公式ドキュメント", t_doc: "公式",
+    g_basic: "基本", g_skill: "スキル", g_mcp: "MCP", g_doc: "公式ドキュメント", t_doc: "公式",
     count: (n) => String(n), empty: "見つかりません。別の言い方（例：「出る」「消える」「弾む」）で試してください",
     meta: (n, s, d) => `${n} 項目・${s} 出典・更新 ${d}`,
-    cite: "出典：", prompt_open: "指示文を見る（出典・再現する値つき）",
-    copy_prompt: "指示文をコピー", copy_url: "URLをコピー", copy_name: "名前", open: "開く",
-    copied_prompt: "指示文をコピーしました。Claude Code や Codex に貼り付けてください", copied_url: "URLをコピーしました", copied: (s) => `${s} をコピーしました`,
+    cite: "出典：", prompt_open: "プロンプトを見る（出典・再現する値つき）",
+    copy_prompt: "プロンプトをコピー", copy_url: "URLをコピー", copy_name: "名前", open: "開く",
+    copied_prompt: "プロンプトをコピーしました。Claude Code や Codex に貼り付けてください", copied_url: "URLをコピーしました", copied: (s) => `${s} をコピーしました`,
     pal_title: "配色の提案", pal_lead: "1色を選ぶと、相性のよい2〜3色のセットを配色ルールごとに出します。色をクリックするとコードをコピーします。",
     pal_tones: "同じ色の濃淡（Material 3 の色調パレットに近い13段）", pal_err: "#RRGGBB の形で入力してください（例: #2f6fed）",
-    pal_copy_hex: "色コードをコピー", pal_copied_hex: "色コードをコピーしました", pal_prompt_open: "指示文を見る（出典・色コードつき）",
+    pal_copy_hex: "色コードをコピー", pal_copied_hex: "色コードをコピーしました", pal_prompt_open: "プロンプトを見る（出典・色コードつき）",
     pal_history: "最近見た配色", pal_history_clear: "すべて消す", pal_history_empty: "まだありません。色を決めると、ここに上から積み重なります（最大30件）",
     pal_history_del: (h) => `${h} を履歴から消す`,
     pal_favs: "お気に入り", pal_favs_empty: "配色カードや上の ☆ を押すと、ここに保存されます", favs: "お気に入り", favs_empty: "お気に入りはまだありません。カード右上の ☆ で追加できます",
@@ -35,25 +41,34 @@ const I18N = {
     s_size: "文字の大きさ", s_small: "小", s_medium: "標準", s_large: "大",
     s_motion: "プレビューの動き", s_motion_always: "常に再生", s_motion_hover: "マウスを乗せたときだけ", s_motion_off: "止める",
     s_density: "カードの表示", s_detail: "詳しく", s_compact: "コンパクト",
-    s_start: "起動時の画面", s_reset: "設定を初期値に戻す", s_close: "閉じる",
+    s_start: "起動時の画面", s_reset: "初期化（すべて消す）", s_close: "閉じる",
     s_labels: "ボタンの表示", s_lbl_icon: "アイコンのみ", s_lbl_text: "文字のみ", s_lbl_both: "アイコンと文字",
+    h_appearance: "画面を明るく（ライト）するか暗く（ダーク）するか。自動は Mac・スマホの設定に合わせます", h_size: "画面の文字とボタンの大きさ", h_motion: "カードのプレビューを常に動かすか、カーソルを乗せたときだけ動かすか、止めるか",
+    h_density: "カードに説明や言い換えまで出す（詳しく）か、名前とプレビューだけにする（コンパクト）か", h_labels: "ボタンをアイコンだけで出すか、文字だけか、両方か", h_start: "アプリを開いたときに最初に出す画面",
+    h_import: "Claude Code・Codex に入れたデザイン系スキルを、この辞典に足します", h_guide: "初めて開いたときの使い方の案内を、もう一度表示します",
+    s_account: "アカウント", s_logout: "ログアウト", h_account: (e) => `${e} でログイン中。ログアウトすると、もう一度 Google でのログインが必要になります`,
+    select_all_in: (g) => `${g} のカテゴリをまとめて選ぶ／外す`,
+    c_cancel: "キャンセル", detail: "詳細", detail_open: (n) => `${n} の詳細を開く`,
+    c_reset_title: "すべて初期状態に戻しますか？", c_reset_body: "設定・お気に入り・最近見た配色・取り込んだスキル・MCP・公式ドキュメントの項目をすべて消し、標準の「基本」だけの状態に戻します。元に戻すことはできません。", c_reset_ok: "すべて消して戻す",
+    c_clear_title: "取り込んだ項目を消しますか？", c_clear_body: (n, s) => `取り込んだ ${s} 個のスキル・${n} 件をこの端末から消します。元に戻すには、もう一度取り込みが必要です。`, c_clear_ok: "消す",
+    c_hist_title: "最近見た配色をすべて消しますか？", c_hist_body: (n) => `${n} 件の履歴を消します。消した直後なら「元に戻す」で戻せます。`, c_hist_ok: "すべて消す",
     guide: "使い方", g_skip: "スキップ", g_back: "戻る", g_next: "次へ", g_start: "はじめる", g_later: "あとで", g_close: "閉じる",
     g_import_start: "スキルを取り込む",
     g1_title: "DesignDex をインストールしていただき、ありがとうございます",
-    g1_body: "UI・動き・配色・書体の「名前」を調べて、Claude Code や Codex にそのまま渡せる指示文をコピーできる辞典です。1分で使い方をご案内します。",
+    g1_body: "UI・動き・配色・書体の「名前」を調べて、Claude Code や Codex にそのまま渡せるプロンプトをコピーできる辞典です。1分で使い方をご案内します。",
     g2_title: "思い浮かんだ言葉で探す",
     g2_body: "「ふわっと出る」「下から出るパネル」のように、見た目の言葉で検索できます。左のサイドバーでは、スキル（出典）やカテゴリで絞り込めます。",
     g2_sample: "ふわっと出る",
     g3_title: "動きを確かめて、AI に渡す",
-    g3_body: "カードのプレビューで動きを確かめたら［指示文をコピー］。Claude Code や Codex に貼り付けると、出典と数値つきで正確に伝わります。スキル名のバッジを押すと、そのスキルの呼び出し方（Claude Code は /名前、Codex は $名前）が出ます。",
+    g3_body: "カードのプレビューで動きを確かめたら［プロンプトをコピー］。Claude Code や Codex に貼り付けると、出典と数値つきで正確に伝わります。スキル名のバッジを押すと、そのスキルの呼び出し方（Claude Code は /名前、Codex は $名前）が出ます。",
     g4_title: "1色から配色を作る",
     g4_body: "左上の［配色］では、1色を選ぶだけで相性のよい3色のセットが配色ルールごとに出ます。気に入った配色は ☆ で保存でき、最近見た色も左に残ります。",
     g5_title: "あなたのスキルも辞典に足せます",
     g5_body: "Claude Code や Codex に入れているデザイン系のスキルを、AI に読ませてこの辞典に取り込めます。3ステップ・数分で終わります。あとからでも、右上の設定からいつでも始められます。",
     imp_title: "自分のスキルを取り込む", imp_lead: "Claude Code か Codex が、入っているデザイン系スキルを読んでファイルを作り、それをここで読み込みます。ファイルは手元に作られるだけで、どこにも送られません。",
-    imp_s1_title: "取り込み用の指示文をコピー", imp_s1_body: "AI に渡す手順（どのフォルダを読み、どんな形で書き出すか）が入った指示文です。",
-    imp_copy: "指示文をコピー", imp_copied: "コピーしました。Claude Code か Codex に貼り付けてください",
-    imp_s2_title: "Claude Code か Codex に貼り付けて実行", imp_s2_body: "ターミナルで claude（または codex）と入力して起動し、コピーした指示文を貼り付けて Enter。Claude のデスクトップアプリの Code タブや、VS Code の拡張機能でも同じです。終わると「ダウンロード」フォルダにファイルができます。",
+    imp_s1_title: "取り込み用のプロンプトをコピー", imp_s1_body: "AI に渡す手順（どのフォルダを読み、どんな形で書き出すか）が入ったプロンプトです。",
+    imp_copy: "プロンプトをコピー", imp_copied: "コピーしました。Claude Code か Codex に貼り付けてください",
+    imp_s2_title: "Claude Code か Codex に貼り付けて実行", imp_s2_body: "ターミナルで claude（または codex）と入力して起動し、コピーしたプロンプトを貼り付けて Enter。Claude のデスクトップアプリの Code タブや、VS Code の拡張機能でも同じです。終わると「ダウンロード」フォルダにファイルができます。",
     imp_s3_title: "できたファイルを選ぶ", imp_s3_body: (f) => `「ダウンロード」フォルダの ${f} を、下の枠に置くか、枠を押して選んでください。`,
     imp_drop: (f) => `${f} をここに置く（押して選ぶ）`,
     imp_done: (n, s, bad) => `${s} 個のスキルから ${n} 件を取り込みました${bad ? `（形式が合わない ${bad} 件は除外）` : ""}。辞典を読み込み直します…`,
@@ -70,7 +85,7 @@ const I18N = {
     reset_filters: "Clear filters", settings: "Settings",
     search_ph: "Search", filters: "Filters", how_to_use: "How to use", invoke_claude: "Claude Code", invoke_codex: "Codex", invoke_mcp: "MCP", src_ref: "Location", src_open: "Open official page", copy_path: "Copy location", open_source_only: "Show only this source",
     k_all: "All", k_motion: "Motion", k_ui: "UI", k_type: "Type",
-    g_skill: "Skills", g_mcp: "MCP", g_doc: "Official docs", t_doc: "DOC",
+    g_basic: "Basics", g_skill: "Skills", g_mcp: "MCP", g_doc: "Official docs", t_doc: "DOC",
     count: (n) => String(n), empty: "No results. Try other words (e.g. appear, disappear, bounce).",
     meta: (n, s, d) => `${n} items · ${s} sources · updated ${d}`,
     cite: "Source: ", prompt_open: "Show prompt (with source and exact values)",
@@ -92,8 +107,17 @@ const I18N = {
     s_size: "Text size", s_small: "Small", s_medium: "Default", s_large: "Large",
     s_motion: "Preview motion", s_motion_always: "Always play", s_motion_hover: "Play on hover", s_motion_off: "Paused",
     s_density: "Card layout", s_detail: "Detailed", s_compact: "Compact",
-    s_start: "Start screen", s_reset: "Reset settings", s_close: "Close",
+    s_start: "Start screen", s_reset: "Reset everything", s_close: "Close",
     s_labels: "Button labels", s_lbl_icon: "Icons only", s_lbl_text: "Text only", s_lbl_both: "Icons and text",
+    h_appearance: "Light or dark screen. Auto follows your Mac or phone setting", h_size: "Size of text and buttons", h_motion: "Play card previews always, only on hover, or never",
+    h_density: "Show descriptions and aliases on cards (Detailed), or only names and previews (Compact)", h_labels: "Show buttons as icons, text, or both", h_start: "The screen shown when the app opens",
+    h_import: "Add the design skills installed in Claude Code or Codex to this dictionary", h_guide: "Show the first-run guide again",
+    s_account: "Account", s_logout: "Sign out", h_account: (e) => `Signed in as ${e}. After signing out you will need to sign in with Google again`,
+    select_all_in: (g) => `Select or clear all ${g} categories`,
+    c_cancel: "Cancel", detail: "Details", detail_open: (n) => `Open details for ${n}`,
+    c_reset_title: "Reset everything?", c_reset_body: "This removes your settings, favorites, recent colors and every imported skill, MCP and doc item, leaving only the built-in Basics. This cannot be undone.", c_reset_ok: "Erase and reset",
+    c_clear_title: "Remove imported items?", c_clear_body: (n, s) => `This removes ${n} items from ${s} imported skills from this device. To get them back you will need to import again.`, c_clear_ok: "Remove",
+    c_hist_title: "Clear all recent colors?", c_hist_body: (n) => `This clears ${n} colors from your history. You can undo right after.`, c_hist_ok: "Clear all",
     guide: "Guide", g_skip: "Skip", g_back: "Back", g_next: "Next", g_start: "Get started", g_later: "Later", g_close: "Close",
     g_import_start: "Import my skills",
     g1_title: "Thank you for installing DesignDex",
@@ -169,7 +193,7 @@ function applySettings() {
 // 設定は文字を使わずアイコンで見分ける。各ボタンにはマウスを乗せたときの説明（title）と読み上げ名（aria-label）を付ける
 function tipAttrs(label) { return { "data-tt": label, "aria-label": label }; }
 function choice(key, options) {
-  return el("div", { class: "seg set-seg", role: "radiogroup" }, ...options.map(([value, label, look]) => el("button", {
+  return el("div", { class: "seg set-seg", role: "radiogroup", "data-seg": key }, ...options.map(([value, label, look]) => el("button", {
     role: "radio", "aria-checked": String(settings[key] === value), ...tipAttrs(t(label)),
     onclick: () => { settings[key] = value; saveSettings(); refreshAll(); },
   }, look(t(label)))));
@@ -177,28 +201,37 @@ function choice(key, options) {
 // 選択肢の見た目。アイコン（または「あ」「A」のような字形）と文字を両方持ち、ボタンの表示設定で出し分ける
 const glyph = (text, size) => (label) => frag(el("span", { class: "glyph opt", style: size ? `font-size:${size}px` : null }, text), el("span", { class: "lbl" }, label));
 const ico = (name) => (label) => face(name, label);
-function row(iconName, label, control) {
-  return el("div", { class: "set-row" }, el("span", { class: "set-ic" }, face(iconName, t(label))), control);
+// hint はその設定が何を変えるのかの説明。読み上げ用の補足（aria-description）として持たせる
+function row(iconName, label, control, hint) {
+  return el("div", { class: "set-row" }, el("span", { class: "set-ic", "aria-description": hint ? t(hint) : null }, face(iconName, t(label))), control);
 }
+
+
 
 function renderSettings() {
   const themes = el("div", { class: "set-themes" }, ...THEME_COLORS.map((c) => el("button", {
     class: "set-theme", style: `background:${c}`, ...tipAttrs(c), "aria-pressed": String(settings.theme === c),
     onclick: () => { settings.theme = c; saveSettings(); refreshAll(); },
   })));
-  $("settings-body").replaceChildren(
-    row("theme", "s_theme", themes),
-    row("auto", "s_appearance", choice("appearance", [["auto", "s_auto", ico("auto")], ["light", "s_light", ico("light")], ["dark", "s_dark", ico("dark")]])),
-    row("language", "s_lang", choice("lang", [["ja", "日本語", glyph("あ")], ["en", "English", glyph("A")]])),
-    row("textsize", "s_size", choice("size", [["small", "s_small", glyph("A", 11)], ["medium", "s_medium", glyph("A", 14)], ["large", "s_large", glyph("A", 18)]])),
-    row("motion", "s_motion", choice("motion", [["always", "s_motion_always", ico("play")], ["hover", "s_motion_hover", ico("hover")], ["off", "s_motion_off", ico("pause")]])),
-    row("detail", "s_density", choice("density", [["detail", "s_detail", ico("detail")], ["compact", "s_compact", ico("compact")]])),
-    row("type", "s_labels", choice("labels", [["icon", "s_lbl_icon", ico("star")], ["text", "s_lbl_text", glyph("Aa")], ["both", "s_lbl_both", (l) => frag(icon("star", "ic opt"), el("span", { class: "glyph opt" }, "Aa"), el("span", { class: "lbl" }, l))]])),
-    row("home", "s_start", choice("start", [["dict", "view_dict", ico("dict")], ["palette", "view_palette", ico("palette")]])),
-    row("terminal", "s_import", el("button", { class: "set-open", onclick: () => { closeSettings(); openImport(); } }, face("dict", t("s_open")))),
-    row("dict", "s_guide", el("button", { class: "set-open", onclick: () => { closeSettings(); openGuide(); } }, face("external", t("s_open")))),
-    el("div", { class: "set-foot" }, el("button", { class: "set-open",
-      onclick: () => { Object.assign(settings, DEFAULTS); saveSettings(); refreshAll(); } }, face("reset", t("s_reset")))));
+  $("settings-body").replaceChildren(...[
+    closeX(closeSettings),
+    row("theme", "s_theme", themes, "s_theme_hint"),
+    row("auto", "s_appearance", choice("appearance", [["auto", "s_auto", ico("auto")], ["light", "s_light", ico("light")], ["dark", "s_dark", ico("dark")]]), "h_appearance"),
+    row("language", "s_lang", choice("lang", [["ja", "日本語", glyph("あ")], ["en", "English", glyph("A")]]), "s_lang_hint"),
+    row("textsize", "s_size", choice("size", [["small", "s_small", glyph("A", 11)], ["medium", "s_medium", glyph("A", 14)], ["large", "s_large", glyph("A", 18)]]), "h_size"),
+    row("motion", "s_motion", choice("motion", [["always", "s_motion_always", ico("play")], ["hover", "s_motion_hover", ico("hover")], ["off", "s_motion_off", ico("pause")]]), "h_motion"),
+    row("detail", "s_density", choice("density", [["detail", "s_detail", ico("detail")], ["compact", "s_compact", ico("compact")]]), "h_density"),
+    row("type", "s_labels", choice("labels", [["icon", "s_lbl_icon", ico("star")], ["text", "s_lbl_text", glyph("Aa")], ["both", "s_lbl_both", (l) => frag(icon("star", "ic opt"), el("span", { class: "glyph opt" }, "Aa"), el("span", { class: "lbl" }, l))]]), "h_labels"),
+    row("home", "s_start", choice("start", [["dict", "view_dict", ico("dict")], ["palette", "view_palette", ico("palette")]]), "h_start"),
+    row("terminal", "s_import", el("button", { class: "set-open", onclick: () => { closeSettings(); openImport(); } }, face("dict", t("s_open"))), "h_import"),
+    signedIn ? el("div", { class: "set-row" }, el("span", { class: "set-ic", "data-tt": t("h_account", signedIn.email) }, face("settings", t("s_account"))),
+      el("form", { method: "post", action: "/auth/logout", class: "set-account" }, el("span", { class: "set-email" }, signedIn.email),
+        el("button", { class: "set-open", type: "submit" }, face("external", t("s_logout"))))) : null,
+    row("dict", "s_guide", el("button", { class: "set-open", onclick: () => { closeSettings(); openGuide(); } }, face("external", t("s_open"))), "h_guide"),
+    el("div", { class: "set-foot" },
+      window.CATALOG?.imported ? el("button", { class: "set-open danger", onclick: confirmClearImport }, face("trash", t("imp_clear"))) : null,
+      el("button", { class: "set-open danger", onclick: confirmReset }, face("reset", t("s_reset")))),
+  ].filter(Boolean));
 }
 
 // 言語を変えたら、文言を含む画面をすべて描き直す
@@ -210,11 +243,58 @@ function refreshAll() {
     return;
   }
   applySettings();
-  if ($("settings").open) renderSettings();
+  if ($("settings").open) { renderSettings(); syncSettingSegs(); }
   if (typeof update === "function") update();
   if (typeof refreshPalette === "function") refreshPalette();
 }
-function openSettings() { renderSettings(); $("settings").showModal(); }
+function syncSettingSegs() { document.querySelectorAll("#settings .set-seg").forEach((s) => syncSeg(s, "set-" + s.dataset.seg)); }
+function openSettings() { renderSettings(); $("settings").showModal(); syncSettingSegs(); }
+
+// Web 版（Cloudflare）でログインしているときだけ、設定にアカウントとログアウトを出す。Mac アプリ・GitHub Pages では /auth/me が無いので出ない
+let signedIn = null;
+if (location.protocol.startsWith("http")) {
+  fetch("/auth/me", { credentials: "same-origin" }).then((r) => (r.ok ? r.json() : null)).then((u) => { signedIn = u?.email ? u : null; }).catch(() => {});
+}
+
+// 取り消しの効かない操作の前に出す確認。confirm() は Mac アプリの WebView で出ないため自前のダイアログにする。
+// 押した結果を Promise で返す（true＝実行する）。設定などのダイアログの上に重ねて開く
+function confirmAction({ title, body, ok }) {
+  const d = document.getElementById("confirm");
+  return new Promise((resolve) => {
+    const done = (yes) => { d.close(); resolve(yes); };
+    const cancel = el("button", { class: "g-ghost", onclick: () => done(false) }, t("c_cancel"));
+    d.replaceChildren(
+      closeX(() => done(false)),
+      el("div", { class: "c-icon", "aria-hidden": "true" }, "!"),
+      el("h2", { id: "confirm-title" }, title), el("p", {}, body),
+      el("div", { class: "c-actions" }, cancel, el("button", { class: "g-primary danger", onclick: () => done(true) }, ok)));
+    d.setAttribute("aria-labelledby", "confirm-title");
+    d.oncancel = (ev) => { ev.preventDefault(); done(false); };
+    d.showModal();
+    cancel.focus();  // 既定は安全な側（キャンセル）
+  });
+}
+async function confirmReset() {
+  if (!await confirmAction({ title: t("c_reset_title"), body: t("c_reset_body"), ok: t("c_reset_ok") })) return;
+  resetAll();
+}
+// このアプリが端末に保存したものを全部消して読み込み直す（同梱の「基本」だけの状態に戻る）。
+// GitHub Pages は同じオリジンに他のページも同居するので localStorage.clear() は使わず、自分の鍵だけを消す
+const APP_KEYS = ["designdex-settings", "designdex-imported", "ui-favs", "guide-done", "picker-tab"];
+const APP_KEY_PREFIXES = ["pal-", "fold-"];
+function resetAll() {
+  try {
+    for (const k of Object.keys(localStorage)) if (APP_KEYS.includes(k) || APP_KEY_PREFIXES.some((p) => k.startsWith(p))) localStorage.removeItem(k);
+  } catch { /* 保存できない環境では消すものも無い */ }
+  location.hash = "";
+  location.reload();
+}
+async function confirmClearImport() {
+  const now = window.CATALOG?.imported;
+  if (!now || !await confirmAction({ title: t("c_clear_title"), body: t("c_clear_body", now.entries, now.sources), ok: t("c_clear_ok") })) return;
+  try { localStorage.removeItem(IMPORT_KEY); } catch { /* 消せなくても再読み込みで状態を見せる */ }
+  location.reload();
+}
 // 閉じるときは、開いたときと同じ道（右上の歯車へ縮む）で戻ってから閉じる
 function closeSettings() {
   const d = document.getElementById("settings");
